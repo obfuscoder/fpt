@@ -1,0 +1,56 @@
+theaters:
+  nttr:
+    name: Nellis Test & Training Range
+    channels:
+      a10:
+        uhf:
+          - frequency: 270.1
+            description: Nellis ATIS
+    airbases:
+      nellis:
+        name: Nellis AFB
+        tacan: 12X
+        atis: 270.1
+        clearance:
+        ground: 123.1
+        tower: 327.0
+        departure:
+        arrival:
+        runways:
+          "21L":
+            length: 1234
+            elevation: 1234
+            ils: XXX
+          "21R":
+            length: 1234
+            elevation: 1234
+          "3R":
+            length: 1234
+            elevation: 1234
+          "3L":
+            length: 1234
+            elevation: 1234
+        departures:
+          fyttr: FYTTR
+          fyttr_low: FYTTR LOW
+        recoveries:
+          stryk: STRYK
+  caucasus:
+    name: Caucasus
+  gulf:
+    name: Persian Gulf
+airframes:
+  f18: F/A-18C
+  a10: A-10C
+  av8b: AV-8B N/A
+  f16: F-16
+callsigns:
+  - Tiger
+  - Cougar
+  - Monster
+  - Dragon
+  - T-Rex
+  - Raptor
+  - Vanguard
+  - Edelweiss
+  - Holiday

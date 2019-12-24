@@ -1,0 +1,51 @@
+%p#notice= notice
+
+%p
+  %b Theater:
+  = @flight.theater
+%p
+  %b Airframe:
+  = @flight.airframe
+%p
+  %b Start:
+  = @flight.start
+%p
+  %b Duration:
+  = @flight.duration
+%p
+  %b Callsign:
+  = @flight.callsign
+%p
+  %b Callsign number:
+  = @flight.callsign_number
+%p
+  %b Slots:
+  = @flight.slots
+%p
+  %b Mission:
+  = @flight.mission
+%p
+  %b Objectives:
+  = @flight.objectives
+%p
+  %b Group:
+  = @flight.group_id
+%p
+  %b Laser:
+  = @flight.laser
+%p
+  %b Tacan channel:
+  = @flight.tacan_channel
+%p
+  %b Tacan polarization:
+  = @flight.tacan_polarization
+%p
+  %b Frequency:
+  = @flight.frequency
+%p
+  %b Notes:
+  = @flight.notes
+
+= link_to 'Edit', edit_flight_path(@flight)
+\|
+= link_to 'Back', flights_path

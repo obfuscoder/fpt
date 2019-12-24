@@ -1,0 +1,55 @@
+= form_for @flight do |f|
+  - if @flight.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@flight.errors.count, "error")} prohibited this flight from being saved:"
+      %ul
+        - @flight.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :theater
+    = f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }
+  .field
+    = f.label :airframe
+    = f.select :airframe, Settings.airframes.to_h.invert
+  .field
+    = f.label :start
+    = f.datetime_select :start
+  .field
+    = f.label :duration
+    = f.number_field :duration
+  .field
+    = f.label :callsign
+    = f.select :callsign, Settings.callsigns
+  .field
+    = f.label :callsign_number
+    = f.select :callsign_number, 1..9
+  .field
+    = f.label :slots
+    = f.select :slots, 1..4
+  .field
+    = f.label :mission
+    = f.text_field :mission
+  .field
+    = f.label :objectives
+    = f.text_field :objectives
+  .field
+    = f.label :group_id
+    = f.select :group_id, 1..40
+  .field
+    = f.label :laser
+    = f.select :laser, 111..167
+  .field
+    = f.label :tacan_channel
+    = f.select :tacan_channel, 1..48
+  .field
+    = f.label :tacan_polarization
+    = f.select :tacan_polarization, %w[X Y]
+  .field
+    = f.label :frequency
+    = f.text_field :frequency
+  .field
+    = f.label :notes
+    = f.text_area :notes
+  .actions
+    = f.submit 'Save'
