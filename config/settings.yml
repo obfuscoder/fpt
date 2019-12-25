@@ -35,6 +35,21 @@ theaters:
           fyttr_low: FYTTR LOW
         recoveries:
           stryk: STRYK
+    support:
+      - callsign: OVERLORD
+        type: AWACS
+        frequency: 251.0
+      - callsign: HILL
+        type: FAC
+        position: N36 39.81 W115 46.88
+      - callsign: TEXACO
+        type: TANKER
+        airframe: KC-135
+        tacan: 1X
+        frequency: 251.1
+        position: AR264
+        altitude: 14000
+        speed: 220
   caucasus:
     name: Caucasus
   gulf:
@@ -54,3 +69,45 @@ callsigns:
   - Vanguard
   - Edelweiss
   - Holiday
+missions:
+  - Training
+  - CAS
+  - CAP
+  - SEAD
+  - Strike
+  - FAC(A)
+  - SCAR
+  - CSAR
+pilots:
+  - Ghost
+  - Nerkub
+  - Retai
+  - SNAFU
+  - Poet
+  - Warblade
+  - Stiletto
+  - Prinz
+  - Tammi
+  - Jemi
+  - Hawk
+  - DirtDiver
+  - Marsy
+  - Loki
+  - Toolface
+  - Jabba
+  - G-Rex
+  - Herby
+  - Butcher
+  - Mütze
+  - Chatterbox
+  - Hercules
+  - Sandman
+  - Tank
+  - MKay
+  - Siddharta
+  - toto
+  - Striker
+  - Sparrowhawk
+  - Tronix
+  - SkyRat
+  - DC

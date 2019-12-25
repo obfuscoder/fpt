@@ -1,19 +1,17 @@
 class FlightsController < ApplicationController
-  before_action :set_flight, only: [:show, :edit, :update, :destroy]
+  before_action :set_flight, only: %i[show edit update destroy print]
 
   def index
     @flights = Flight.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @flight = Flight.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @flight = Flight.new(flight_params)
@@ -38,6 +36,11 @@ class FlightsController < ApplicationController
     redirect_to flights_url, notice: 'Flight was successfully destroyed.'
   end
 
+  def print
+    mdc = MissionDataCard.new @flight
+    send_data mdc.render, filename: "mission_#{@flight.id}.pdf", type: 'application/pdf', disposition: :inline
+  end
+
   private
 
   def set_flight
@@ -45,6 +48,6 @@ class FlightsController < ApplicationController
   end
 
   def flight_params
-    params.require(:flight).permit(:theater, :airframe, :start, :duration, :callsign, :callsign_number, :slots, :mission, :objectives, :group_id, :laser, :tacan_channel, :tacan_polarization, :frequency, :notes)
+    params.require(:flight).permit(:theater, :airframe, :start, :duration, :callsign, :callsign_number, :slots, :mission, :objectives, :group_id, :laser, :tacan_channel, :tacan_polarization, :frequency, :notes, :start_airbase, :land_airbase, :divert_airbase, :departure, :arrival)
   end
 end

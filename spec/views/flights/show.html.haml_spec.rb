@@ -9,7 +9,7 @@ RSpec.describe "flights/show", type: :view do
       :callsign => "Callsign",
       :callsign_number => 3,
       :slots => 4,
-      :mission => "Mission",
+      :flight => "Mission",
       :objectives => "Objectives",
       :group_id => 5,
       :laser => 6,

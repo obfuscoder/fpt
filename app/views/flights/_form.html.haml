@@ -29,7 +29,7 @@
     = f.select :slots, 1..4
   .field
     = f.label :mission
-    = f.text_field :mission
+    = f.select :mission, Settings.missions
   .field
     = f.label :objectives
     = f.text_field :objectives
@@ -48,6 +48,21 @@
   .field
     = f.label :frequency
     = f.text_field :frequency
+  .field
+    = f.label :start_airbase
+    = f.select :start_airbase, Settings.theaters[@flight.theater].airbases.map { |t| [t.last.name, t.first] }
+  .field
+    = f.label :land_airbase
+    = f.select :land_airbase, Settings.theaters[@flight.theater].airbases.map { |t| [t.last.name, t.first] }
+  .field
+    = f.label :divert_airbase
+    = f.select :divert_airbase, Settings.theaters[@flight.theater].airbases.map { |t| [t.last.name, t.first] }
+  .field
+    = f.label :departure
+    = f.select :departure, Settings.theaters[@flight.theater].airbases[@flight.start_airbase]&.departures.to_h.invert
+  .field
+    = f.label :arrival
+    = f.select :arrival, Settings.theaters[@flight.theater].airbases[@flight.land_airbase]&.recoveries.to_h.invert
   .field
     = f.label :notes
     = f.text_area :notes

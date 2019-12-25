@@ -10,9 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_24_005703) do
+ActiveRecord::Schema.define(version: 2019_12_24_165605) do
 
   create_table "flights", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "theater"
     t.string "airframe"
     t.datetime "start"
@@ -28,8 +30,34 @@ ActiveRecord::Schema.define(version: 2019_12_24_005703) do
     t.string "tacan_polarization"
     t.decimal "frequency"
     t.text "notes"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "loadout"
+    t.string "start_airbase"
+    t.string "land_airbase"
+    t.string "divert_airbase"
+    t.string "departure"
+    t.string "arrival"
   end
 
+  create_table "pilots", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "flight_id", null: false
+    t.integer "number"
+    t.string "name"
+    t.index ["flight_id"], name: "index_pilots_on_flight_id"
+  end
+
+  create_table "waypoints", force: :cascade do |t|
+    t.integer "flight_id", null: false
+    t.integer "number"
+    t.string "name"
+    t.string "position"
+    t.string "altitude"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["flight_id"], name: "index_waypoints_on_flight_id"
+  end
+
+  add_foreign_key "pilots", "flights"
+  add_foreign_key "waypoints", "flights"
 end

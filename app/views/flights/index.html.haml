@@ -3,47 +3,31 @@
 %table
   %thead
     %tr
-      %th Theater
-      %th Airframe
-      %th Start
-      %th Duration
+      %th Time
       %th Callsign
-      %th Callsign number
-      %th Slots
+      %th Airframe
+      %th Pilots
       %th Mission
-      %th Objectives
-      %th Group
-      %th Laser
-      %th Tacan channel
-      %th Tacan polarization
       %th Frequency
-      %th Notes
-      %th
-      %th
+      %th Takeoff
+      %th Departure
+      %th Land
+      %th Recovery
       %th
 
   %tbody
     - @flights.each do |flight|
       %tr
-        %td= flight.theater
-        %td= flight.airframe
         %td= flight.start
-        %td= flight.duration
-        %td= flight.callsign
-        %td= flight.callsign_number
-        %td= flight.slots
+        %td= flight.full_callsign
+        %td= Settings.airframes[flight.airframe]
+        %td= "#{flight.pilots.count}/#{flight.slots}"
         %td= flight.mission
-        %td= flight.objectives
-        %td= flight.group_id
-        %td= flight.laser
-        %td= flight.tacan_channel
-        %td= flight.tacan_polarization
         %td= flight.frequency
-        %td= flight.notes
+        %td= Settings.theaters[flight.theater].airbases[flight.start_airbase].name
+        %td= Settings.theaters[flight.theater].airbases[flight.start_airbase].departures[flight.departure]
+        %td= Settings.theaters[flight.theater].airbases[flight.land_airbase].name
+        %td= Settings.theaters[flight.theater].airbases[flight.land_airbase].recoveries[flight.arrival]
         %td= link_to 'Show', flight
-        %td= link_to 'Edit', edit_flight_path(flight)
-        %td= link_to 'Destroy', flight, method: :delete, data: { confirm: 'Are you sure?' }
-
 %br
-
 = link_to 'New Flight', new_flight_path
