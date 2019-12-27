@@ -147,7 +147,7 @@ class MissionDataCard < Prawn::Document
   def notes
     define_columns 1
     header('NOTES')
-    cell(0, "\n" + @flight.notes, valign: :top, rows: (@grid.rows - @row))
+    cell(0, "\n#{@flight.notes}", valign: :top, rows: (@grid.rows - @row))
   end
 
   def flight_plan
