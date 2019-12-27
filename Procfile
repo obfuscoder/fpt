@@ -1,0 +1,2 @@
+release: rake db:migrate
+
