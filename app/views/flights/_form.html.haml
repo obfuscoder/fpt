@@ -16,7 +16,7 @@
       %td= f.number_field :duration, class: 'form-control'
     %tr
       %th.table-secondary Theater
-      %td= f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }, {}, class: 'form-control'
+      %td= f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }, {}, class: 'form-control', data: { remote: true, url: airbases_path }
       %th.table-secondary Airframe
       %td
         = f.select :airframe, Settings.airframes.to_h.invert, {}, class: 'form-control'
@@ -54,7 +54,7 @@
       %td(colspan=3)= f.text_field :ao, class: 'form-control'
     %tr
       %th.table-secondary Divert
-      %td= f.select :divert_airbase, airbases(@flight), {}, class: 'form-control'
+      %td= f.select :divert_airbase, airbases(@flight), { include_blank: true }, class: 'form-control'
       %td= f.select :divert, diverts(@flight), {}, class: 'form-control'
     %tr
       %th.table-secondary Grp Id

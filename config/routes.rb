@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     resources :pilots
     resources :waypoints, except: %i[index]
   end
+
+  resources :airbases, only: :index
 end

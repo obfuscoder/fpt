@@ -1,0 +1,8 @@
+airbase_options = "<%= j options_for_select(@airbases) %>"
+document.getElementById('flight_start_airbase').innerHTML = airbase_options
+document.getElementById('flight_land_airbase').innerHTML = airbase_options
+document.getElementById('flight_divert_airbase').innerHTML = "<%= j options_for_select([nil] + @airbases) %>"
+
+document.getElementById('flight_departure').innerHTML = "<%= j options_for_select(@departures) %>"
+document.getElementById('flight_recovery').innerHTML = "<%= j options_for_select(@recoveries) %>"
+document.getElementById('flight_divert').innerHTML = ''
