@@ -10,7 +10,7 @@ RSpec.describe "flights/show", type: :view do
       :callsign_number => 3,
       :slots => 4,
       :flight => "Mission",
-      :objectives => "Objectives",
+      :task => "Task",
       :group_id => 5,
       :laser => 6,
       :tacan_channel => 7,
@@ -29,7 +29,7 @@ RSpec.describe "flights/show", type: :view do
     expect(rendered).to match(/3/)
     expect(rendered).to match(/4/)
     expect(rendered).to match(/Mission/)
-    expect(rendered).to match(/Objectives/)
+    expect(rendered).to match(/Task/)
     expect(rendered).to match(/5/)
     expect(rendered).to match(/6/)
     expect(rendered).to match(/7/)

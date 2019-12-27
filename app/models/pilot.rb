@@ -13,6 +13,10 @@ class Pilot < ApplicationRecord
     sprintf('%02d', number)
   end
 
+  def net_id
+    sprintf('%02d/%02d', flight.group_id, number)
+  end
+
   def laser
     (flight.laser * 10 + number).to_s
   end

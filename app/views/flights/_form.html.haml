@@ -5,66 +5,105 @@
       %ul
         - @flight.errors.full_messages.each do |message|
           %li= message
-
-  .field
-    = f.label :theater
-    = f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }
-  .field
-    = f.label :airframe
-    = f.select :airframe, Settings.airframes.to_h.invert
-  .field
-    = f.label :start
-    = f.datetime_select :start
-  .field
-    = f.label :duration
-    = f.number_field :duration
-  .field
-    = f.label :callsign
-    = f.select :callsign, Settings.callsigns
-  .field
-    = f.label :callsign_number
-    = f.select :callsign_number, 1..9
-  .field
-    = f.label :slots
-    = f.select :slots, 1..4
-  .field
-    = f.label :mission
-    = f.select :mission, Settings.missions
-  .field
-    = f.label :objectives
-    = f.text_field :objectives
-  .field
-    = f.label :group_id
-    = f.select :group_id, 1..40
-  .field
-    = f.label :laser
-    = f.select :laser, 111..167
-  .field
-    = f.label :tacan_channel
-    = f.select :tacan_channel, 1..48
-  .field
-    = f.label :tacan_polarization
-    = f.select :tacan_polarization, %w[X Y]
-  .field
-    = f.label :frequency
-    = f.text_field :frequency
-  .field
-    = f.label :start_airbase
-    = f.select :start_airbase, Settings.theaters[@flight.theater].airbases.map { |t| [t.last.name, t.first] }
-  .field
-    = f.label :land_airbase
-    = f.select :land_airbase, Settings.theaters[@flight.theater].airbases.map { |t| [t.last.name, t.first] }
-  .field
-    = f.label :divert_airbase
-    = f.select :divert_airbase, Settings.theaters[@flight.theater].airbases.map { |t| [t.last.name, t.first] }
-  .field
-    = f.label :departure
-    = f.select :departure, Settings.theaters[@flight.theater].airbases[@flight.start_airbase]&.departures.to_h.invert
-  .field
-    = f.label :arrival
-    = f.select :arrival, Settings.theaters[@flight.theater].airbases[@flight.land_airbase]&.recoveries.to_h.invert
-  .field
-    = f.label :notes
-    = f.text_area :notes
-  .actions
-    = f.submit 'Save'
+  %table.table.table-striped.table-bordered.table-sm.table-hover
+    %tr
+      %th.bg-secondary(colspan=6) MISSION DATA
+    %tr
+      %th.table-secondary Start
+      %td(colspan=3)
+        .form-row= f.datetime_select :start,  {}, class: 'form-control col'
+      %th.table-secondary Duration
+      %td= f.number_field :duration, class: 'form-control'
+    %tr
+      %th.table-secondary Theater
+      %td= f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }, {}, class: 'form-control'
+      %th.table-secondary Airframe
+      %td
+        = f.select :airframe, Settings.airframes.to_h.invert, {}, class: 'form-control'
+      %th.table-secondary Slots
+      %td= f.select :slots, 1..4, {}, class: 'form-control'
+    %tr
+      %th.table-secondary Callsign
+      %td
+        .form-row
+          .col-md-8
+            = f.select :callsign, Settings.callsigns, {}, class: 'form-control'
+          .col-md-4
+            = f.select :callsign_number, 1..9, {}, class: 'form-control'
+      %th.table-secondary Mission
+      %td= f.select :mission, Settings.missions, {}, class: 'form-control'
+      %th.table-secondary Comms
+      %td= f.text_field :frequency, class: 'form-control'
+    %tr
+      %th.bg-secondary(colspan=3) AIRBASES
+      %th.bg-secondary(colspan=3) TASK
+    %tr
+      %th.table-secondary Type
+      %th.table-secondary Airbase
+      %th.table-secondary Procedure
+      %td(colspan=3)= f.text_field :task, class: 'form-control'
+    %tr
+      %th.table-secondary Departure
+      %td= f.select :start_airbase, airbases(@flight), {}, class: 'form-control'
+      %td= f.select :departure, departures(@flight), {}, class: 'form-control'
+      %th.table-secondary(colspan=3) AO
+    %tr
+      %th.table-secondary Recovery
+      %td= f.select :land_airbase, airbases(@flight), {}, class: 'form-control'
+      %td= f.select :recovery, recoveries(@flight), {}, class: 'form-control'
+      %td(colspan=3)= f.text_field :ao, class: 'form-control'
+    %tr
+      %th.table-secondary Divert
+      %td= f.select :divert_airbase, airbases(@flight), {}, class: 'form-control'
+      %td= f.select :divert, diverts(@flight), {}, class: 'form-control'
+    %tr
+      %th.table-secondary Grp Id
+      %td= f.select :group_id, 1..40, {}, class: 'form-control'
+      %th.table-secondary Lasercode
+      %td= f.select :laser, 111..167, {}, class: 'form-control'
+      %th.table-secondary TACAN
+      %td
+        .form-row
+          .col-md-8
+            = f.select :tacan_channel, 1..48, {}, class: 'form-control'
+          .col-md-4
+            = f.select :tacan_polarization, %w[X Y], {}, class: 'form-control'
+    %tr
+      %th.bg-secondary(colspan=6) SUPPORT
+    %tr
+      %td(colspan=6)
+        .container
+          .row
+            .col-1.table-secondary
+            .col-2.table-secondary Type
+            .col-2.table-secondary Callsign
+            .col-1.table-secondary Comms
+            .col-1.table-secondary TCN
+            .col-3.table-secondary Position
+            .col-1.table-secondary Altitude
+            .col-1.table-secondary Speed
+          - theater_support(@flight.theater).each do |support|
+            .row
+              .col-1
+                - if @flight.support.include?(support.key.to_s)
+                  %input(type='checkbox' name='flight[support][]' value="#{support.key}" checked)
+                - else
+                  %input(type='checkbox' name='flight[support][]' value="#{support.key}")
+              .col-2= support.type
+              .col-2= support.callsign
+              .col-1= support.comms
+              .col-1= support.tacan
+              .col-3= support.position
+              .col-1= support.altitude
+              .col-1= support.speed
+    %tr
+      %th.bg-secondary(colspan=6) COMMS
+    - 1.upto(4) do |num|
+      %tr
+        %td= "\##{num}"
+        %td(colspan=5)= f.text_field "radio#{num}", class: 'form-control'
+    %tr
+      %th.bg-secondary(colspan=6) NOTES
+    %tr
+      %td(colspan=6)= f.text_area :notes, class: 'form-control', rows: 10
+  = f.submit 'Save'

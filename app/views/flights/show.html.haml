@@ -1,61 +1,165 @@
-%p#notice= notice
+%p
+  #notice= notice
 
-%p
-  %b Theater:
-  = Settings.theaters[@flight.theater].name
-%p
-  %b Airframe:
-  = Settings.airframes[@flight.airframe]
-%p
-  %b Start:
-  = @flight.start
-%p
-  %b Duration:
-  = @flight.duration
-%p
-  %b Callsign:
-  = @flight.full_callsign
-%p
-  %b Slots:
-  = @flight.slots
-%p
-- @flight.slots.times do |index|
-  %p
-    - number = index + 1
-    %b= "Slot #{number}:"
-    - pilot = @flight.pilots.find_by number: number
-    - if pilot
-      = pilot.name
-      = link_to 'Unassign', flight_pilot_path(@flight, pilot), method: :delete
-    - else
-      = form_for :pilot, url: flight_pilots_path(@flight) do |f|
-        = f.hidden_field :number, value: number
-        = f.select :name, Settings.pilots
-        = f.submit 'Assign'
-%p
-  %b Mission:
-  = @flight.mission
-%p
-  %b Objectives:
-  = @flight.objectives
-%p
-  %b Group:
-  = @flight.group_id
-%p
-  %b Laser:
-  = @flight.laser
-%p
-  %b Tacan channel:
-  = @flight.tacan
-%p
-  %b Frequency:
-  = @flight.frequency
-%p
-  %b Notes:
-  = @flight.notes
+%table.table.table-striped.table-bordered.table-sm.table-hover
+  %tr
+    %th.bg-secondary(colspan=6) MISSION DATA
+  %tr
+    %th.table-secondary Theater
+    %td= Settings.theaters[@flight.theater].name
+    %th.table-secondary Start
+    %td= @flight.start
+    %th.table-secondary Duraton
+    %td= @flight.duration
+  %tr
+    %th.table-secondary Callsign
+    %td= @flight.full_callsign
+    %th.table-secondary Mission
+    %td= @flight.mission
+    %th.table-secondary Comms
+    %td= @flight.frequency
+  %tr
+    %th.table-secondary Task
+    %td(colspan=5)= @flight.task
+  %tr
+    %th.table-secondary AO
+    %td(colspan=5)= @flight.ao
+  %tr
+    %td(colspan=6)
+      .container
+        .row
+          .col-1.table-secondary #
+          .col-3.table-secondary Callsign
+          .col-3.table-secondary Pilot
+          .col-1.table-secondary NetId
+          .col-2.table-secondary Lasercode
+          .col-1.table-secondary TCN
+          .col-1.table-secondary
+        - @flight.slots.times do |index|
+          - number = index + 1
+          .row
+            .col-1= "-#{number}"
+            - pilot = @flight.pilots.find_by number: number
+            - if pilot
+              .col-3= pilot.callsign
+              .col-3= pilot.name
+              .col-1= pilot.net_id
+              .col-2= pilot.laser
+              .col-1= pilot.tacan
+              .col-1= link_to 'Unassign', flight_pilot_path(@flight, pilot), method: :delete
+            - else
+              .col-11
+                = form_for :pilot, url: flight_pilots_path(@flight) do |f|
+                  .form-row
+                    = f.hidden_field :number, value: number
+                    .col-auto
+                      = f.select :name, Settings.pilots, {}, class: 'form-control'
+                    .col-auto
+                      = f.submit 'Assign'
+  %tr
+    %th.bg-secondary(colspan=6) AIRBASES
+  %tr
+    %td(colspan=6)
+      .container
+        .row
+          .col-1.table-secondary Type
+          .col-2.table-secondary Name
+          .col-1.table-secondary TCN
+          .col-1.table-secondary ATIS
+          .col-1.table-secondary Ground
+          .col-1.table-secondary Tower
+          .col-1.table-secondary RWY
+          .col-1.table-secondary Elev
+          .col-1.table-secondary ILS
+          .col-2.table-secondary Procedure
+        - ab = start_airbase(@flight)
+        - rwy = runway(ab, ab&.takeoff)
+        .row
+          .col-1 DEP
+          .col-2= link_to_start_airbase(@flight)
+          .col-1= ab&.tacan
+          .col-1= ab&.atis
+          .col-1= ab&.ground
+          .col-1= ab&.tower
+          .col-1= rwy&.name
+          .col-1= rwy&.elevation
+          .col-1= rwy&.ils
+          .col-2= link_to_departure(@flight)
+        - ab = land_airbase(@flight)
+        - rwy = runway(ab, ab&.land)
+        .row
+          .col-1 REC
+          .col-2= link_to_land_airbase(@flight)
+          .col-1= ab&.tacan
+          .col-1= ab&.atis
+          .col-1= ab&.ground
+          .col-1= ab&.tower
+          .col-1= rwy&.name
+          .col-1= rwy&.elevation
+          .col-1= rwy&.ils
+          .col-2= link_to_recovery(@flight)
+        - ab = divert_airbase(@flight)
+        - rwy = runway(ab, ab&.land)
+        .row
+          .col-1 DIV
+          .col-2= link_to_divert_airbase(@flight)
+          .col-1= ab&.tacan
+          .col-1= ab&.atis
+          .col-1= ab&.ground
+          .col-1= ab&.tower
+          .col-1= rwy&.name
+          .col-1= rwy&.elevation
+          .col-1= rwy&.ils
+          .col-2= link_to_divert(@flight)
+  %tr
+    %th.bg-secondary(colspan=6) SUPPORT
+  %tr
+    %td(colspan=6)
+      .container
+        .row
+          .col-2.table-secondary Type
+          .col-2.table-secondary Callsign
+          .col-1.table-secondary Comms
+          .col-1.table-secondary TCN
+          .col-3.table-secondary Position
+          .col-2.table-secondary Altitude
+          .col-1.table-secondary Speed
+        - @flight.selected_support.each do |support|
+          .row
+            .col-2= support.type
+            .col-2= support.callsign
+            .col-1= support.comms
+            .col-1= support.tacan
+            .col-3= support.position
+            .col-2= support.altitude
+            .col-1= support.speed
+  %tr
+    %th.bg-secondary(colspan=6) FLIGHT PLAN
+  %tr
+    %td(colspan=6)
+      .container
+        .row
+          .col-1.table-secondary #
+          .col-2.table-secondary Name
+          .col-4.table-secondary Navaid/Coords/DME
+          .col-1.table-secondary Altitude
+          .col-2.table-secondary TOT
+          .col-2.table-secondary
+        - @flight.waypoints.each do |waypoint|
+          = content_tag :div, id: dom_id(waypoint), class: 'row' do
+            = render waypoint
+        .row#add-waypoint
+          .col-12.table-secondary= link_to 'Add Waypoint', new_flight_waypoint_path(@flight), remote: true
+  - comms = 1.upto(4).map { |num| [num, @flight.send("radio#{num}")] }.select { |e| e.last.present? }
+  - unless comms.empty?
+    %tr
+      %th.bg-secondary(colspan=6) COMMS
+    - comms.each do |e|
+      %tr
+        %td.table-secondary= e.first
+        %td(colspan=5)= e.last
 
 = link_to 'Edit', edit_flight_path(@flight)
-= link_to 'Waypoints', flight_waypoints_path(@flight)
 = link_to 'Print', print_flight_path(@flight)
 = link_to 'Destroy', @flight, method: :delete, data: { confirm: 'Are you sure?' }
 = link_to 'Back', flights_path

@@ -1,38 +1,44 @@
 class WaypointsController < ApplicationController
   before_action :set_flight
-  before_action :set_waypoint, only: %i[show edit update destroy]
-
-  def index
-    @waypoints = @flight.waypoints
-  end
+  before_action :set_waypoint, only: %i[edit update destroy]
 
   def new
-    @waypoint = @flight.waypoints.build
+    @waypoint = @flight.waypoints.build number: @flight.waypoints.count + 1
   end
 
   def edit; end
 
   def create
+    params[:waypoint].delete_if{ |k,v| v.empty? }
     @waypoint = @flight.waypoints.build(waypoint_params)
 
-    if @waypoint.save
-      redirect_to flight_waypoints_path(@flight), notice: 'Waypoint was successfully created.'
-    else
-      render :new
+    respond_to do |format|
+      if @waypoint.save
+        format.js
+        format.html { redirect_to flight_path(@flight), notice: 'Waypoint was successfully created.' }
+      else
+        format.js
+        format.html { render :new }
+      end
     end
   end
 
   def update
-    if @waypoint.update(waypoint_params)
-      redirect_to flight_waypoints_path(@flight), notice: 'Waypoint was successfully updated.'
-    else
-      render :edit
+    respond_to do |format|
+      if @waypoint.update(waypoint_params)
+        format.js
+        format.html { redirect_to flight_path(@flight), notice: 'Waypoint was successfully updated.' }
+      else
+        format.js
+        format.html { render :edit }
+      end
+
     end
   end
 
   def destroy
     @waypoint.destroy
-    redirect_to flight_waypoints_path(@flight), notice: 'Flight was successfully destroyed.'
+    redirect_to flight_path(@flight), notice: 'Waypoint was successfully destroyed.'
   end
 
   private
@@ -46,6 +52,6 @@ class WaypointsController < ApplicationController
   end
 
   def waypoint_params
-    params.require(:waypoint).permit(:name, :position, :altitude)
+    params.require(:waypoint).permit(:name, :position, :altitude, :tot)
   end
 end

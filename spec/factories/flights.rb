@@ -8,7 +8,7 @@ FactoryBot.define do
     callsign_number { 1 }
     slots { 1 }
     mission { "MyString" }
-    objectives { "MyString" }
+    task { "MyString" }
     group_id { 1 }
     laser { 1 }
     tacan_channel { 1 }

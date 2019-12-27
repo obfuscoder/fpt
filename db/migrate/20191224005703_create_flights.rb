@@ -11,7 +11,7 @@ class CreateFlights < ActiveRecord::Migration[6.0]
       t.integer :callsign_number
       t.integer :slots
       t.string :mission
-      t.string :objectives
+      t.string :task
       t.integer :group_id
       t.integer :laser
       t.integer :tacan_channel

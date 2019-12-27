@@ -1,0 +1,7 @@
+.col-1= waypoint.number
+.col-2= waypoint.name
+.col-4= waypoint.position
+.col-1= waypoint.altitude
+.col-2= waypoint.tot&.to_s(:time)
+.col-1= link_to 'Edit', edit_flight_waypoint_path(@flight, waypoint), remote: true
+.col-1= link_to 'Destroy', flight_waypoint_path(@flight, waypoint), method: :delete, data: { confirm: 'Are you sure?' }

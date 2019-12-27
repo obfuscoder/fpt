@@ -1,13 +1,14 @@
 %h1 Listing flights
 
-%table
-  %thead
+%table.table.table-striped.table-bordered.table-sm.table-hover
+  %thead.thead-dark
     %tr
       %th Time
       %th Callsign
       %th Airframe
       %th Pilots
       %th Mission
+      %th AO
       %th Frequency
       %th Takeoff
       %th Departure
@@ -17,17 +18,20 @@
 
   %tbody
     - @flights.each do |flight|
-      %tr
+      %tr(scope="row")
         %td= flight.start
         %td= flight.full_callsign
         %td= Settings.airframes[flight.airframe]
         %td= "#{flight.pilots.count}/#{flight.slots}"
         %td= flight.mission
+        %td= flight.ao
         %td= flight.frequency
-        %td= Settings.theaters[flight.theater].airbases[flight.start_airbase].name
-        %td= Settings.theaters[flight.theater].airbases[flight.start_airbase].departures[flight.departure]
-        %td= Settings.theaters[flight.theater].airbases[flight.land_airbase].name
-        %td= Settings.theaters[flight.theater].airbases[flight.land_airbase].recoveries[flight.arrival]
-        %td= link_to 'Show', flight
+        %td= link_to_start_airbase(flight)
+        %td= link_to_departure(flight)
+        %td= link_to_land_airbase(flight)
+        %td= link_to_recovery(flight)
+        %td
+          = link_to 'Show', flight
+          = link_to 'Print', print_flight_path(flight)
 %br
 = link_to 'New Flight', new_flight_path

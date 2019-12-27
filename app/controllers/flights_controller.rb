@@ -24,7 +24,8 @@ class FlightsController < ApplicationController
   end
 
   def update
-    if @flight.update(flight_params)
+    p = flight_params
+    if @flight.update(p)
       redirect_to @flight, notice: 'Flight was successfully updated.'
     else
       render :edit
@@ -38,7 +39,16 @@ class FlightsController < ApplicationController
 
   def print
     mdc = MissionDataCard.new @flight
-    send_data mdc.render, filename: "mission_#{@flight.id}.pdf", type: 'application/pdf', disposition: :inline
+    combine_pdf = CombinePDF.parse mdc.render
+    combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.start_airbase, 'ad.pdf'))
+    combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.start_airbase, 'departures', "#{@flight.departure}.pdf"))
+    combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.land_airbase, 'recoveries', "#{@flight.recovery}.pdf"))
+    combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.land_airbase, 'ad.pdf')) if @flight.start_airbase != @flight.land_airbase
+    if @flight.divert_airbase
+      combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.divert_airbase, 'recoveries', "#{@flight.divert}.pdf"))
+      combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.divert_airbase, 'ad.pdf'))
+    end
+    send_data combine_pdf.to_pdf, filename: "mission_#{@flight.id}.pdf", type: 'application/pdf', disposition: :inline
   end
 
   private
@@ -48,6 +58,6 @@ class FlightsController < ApplicationController
   end
 
   def flight_params
-    params.require(:flight).permit(:theater, :airframe, :start, :duration, :callsign, :callsign_number, :slots, :mission, :objectives, :group_id, :laser, :tacan_channel, :tacan_polarization, :frequency, :notes, :start_airbase, :land_airbase, :divert_airbase, :departure, :arrival)
+    params.require(:flight).permit(:theater, :airframe, :ao, :start, :duration, :callsign, :callsign_number, :slots, :mission, :task, :group_id, :laser, :tacan_channel, :tacan_polarization, :frequency, :notes, :start_airbase, :land_airbase, :divert_airbase, :departure, :recovery, :divert, :radio1, :radio2, :radio3, :radio4, support: [])
   end
 end

@@ -11,43 +11,78 @@ theaters:
         name: Nellis AFB
         tacan: 12X
         atis: 270.1
-        clearance:
         ground: 123.1
         tower: 327.0
-        departure:
-        arrival:
+        takeoff: 3R
+        land: 21L
         runways:
-          "21L":
+          - name: 3R
             length: 1234
             elevation: 1234
-            ils: XXX
-          "21R":
+          - name: 21L
             length: 1234
             elevation: 1234
-          "3R":
+            ils: XXX.X
+          - name: 3L
             length: 1234
             elevation: 1234
-          "3L":
+          - name: 21R
             length: 1234
             elevation: 1234
         departures:
-          fyttr: FYTTR
+          fyttr3: FYTTR THREE
           fyttr_low: FYTTR LOW
+          tac_north: A10 TAC NORTH
+          tac_west: A10 TAC WEST
+          flex: FLEX TURNOUT
+          dream_low: DREAM LOW
+          dream4: DREAM FOUR
+          mmm4: MORMON MESA FOUR
         recoveries:
           stryk: STRYK
+          acton: ACTON
+          alamo: ALAMO
+          arcoe: ARCOE
+          bighorn: BIGHORN
+          jaysn: JAYSN
+          mintt: MINTT
+          mopar: MOPAR
+          rammm: RAMMM
+          timbr: TIMBR
+          flush: FLUSH
+          hilz21l: HI-ILS or LOC/DME Z RWY 21L
+          ht3r: HI-TACAN RWY 3R
+          hty21l: HI-TACAN Y RWY 21L
+          htz21l: HI-TACAN Z RWY 21L
+          ilx21l: ILS or LOC/DME X RWY 21L
+          iz21l: ILS or LOC/DME Z RWY 21L
+          ly21L: LOC Y RWY 21L
+          t21l: TACAN RWY 21L
+          tx21l: TACAN X RWY 21L
+      creech:
+        name: Creech AFB
+        tacan: 87X
+        atis: 122.5
+        tower: 360.7
+        ground: 275.8
+        recoveries:
+          ht8: HI-TACAN RWY 8
+          ht26: HI-TACAN RWY 26
     support:
-      - callsign: OVERLORD
+      overlord:
+        callsign: OVERLORD
         type: AWACS
-        frequency: 251.0
-      - callsign: HILL
+        comms: 251.0
+      fac_hill:
+        callsign: HILL
         type: FAC
         position: N36 39.81 W115 46.88
-      - callsign: TEXACO
-        type: TANKER
-        airframe: KC-135
-        tacan: 1X
-        frequency: 251.1
-        position: AR264
+      ar641:
+        callsign: TEXACO
+        type: TANKER (KC-135)
+        comms: 251.1
+        tacan: 15X
+        position: AR641.1 - AR641.2
         altitude: 14000
         speed: 220
   caucasus:

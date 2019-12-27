@@ -5,6 +5,7 @@ ruby '2.6.3'
 
 gem 'bootstrap'
 gem 'config'
+gem 'combine_pdf'
 gem 'haml-rails'
 gem 'prawn'
 gem 'rmagick'

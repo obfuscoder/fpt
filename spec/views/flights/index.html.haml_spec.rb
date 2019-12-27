@@ -11,7 +11,7 @@ RSpec.describe "flights/index", type: :view do
         :callsign_number => 3,
         :slots => 4,
         :flight => "Mission",
-        :objectives => "Objectives",
+        :task => "Task",
         :group_id => 5,
         :laser => 6,
         :tacan_channel => 7,
@@ -27,7 +27,7 @@ RSpec.describe "flights/index", type: :view do
         :callsign_number => 3,
         :slots => 4,
         :flight => "Mission",
-        :objectives => "Objectives",
+        :task => "Task",
         :group_id => 5,
         :laser => 6,
         :tacan_channel => 7,
@@ -47,7 +47,7 @@ RSpec.describe "flights/index", type: :view do
     assert_select "tr>td", :text => 3.to_s, :count => 2
     assert_select "tr>td", :text => 4.to_s, :count => 2
     assert_select "tr>td", :text => "Mission".to_s, :count => 2
-    assert_select "tr>td", :text => "Objectives".to_s, :count => 2
+    assert_select "tr>td", :text => "Task".to_s, :count => 2
     assert_select "tr>td", :text => 5.to_s, :count => 2
     assert_select "tr>td", :text => 6.to_s, :count => 2
     assert_select "tr>td", :text => 7.to_s, :count => 2

@@ -10,7 +10,7 @@ RSpec.describe "flights/new", type: :view do
       :callsign_number => 1,
       :slots => 1,
       :flight => "MyString",
-      :objectives => "MyString",
+      :task => "MyString",
       :group_id => 1,
       :laser => 1,
       :tacan_channel => 1,
@@ -39,7 +39,7 @@ RSpec.describe "flights/new", type: :view do
 
       assert_select "input[name=?]", "flight[mission]"
 
-      assert_select "input[name=?]", "flight[objectives]"
+      assert_select "input[name=?]", "flight[task]"
 
       assert_select "input[name=?]", "flight[group_id]"
 

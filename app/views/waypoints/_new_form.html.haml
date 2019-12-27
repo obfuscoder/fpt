@@ -1,0 +1,8 @@
+= form_with model: waypoint, url: flight_waypoints_path(@flight, waypoint), id: 'new-wp-inline_form' do |f|
+  .form-row
+    .col-1= waypoint.number
+    .col-2= f.text_field :name, class: 'form-control', value: sprintf("MSN%02d", waypoint.number)
+    .col-4= f.text_field :position, class: 'form-control'
+    .col-1= f.text_field :altitude, class: 'form-control'
+    .col-2.form-row= f.time_select :tot, { include_blank: true, ignore_date: true }, class: 'form-control col'
+    .col-2= f.submit 'Add'

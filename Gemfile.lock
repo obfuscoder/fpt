@@ -67,6 +67,8 @@ GEM
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
     byebug (11.0.1)
+    combine_pdf (1.0.16)
+      ruby-rc4 (>= 0.1.5)
     concurrent-ruby (1.1.5)
     config (2.0.0)
       activesupport (>= 4.2)
@@ -214,6 +216,7 @@ GEM
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.0)
+    ruby-rc4 (0.1.5)
     ruby_dep (1.5.0)
     ruby_parser (3.14.1)
       sexp_processor (~> 4.9)
@@ -271,6 +274,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   bootstrap
   byebug
+  combine_pdf
   config
   factory_bot_rails
   haml-rails
