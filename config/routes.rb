@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :waypoints, except: %i[index]
   end
 
-  resources :airbases, only: :index
+  get 'airbases', to: 'airbases#index'
+  get 'procedures', to: 'airbases#procedures'
 end

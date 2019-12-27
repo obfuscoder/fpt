@@ -29,7 +29,7 @@
           .col-md-8
             = f.select :callsign, Settings.callsigns, {}, class: 'form-control'
           .col-md-4
-            = f.select :callsign_number, 1..9, {}, class: 'form-control'
+            = f.select :callsign_number, 1..9, { include_blank: true }, class: 'form-control'
       %th.table-secondary Mission
       %td= f.select :mission, Settings.missions, {}, class: 'form-control'
       %th.table-secondary Comms
@@ -44,17 +44,17 @@
       %td(colspan=3)= f.text_field :task, class: 'form-control'
     %tr
       %th.table-secondary Departure
-      %td= f.select :start_airbase, airbases(@flight), {}, class: 'form-control'
+      %td= f.select :start_airbase, airbases(@flight), {}, class: 'form-control', data: { remote: true, url: procedures_path }
       %td= f.select :departure, departures(@flight), {}, class: 'form-control'
       %th.table-secondary(colspan=3) AO
     %tr
       %th.table-secondary Recovery
-      %td= f.select :land_airbase, airbases(@flight), {}, class: 'form-control'
+      %td= f.select :land_airbase, airbases(@flight), {}, class: 'form-control', data: { remote: true, url: procedures_path }
       %td= f.select :recovery, recoveries(@flight), {}, class: 'form-control'
       %td(colspan=3)= f.text_field :ao, class: 'form-control'
     %tr
       %th.table-secondary Divert
-      %td= f.select :divert_airbase, airbases(@flight), { include_blank: true }, class: 'form-control'
+      %td= f.select :divert_airbase, airbases(@flight), { include_blank: true }, class: 'form-control', data: { remote: true, url: procedures_path }
       %td= f.select :divert, diverts(@flight), {}, class: 'form-control'
     %tr
       %th.table-secondary Grp Id
