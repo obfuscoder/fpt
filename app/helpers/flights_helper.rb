@@ -68,6 +68,6 @@ module FlightsHelper
   end
 
   def link_to_divert(flight)
-    link_to flight.divert_name, "/#{flight.theater}/#{flight.land_airbase}/recoveries/#{flight.divert}.pdf" if flight.divert
+    link_to flight.divert_name, "/#{flight.theater}/#{flight.divert_airbase}/recoveries/#{flight.divert}.pdf" if flight.divert
   end
 end
