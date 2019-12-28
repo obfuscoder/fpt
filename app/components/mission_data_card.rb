@@ -213,17 +213,20 @@ class MissionDataCard < Prawn::Document
     cell(10, airbase.ils)
     next_row
 
-    airbase = Settings.theaters[@flight.theater].airbases[@flight.divert_airbase]
-    cell(0, 'Div')
-    cell([1, 3], airbase.name)
-    cell(4, airbase.tacan)
-    cell(5, airbase.atis)
-    cell(6, airbase.ground)
-    cell(7, airbase.tower)
-    cell(8, airbase.land)
-    cell(9, airbase.elevation)
-    cell(10, airbase.ils)
-    next_row
+    if @flight.divert_airbase
+      airbase = Settings.theaters[@flight.theater].airbases[@flight.divert_airbase]
+      cell(0, 'Div')
+      cell([1, 3], airbase.name)
+      cell(4, airbase.tacan)
+      cell(5, airbase.atis)
+      cell(6, airbase.ground)
+      cell(7, airbase.tower)
+      cell(8, airbase.land)
+      cell(9, airbase.elevation)
+      cell(10, airbase.ils)
+      next_row
+    end
+
     next_row
   end
 
