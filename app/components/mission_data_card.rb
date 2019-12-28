@@ -130,6 +130,7 @@ class MissionDataCard < Prawn::Document
     comms = 1.upto(4).map { |num| [num, @flight.send("radio#{num}")] }.select { |e| e.last.present? }
     return if comms.empty?
 
+    define_columns 11
     header('COMMS')
 
     cell(0, 'Radio', header: true)
