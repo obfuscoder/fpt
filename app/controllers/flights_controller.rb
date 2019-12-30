@@ -1,5 +1,5 @@
 class FlightsController < ApplicationController
-  before_action :set_flight, only: %i[show edit update destroy print]
+  before_action :set_flight, only: %i[show edit update destroy print clone]
 
   def index
     @flights = params['all'] ? Flight.all : Flight.current
@@ -40,6 +40,19 @@ class FlightsController < ApplicationController
   def destroy
     @flight.destroy
     redirect_to flights_url, notice: 'Flight was successfully destroyed.'
+  end
+  
+  def clone
+    src_flight = @flight
+    @flight = src_flight.dup
+    @flight.start = Date.tomorrow
+    @flight.save!
+    src_flight.waypoints.each do |wp|
+      new_wp = wp.dup
+      new_wp.flight = @flight
+      new_wp.save!
+    end
+    redirect_to edit_flight_path(@flight), notice: 'Flight successfully cloned.'
   end
 
   def print
