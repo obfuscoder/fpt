@@ -146,7 +146,7 @@ class MissionDataCard < Prawn::Document
   end
 
   def notes
-    return if @flight.notes.empty?
+    return if @flight.notes.blank?
 
     define_columns 1
     header('NOTES')
