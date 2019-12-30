@@ -2,6 +2,9 @@ class Flight < ApplicationRecord
   has_many :pilots
   has_many :waypoints
 
+  default_scope { order(date: :desc) }
+  scope :current, -> { where('start > ?', 1.day.ago) }
+
   def full_callsign
     callsign_number.present? ? "#{callsign} #{callsign_number}" : callsign
   end

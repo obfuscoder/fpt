@@ -29,24 +29,24 @@
       .container
         .row
           .col-1.table-secondary #
-          .col-3.table-secondary Callsign
+          .col-2.table-secondary Callsign
           .col-3.table-secondary Pilot
           .col-1.table-secondary NetId
           .col-2.table-secondary Lasercode
           .col-1.table-secondary TCN
-          .col-1.table-secondary
+          .col-2.table-secondary
         - @flight.slots.times do |index|
           - number = index + 1
           .row
             .col-1= "-#{number}"
             - pilot = @flight.pilots.find_by number: number
             - if pilot
-              .col-3= pilot.callsign
+              .col-2= pilot.callsign
               .col-3= pilot.name
               .col-1= pilot.net_id
               .col-2= pilot.laser
               .col-1= pilot.tacan
-              .col-1= link_to 'Unassign', flight_pilot_path(@flight, pilot), method: :delete
+              .col-2= link_to 'Unassign', flight_pilot_path(@flight, pilot), method: :delete, class: 'btn btn-danger btn-sm'
             - else
               .col-11
                 = form_for :pilot, url: flight_pilots_path(@flight) do |f|
@@ -55,7 +55,7 @@
                     .col-auto
                       = f.select :name, Settings.pilots, {}, class: 'form-control'
                     .col-auto
-                      = f.submit 'Assign'
+                      = f.submit 'Assign', class: 'btn btn-primary'
   %tr
     %th.bg-secondary(colspan=6) AIRBASES
   %tr
@@ -149,7 +149,7 @@
           = content_tag :div, id: dom_id(waypoint), class: 'row' do
             = render waypoint
         .row#add-waypoint
-          .col-12.table-secondary= link_to 'Add Waypoint', new_flight_waypoint_path(@flight), remote: true
+          .col-12.table-secondary= link_to 'Add Waypoint', new_flight_waypoint_path(@flight), remote: true, class: 'btn btn-primary btn-sm'
   - comms = 1.upto(4).map { |num| [num, @flight.send("radio#{num}")] }.select { |e| e.last.present? }
   - unless comms.empty?
     %tr
@@ -159,7 +159,9 @@
         %td.table-secondary= e.first
         %td(colspan=5)= e.last
 
-= link_to 'Edit', edit_flight_path(@flight)
-= link_to 'Print', print_flight_path(@flight)
-= link_to 'Destroy', @flight, method: :delete, data: { confirm: 'Are you sure?' }
+= link_to 'Edit', edit_flight_path(@flight), class: 'btn btn-primary'
+= link_to 'Print', print_flight_path(@flight), class: 'btn btn-secondary'
+/= link_to 'Clone', clone_flight_path(@flight), class: 'btn btn-info'
+= link_to 'Destroy', @flight, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+%p
 = link_to 'Back', flights_path

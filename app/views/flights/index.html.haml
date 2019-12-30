@@ -1,5 +1,12 @@
 %h1 Listing flights
-
+- if @all
+  %p
+    Showing all flights.
+    = link_to 'Show only current or upcoming flights.', root_path
+- else
+  %p
+    Showing current and upcoming flights.
+    = link_to 'Also show past flights.', root_path(params: { all: true })
 %table.table.table-striped.table-bordered.table-sm.table-hover
   %thead.thead-dark
     %tr
@@ -14,8 +21,8 @@
       %th Departure
       %th Land
       %th Recovery
+      %th Task
       %th
-
   %tbody
     - @flights.each do |flight|
       %tr(scope="row")
@@ -30,8 +37,7 @@
         %td= link_to_departure(flight)
         %td= link_to_land_airbase(flight)
         %td= link_to_recovery(flight)
-        %td
-          = link_to 'Show', flight
-          = link_to 'Print', print_flight_path(flight)
+        %td= flight.task
+        %td= link_to 'Show', flight, class: 'btn btn-primary btn-sm'
 %br
-= link_to 'New Flight', new_flight_path
+= link_to 'New Flight', new_flight_path, class: 'btn btn-primary'

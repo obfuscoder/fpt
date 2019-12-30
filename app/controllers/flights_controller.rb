@@ -2,7 +2,8 @@ class FlightsController < ApplicationController
   before_action :set_flight, only: %i[show edit update destroy print]
 
   def index
-    @flights = Flight.all
+    @flights = params['all'] ? Flight.all : Flight.current
+    @all = params['all'] ? true : false
   end
 
   def show; end

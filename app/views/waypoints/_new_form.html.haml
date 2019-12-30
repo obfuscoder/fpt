@@ -5,4 +5,4 @@
     .col-4= f.text_field :position, class: 'form-control'
     .col-1= f.text_field :altitude, class: 'form-control'
     .col-2.form-row= f.time_select :tot, { include_blank: true, ignore_date: true }, class: 'form-control col'
-    .col-2= f.submit 'Add'
+    .col-2= f.submit 'Add', class: 'btn btn-primary'

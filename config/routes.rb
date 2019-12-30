@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :flights do
     member do
       get :print
+      post :clone
     end
     resources :pilots
     resources :waypoints, except: %i[index]

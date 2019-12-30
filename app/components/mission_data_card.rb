@@ -146,6 +146,8 @@ class MissionDataCard < Prawn::Document
   end
 
   def notes
+    return if @flight.notes.empty?
+
     define_columns 1
     header('NOTES')
     cell(0, "\n#{@flight.notes}", valign: :top, rows: (@grid.rows - @row))

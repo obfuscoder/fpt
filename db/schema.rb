@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 2019_12_26_171346) do
     t.string "divert_airbase"
     t.string "departure"
     t.string "recovery"
-    t.string "flights"
     t.string "ao"
     t.string "divert"
     t.string "support"
@@ -63,7 +62,6 @@ ActiveRecord::Schema.define(version: 2019_12_26_171346) do
     t.string "altitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "waypoints"
     t.time "tot"
     t.index ["flight_id"], name: "index_waypoints_on_flight_id"
   end
