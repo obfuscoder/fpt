@@ -85,25 +85,107 @@ theaters:
         position: AR641.1 - AR641.2
         altitude: 14000
         speed: 220
-  caucasus:
-    name: Caucasus
-  gulf:
-    name: Persian Gulf
+    waypoints:
+      - ACTON	LSV 021/36	N3644.52	W11436.45
+      - APEX	LSV 027/09	N3621.58	W11454.34
+      - ARCOE	LSV 357/30	N3644.26	W11455.02
+      - Alamo N Point	LSV 333/60	N3712.8	W11520.5
+      - Alamo S Point	LSV 325/38	N3650.0	W11520.2
+      - BIGHORN	LSV 347/97	N3752.00	W11502.00
+      - Beatty	N3648:54	W11644:86
+      - Belted Peak	TQQ 100/36	N3734.0	W11604.5
+      - Bishop	N3722.62	W11821.99
+      - Black Mt	TQQ 156/31	N3717.0	W11638.5
+      - Boulder	N3559:75	W11451.82
+      - CARPP	LSV 355/63	N3717.00	W11450.72
+      - CESAR	LSV 290/85	N3700.49	W11630.51
+      - CRAIG	LSV 263/5.5	N3615.25	W11508.27
+      - Caliente A Ctr Point	ILC 207/47	N3739.0	W11500.0
+      - Caliente B Ctr Point	ILC 192/38	N3740.0	W11443.0
+      - Cedar City	N3747.24	W11304.90
+      - Cedar Peak	TQQ 092/56	N3742.0	W11620.0
+      - Coale Dale	N3800.20	W11746.23
+      - Coyote Peak	TQQ 088/56	N3737.5	W11538.0
+      - Creech AFB	N3635.20	W11540.12
+      - DREAM	LAS 354/66 BLD 342/71	N3710.34	W11459.53
+      - DUCK	LSV 052/7.5	N3617.84	W11453.09
+      - Daggett	N3457.75	W11634.69
+      - Dry Lake	LSV 017/15	N3627.68	W11452.21
+      - ELKXX	LSV 001/100	N375200	W11430.00
+      - Elgin N Point	LSV 007/70	N3721.0	W11432.0
+      - Elgin S Point	LSV 012/42	N3653.0	W11440.0
+      - FLEX	LSV 337/5	N3618.62	W11502.36
+      - FLUSH	LSV 287/73	N3650.80	W11620.27
+      - FYTTR	LSV 269/33	N3621.44	W11541.47
+      - GARTH	LSV 302/90	N3717.96	W11621.26
+      - GASS PEAK	LSV 309/12	N3624.14	W11510.66
+      - Goffs	N3507.87	W11510.59
+      - Groom Lake	INS 339/42	N3716.5	W11548.0
+      - Groom Lake	N3713.91	W11548.16
+      - Hector	N3447.83	W11627.78
+      - JUNNO	BLD 346/44	N3643.80	W11452.77
+      - Jettison Hill	LSV 350/5.2	N3619.88	W11501.17
+      - Leach Lake	DAG 341/40	N3537.51	W11640.67
+      - MINTT	LSV 339/28 LAS 351/38	N3642.74	W11506.29
+      - MOOSE	LSV 016/94	N3736.77	W11404.42
+      - MOPAR	BTY 347/29	N3717.00	W11645.00
+      - McCarran Intl	N3604.78	W11509.59
+      - Milford	N3821.62	W11300.79
+      - Mina	N3833.92	W11801.97
+      - Mormon Mesa	N3646.16	W11416.65
+      - Mt Helen	TQQ 162/17	N3730.0	W11644.5
+      - Mt Irish	TQQ 085/67	N3738.5	W11524.0
+      - NIXON	LSV 292/30	N3632.01	W11532.25
+      - NUGGE	BLD 346/68	N3707.83	W11453.29
+      - Needles	N3445.96	W11428.43
+      - Nellis	N3614.68	W11501.50
+      - PIUTE	INS 245/21	N3630.68	W11605.69
+      - Peach Springs	N3537.48	W11332.67
+      - Quartzite Mt	TQQ 113/27	N3731.0	W11619.5
+      - R63 Tower	INS 067/8	N3637.0	W11530.2
+      - R64 W Circle	INS 354/6	N3640.9	W11540.4
+      - RAMMM	LSV 024/38	N3645.00	W11433.33
+      - Reveille Peak	TQQ 070/31	N3751.5	W11608.0
+      - SARAH	LSV 315/25	N3636.45	W11518.03
+      - SHOWW	BTY 099/37	N3634.25	W11602.27
+      - SIMNS	LSV 276/8	N3617.34	W11510.75
+      - STRIP	INS 114/24	N3620.60	W11516.48
+      - STRYK	LSV 282/26	N3625.62	W11530.70
+      - Silverbow	N3748.00	W11647.00
+      - St George	N3705.29	W11335.53
+      - Stonewall Mt	TQQ 207/21	N3730.0	W11703.0
+      - Stuckey's Peak	LSV 004/52	N3704.1	W11444.3
+      - Stuckey’s Peak	LSV 003/51	N3704.10	W11444.30
+      - Student Gap	LSV 349/82	N3737.0	W11500.0
+      - T-Bird Lake	LSV 334/45	N3658.1	W11513.5
+      - TIMBR	LSV 011/33	N3645.00	W11444.58
+      - TROUTT	LSV 323/63	N3717.00	W11507.05
+      - TUCKY	BTY 212/18	N3635.50	W11700.10
+      - Texas Lake	LSV 350/64	N3719.00	W11457.50
+      - Texas Lake	LSV 351/64	N3719.0	W11457.5
+      - Tonopah Muni	N3801.84	W11702.01
+      - VETTT	LSV 030/31	N3637.34	W11435.19
+      - Wilson Creek	N3815.02	W11423.65
+      - Winner LZ	LSV 356/6	N3620.33	W11500.25
+caucasus:
+  name: Caucasus
+gulf:
+  name: Persian Gulf
 airframes:
-  f18: F/A-18C
   a10: A-10C
+  f18: F/A-18C
   av8b: AV-8B N/A
   f16: F-16
 callsigns:
-  - Tiger
   - Cougar
-  - Monster
   - Dragon
-  - T-Rex
-  - Raptor
-  - Vanguard
   - Edelweiss
   - Holiday
+  - Monster
+  - Raptor
+  - T-Rex
+  - Tiger
+  - Vanguard
 missions:
   - Training
   - CAS
@@ -114,35 +196,35 @@ missions:
   - SCAR
   - CSAR
 pilots:
+  - Butcher
+  - Chatterbox
+  - DC
+  - DirtDiver
+  - G-Rex
   - Ghost
+  - Hawk
+  - Herby
+  - Hercules
+  - Jabba
+  - Jemi
+  - Loki
+  - MKay
+  - Marsy
+  - Mütze
   - Nerkub
+  - Poet
+  - Prinz
   - Retai
   - SNAFU
-  - Poet
-  - Warblade
-  - Stiletto
-  - Prinz
-  - Tammi
-  - Jemi
-  - Hawk
-  - DirtDiver
-  - Marsy
-  - Loki
-  - Toolface
-  - Jabba
-  - G-Rex
-  - Herby
-  - Butcher
-  - Mütze
-  - Chatterbox
-  - Hercules
   - Sandman
-  - Tank
-  - MKay
   - Siddharta
-  - toto
-  - Striker
-  - Sparrowhawk
-  - Tronix
   - SkyRat
-  - DC
+  - Sparrowhawk
+  - Stiletto
+  - Striker
+  - Tammi
+  - Tank
+  - Toolface
+  - toto
+  - Tronix
+  - Warblade

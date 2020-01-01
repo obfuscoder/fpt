@@ -1,6 +1,6 @@
 class MissionDataCard < Prawn::Document
   def initialize(flight, options = {})
-    super(options)
+    super(options.merge(page_size: [540, 814]))
 
     @flight = flight
     @row = 0

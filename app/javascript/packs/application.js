@@ -15,3 +15,11 @@ import '../stylesheets/application';
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+$( document ).on('turbolinks:load', function() {
+    $('#dropdownMenuLink').keypress(function() {
+        $('#dropdownMenuLink').dropdown('show')
+        $('#dropdownMenuLink').dropdown('update')
+    })
+    
+})
