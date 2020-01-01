@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :flights do
     member do
       get :print
+      get :print_images
       post :clone
     end
     resources :pilots

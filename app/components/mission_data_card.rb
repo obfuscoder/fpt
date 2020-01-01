@@ -1,6 +1,14 @@
 class MissionDataCard < Prawn::Document
   def initialize(flight, options = {})
-    super(options.merge(page_size: [540, 814]))
+    super(options.merge(page_size: [540, 814], margin: 10))
+
+    font_families.update 'freesans' => {
+      normal: 'lib/assets/ttf/FreeSans.ttf',
+      bold: 'lib/assets/ttf/FreeSansBold.ttf',
+      italic: 'lib/assets/ttf/FreeSansOblique.ttf',
+      bold_italic: 'lib/assets/ttf/FreeSansBoldOblique.ttf'
+    }
+    font 'freesans'
 
     @flight = flight
     @row = 0
@@ -246,11 +254,10 @@ class MissionDataCard < Prawn::Document
     from = col.kind_of?(Array) ? [@row, col.first] : [@row, col]
     to = col.kind_of?(Array) ? [@row + rows - 1, col.last] : [@row + rows - 1, col]
     grid(from, to).bounding_box do
-      if header
-        fill_color 'c0c0c0'
-        fill_rectangle bounds.top_left, bounds.width, bounds.height
-        fill_color '000000'
-      end
+      fill_color header ? 'c0c0c0' : 'ffffff'
+      fill_rectangle bounds.top_left, bounds.width, bounds.height
+      fill_color '000000'
+
       stroke_bounds
       indent(3, 3) do
         options = { style: style, size: 12, align: align, valign: valign, overflow: :shrink_to_fit, inline_format: true }

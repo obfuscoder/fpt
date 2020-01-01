@@ -56,7 +56,7 @@ class Flight < ApplicationRecord
   end
 
   def others
-    Flight.where.not(id: id)
+    Flight.where(theater: theater, start: (start - 4.hours)..(start + 4.hours)).where.not(id: id)
   end
 
   def laser_mask

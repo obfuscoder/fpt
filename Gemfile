@@ -9,6 +9,7 @@ gem 'config'
 gem 'haml-rails'
 gem 'prawn'
 gem 'rmagick'
+gem 'rubyzip'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'

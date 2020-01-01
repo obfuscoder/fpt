@@ -1,5 +1,7 @@
+require 'zip'
+
 class FlightsController < ApplicationController
-  before_action :set_flight, only: %i[show edit update destroy print clone]
+  before_action :set_flight, only: %i[show edit update destroy print print_images clone]
 
   def index
     @flights = params['all'] ? Flight.all : Flight.current
@@ -41,7 +43,7 @@ class FlightsController < ApplicationController
     @flight.destroy
     redirect_to flights_url, notice: 'Flight was successfully destroyed.'
   end
-  
+
   def clone
     src_flight = @flight
     @flight = src_flight.dup
@@ -60,8 +62,17 @@ class FlightsController < ApplicationController
   end
 
   def print_images
-    pdf = create_pdf
-
+    images = Magick::Image.from_blob create_pdf
+    stringio = ::Zip::OutputStream.write_buffer do |zip|
+      images.each_with_index do |image, index|
+        # image.alpha = 'off' ???
+        image.format = 'png'
+        zip.put_next_entry sprintf('mdc_%d_%02d.png', @flight.id, index + 1)
+        zip.write image.to_blob
+      end
+    end
+    stringio.rewind
+    send_data stringio.sysread, filename: "mission_#{@flight.id}.zip", type: 'application/zip'
   end
 
   private
@@ -73,7 +84,6 @@ class FlightsController < ApplicationController
   def flight_params
     params.require(:flight).permit(:theater, :airframe, :ao, :start, :duration, :callsign, :callsign_number, :slots, :mission, :task, :group_id, :laser, :tacan_channel, :tacan_polarization, :frequency, :notes, :start_airbase, :land_airbase, :divert_airbase, :departure, :recovery, :divert, :radio1, :radio2, :radio3, :radio4, support: [])
   end
-end
 
   private
 
@@ -90,3 +100,4 @@ end
     end
     combine_pdf.to_pdf
   end
+end
