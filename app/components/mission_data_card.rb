@@ -15,6 +15,22 @@ class MissionDataCard < Prawn::Document
   end
 
   def render
+    set_white_background
+
+    flight_info
+    airbases
+    support
+    other_flights
+    start_new_page
+    flight_plan
+    comms
+    notes
+    super
+  end
+
+  private
+
+  def flight_info
     define_columns 6
 
     header('MISSION DATA CARD')
@@ -57,18 +73,7 @@ class MissionDataCard < Prawn::Document
       next_row
     end
     next_row
-
-    airbases
-    support
-    other_flights
-    start_new_page
-    flight_plan
-    comms
-    notes
-    super
   end
-
-  private
 
   def other_flights
     flights = @flight.others
@@ -270,5 +275,16 @@ class MissionDataCard < Prawn::Document
     super(options)
 
     @row = 0
+
+    set_white_background
+  end
+
+  def set_white_background
+    color = fill_color
+    canvas do
+      fill_color 'ffffff'
+      fill_rectangle([bounds.left, bounds.top], bounds.right, bounds.top)
+    end
+    fill_color color
   end
 end
