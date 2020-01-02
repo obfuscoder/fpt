@@ -1,5 +1,5 @@
 class Flight < ApplicationRecord
-  has_many :pilots
+  has_many :pilots, -> { order(:number) }
   has_many :waypoints
 
   default_scope { order(start: :desc) }

@@ -11,24 +11,27 @@ theaters:
         name: Nellis AFB
         tacan: 12X
         atis: 270.1
-        ground: 123.1
+        clearance: 289.4
+        ground: 275.8
         tower: 327.0
+        approach: 291.725
+        departure: 385.4
         takeoff: 3R
         land: 21L
         runways:
           - name: 3R
-            length: 1234
-            elevation: 1234
+            length: 10051
+            elevation: 1841
           - name: 21L
-            length: 1234
-            elevation: 1234
-            ils: XXX.X
+            length: 10051
+            elevation: 1854
+            ils: 109.1
           - name: 3L
-            length: 1234
-            elevation: 1234
+            length: 10120
+            elevation: 1841
           - name: 21R
-            length: 1234
-            elevation: 1234
+            length: 10120
+            elevation: 1857
         departures:
           fyttr3: FYTTR THREE
           fyttr_low: FYTTR LOW
@@ -80,8 +83,8 @@ theaters:
       ar641:
         callsign: TEXACO
         type: TANKER (KC-135)
-        comms: 251.1
-        tacan: 15X
+        comms: 265.0
+        tacan: 41X
         position: AR641.1 - AR641.2
         altitude: 14000
         speed: 220
