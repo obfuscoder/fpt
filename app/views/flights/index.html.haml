@@ -2,7 +2,7 @@
 - if @all
   %p
     Showing all flights.
-    = link_to 'Show only current or upcoming flights.', root_path
+    = link_to 'Show only current or upcoming flights.', root_path(params: { all: false })
 - else
   %p
     Showing current and upcoming flights.

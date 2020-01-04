@@ -4,8 +4,9 @@ class FlightsController < ApplicationController
   before_action :set_flight, only: %i[show edit update destroy print print_images clone]
 
   def index
-    @flights = params['all'] ? Flight.all : Flight.current
-    @all = params['all'] ? true : false
+    set_all_flights if params['all'].present?
+    @flights = all_flights? ? Flight.all : Flight.current
+    @all = all_flights?
   end
 
   def show; end
@@ -68,8 +69,8 @@ class FlightsController < ApplicationController
         image.resize! 540, 814
         image.alpha Magick::RemoveAlphaChannel
         image.background_color = 'white'
-        image.format = 'png'
-        zip.put_next_entry sprintf('mdc_%d_%02d.png', @flight.id, index + 1)
+        image.format = 'jpg'
+        zip.put_next_entry sprintf('mdc_%d_%02d.jpg', @flight.id, index + 1)
         zip.write image.to_blob
       end
     end
@@ -101,5 +102,13 @@ class FlightsController < ApplicationController
       combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.divert_airbase, 'ad.pdf'))
     end
     combine_pdf.to_pdf
+  end
+
+  def all_flights?
+    session[:all_flights] ? true : false
+  end
+
+  def set_all_flights
+    session[:all_flights] = ActiveModel::Type::Boolean.new.cast params[:all]
   end
 end
