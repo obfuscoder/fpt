@@ -8,8 +8,8 @@ class WaypointsController < ApplicationController
 
   def index
     wps = Settings.theaters[@flight.theater].waypoints
-    wps.select! { |wp| wp.name.downcase.include? params[:q].downcase } if params[:q]
-    wps.map! { |wp| { name: wp.name, pos: wp.pos } }
+    wps.select! { |wp| wp[:name].downcase.include? params[:q].downcase } if params[:q]
+    wps.map! { |wp| { name: wp[:name], pos: wp[:pos] } }
     render json: wps
   end
 
