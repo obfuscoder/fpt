@@ -6,16 +6,13 @@ var input = $('#waypoint_name')
 var menu = $('.dropdown-menu')
 input.keyup(function() {
     var value = input.val()
-    console.log("value = " + value)
     if (value.length < 2) {
         menu.dropdown('hide')
     } else {
         $.get('<%= flight_waypoints_path(@flight) %>?q=' + value, function(data) {
-            console.log(data)
             if (data.length > 0) {
                 menu.empty()
                 data.forEach(function(value, index) {
-                    console.log(value)
                     menu.append('<a class="dropdown-item" href="#" data-pos="' + value['pos'] + '">' + value['name'] + '</a>')
                 })
                 menu.dropdown('show')
