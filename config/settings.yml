@@ -73,9 +73,10 @@ theaters:
           ht26: HI-TACAN RWY 26
     support:
       overlord:
-        callsign: OVERLORD
-        type: AWACS
-        comms: 251.0
+        callsign: MAGIC
+        type: AWACS (E-3A)
+        comms: 377.8
+        speed: 500
       fac_hill:
         callsign: HILL
         type: FAC
@@ -85,9 +86,41 @@ theaters:
         type: TANKER (KC-135)
         comms: 265.0
         tacan: 41X
-        position: AR641.1 - AR641.2
-        altitude: 14000
-        speed: 220
+        position: AR641A (AR641.1 - AR641.2)
+        altitude: 17000
+        speed: 300
+      ar624:
+        callsign: TEXACO
+        type: TANKER (KC-135)
+        comms: 289.7
+        tacan: 22X
+        position: AR-624 (????)
+        altitude: 24000
+        speed: 450
+      ar635:
+        callsign: SHELL
+        type: TANKER (KC-135MPRS)
+        comms: 360.8
+        tacan: 35Y
+        position: AR-625 (N38 30 W115 18 - N38 27 W114 14)
+        altitude: 25000
+        speed: 450
+      ar625:
+        callsign: ARCO
+        type: TANKER (KC-135MPRS)
+        comms: 319.8
+        tacan: 25Y
+        position: AR-625 (N38 19 W117 36 - N37 29 W117 36)
+        altitude: 25000
+        speed: 450
+      ar231:
+        callsign: TEXACO
+        type: TANKER (KC-130)
+        comms: 300.05
+        tacan: 31Y
+        position: AR-231V (????)
+        altitude: 10000
+        speed: 320
     waypoints:
       - ACTON	LSV 021/36	N3644.52	W11436.45
       - APEX	LSV 027/09	N3621.58	W11454.34
