@@ -1,3 +1,4 @@
 e = document.getElementById('<%= dom_id(@waypoint) %>')
 e.insertAdjacentHTML('afterend', "<%= j render 'inline_form', waypoint: @waypoint %>")
 e.style.display = 'none'
+$('#waypoint_name').focus()

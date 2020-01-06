@@ -1,3 +1,43 @@
-e = document.getElementById('add-waypoint')
-e.insertAdjacentHTML('afterend', "<%= j render 'new_form', waypoint: @waypoint %>")
-e.style.display = 'none'
+var add_button = $('#add-waypoint')
+add_button.after('<%= j render 'new_form', waypoint: @waypoint %>')
+
+var dropdown = $('.dropdown')
+var input = $('#waypoint_name')
+var menu = $('.dropdown-menu')
+input.keyup(function() {
+    var value = input.val()
+    console.log("value = " + value)
+    if (value.length < 2) {
+        menu.dropdown('hide')
+    } else {
+        $.get('<%= flight_waypoints_path(@flight) %>?q=' + value, function(data) {
+            console.log(data)
+            if (data.length > 0) {
+                menu.empty()
+                data.forEach(function(value, index) {
+                    console.log(value)
+                    menu.append('<a class="dropdown-item" href="#" data-pos="' + value['pos'] + '">' + value['name'] + '</a>')
+                })
+                menu.dropdown('show')
+                menu.dropdown('update')
+                $('.dropdown-item').click(function () {
+                    $('#waypoint_name').val($(this).html())
+                    $('#waypoint_position').val($(this).attr('data-pos'))
+                    $('#waypoint_altitude').focus()
+                    return false
+                })
+            } else {
+                menu.dropdown('hide')
+            }
+        })
+    }
+})
+dropdown.focusout(function(e) {
+    if ($(this).has(e.relatedTarget).length === 0) {
+        menu.dropdown('hide')
+    }
+})
+
+add_button.hide()
+
+$('#waypoint_name').focus()

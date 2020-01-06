@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       post :clone
     end
     resources :pilots
-    resources :waypoints, except: %i[index]
+    resources :waypoints
   end
 
   get 'airbases', to: 'airbases#index'

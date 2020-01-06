@@ -6,10 +6,17 @@ class WaypointsController < ApplicationController
     @waypoint = @flight.waypoints.build number: @flight.waypoints.count + 1
   end
 
+  def index
+    wps = Settings.theaters[@flight.theater].waypoints
+    wps.select! { |wp| wp.name.downcase.include? params[:q].downcase } if params[:q]
+    wps.map! { |wp| { name: wp.name, pos: wp.pos } }
+    render json: wps
+  end
+
   def edit; end
 
   def create
-    params[:waypoint].delete_if{ |k,v| v.empty? }
+    params[:waypoint].delete_if{ |_k, v| v.empty? }
     @waypoint = @flight.waypoints.build(waypoint_params)
 
     respond_to do |format|
