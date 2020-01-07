@@ -81,45 +81,45 @@ theaters:
         callsign: HILL
         type: FAC
         position: N36 39.81 W115 46.88
-      ar641:
-        callsign: TEXACO
-        type: TANKER (KC-135)
-        comms: 265.0
-        tacan: 41X
-        position: AR641A (AR641.1 - AR641.2)
-        altitude: 17000
-        speed: 300
       ar624:
-        callsign: TEXACO
+        callsign: TEXACO 2
         type: TANKER (KC-135)
         comms: 289.7
-        tacan: 22X
-        position: AR-624 (????)
-        altitude: 24000
-        speed: 450
-      ar635:
-        callsign: SHELL
-        type: TANKER (KC-135MPRS)
-        comms: 360.8
-        tacan: 35Y
-        position: AR-625 (N38 30 W115 18 - N38 27 W114 14)
-        altitude: 25000
-        speed: 450
+        tacan: 95Y
+        position: AR-624: CDC 166/102 (N3605 W11305)
+        altitude: FL220
+        speed: 420
       ar625:
-        callsign: ARCO
+        callsign: ARCO 1
         type: TANKER (KC-135MPRS)
         comms: 319.8
-        tacan: 25Y
-        position: AR-625 (N38 19 W117 36 - N37 29 W117 36)
-        altitude: 25000
+        tacan: 113Y
+        position: AR-625: MVA 168/77 (N3717 W11802)
+        altitude: FL250
         speed: 450
+      ar635:
+        callsign: SHELL 2
+        type: TANKER (KC-135MPRS)
+        comms: 360.8
+        tacan: 115Y
+        position: AR-635: MLF 260/127 (N3831 W11542)
+        altitude: FL250
+        speed: 430
+      ar641:
+        callsign: TEXACO 1
+        type: TANKER (KC-135)
+        comms: 265.0
+        tacan: 94Y
+        position: AR-641A: CDC 242/78 (N3728 W11439)
+        altitude: 17000
+        speed: 290
       ar231:
-        callsign: TEXACO
+        callsign: TEXACO 3
         type: TANKER (KC-130)
         comms: 300.05
         tacan: 31Y
-        position: AR-231V (????)
-        altitude: 10000
+        position: AR-231V: BTY 126/37 (N3620 W11614)
+        altitude: 8000
         speed: 320
     waypoints:
       - name: ACTON
