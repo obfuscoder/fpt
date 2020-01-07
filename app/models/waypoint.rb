@@ -1,6 +1,8 @@
 class Waypoint < ApplicationRecord
   belongs_to :flight
 
+  default_scope { order(:number) }
+
   before_validation :set_number
   after_destroy :destroyed
 
