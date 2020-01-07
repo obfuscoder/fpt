@@ -86,7 +86,7 @@ theaters:
         type: TANKER (KC-135)
         comms: 289.7
         tacan: 95Y
-        position: AR-624: CDC 166/102 (N3605 W11305)
+        position: "AR-624: CDC 166/102 (N3605 W11305)"
         altitude: FL220
         speed: 420
       ar625:
@@ -94,7 +94,7 @@ theaters:
         type: TANKER (KC-135MPRS)
         comms: 319.8
         tacan: 113Y
-        position: AR-625: MVA 168/77 (N3717 W11802)
+        position: "AR-625: MVA 168/77 (N3717 W11802)"
         altitude: FL250
         speed: 450
       ar635:
@@ -102,7 +102,7 @@ theaters:
         type: TANKER (KC-135MPRS)
         comms: 360.8
         tacan: 115Y
-        position: AR-635: MLF 260/127 (N3831 W11542)
+        position: "AR-635: MLF 260/127 (N3831 W11542)"
         altitude: FL250
         speed: 430
       ar641:
@@ -110,7 +110,7 @@ theaters:
         type: TANKER (KC-135)
         comms: 265.0
         tacan: 94Y
-        position: AR-641A: CDC 242/78 (N3728 W11439)
+        position: "AR-641A: CDC 242/78 (N3728 W11439)"
         altitude: 17000
         speed: 290
       ar231:
@@ -118,7 +118,7 @@ theaters:
         type: TANKER (KC-130)
         comms: 300.05
         tacan: 31Y
-        position: AR-231V: BTY 126/37 (N3620 W11614)
+        position: "AR-231V: BTY 126/37 (N3620 W11614)"
         altitude: 8000
         speed: 320
     waypoints:
