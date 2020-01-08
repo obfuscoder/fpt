@@ -2,10 +2,45 @@ theaters:
   nttr:
     name: Nellis Test & Training Range
     channels:
-      a10:
-        uhf:
-          - frequency: 270.1
-            description: Nellis ATIS
+      - name: Flight/Squadron specific
+      - name: Nellis Clearance Delivery
+        freq: 289.4
+      - name: Nellis Ground
+        freq: 275.8
+      - name: Nellis Tower
+        freq: 327.0
+      - name: Nellis Approach/Departure West
+        freq: 385.4
+      - name: Nellis Approach/Departure East
+        freq: 273.55
+      - name: Nellis Control -- Sally
+        freq: 317.525
+      - name: Nellis Control-- Lee
+        freq: 254.4
+      - name: SOF Bullseye
+        freq: 305.6
+      - name: EMERGENCY SINGLE FRQ
+        freq: 343.725
+      - name: Nellis ATIS
+        freq: 270.1
+      - name: Creech AFB Tower
+        freq: 360.625
+      - name: HAVE QUICK 13
+        freq: 250.1
+      - name: HAVE QUICK 14
+        freq: 251.1
+      - name: HAVE QUICK 15
+        freq: 252.1
+      - name: Blackjack
+        freq: 377.8
+      - name: KC-135 AR-641A
+        freq: 265.0
+      - name: KC-135MPRS AR-635
+        freq: 360.8
+      - name: KC-135MPRS AR-625
+        freq: 319.8
+      - name: HAVE QUICK 20
+        freq: 300.05
     airbases:
       nellis:
         name: Nellis AFB
@@ -80,7 +115,7 @@ theaters:
       fac_hill:
         callsign: HILL
         type: FAC
-        position: N36 39.81 W115 46.88
+        position: N3639.81 W11546.88
       ar624:
         callsign: TEXACO 2
         type: TANKER (KC-135)
@@ -123,91 +158,124 @@ theaters:
         speed: 320
     waypoints:
       - name: ACTON
-        pos: LSV 021/36 (N3644.52 W11436.45)
+        dme: LSV 021/36
+        pos: N3644.52 W11436.45
       - name: APEX
-        pos: LSV 027/09 (N3621.58 W11454.34)
+        dme: LSV 027/09
+        pos: N3621.58 W11454.34
       - name: ARCOE
-        pos: LSV 357/30 (N3644.26 W11455.02)
+        dme: LSV 357/30
+        pos: N3644.26 W11455.02
       - name: Alamo N Point
-        pos: LSV 333/60 (N3712.8 W11520.5)
+        dme: LSV 333/60
+        pos: N3712.8 W11520.5
       - name: Alamo S Point
-        pos: LSV 325/38 (N3650.0 W11520.2)
+        dme: LSV 325/38
+        pos: N3650.0 W11520.2
       - name: BIGHORN
-        pos: LSV 347/97 (N3752.00 W11502.00)
+        dme: LSV 347/97
+        pos: N3752.00 W11502.00
       - name: Beatty
         pos: N3648.54 W11644.86
       - name: Belted Peak
-        pos: TQQ 100/36 (N3734.0 W11604.5)
+        dme: TQQ 100/36
+        pos: N3734.0 W11604.5
       - name: Bishop
         pos: N3722.62 W11821.99
       - name: Black Mt
-        pos: TQQ 156/31 (N3717.0 W11638.5)
+        dme: TQQ 156/31
+        pos: N3717.0 W11638.5
       - name: Boulder
         pos: N3559:75 W11451.82
       - name: CARPP
-        pos: LSV 355/63 (N3717.00 W11450.72)
+        dme: LSV 355/63
+        pos: N3717.00 W11450.72
       - name: CESAR
-        pos: LSV 290/85 (N3700.49 W11630.51)
+        dme: LSV 290/85
+        pos: N3700.49 W11630.51
       - name: CRAIG
-        pos: LSV 263/5.5 (N3615.25 W11508.27)
+        dme: LSV 263/5.5
+        pos: N3615.25 W11508.27
       - name: Caliente A Ctr Point
-        pos: ILC 207/47 (N3739.0 W11500.0)
+        dme: ILC 207/47
+        pos: N3739.0 W11500.0
       - name: Caliente B Ctr Point
-        pos: ILC 192/38 (N3740.0 W11443.0)
+        dme: ILC 192/38
+        pos: N3740.0 W11443.0
       - name: Cedar City
         pos: N3747.24 W11304.90
       - name: Cedar Peak
-        pos: TQQ 092/56 (N3742.0 W11620.0)
+        dme: TQQ 092/56
+        pos: N3742.0 W11620.0
       - name: Coale Dale
         pos: N3800.20 W11746.23
       - name: Coyote Peak
-        pos: TQQ 088/56 (N3737.5 W11538.0)
+        dme: TQQ 088/56
+        pos: N3737.5 W11538.0
       - name: Creech AFB
         pos: N3635.20 W11540.12
       - name: DREAM
-        pos: LAS 354/66 BLD 342/71 (N3710.34 W11459.53)
+        dme: LAS 354/66 BLD 342/71
+        pos: N3710.34 W11459.53
       - name: DUCK
-        pos: LSV 052/7.5 (N3617.84 W11453.09)
+        dme: LSV 052/7.5
+        pos: N3617.84 W11453.09
       - name: Daggett
         pos: N3457.75 W11634.69
       - name: Dry Lake
-        pos: LSV 017/15 (N3627.68 W11452.21)
+        dme: LSV 017/15
+        pos: N3627.68 W11452.21
       - name: ELKXX
-        pos: LSV 001/100 (N375200 W11430.00)
+        dme: LSV 001/100
+        pos: N375200 W11430.00
       - name: Elgin N Point
-        pos: LSV 007/70 (N3721.0 W11432.0)
+        dme: LSV 007/70
+        pos: N3721.0 W11432.0
       - name: Elgin S Point
-        pos: LSV 012/42 (N3653.0 W11440.0)
+        dme: LSV 012/42
+        pos: N3653.0 W11440.0
       - name: FLEX
-        pos: LSV 337/5 (N3618.62 W11502.36)
+        dme: LSV 337/5
+        pos: N3618.62 W11502.36
       - name: FLUSH
-        pos: LSV 287/73 (N3650.80 W11620.27)
+        dme: LSV 287/73
+        pos: N3650.80 W11620.27
       - name: FYTTR
-        pos: LSV 269/33 (N3621.44 W11541.47)
+        dme: LSV 269/33
+        pos: N3621.44 W11541.47
       - name: GARTH
-        pos: LSV 302/90 (N3717.96 W11621.26)
+        dme: LSV 302/90
+        pos: N3717.96 W11621.26
       - name: GASS PEAK
-        pos: LSV 309/12 (N3624.14 W11510.66)
+        dme: LSV 309/12
+        pos: N3624.14 W11510.66
       - name: Goffs
         pos: N3507.87 W11510.59
       - name: Groom Lake
-        pos: INS 339/42 (N3716.5 W11548.0)
+        dme: INS 339/42
+        pos: N3716.5 W11548.0
       - name: Groom Lake
         pos: N3713.91 W11548.16
       - name: Hector
         pos: N3447.83 W11627.78
       - name: JUNNO
-        pos: BLD 346/44 (N3643.80 W11452.77)
+        dme: BLD 346/44
+        pos: N3643.80 W11452.77
       - name: Jettison Hill
-        pos: LSV 350/5.2 (N3619.88 W11501.17)
+        dme: LSV 350/5.2
+        pos: N3619.88 W11501.17
       - name: Leach Lake
-        pos: DAG 341/40 (N3537.51 W11640.67)
+        dme: DAG 341/40
+        pos: N3537.51 W11640.67
       - name: MINTT
-        pos: LSV 339/28 LAS 351/38 (N3642.74 W11506.29)
+        dme: LSV 339/28 LAS 351/38
+        pos: N3642.74 W11506.29
       - name: MOOSE
-        pos: LSV 016/94 (N3736.77 W11404.42)
+        dme: LSV 016/94
+        pos: N3736.77 W11404.42
       - name: MOPAR
-        pos: BTY 347/29 (N3717.00 W11645.00)
+        dme: BTY 347/29
+        pos: N3717.00 W11645.00
       - name: McCarran Intl
         pos: N3604.78 W11509.59
       - name: Milford
@@ -217,73 +285,100 @@ theaters:
       - name: Mormon Mesa
         pos: N3646.16 W11416.65
       - name: Mt Helen
-        pos: TQQ 162/17 (N3730.0 W11644.5)
+        dme: TQQ 162/17
+        pos: N3730.0 W11644.5
       - name: Mt Irish
-        pos: TQQ 085/67 (N3738.5 W11524.0)
+        dme: TQQ 085/67
+        pos: N3738.5 W11524.0
       - name: NIXON
-        pos: LSV 292/30 (N3632.01 W11532.25)
+        dme: LSV 292/30
+        pos: N3632.01 W11532.25
       - name: NUGGE
-        pos: BLD 346/68 (N3707.83 W11453.29)
+        dme: BLD 346/68
+        pos: N3707.83 W11453.29
       - name: Needles
         pos: N3445.96 W11428.43
       - name: Nellis
         pos: N3614.68 W11501.50
       - name: PIUTE
-        pos: INS 245/21 (N3630.68 W11605.69)
+        dme: INS 245/21
+        pos: N3630.68 W11605.69
       - name: Peach Springs
         pos: N3537.48 W11332.67
       - name: Quartzite Mt
-        pos: TQQ 113/27 (N3731.0 W11619.5)
+        dme: TQQ 113/27
+        pos: N3731.0 W11619.5
       - name: R63 Tower
-        pos: INS 067/8 (N3637.0 W11530.2)
+        dme: INS 067/8
+        pos: N3637.0 W11530.2
       - name: R64 W Circle
-        pos: INS 354/6 (N3640.9 W11540.4)
+        dme: INS 354/6
+        pos: N3640.9 W11540.4
       - name: RAMMM
-        pos: LSV 024/38 (N3645.00 W11433.33)
+        dme: LSV 024/38
+        pos: N3645.00 W11433.33
       - name: Reveille Peak
-        pos: TQQ 070/31 (N3751.5 W11608.0)
+        dme: TQQ 070/31
+        pos: N3751.5 W11608.0
       - name: SARAH
-        pos: LSV 315/25 (N3636.45 W11518.03)
+        dme: LSV 315/25
+        pos: N3636.45 W11518.03
       - name: SHOWW
-        pos: BTY 099/37 (N3634.25 W11602.27)
+        dme: BTY 099/37
+        pos: N3634.25 W11602.27
       - name: SIMNS
-        pos: LSV 276/8 (N3617.34 W11510.75)
+        dme: LSV 276/8
+        pos: N3617.34 W11510.75
       - name: STRIP
-        pos: INS 114/24 (N3620.60 W11516.48)
+        dme: INS 114/24
+        pos: N3620.60 W11516.48
       - name: STRYK
-        pos: LSV 282/26 (N3625.62 W11530.70)
+        dme: LSV 282/26
+        pos: N3625.62 W11530.70
       - name: Silverbow
         pos: N3748.00 W11647.00
       - name: St George
         pos: N3705.29 W11335.53
       - name: Stonewall Mt
-        pos: TQQ 207/21 (N3730.0 W11703.0)
+        dme: TQQ 207/21
+        pos: N3730.0 W11703.0
       - name: Stuckey's Peak
-        pos: LSV 004/52 (N3704.1 W11444.3)
+        dme: LSV 004/52
+        pos: N3704.1 W11444.3
       - name: Stuckey’s Peak
-        pos: LSV 003/51 (N3704.10 W11444.30)
+        dme: LSV 003/51
+        pos: N3704.10 W11444.30
       - name: Student Gap
-        pos: LSV 349/82 (N3737.0 W11500.0)
+        dme: LSV 349/82
+        pos: N3737.0 W11500.0
       - name: T-Bird Lake
-        pos: LSV 334/45 (N3658.1 W11513.5)
+        dme: LSV 334/45
+        pos: N3658.1 W11513.5
       - name: TIMBR
-        pos: LSV 011/33 (N3645.00 W11444.58)
+        dme: LSV 011/33
+        pos: N3645.00 W11444.58
       - name: TROUTT
-        pos: LSV 323/63 (N3717.00 W11507.05)
+        dme: LSV 323/63
+        pos: N3717.00 W11507.05
       - name: TUCKY
-        pos: BTY 212/18 (N3635.50 W11700.10)
+        dme: BTY 212/18
+        pos: N3635.50 W11700.10
       - name: Texas Lake
-        pos: LSV 350/64 (N3719.00 W11457.50)
+        dme: LSV 350/64
+        pos: N3719.00 W11457.50
       - name: Texas Lake
-        pos: LSV 351/64 (N3719.0 W11457.5)
+        dme: LSV 351/64
+        pos: N3719.0 W11457.5
       - name: Tonopah Muni
         pos: N3801.84 W11702.01
       - name: VETTT
-        pos: LSV 030/31 (N3637.34 W11435.19)
+        dme: LSV 030/31
+        pos: N3637.34 W11435.19
       - name: Wilson Creek
         pos: N3815.02 W11423.65
       - name: Winner LZ
-        pos: LSV 356/6 (N3620.33 W11500.25)
+        dme: LSV 356/6
+        pos: N3620.33 W11500.25
 caucasus:
   name: Caucasus
 gulf:

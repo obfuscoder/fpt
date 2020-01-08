@@ -7,7 +7,9 @@ class WaypointsController < ApplicationController
   end
 
   def index
-    wps = Settings.theaters[@flight.theater].waypoints.map { |wp| { name: wp.name, pos: wp.pos } }
+    wps = Settings.theaters[@flight.theater].waypoints.map do |wp|
+      { name: wp.name, pos: position(wp) }
+    end
     wps.select! { |wp| wp[:name].downcase.include? params[:q].downcase } if params[:q]
     render json: wps
   end
@@ -59,5 +61,12 @@ class WaypointsController < ApplicationController
 
   def waypoint_params
     params.require(:waypoint).permit(:name, :position, :altitude, :tot)
+  end
+
+  def position(wp)
+    return "#{wp.dme} (#{wp.pos})" if wp.dme.present? && wp.pos.present?
+    return wp.dme if wp.dme.present?
+
+    wp.pos if wp.pos.present?
   end
 end
