@@ -1,6 +1,6 @@
 class Flight < ApplicationRecord
-  has_many :pilots, -> { order(:number) }
-  has_many :waypoints
+  has_many :pilots, -> { order(:number) }, dependent: :destroy
+  has_many :waypoints, dependent: :destroy
 
   default_scope { order(start: :desc) }
   scope :current, -> { where('start > ?', 1.day.ago) }
@@ -61,5 +61,9 @@ class Flight < ApplicationRecord
 
   def laser_mask
     "#{laser}X"
+  end
+
+  def assignable_pilots
+    Settings.pilots - pilots.pluck(:name) + others.map(&:pilots).flatten.map(&:name)
   end
 end

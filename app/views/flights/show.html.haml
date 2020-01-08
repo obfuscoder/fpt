@@ -53,7 +53,7 @@
                   .form-row
                     = f.hidden_field :number, value: number
                     .col-auto
-                      = f.select :name, Settings.pilots, {}, class: 'form-control'
+                      = f.select :name, @flight.assignable_pilots, {}, class: 'form-control'
                     .col-auto
                       = f.submit 'Assign', class: 'btn btn-primary'
   %tr
