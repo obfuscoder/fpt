@@ -64,9 +64,41 @@ class WaypointsController < ApplicationController
   end
 
   def position(wp)
-    return "#{wp.dme} (#{wp.pos})" if wp.dme.present? && wp.pos.present?
+    return "#{wp.dme} (#{ll(wp.pos)})" if wp.dme.present? && wp.pos.present?
     return wp.dme if wp.dme.present?
 
-    wp.pos if wp.pos.present?
+    ll(wp.pos) if wp.pos.present?
+  end
+
+  def ll(pos)
+    return pos unless @flight.airframe == 'f18' || @flight.airframe == 'av8b'
+
+    dms(pos)
+  end
+
+  def dms(pos)
+    match = pos.match /(\w)(\d\d)(\d\d\.?\d*) (\w)(\d\d\d)(\d\d\.?\d*)/
+    return pos if match.nil?
+
+    lat_let = match[1]
+    lat_deg = match[2]
+    lat_min = match[3]
+    lon_let = match[4]
+    lon_deg = match[5]
+    lon_min = match[6]
+
+    lat = "#{lat_let}#{lat_deg} #{dec_min_to_min_sec(lat_min)}"
+    lon = "#{lon_let}#{lon_deg} #{dec_min_to_min_sec(lon_min)}"
+    "#{lat} #{lon}"
+  end
+
+  def dec_min_to_min_sec(min)
+    min = min.to_d
+    sec = 60 * min.frac
+    if sec.frac.zero?
+      format('%02d %02d', min.to_i, sec)
+    else
+      format('%02d %02.3f', min.to_i, sec)
+    end
   end
 end

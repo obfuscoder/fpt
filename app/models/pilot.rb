@@ -10,11 +10,11 @@ class Pilot < ApplicationRecord
   end
 
   def own_id
-    sprintf('%02d', number)
+    format('%02d', number)
   end
 
   def net_id
-    sprintf('%02d/%02d', flight.group_id, number)
+    format('%02d/%02d', flight.group_id, number)
   end
 
   def laser
