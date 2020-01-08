@@ -48,7 +48,7 @@ class FlightsController < ApplicationController
   def clone
     src_flight = @flight
     @flight = src_flight.dup
-    @flight.start = Date.tomorrow
+    @flight.start = Date.tomorrow if @flight.start.past?
     @flight.save!
     src_flight.waypoints.each do |wp|
       new_wp = wp.dup
