@@ -53,9 +53,9 @@
                   .form-row
                     = f.hidden_field :number, value: number
                     .col-auto
-                      = f.select :name, @flight.assignable_pilots, {}, class: 'form-control'
+                      = f.select :name, @flight.assignable_pilots, {}, class: 'form-control form-control-sm'
                     .col-auto
-                      = f.submit 'Assign', class: 'btn btn-primary'
+                      = f.submit 'Assign', class: 'btn btn-primary btn-sm'
   %tr
     %th.bg-secondary(colspan=6) AIRBASES
   %tr
@@ -141,11 +141,11 @@
       %th.bg-secondary(colspan=2)
         = form_for :waypoints, url: copy_from_flight_waypoints_path(@flight) do |f|
           .form-row
-            .col-8= f.select :flight, @flight.others.map { |fl| [fl.full_callsign, fl.id] }, {}, class: 'form-control'
+            .col-8= f.select :flight, @flight.others.map { |fl| [fl.full_callsign, fl.id] }, {}, class: 'form-control form-control-sm'
             - if @flight.waypoints.empty?
-              .col-4= f.submit 'Fetch', class: 'btn btn-primary'
+              .col-4= f.submit 'Fetch', class: 'btn btn-primary btn-sm'
             - else
-              .col-4= f.submit 'Fetch', class: 'btn btn-primary', data: { confirm: 'This will overwrite all waypoints of the current flight. Are you sure?' }
+              .col-4= f.submit 'Fetch', class: 'btn btn-primary btn-sm', data: { confirm: 'This will overwrite all waypoints of the current flight. Are you sure?' }
   %tr
     %td(colspan=6)
       .container
