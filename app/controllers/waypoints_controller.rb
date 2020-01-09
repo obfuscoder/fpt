@@ -49,6 +49,17 @@ class WaypointsController < ApplicationController
     redirect_to flight_path(@flight), notice: 'Waypoint was successfully destroyed.'
   end
 
+  def copy_from
+    @flight.waypoints.destroy_all
+    src_flight = Flight.find params[:waypoints][:flight]
+    src_flight.waypoints.each do |wp|
+      new_wp = wp.dup
+      new_wp.flight = @flight
+      new_wp.save!
+    end
+    redirect_to flight_path(@flight), notice: 'Waypoints successfully copied.'
+  end
+
   private
 
   def set_flight

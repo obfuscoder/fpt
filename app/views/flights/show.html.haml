@@ -134,7 +134,18 @@
             .col-2= support.altitude
             .col-1= support.speed
   %tr
-    %th.bg-secondary(colspan=6) FLIGHT PLAN
+    - if @flight.others.empty?
+      %th.bg-secondary(colspan=6) FLIGHT PLAN
+    - else
+      %th.bg-secondary(colspan=4) FLIGHT PLAN
+      %th.bg-secondary(colspan=2)
+        = form_for :waypoints, url: copy_from_flight_waypoints_path(@flight) do |f|
+          .form-row
+            .col-8= f.select :flight, @flight.others.map { |fl| [fl.full_callsign, fl.id] }, {}, class: 'form-control'
+            - if @flight.waypoints.empty?
+              .col-4= f.submit 'Fetch', class: 'btn btn-primary'
+            - else
+              .col-4= f.submit 'Fetch', class: 'btn btn-primary', data: { confirm: 'This will overwrite all waypoints of the current flight. Are you sure?' }
   %tr
     %td(colspan=6)
       .container

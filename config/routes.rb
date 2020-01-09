@@ -8,7 +8,11 @@ Rails.application.routes.draw do
       post :clone
     end
     resources :pilots
-    resources :waypoints
+    resources :waypoints do
+      collection do
+        post :copy_from
+      end
+    end
   end
 
   get 'airbases', to: 'airbases#index'
