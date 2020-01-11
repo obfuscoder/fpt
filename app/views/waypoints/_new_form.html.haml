@@ -4,7 +4,6 @@
     .col-2.dropdown
       = f.text_field :name, class: 'form-control form-control-sm'
       .dropdown-menu
-        / %a.dropdown-item(href="#") ACTON	LSV 021/36	N3644.52	W11436.45
     .col-4= f.text_field :position, class: 'form-control form-control-sm', remote: true
     .col-1= f.text_field :altitude, class: 'form-control form-control-sm'
     .col-2.form-row= f.time_select :tot, { include_blank: true, ignore_date: true }, class: 'form-control col form-control-sm'
