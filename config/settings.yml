@@ -1,5 +1,51 @@
 theaters:
   nttr:
+    defaults:
+      tiger:
+        freq: 261.15
+        laser: 155
+        tcn: 11
+      cougar:
+        freq: 261.25
+        laser: 156
+        tcn: 21
+      panther:
+        freq: 261.35
+        laser: 157
+        tcn: 31
+      lion:
+        freq: 261.45
+        laser: 158
+        tcn: 41
+      monster:
+        freq: 132.15
+        laser: 161
+        group: 21
+        tcn: 25
+      t-rex:
+        freq: 132.25
+        laser: 165
+        group: 25
+        tcn: 27
+      edelweiss_1:
+        freq: 264.15
+        laser: 171
+      edelweiss_2:
+        freq: 264.25
+        laser: 172
+      edelweiss_3:
+        freq: 264.35
+        laser: 173
+      edelweiss_4:
+        freq: 264.45
+        laser: 174
+      edelweiss_5:
+        freq: 264.55
+        laser: 175
+      edelweiss_6:
+        freq: 134.65
+        laser: 166
+        group: 41
     name: Nellis Test & Training Range
     channels:
       - name: Flight/Squadron specific
@@ -41,6 +87,95 @@ theaters:
         freq: 319.8
       - name: HAVE QUICK 20
         freq: 300.05
+    navaids:
+      - id: BTY
+        name: Beatty
+        channel: 94
+        pos: N3648.54	W11644.86
+      - id: BIH
+        name: Bishop
+        channel: 33
+        pos: N3722.62	W11821.99
+      - id: BLD
+        name: Boulder
+        channel: 114
+        pos: N3559:75	W11451.82
+      - id: CDC
+        name: Cedar City
+        channel: 120
+        pos: N3747.24	W11304.90
+      - id: OAL
+        name: Coale Dale
+        channel: 124
+        pos: N3800.20	W11746.23
+      - id: INS
+        name: Creech AFB
+        channel: 87
+        pos: N3635.20	W11540.12
+      - id: DAG
+        name: Daggett
+        channel: 79
+        pos: N3457.75	W11634.69
+      - id: GFS
+        name: Goffs
+        channel: 91
+        pos: N3507.87	W11510.59
+      - id: GRL
+        name: Groom Lake
+        channel: 18
+        pos: N3713.91	W11548.16
+      - id: HEC
+        name: Hector
+        channel: 74
+        pos: N3447.83	W11627.78
+      - id: LAS
+        name: McCarran Intl
+        channel: 116
+        pos: N3604.78	W11509.59
+      - id: MLF
+        name: Milford
+        channel: 58
+        pos: N3821.62	W11300.79
+      - id: MVA
+        name: Mina
+        channel: 98
+        pos: N3833.92	W11801.97
+      - id: MMM
+        name: Mormon Mesa
+        channel: 90
+        pos: N3646.16	W11416.65
+      - id: EED
+        name: Needles
+        channel: 99
+        pos: N3445.96	W11428.43
+      - id: LSV
+        name: Nellis
+        channel: 12
+        pos: N3614.68	W11501.50
+      - id: PGS
+        name: Peach Springs
+        channel: 57
+        pos: N3537.48	W11332.67
+      - id: UTI
+        name: St George
+        channel: 23
+        pos: N3705.29	W11335.53
+      - id: TPH
+        name: Tonopah Muni
+        channel: 119
+        pos: N3801.84	W11702.01
+      - id: TQQ
+        name: Silverbow
+        channel: 77
+        pos: N3748.00	W11647.00
+      - id: ILC
+        name: Wilson Creek
+        channel: 110
+        pos: N3815.02	W11423.65
+      - id: BCE
+        name: Bryce Canyon
+        channel: 75
+        pos: N3741.351 W11218.234
     airbases:
       nellis:
         name: Nellis AFB
