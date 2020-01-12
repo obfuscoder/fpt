@@ -75,10 +75,7 @@ class WaypointsController < ApplicationController
   end
 
   def position(wp)
-    pos = Position.new(latitude: wp.lat, longitude: wp.lon, pos: wp.pos)
-    pos = pos.to_s(type: (@flight.airframe == 'f18' || @flight.airframe == 'av8b' ? :dms : :dm))
-    return "#{wp.dme} (#{pos})" if wp.dme.present?
-
-    pos
+    pos = Position.new(latitude: wp.lat, longitude: wp.lon, pos: wp.pos, dme: wp.dme)
+    pos.to_s(type: (@flight.airframe == 'f18' || @flight.airframe == 'av8b' ? :dms : :dm))
   end
 end

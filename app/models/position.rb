@@ -1,5 +1,5 @@
 class Position
-  def initialize(latitude: nil, longitude: nil, pos: nil)
+  def initialize(latitude: nil, longitude: nil, pos: nil, dme: nil)
     if latitude.present? && longitude.present?
       @latitude = latitude.to_d
       @longitude = longitude.to_d
@@ -7,18 +7,21 @@ class Position
       ll(pos)
     end
 
+    @dme = dme
+
     if @latitude.nil? || @longitude.nil?
       raise "Invalid! #{latitude} #{longitude} #{pos}"
     end
   end
 
   def to_s(type: :dm)
-    case type
-    when :dm
-      "#{lat_to_dm} #{lon_to_dm}"
-    when :dms
-      "#{lat_to_dms} #{lon_to_dms}"
-    end
+    pos = case type
+          when :dm
+            "#{lat_to_dm} #{lon_to_dm}"
+          when :dms
+            "#{lat_to_dms} #{lon_to_dms}"
+          end
+    @dme.nil? ? pos : "#{@dme} (#{pos})"
   end
 
   private
