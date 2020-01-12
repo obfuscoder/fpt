@@ -1,4 +1,6 @@
 class Position
+  attr_reader :latitude, :longitude, :dme
+
   def initialize(latitude: nil, longitude: nil, pos: nil, dme: nil)
     if latitude.present? && longitude.present?
       @latitude = latitude.to_d
@@ -9,9 +11,7 @@ class Position
 
     @dme = dme
 
-    if @latitude.nil? || @longitude.nil?
-      raise "Invalid! #{latitude} #{longitude} #{pos}"
-    end
+    raise "Invalid! #{latitude} #{longitude} #{pos}" if @latitude.nil? || @longitude.nil?
   end
 
   def to_s(type: :dm)
