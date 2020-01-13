@@ -101,7 +101,7 @@ theaters:
       - id: BLD
         name: Boulder
         channel: 114
-        pos: N3559:75 W11451.82
+        pos: N3559.75 W11451.82
         elevation: 3650
       - id: CDC
         name: Cedar City
