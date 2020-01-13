@@ -48,7 +48,7 @@
       %td= f.select :departure, departures(@flight), {}, class: 'form-control'
       %th.table-secondary(colspan=3) AO
     %tr
-      %th.table-secondary Recovery
+      %th.table-secondary Arrival
       %td= f.select :land_airbase, airbases(@flight), {}, class: 'form-control', data: { remote: true, url: procedures_path }
       %td= f.select :recovery, recoveries(@flight), {}, class: 'form-control'
       %td(colspan=3)= f.text_field :ao, class: 'form-control'
