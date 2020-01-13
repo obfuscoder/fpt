@@ -91,112 +91,112 @@ theaters:
       - id: BTY
         name: Beatty
         channel: 94
-        pos: N3648.54	W11644.86
+        pos: N3648.54 W11644.86
         elevation: 2925
       - id: BIH
         name: Bishop
         channel: 33
-        pos: N3722.62	W11821.99
+        pos: N3722.62 W11821.99
         elevation: 4114
       - id: BLD
         name: Boulder
         channel: 114
-        pos: N3559:75	W11451.82
+        pos: N3559:75 W11451.82
         elevation: 3650
       - id: CDC
         name: Cedar City
         channel: 120
-        pos: N3747.24	W11304.90
+        pos: N3747.24 W11304.90
         elevation: 5463
       - id: OAL
         name: Coale Dale
         channel: 124
-        pos: N3800.20	W11746.23
+        pos: N3800.20 W11746.23
         elevation: 4800
       - id: INS
         name: Creech AFB
         channel: 87
-        pos: N3635.20	W11540.12
+        pos: N3635.20 W11540.12
         elevation: 3101
       - id: DAG
         name: Daggett
         channel: 79
-        pos: N3457.75	W11634.69
+        pos: N3457.75 W11634.69
         elevation: 1760
       - id: GFS
         name: Goffs
         channel: 91
-        pos: N3507.87	W11510.59
+        pos: N3507.87 W11510.59
         elevation: 4019
       - id: GRL
         name: Groom Lake
         channel: 18
-        pos: N3713.91	W11548.16
+        pos: N3713.91 W11548.16
         elevation: 4475
       - id: HEC
         name: Hector
         channel: 74
-        pos: N3447.83	W11627.78
+        pos: N3447.83 W11627.78
         elevation: 1854
       - id: LAS
         name: McCarran Intl
         channel: 116
-        pos: N3604.78	W11509.59
+        pos: N3604.78 W11509.59
         elevation: 2142
       - id: MLF
         name: Milford
         channel: 58
-        pos: N3821.62	W11300.79
+        pos: N3821.62 W11300.79
         elevation: 4977
       - id: MVA
         name: Mina
         channel: 98
-        pos: N3833.92	W11801.97
+        pos: N3833.92 W11801.97
         elevation: 7860
       - id: MMM
         name: Mormon Mesa
         channel: 90
-        pos: N3646.16	W11416.65
+        pos: N3646.16 W11416.65
         elevation: 2120
       - id: EED
         name: Needles
         channel: 99
-        pos: N3445.96	W11428.43
+        pos: N3445.96 W11428.43
         elevation: 650
       - id: LSV
         name: Nellis
         channel: 12
-        pos: N3614.68	W11501.50
+        pos: N3614.68 W11501.50
         elevation: 1864
       - id: PGS
         name: Peach Springs
         channel: 57
-        pos: N3537.48	W11332.67
+        pos: N3537.48 W11332.67
         elevation: 4754
       - id: UTI
         name: St George
         channel: 23
-        pos: N3705.29	W11335.53
+        pos: N3705.29 W11335.53
         elevation: 2871
       - id: TPH
         name: Tonopah Muni
         channel: 119
-        pos: N3801.84	W11702.01
+        pos: N3801.84 W11702.01
         elevation: 5330
       - id: TQQ
         name: Silverbow
         channel: 77
-        pos: N3748.00	W11647.00
+        pos: N3748.00 W11647.00
         elevation: 5500
       - id: ILC
         name: Wilson Creek
         channel: 110
-        pos: N3815.02	W11423.65
+        pos: N3815.02 W11423.65
         elevation: 9318
       - id: BCE
         name: Bryce Canyon
         channel: 75
-        pos: N3741.351 W11218.234
+        pos: N3741.35 W11218.23
         elevation: 9040
     airbases:
       nellis:

@@ -25,6 +25,10 @@ class MissionDataCard < Prawn::Document
     flight_plan
     comms
     notes
+    start_new_page
+    channels
+    start_new_page
+    navaids
     super
   end
 
@@ -244,6 +248,46 @@ class MissionDataCard < Prawn::Document
     end
 
     next_row
+  end
+
+  def channels
+    define_columns 6
+    header('RADIO CHANNELS')
+
+    cell(0, '#', header: true)
+    cell(1, 'Freq', header: true)
+    cell([2, 5], 'Name', header: true)
+    next_row
+
+    channels = Settings.theaters[@flight.theater].channels
+    channels.each_with_index do |channel, i|
+      cell(0, i + 1)
+      cell(1, channel.freq)
+      cell([2, 5], channel.name)
+      next_row
+    end
+  end
+
+  def navaids
+    define_columns 6
+    header('NAVAIDS')
+
+    cell(0, 'Id', header: true)
+    cell(1, 'Name', header: true)
+    cell(2, 'Channel', header: true)
+    cell([3, 4], 'Position', header: true)
+    cell(5, 'Elevation', header: true)
+    next_row
+
+    navaids = Settings.theaters[@flight.theater].navaids
+    navaids.each do |navaid|
+      cell(0, navaid.id)
+      cell(1, navaid.name)
+      cell(2, navaid.channel)
+      cell([3, 4], navaid.pos)
+      cell(5, navaid.elevation)
+      next_row
+    end
   end
 
   def define_columns(cols)
