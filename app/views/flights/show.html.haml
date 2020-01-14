@@ -126,7 +126,7 @@
           .col-1.table-secondary Speed
         - @flight.selected_support.each do |support|
           .row
-            .col-2= support.type
+            .col-2= support.airframe.present? ? "#{support.type} (#{support.airframe})" : support.type
             .col-2= support.callsign
             .col-1= support.comms
             .col-1= support.tacan

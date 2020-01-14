@@ -266,7 +266,8 @@ theaters:
     support:
       overlord:
         callsign: MAGIC
-        type: AWACS (E-3A)
+        type: AWACS
+        airframe: E-3A
         comms: 377.8
         speed: 500
       fac_hill:
@@ -275,7 +276,8 @@ theaters:
         position: N3639.81 W11546.88
       ar624:
         callsign: TEXACO 2
-        type: TANKER (KC-135)
+        type: TANKER
+        aiframe: KC-135
         comms: 289.7
         tacan: 95Y
         position: "AR-624: CDC 166/102 (N3605 W11305)"
@@ -283,7 +285,8 @@ theaters:
         speed: 420
       ar625:
         callsign: ARCO 1
-        type: TANKER (KC-135MPRS)
+        type: TANKER
+        airframe: KC-135MPRS
         comms: 319.8
         tacan: 113Y
         position: "AR-625: MVA 168/77 (N3717 W11802)"
@@ -291,7 +294,8 @@ theaters:
         speed: 450
       ar635:
         callsign: SHELL 2
-        type: TANKER (KC-135MPRS)
+        type: TANKER
+        airframe: KC-135MPRS
         comms: 360.8
         tacan: 115Y
         position: "AR-635: MLF 260/127 (N3831 W11542)"
@@ -299,7 +303,8 @@ theaters:
         speed: 430
       ar641:
         callsign: TEXACO 1
-        type: TANKER (KC-135)
+        type: TANKER
+        airframe: KC-135
         comms: 265.0
         tacan: 94Y
         position: "AR-641A: CDC 242/78 (N3728 W11439)"
@@ -307,7 +312,8 @@ theaters:
         speed: 290
       ar231:
         callsign: TEXACO 3
-        type: TANKER (KC-130)
+        type: TANKER
+        airframe: KC-130
         comms: 300.05
         tacan: 31Y
         position: "AR-231V: BTY 126/37 (N3620 W11614)"

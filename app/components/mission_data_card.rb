@@ -1,6 +1,9 @@
 class MissionDataCard < Prawn::Document
+  INCHES_PER_MM = 0.0393701
+
   def initialize(flight, options = {})
-    super(options.merge(page_size: [540, 814], margin: 10))
+    page_size = [137.0 * 72 * INCHES_PER_MM, 210.0 * 72 * INCHES_PER_MM]
+    super(options.merge(page_layout: :portrait, page_size: page_size, margin: 10))
 
     font_families.update 'freesans' => {
       normal: 'lib/assets/ttf/FreeSans.ttf',
@@ -19,12 +22,15 @@ class MissionDataCard < Prawn::Document
 
     flight_info
     airbases
-    support
-    other_flights
     start_new_page
     flight_plan
     comms
+    start_new_page
     notes
+    start_new_page
+    support
+    start_new_page
+    other_flights
     start_new_page
     channels
     start_new_page
@@ -35,45 +41,58 @@ class MissionDataCard < Prawn::Document
   private
 
   def flight_info
-    define_columns 6
+    define_columns 4
 
-    header('MISSION DATA CARD')
+    header("MISSION DATA CARD")
 
-    cell(0, 'Callsign', header: true)
-    cell(1, @flight.full_callsign)
+    cell(0, 'OPORD', header: true)
+    cell(1, 'Callsign', header: true)
     cell(2, 'Mission', header: true)
-    cell(3, @flight.mission)
-    cell(4, 'Comms', header: true)
-    cell(5, @flight.frequency)
+    cell(3, 'Date/Time', header: true)
+    next_row
+
+    cell(0, format('%03d/%04d', @flight.id, @flight.start.year))
+    cell(1, @flight.full_callsign)
+    cell(2, @flight.mission)
+    cell(3, @flight.start.strftime('%d%H%M%^b%y'))
+    next_row
+
+    define_columns 8
+    cell(0, 'Task', header: true)
+    cell([1, 6], @flight.task)
+    cell(7, 'Freq', header: true)
     next_row
 
     cell(0, 'AO', header: true)
-    cell(1, @flight.ao)
-    cell(2, 'Departure', header: true)
-    cell(3, @flight.departure_name)
-    cell(4, 'Recovery', header: true)
-    cell(5, @flight.recovery_name)
+    cell([1, 6], @flight.ao)
+    cell(7, @flight.frequency)
     next_row
 
-    cell(0, 'Task', header: true)
-    cell([1, 5], @flight.task)
+    define_columns 2
+    cell(0, 'Departure', header: true)
+    cell(1, 'Recovery', header: true)
     next_row
 
+    cell(0, @flight.departure_name)
+    cell(1, @flight.recovery_name)
+    next_row
+
+    define_columns 10
     cell(0, '#', header: true)
-    cell(1, 'Callsign', header: true)
-    cell(2, 'Pilot', header: true)
-    cell(3, 'Net Id', header: true)
-    cell(4, 'Lasercode', header: true)
-    cell(5, 'TACAN', header: true)
+    cell([1, 5], 'Callsign', header: true)
+    cell([4, 6], 'Pilot', header: true)
+    cell(7, 'Net ID', header: true)
+    cell(8, 'LSR', header: true)
+    cell(9, 'TCN', header: true)
     next_row
 
     @flight.pilots.each do |pilot|
       cell(0, pilot.dash_number)
-      cell(1, pilot.callsign)
-      cell(2, pilot.name)
-      cell(3, pilot.net_id)
-      cell(4, pilot.laser)
-      cell(5, pilot.tacan)
+      cell([1, 5], pilot.callsign)
+      cell([4, 6], pilot.name)
+      cell(7, pilot.net_id)
+      cell(8, pilot.laser)
+      cell(9, pilot.tacan)
       next_row
     end
     next_row
@@ -114,27 +133,68 @@ class MissionDataCard < Prawn::Document
     support = @flight.selected_support
     return if support.empty?
 
-    define_columns 11
     header('SUPPORT')
 
-    cell([0, 1], 'Type', header: true)
-    cell([2, 3], 'Callsign', header: true)
-    cell(4, 'Comms', header: true)
-    cell(5, 'TCN', header: true)
-    cell([6, 8], 'Location', header: true)
-    cell(9, 'Altitude', header: true)
-    cell(10, 'Speed', header: true)
-    next_row
-
-    support.each do |s|
-      cell([0, 1], s.type)
-      cell([2, 3], s.callsign)
-      cell(4, s.comms)
-      cell(5, s.tacan)
-      cell([6, 8], s.position)
-      cell(9, s.altitude)
-      cell(10, s.speed)
+    tanker = support.select { |s| s.type == 'TANKER' }
+    unless tanker.empty?
+      define_columns 6
+      header('Tanker')
+      cell([0, 1], 'Callsign', header: true)
+      cell(2, 'TCN', header: true)
+      cell(3, 'Freq', header: true)
+      cell(4, 'ALT', header: true)
+      cell(5, 'TAS', header: true)
       next_row
+
+      tanker.each do |t|
+        cell([0, 1], t.callsign)
+        cell(2, t.tacan)
+        cell(3, t.comms)
+        cell(4, t.altitude)
+        cell(5, t.speed)
+        next_row
+        cell(1, 'Pos', header: true)
+        cell([2, 5], t.position)
+        next_row
+      end
+    end
+
+    awacs = support.select { |s| s.type == 'AWACS' }
+    unless awacs.empty?
+      define_columns 10
+      header('AWACS')
+      cell([0, 1], 'Callsign', header: true)
+      cell(2, 'Freq', header: true)
+      cell(3, 'ALT', header: true)
+      cell([4, 9], 'Pos', header: true)
+      next_row
+
+      awacs.each do |a|
+        cell([0, 1], a.callsign)
+        cell(2, a.comms)
+        cell(3, a.altitude)
+        cell([4, 9], a.position)
+        next_row
+      end
+    end
+
+    fac = support.select { |s| s.type == 'FAC' }
+    unless fac.empty?
+      define_columns 10
+      header('FAC')
+      cell([0, 1], 'Callsign', header: true)
+      cell(2, 'Freq', header: true)
+      cell(3, 'Elev', header: true)
+      cell([4, 9], 'Pos', header: true)
+      next_row
+
+      fac.each do |f|
+        cell([0, 1], f.callsign)
+        cell(2, f.comms)
+        cell(3, f.altitude)
+        cell([4, 9], f.position)
+        next_row
+      end
     end
     next_row
   end
@@ -179,7 +239,7 @@ class MissionDataCard < Prawn::Document
     cell(0, '#', header: true)
     cell([1, 2], 'Name', header: true)
     cell([3, 8], 'Navaid/Coords/DME', header: true)
-    cell(9, 'Altitude', header: true)
+    cell(9, 'ALT', header: true)
     cell(10, 'TOT', header: true)
     next_row
 
@@ -202,8 +262,8 @@ class MissionDataCard < Prawn::Document
     cell([1, 3], 'Name', header: true)
     cell(4, 'TCN', header: true)
     cell(5, 'ATIS', header: true)
-    cell(6, 'Ground', header: true)
-    cell(7, 'Tower', header: true)
+    cell(6, 'GND', header: true)
+    cell(7, 'TWR', header: true)
     cell(8, 'RWY', header: true)
     cell(9, 'Elev', header: true)
     cell(10, 'ILS', header: true)
