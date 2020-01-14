@@ -9,8 +9,13 @@ class AirbasesController < ApplicationController
 
   def procedures
     airbase_type, airbase = procedure_param
-    @procedures = airbases[airbase].send(airbase_map[airbase_type].first).to_h.invert
+    airbase_settings = airbases[airbase]
     @id = airbase_map[airbase_type].last
+    if airbase_settings.present?
+      @procedures = airbase_settings.send(airbase_map[airbase_type].first).to_h.invert
+    else
+      @procedures = []
+    end
   end
 
   private

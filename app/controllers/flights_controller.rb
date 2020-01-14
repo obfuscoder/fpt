@@ -78,6 +78,13 @@ class FlightsController < ApplicationController
     send_data stringio.sysread, filename: "mission_#{@flight.id}.zip", type: 'application/zip'
   end
 
+  def defaults
+    blank?
+    callsign = [params[:cs], params[:n]].select(&:present?).join('_').downcase
+    @defaults = Settings.theaters[params[:t]].defaults[callsign]
+    render json: @defaults
+  end
+
   private
 
   def set_flight

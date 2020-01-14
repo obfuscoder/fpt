@@ -22,4 +22,18 @@ $(document).on('turbolinks:load', function() {
         $('.dropdown-menu').dropdown('show')
         $('.dropdown-menu').dropdown('update')
     })
+
+    $('.update-defaults').change(function() {
+        let url = $(this).data('defaultsUrl')
+        let theater = $('#flight_theater').val()
+        let callsign = $('#flight_callsign').val()
+        let callsign_number = $('#flight_callsign_number').val()
+        $.get(url + '?' + $.param({ t: theater, cs: callsign, n: callsign_number}), function(data) {
+            $('#flight_frequency').val(data['freq'])
+            $('#flight_group_id').val(data['group'])
+            $('#flight_laser').val(data['laser'])
+            $('#flight_tacan_channel').val(data['tcn'])
+            $('#flight_tacan_polarization').val(data['Y'])
+        })
+    })
 })

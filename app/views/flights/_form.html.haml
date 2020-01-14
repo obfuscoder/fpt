@@ -16,7 +16,7 @@
       %td= f.number_field :duration, class: 'form-control'
     %tr
       %th.table-secondary Theater
-      %td= f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }, {}, class: 'form-control', data: { remote: true, url: airbases_path }
+      %td= f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }, {}, class: 'form-control update-defaults', data: { remote: true, url: airbases_path, defaults_url: defaults_flights_path }
       %th.table-secondary Airframe
       %td
         = f.select :airframe, Settings.airframes.to_h.invert, {}, class: 'form-control'
@@ -27,9 +27,9 @@
       %td
         .form-row
           .col-md-8
-            = f.select :callsign, Settings.callsigns, {}, class: 'form-control'
+            = f.select :callsign, Settings.callsigns, {}, class: 'form-control update-defaults', data: { defaults_url: defaults_flights_path }
           .col-md-4
-            = f.select :callsign_number, 1..9, { include_blank: true }, class: 'form-control'
+            = f.select :callsign_number, 1..9, { include_blank: true }, class: 'form-control update-defaults', data: { defaults_url: defaults_flights_path }
       %th.table-secondary Mission
       %td= f.select :mission, Settings.missions, {}, class: 'form-control'
       %th.table-secondary Comms
@@ -58,7 +58,7 @@
       %td= f.select :divert, diverts(@flight), {}, class: 'form-control'
     %tr
       %th.table-secondary Grp Id
-      %td= f.select :group_id, 1..41, {}, class: 'form-control'
+      %td= f.select :group_id, 1..41, { include_blank: true }, class: 'form-control'
       %th.table-secondary Lasercode
       %td= f.select :laser, 111..175, {}, class: 'form-control'
       %th.table-secondary TACAN
