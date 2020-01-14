@@ -33,7 +33,7 @@ $(document).on('turbolinks:load', function() {
             $('#flight_group_id').val(data['group'])
             $('#flight_laser').val(data['laser'])
             $('#flight_tacan_channel').val(data['tcn'])
-            $('#flight_tacan_polarization').val(data['Y'])
+            $('#flight_tacan_polarization').val('Y')
         })
     })
 })
