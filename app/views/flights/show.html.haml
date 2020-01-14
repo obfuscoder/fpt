@@ -157,10 +157,35 @@
           .col-2.table-secondary TOT
           .col-2.table-secondary
         - @flight.waypoints.each do |waypoint|
-          = content_tag :div, id: dom_id(waypoint), class: 'row' do
-            = render waypoint
+          = render waypoint
         .row#add-waypoint
-          .col-12.table-secondary= link_to 'Add Waypoint', new_flight_waypoint_path(@flight), remote: true, class: 'btn btn-primary btn-sm'
+          %button.btn.btn-primary.btn-sm(data-target="#waypointdlg" data-toggle="modal" type="button") Add waypoint
+        #waypointdlg.modal.fade(aria-hidden="true" aria-labelledby="waypointdlgtitle" role="dialog" tabindex="-1")
+          .modal-dialog.modal-dialog-centered(role="document")
+            .modal-content
+              %form#waypointform
+                %input#waypoint_id(type='hidden')
+                .modal-header
+                  %h5#waypointdlgitle.modal-title Waypoint
+                  %button.close(aria-label="Close" data-dismiss="modal" type="button")
+                    %span(aria-hidden="true") ×
+                .modal-body
+                  .form-group.dropdown
+                    %label.col-form-label(for="waypoint_name") Name:
+                    %input#waypoint_name.form-control(type="text")
+                    .dropdown-menu
+                  .form-group
+                    %label.col-form-label(for="waypoint_position") Position:
+                    %input#waypoint_position.form-control
+                  .form-group
+                    %label.col-form-label(for="waypoint_altitude") Altitude:
+                    %input#waypoint_altitude.form-control
+                  .form-group
+                    %label.col-form-label(for="waypoint_tot") TOT:
+                    %input#waypoint_tot.form-control
+                .modal-footer
+                  %button.btn.btn-secondary(data-dismiss="modal" type="button") Cancel
+                  %button.btn.btn-primary(type="submit") Save
   - comms = 1.upto(4).map { |num| [num, @flight.send("radio#{num}")] }.select { |e| e.last.present? }
   - unless comms.empty?
     %tr

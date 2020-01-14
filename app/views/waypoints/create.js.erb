@@ -1,4 +1,0 @@
-$('#new-wp-inline_form').remove()
-e = document.getElementById('add-waypoint')
-e.insertAdjacentHTML('beforebegin', "<%= j content_tag(:div, id: dom_id(@waypoint), class: 'row') { render @waypoint } %>")
-e.style.display = 'flex'

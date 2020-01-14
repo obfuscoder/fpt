@@ -1,8 +1,9 @@
-.col-1= waypoint.number
-.col-2= waypoint.name
-.col-4= waypoint.position
-.col-1= waypoint.altitude
-.col-2= waypoint.tot&.to_s(:time)
-.col-2
-  = link_to 'Edit', edit_flight_waypoint_path(@flight, waypoint), remote: true, class: 'btn btn-primary btn-sm'
-  = link_to 'Destroy', flight_waypoint_path(@flight, waypoint), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'
+= content_tag :div, id: dom_id(waypoint), class: 'row' do
+  .col-1= waypoint.number
+  .col-2= waypoint.name
+  .col-4= waypoint.position
+  .col-1= waypoint.altitude
+  .col-2= waypoint.tot&.to_s(:time)
+  .col-2
+    %button.btn.btn-primary.btn-sm(data-target="#waypointdlg" data-toggle="modal" data-id="#{waypoint.id}" data-name="#{waypoint.name}" data-pos="#{waypoint.position}" data-alt="#{waypoint.altitude}" data-tot="#{waypoint.tot&.to_s(:time)}" type="button") Edit
+    = link_to 'Destroy', flight_waypoint_path(@flight, waypoint), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'

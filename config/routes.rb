@@ -11,7 +11,10 @@ Rails.application.routes.draw do
       post :clone
     end
     resources :pilots
-    resources :waypoints do
+    resources :waypoints, only: %i[index create destroy] do
+      member do
+        post :update
+      end
       collection do
         post :copy_from
       end

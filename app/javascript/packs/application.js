@@ -36,4 +36,73 @@ $(document).on('turbolinks:load', function() {
             $('#flight_tacan_polarization').val('Y')
         })
     })
+
+    $('#waypointdlg').on('shown.bs.modal', function(event) {
+        let button = $(event.relatedTarget)
+        $('#waypoint_id').val(button.data('id'))
+        $('#waypoint_name').val(button.data('name'))
+        $('#waypoint_position').val(button.data('pos'))
+        $('#waypoint_altitude').val(button.data('alt'))
+        $('#waypoint_tot').val(button.data('tot'))
+
+        $('#waypoint_name').focus()
+    })
+
+    $('#waypointform').submit(function(event) {
+        $.post(window.location.href + '/waypoints/' + $('#waypoint_id').val(), {
+            name: $('#waypoint_name').val(),
+            position: $('#waypoint_position').val(),
+            altitude: $('#waypoint_altitude').val(),
+            tot: $('#waypoint_tot').val()
+        }, function(data) {
+            let id = $('#waypoint_id').val()
+            if (id === '') {
+                $('#add-waypoint').before(data)
+            } else {
+                $('#waypoint_' + id).replaceWith(data)
+            }
+
+            $('#waypoint_id').val('')
+            $('#waypoint_name').val('')
+            $('#waypoint_position').val('')
+            $('#waypoint_tot').val('')
+
+            $('#waypointdlg').modal('hide')
+        })
+        event.preventDefault()
+        return false
+    })
+
+    $('.dropdown').focusout(function(e) {
+        if ($(this).has(e.relatedTarget).length === 0) {
+            $('.dropdown-menu').dropdown('hide')
+        }
+    })
+
+    $('#waypoint_name').keyup(function() {
+        let menu = $('.dropdown-menu')
+        let value = $(this).val()
+        if (value.length < 2) {
+            menu.dropdown('hide')
+        } else {
+            $.get(window.location.href + '/waypoints/?q=' + value, function(data) {
+                if (data.length > 0) {
+                    menu.empty()
+                    data.forEach(function(value, index) {
+                        menu.append('<a class="dropdown-item" href="#" data-pos="' + value['pos'] + '">' + value['name'] + '</a>')
+                    })
+                    menu.dropdown('show')
+                    menu.dropdown('update')
+                    $('.dropdown-item').click(function () {
+                        $('#waypoint_name').val($(this).html())
+                        $('#waypoint_position').val($(this).attr('data-pos'))
+                        $('#waypoint_altitude').focus()
+                        return false
+                    })
+                } else {
+                    menu.dropdown('hide')
+                }
+            })
+        }
+    })
 })

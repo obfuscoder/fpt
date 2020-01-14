@@ -1,10 +1,6 @@
 class WaypointsController < ApplicationController
   before_action :set_flight
-  before_action :set_waypoint, only: %i[edit update destroy]
-
-  def new
-    @waypoint = @flight.waypoints.build number: @flight.waypoints.count + 1
-  end
+  before_action :set_waypoint, only: %i[update destroy]
 
   def index
     wps = Settings.theaters[@flight.theater].waypoints.map do |wp|
@@ -14,33 +10,21 @@ class WaypointsController < ApplicationController
     render json: wps
   end
 
-  def edit; end
-
   def create
-    params[:waypoint].delete_if{ |_k, v| v.empty? }
     @waypoint = @flight.waypoints.build(waypoint_params)
 
-    respond_to do |format|
-      if @waypoint.save
-        format.js
-        format.html { redirect_to flight_path(@flight), notice: 'Waypoint was successfully created.' }
-      else
-        format.js
-        format.html { render :new }
-      end
+    if @waypoint.save
+      render @waypoint
+    else
+      head :bad_request
     end
   end
 
   def update
-    respond_to do |format|
-      if @waypoint.update(waypoint_params)
-        format.js
-        format.html { redirect_to flight_path(@flight), notice: 'Waypoint was successfully updated.' }
-      else
-        format.js
-        format.html { render :edit }
-      end
-
+    if @waypoint.update(waypoint_params)
+      render @waypoint
+    else
+      head :bad_request
     end
   end
 
@@ -71,7 +55,7 @@ class WaypointsController < ApplicationController
   end
 
   def waypoint_params
-    params.require(:waypoint).permit(:name, :position, :altitude, :tot)
+    params.permit(:name, :position, :altitude, :tot)
   end
 
   def position(wp)
