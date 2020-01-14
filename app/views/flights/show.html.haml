@@ -175,14 +175,18 @@
                     %input#waypoint_name.form-control(type="text")
                     .dropdown-menu
                   .form-group
-                    %label.col-form-label(for="waypoint_position") Position:
-                    %input#waypoint_position.form-control
+                    %label.col-form-label(for="waypoint_dme") DME:
+                    %input#waypoint_dme.form-control
                   .form-group
-                    %label.col-form-label(for="waypoint_altitude") Altitude:
-                    %input#waypoint_altitude.form-control
-                  .form-group
-                    %label.col-form-label(for="waypoint_tot") TOT:
-                    %input#waypoint_tot.form-control
+                    %label.col-form-label(for="waypoint_pos") Position:
+                    %input#waypoint_pos.form-control
+                  .form-row
+                    .col.form-group
+                      %label.col-form-label(for="waypoint_elev") Elevation:
+                      %input#waypoint_elev.form-control
+                    .col.form-group
+                      %label.col-form-label(for="waypoint_tot") TOT:
+                      %input#waypoint_tot.form-control
                 .modal-footer
                   %button.btn.btn-secondary(data-dismiss="modal" type="button") Cancel
                   %button.btn.btn-primary(type="submit") Save

@@ -4,14 +4,16 @@ class WaypointsController < ApplicationController
 
   def index
     wps = Settings.theaters[@flight.theater].waypoints.map do |wp|
-      { name: wp.name, pos: position(wp) }
+      pos = position(wp)
+      { name: wp.name, dme: pos.dme || '', pos: pos.coords, lat: pos.latitude, lon: pos.longitude }
     end
     wps = wps.select { |wp| wp[:name].downcase.include? params[:q].downcase } if params[:q]
     render json: wps
   end
 
   def create
-    @waypoint = @flight.waypoints.build(waypoint_params)
+    pos, wp = to_position
+    @waypoint = @flight.waypoints.build latitude: pos.latitude, longitude: pos.longitude, dme: pos.dme, name: wp[:name], elevation: wp[:elev], tot: wp[:tot]
 
     if @waypoint.save
       render @waypoint
@@ -21,7 +23,8 @@ class WaypointsController < ApplicationController
   end
 
   def update
-    if @waypoint.update(waypoint_params)
+    pos, wp = to_position
+    if @waypoint.update latitude: pos.latitude, longitude: pos.longitude, dme: pos.dme, name: wp[:name], elevation: wp[:elev], tot: wp[:tot]
       render @waypoint
     else
       head :bad_request
@@ -46,6 +49,12 @@ class WaypointsController < ApplicationController
 
   private
 
+  def to_position
+    wp = waypoint_params
+    pos = Position.new latitude: wp[:lat], longitude: wp[:lon], pos: wp[:pos], dme: wp[:dme]
+    return pos, wp
+  end
+
   def set_flight
     @flight = Flight.find(params[:flight_id])
   end
@@ -55,11 +64,10 @@ class WaypointsController < ApplicationController
   end
 
   def waypoint_params
-    params.permit(:name, :position, :altitude, :tot)
+    params.permit(:name, :dme, :lat, :lon, :pos, :elev, :tot)
   end
 
   def position(wp)
-    pos = Position.new(latitude: wp.lat, longitude: wp.lon, pos: wp.pos, dme: wp.dme)
-    pos.to_s(type: (@flight.airframe == 'f18' || @flight.airframe == 'av8b' ? :dms : :dm))
+    Position.new(latitude: wp.lat, longitude: wp.lon, pos: wp.pos, dme: wp.dme)
   end
 end

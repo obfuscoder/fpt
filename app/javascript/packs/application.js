@@ -41,8 +41,9 @@ $(document).on('turbolinks:load', function() {
         let button = $(event.relatedTarget)
         $('#waypoint_id').val(button.data('id'))
         $('#waypoint_name').val(button.data('name'))
-        $('#waypoint_position').val(button.data('pos'))
-        $('#waypoint_altitude').val(button.data('alt'))
+        $('#waypoint_dme').val(button.data('dme'))
+        $('#waypoint_pos').val(button.data('pos'))
+        $('#waypoint_elev').val(button.data('elev'))
         $('#waypoint_tot').val(button.data('tot'))
 
         $('#waypoint_name').focus()
@@ -51,8 +52,9 @@ $(document).on('turbolinks:load', function() {
     $('#waypointform').submit(function(event) {
         $.post(window.location.href + '/waypoints/' + $('#waypoint_id').val(), {
             name: $('#waypoint_name').val(),
-            position: $('#waypoint_position').val(),
-            altitude: $('#waypoint_altitude').val(),
+            dme: $('#waypoint_dme').val(),
+            pos: $('#waypoint_pos').val(),
+            elev: $('#waypoint_elev').val(),
             tot: $('#waypoint_tot').val()
         }, function(data) {
             let id = $('#waypoint_id').val()
@@ -64,7 +66,8 @@ $(document).on('turbolinks:load', function() {
 
             $('#waypoint_id').val('')
             $('#waypoint_name').val('')
-            $('#waypoint_position').val('')
+            $('#waypoint_dme').val('')
+            $('#waypoint_pos').val('')
             $('#waypoint_tot').val('')
 
             $('#waypointdlg').modal('hide')
@@ -88,15 +91,16 @@ $(document).on('turbolinks:load', function() {
             $.get(window.location.href + '/waypoints/?q=' + value, function(data) {
                 if (data.length > 0) {
                     menu.empty()
-                    data.forEach(function(value, index) {
-                        menu.append('<a class="dropdown-item" href="#" data-pos="' + value['pos'] + '">' + value['name'] + '</a>')
+                    data.forEach(function(value) {
+                        menu.append('<a class="dropdown-item" href="#" data-dme="' + value['dme'] + '" data-pos="' + value['pos'] + '">' + value['name'] + '</a>')
                     })
                     menu.dropdown('show')
                     menu.dropdown('update')
                     $('.dropdown-item').click(function () {
                         $('#waypoint_name').val($(this).html())
-                        $('#waypoint_position').val($(this).attr('data-pos'))
-                        $('#waypoint_altitude').focus()
+                        $('#waypoint_dme').val($(this).attr('data-dme'))
+                        $('#waypoint_pos').val($(this).attr('data-pos'))
+                        $('#waypoint_elev').focus()
                         return false
                     })
                 } else {

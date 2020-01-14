@@ -6,6 +6,18 @@ class Waypoint < ApplicationRecord
   before_validation :set_number
   after_destroy :destroyed
 
+  def to_s(type = :dm)
+    Position.new(latitude: latitude, longitude: longitude, dme: dme).to_s(type)
+  end
+
+  def coords(type = :dm)
+    Position.new(latitude: latitude, longitude: longitude, dme: dme).coords(type)
+  end
+
+  def position(type = :dm)
+    to_s(type)
+  end
+
   private
 
   def set_number

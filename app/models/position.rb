@@ -6,41 +6,59 @@ class Position
       @latitude = latitude.to_d
       @longitude = longitude.to_d
     else
-      ll(pos)
+      parse(pos) if pos.present?
     end
 
-    @dme = dme
+    @dme ||= dme
 
-    raise "Invalid! #{latitude} #{longitude} #{pos}" if @latitude.nil? || @longitude.nil?
+    @dme = pos if @latitude.nil? && @longitude.nil? && @dme.nil?
   end
 
-  def to_s(type: :dm)
-    pos = case type
-          when :dm
-            "#{lat_to_dm} #{lon_to_dm}"
-          when :dms
-            "#{lat_to_dms} #{lon_to_dms}"
-          end
-    @dme.nil? ? pos : "#{@dme} (#{pos})"
+  def coords(type = :dm)
+    case type
+    when :dms
+      "#{lat_to_dms} #{lon_to_dms}"
+    when :dmsp
+      "#{lat_to_dms(2)} #{lon_to_dms(2)}"
+    when :dmp
+      "#{lat_to_dm(4)} #{lon_to_dm(4)}"
+    else
+      "#{lat_to_dm} #{lon_to_dm}"
+    end
+  end
+
+  def to_s(type = :dm)
+    return @dme if @latitude.nil? && @longitude.nil?
+
+    @dme.nil? ? coords(type) : "#{@dme} (#{coords(type)})"
   end
 
   private
 
   MAPPINGS = { n: 1, s: -1, w: -1, e: 1 }.freeze
 
-  def ll(pos)
-    match = pos.match /(\w)(\d\d)(\d\d\.?\d*) (\w)(\d\d\d)(\d\d\.?\d*)/
-    return if match.nil?
+  def parse(pos)
+    @latitude = extract_part(pos, 'N|S', 2)
+    @longitude = extract_part(pos, 'W|E', 3)
+    @dme = extract_dmes(pos)
+  end
 
-    lat_let = match[1]
-    lat_deg = match[2].to_d
-    lat_min = match[3].to_d
-    lon_let = match[4]
-    lon_deg = match[5].to_d
-    lon_min = match[6].to_d
+  def extract_part(pos, letters, deg_len)
+    regex = "(?<let>#{letters})(?<deg>\\d{#{deg_len}}(?:\\.\\d+)?)°?\\s*(?<min>\\d\\d(?:\\.\\d+)?)?'?\\s*(?<sec>\\d\\d(?:\\.\\d+)?)?"
+    match = pos.match regex
+    return nil unless match
 
-    @latitude = from_dm(lat_let, lat_deg, lat_min)
-    @longitude = from_dm(lon_let, lon_deg, lon_min)
+    let = match[:let]
+    deg = match[:deg].to_d
+    min = match[:min].to_d
+    sec = match[:sec].to_d
+
+    letter_to_sign(let) * (deg + min / 60 + sec / 3600)
+  end
+
+  def extract_dmes(pos)
+    dmes = pos.scan(%r{[A-Z]{3} \d{3}/\d+(?:\.\d+)?}).join(' ')
+    dmes.present? ? dmes : nil
   end
 
   def from_dm(letter, deg, min)
@@ -51,24 +69,24 @@ class Position
     MAPPINGS[letter.downcase.to_sym]
   end
 
-  def lat_to_dm
+  def lat_to_dm(precision = 3)
     value = @latitude.abs
-    "#{lat_letter}#{to_dm(value, 2)}"
+    "#{lat_letter}#{to_dm(value, 2, precision)}"
   end
 
-  def lon_to_dm
+  def lon_to_dm(precision = 3)
     value = @longitude.abs
-    "#{lon_letter}#{to_dm(value, 3)}"
+    "#{lon_letter}#{to_dm(value, 3, precision)}"
   end
 
-  def lat_to_dms
+  def lat_to_dms(precision = 0)
     value = @latitude.abs
-    "#{lat_letter}#{to_dms(value, 2)}"
+    "#{lat_letter}#{to_dms(value, 2, precision)}"
   end
 
-  def lon_to_dms
+  def lon_to_dms(precision = 0)
     value = @longitude.abs
-    "#{lon_letter}#{to_dms(value, 3)}"
+    "#{lon_letter}#{to_dms(value, 3, precision)}"
   end
 
   def lat_letter
@@ -79,21 +97,34 @@ class Position
     @longitude.negative? ? 'W' : 'E'
   end
 
-  def to_dm(value, digits)
+  def to_dm(value, digits, precision)
     d = value.to_i
-    m = (value.frac * 60).round(3)
-    m_format = m.frac.zero? ? '%02d' : '%06.3f'
+    m = (value.frac * 60).round(precision)
 
-    format "%0#{digits}d #{m_format}", d, m
+    if m.zero?
+      format "%0#{digits}d", d
+    else
+      m_format = m.frac.zero? ? '%02d' : "%0#{precision + 3}.#{precision}f"
+
+      format "%0#{digits}d #{m_format}", d, m
+    end
   end
 
-  def to_dms(value, digits)
+  def to_dms(value, digits, precision)
     d = value.to_i
     m = value.frac * 60
-    s = (m.frac * 60).round(3)
+    s = (m.frac * 60).round(precision)
     m = m.to_i
 
-    s_format = s.frac.zero? ? '%02d' : '%06.3f'
-    format "%0#{digits}d %02d #{s_format}", d, m, s
+    if s.zero?
+      if m.zero?
+        format "%0#{digits}d", d
+      else
+        format "%0#{digits}d %02d", d, m
+      end
+    else
+      s_format = s.frac.zero? ? '%02d' : "%0#{precision + 3}.#{precision}f"
+      format "%0#{digits}d %02d #{s_format}", d, m, s
+    end
   end
 end
