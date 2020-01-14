@@ -2969,7 +2969,14 @@ airframes:
   a10: A-10C
   f18: F/A-18C
   av8b: AV-8B N/A
-  f16: F-16
+  f16: F-16C
+  f5: F-5E
+  f14: F-14
+  jf17: JF-17
+  m2000: M-2000C
+  l39: L-39
+  c101: C-101
+  uh1h: UH-1H
 callsigns:
   - Cougar
   - Edelweiss
