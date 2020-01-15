@@ -3052,10 +3052,22 @@ theaters:
         approach: 264.0
         clearance: 265.0
         ground: ICLS 12
+        departures:
+          cat: CAT
+        recoveries:
+          case1: CASE I
+          case2: CASE II
+          case3: CASE III
       tarawa:
         name: LHA-1 Tarawa
         tacan: 77X
         tower: 315.0
+        departures:
+          sto: STO
+        recoveries:
+          case1: CASE I
+          case2: CASE II
+          case3: CASE III
     support:
       texaco:
         type: TANKER
