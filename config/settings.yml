@@ -2956,6 +2956,24 @@ theaters:
         lon: -114.850855555556
   caucasus:
     name: Caucasus
+    channels:
+      - name: Flight/Squadron specific
+    navaids:
+      - id: KBL
+        name: Kobuleti
+        channel: 67
+        pos: N4155.797 E04151.809
+        elevation: 59
+      - id: KTS
+        name: Kutaisi
+        channel: 44
+        pos: N4210.657 E04228.874
+        elevation: 148
+      - id: BTM
+        name: Batumi
+        channel: 16
+        pos: N4136.562 E04136.034
+        elevation: 33
     airbases:
       kutaisi:
         name: Kutaisi - Kopitnari
@@ -3038,8 +3056,46 @@ theaters:
         name: LHA-1 Tarawa
         tacan: 77X
         tower: 315.0
-gulf:
-  name: Persian Gulf
+    support:
+      texaco:
+        type: TANKER
+        callsign: TEXACO
+        airframe: KC-135
+        comms: 265.0
+        tacan: 11X
+        position: N-S Track
+        altitude: 17000
+      shell:
+        type: TANKER
+        callsign: SHELL
+        airframe: KC-135MPRS
+        comms: 360.8
+        tacan: 45Y
+        position: N-S Track
+        altitude: FL240
+      arco:
+        type: TANKER
+        callsign: ARCO
+        airframe: KC-130
+        comms: 319.8
+        tacan: 13Y
+        position: N-S Track
+        altitude: 10000
+      stennis:
+        type: TANKER
+        callsign: S3B Stennis
+        comms: 250.1
+        tacan: 78Y
+      overlord:
+        type: AWACS
+        callsign: OVERLORD
+        comms: 270.1
+        position: West-Georgia
+      magic:
+        type: AWACS
+        callsign: MAGIC
+        comms: 305.6
+        position: Central Black Sea
 airframes:
   a10: A-10C
   f18: F/A-18C

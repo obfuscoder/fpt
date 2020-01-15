@@ -376,10 +376,10 @@ class MissionDataCard < Prawn::Document
   end
 
   def start_new_page(options = {})
+    return if @row == 0
+
     super(options)
-
     @row = 0
-
     set_white_background
   end
 
