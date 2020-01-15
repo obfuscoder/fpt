@@ -14,7 +14,7 @@ class Pilot < ApplicationRecord
   end
 
   def net_id
-    format('%02d/%02d', flight.group_id, number)
+    flight.group_id.present? ? format('%02d/%02d', flight.group_id, number) : ''
   end
 
   def laser
