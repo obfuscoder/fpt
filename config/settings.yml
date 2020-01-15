@@ -2954,8 +2954,90 @@ theaters:
       - name: ZINAX
         lat: 36.3904027777778
         lon: -114.850855555556
-caucasus:
-  name: Caucasus
+  caucasus:
+    name: Caucasus
+    airbases:
+      kutaisi:
+        name: Kutaisi - Kopitnari
+        tacan: 44X
+        tower: 134.0
+        takeoff: 08
+        land: 08
+        runways:
+          - name: 08
+            length: 8200
+            elevation: 148
+            ils: 109.75
+          - name: 26
+            length: 8200
+            elevation: 148
+        departures:
+          e: EAST
+          s: SOUTH
+          w: WEST
+          n: NORTH
+        recoveries:
+          e: EAST
+          s: SOUTH
+          w: WEST
+          n: NORTH
+      kobuleti:
+        name: Kobuleti
+        tacan: 67X
+        tower: 133.0
+        takeoff: 07
+        land: 07
+        runways:
+          - name: 07
+            length: 7870
+            elevation: 59
+            ils: 111.5
+          - name: 25
+            length: 7870
+            elevation: 59
+        departures:
+          ne: NORTH/EAST
+          e: EAST
+          bs: BLACK SEA
+          s: SOUTH
+        recoveries:
+          ne: NORTH/EAST
+          e: EAST
+          bs: BLACK SEA
+          s: SOUTH
+      batumi:
+        name: Batumi
+        tacan: 16X
+        tower: 131.0
+        takeoff: 31
+        land: 13
+        runways:
+          - name: 13
+            length: 8050
+            elevation: 33
+            ils: 110.3
+          - name: 31
+            length: 8050
+            elevation: 33
+        departures:
+          n: NORTH
+          e: EAST
+          s: SOUTH
+        recoveries:
+          n: NORTH
+          e: EAST
+          s: SOUTH
+      stennis:
+        name: CV-74 Stennis
+        tacan: 55X
+        tower: 305.0
+        approach: 264.0
+        clearance: 265.0
+        ground: ICLS 12
+      tarawa:
+        name: LHA-1 Tarawa
+        tacan: 77X
+        tower: 315.0
 gulf:
   name: Persian Gulf
 airframes:
