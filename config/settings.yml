@@ -2994,11 +2994,22 @@ theaters:
           s: SOUTH
           w: WEST
           n: NORTH
+          sid8: SID RWY 08
+          sid26: SID RWY 26
         recoveries:
           e: EAST
           s: SOUTH
           w: WEST
           n: NORTH
+          ily8: ILS or LOC y RWY 08
+          ily26: ILS or LOC y RWY 26
+          ilz8: ILS or LOC z RWY 08
+          ilz26: ILS or LOC z RWY 26
+          vy8: VOR y RWY 08
+          vy26: VOR z RWY 26
+          vz8: VOR z RWY 08
+          vz26: VOR z RWY 26
+          star826: STAR RWY 08-26
       kobuleti:
         name: Kobuleti
         tacan: 67X
