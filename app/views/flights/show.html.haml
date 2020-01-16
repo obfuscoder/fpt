@@ -194,6 +194,12 @@
       %tr
         %td.table-secondary= e.first
         %td(colspan=5)= e.last
+  - if @flight.notes.present?
+    %tr
+      %th.bg-secondary(colspan=6) NOTES
+    %tr
+      %td(colspan=6)
+        %pre= @flight.notes
 
 = link_to 'Edit', edit_flight_path(@flight), class: 'btn btn-primary'
 = link_to 'Print', print_flight_path(@flight), class: 'btn btn-secondary'
