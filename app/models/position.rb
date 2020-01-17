@@ -15,6 +15,8 @@ class Position
   end
 
   def coords(type = :dm)
+    return '' if @longitude.nil? || @latitude.nil?
+
     case type
     when :dms
       "#{lat_to_dms} #{lon_to_dms}"
