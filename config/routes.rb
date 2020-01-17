@@ -16,7 +16,7 @@ Rails.application.routes.draw do
         post :update
       end
       collection do
-        post :copy_from
+        put :copy_from
       end
     end
   end
