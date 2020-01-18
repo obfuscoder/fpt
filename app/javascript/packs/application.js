@@ -29,10 +29,18 @@ $(document).on('turbolinks:load', function() {
         let callsign = $('#flight_callsign').val()
         let callsign_number = $('#flight_callsign_number').val()
         $.get(url + '?' + $.param({ t: theater, cs: callsign, n: callsign_number}), function(data) {
-            $('#flight_frequency').val(data['freq'])
-            $('#flight_group_id').val(data['group'])
-            $('#flight_laser').val(data['laser'])
-            $('#flight_tacan_channel').val(data['tcn'])
+            if('freq' in data) {
+                $('#flight_frequency').val(data['freq'])
+            }
+            if('group' in data) {
+                $('#flight_group_id').val(data['group'])
+            }
+            if('laser' in data) {
+                $('#flight_laser').val(data['laser'])
+            }
+            if('tcn' in data) {
+                $('#flight_tacan_channel').val(data['tcn'])
+            }
             $('#flight_tacan_polarization').val('Y')
         })
     })
