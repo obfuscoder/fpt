@@ -22,7 +22,7 @@ class Pilot < ApplicationRecord
   end
 
   def tacan
-    return if flight.tacan.blank?
+    return unless flight.tacan_channel.present?
 
     second_polarization = flight.tacan_polarization == 'X' ? 'Y' : 'X'
     case number
