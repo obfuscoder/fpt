@@ -22,6 +22,8 @@ class Pilot < ApplicationRecord
   end
 
   def tacan
+    return if flight.tacan.blank?
+
     second_polarization = flight.tacan_polarization == 'X' ? 'Y' : 'X'
     case number
     when 1
