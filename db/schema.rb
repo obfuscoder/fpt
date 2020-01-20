@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_17_180202) do
+ActiveRecord::Schema.define(version: 2020_01_20_183036) do
 
   create_table "flights", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 2020_01_17_180202) do
     t.string "dme"
     t.decimal "latitude", precision: 16, scale: 14
     t.decimal "longitude", precision: 17, scale: 14
+    t.integer "format"
+    t.integer "precision"
     t.index ["flight_id"], name: "index_waypoints_on_flight_id"
   end
 
