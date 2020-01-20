@@ -247,7 +247,7 @@ class MissionDataCard < Prawn::Document
       cell(0, wp.number)
       cell([1, 2], wp.name)
       cell([3, 8], wp.position)
-      cell(9, wp.altitude)
+      cell(9, wp.elevation)
       cell(10, wp.tot&.to_s(:time))
       next_row
     end

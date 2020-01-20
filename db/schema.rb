@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 2020_01_17_180202) do
     t.string "divert_airbase"
     t.string "departure"
     t.string "recovery"
-    t.string "flights"
     t.string "ao"
     t.string "divert"
     t.string "support"
@@ -59,11 +58,9 @@ ActiveRecord::Schema.define(version: 2020_01_17_180202) do
     t.integer "flight_id", null: false
     t.integer "number"
     t.string "name"
-    t.string "position"
     t.string "elevation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "waypoints"
     t.time "tot"
     t.string "dme"
     t.decimal "latitude", precision: 16, scale: 14

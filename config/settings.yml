@@ -229,7 +229,8 @@ theaters:
           fyttr_low: FYTTR LOW
           tac_north: A10 TAC NORTH
           tac_west: A10 TAC WEST
-          flex: FLEX TURNOUT
+          flex21: FLEX 21 TURNOUT
+          flex3: FLEX 3 TURNOUT
           dream_low: DREAM LOW
           dream4: DREAM FOUR
           mmm4: MORMON MESA FOUR
