@@ -4,3 +4,16 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+task :import do
+  xml = Nokogiri::XML(File.open('doc.kml'))
+  File.open('wps.yaml', 'w') do |f|
+    xml.xpath('//Placemark/Point/coordinates/../..').each do |node|
+      name = node.xpath('name').text
+      lat, lon, alt = node.xpath('Point/coordinates').text.split(',')
+      f.puts "    - name: #{name}"
+      f.puts "      lat: #{lat}"
+      f.puts "      lon: #{lon}"
+    end
+  end
+end
