@@ -32,8 +32,7 @@ class FlightsController < ApplicationController
   end
 
   def update
-    p = flight_params
-    if @flight.update(p)
+    if @flight.update(flight_params)
       redirect_to @flight, notice: 'Flight was successfully updated.'
     else
       render :edit

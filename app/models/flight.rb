@@ -26,7 +26,10 @@ class Flight < ApplicationRecord
   def selected_support
     return [] unless support
 
-    support.map { |s| OpenStruct.new({key: s}.merge Settings.theaters[theater].support[s]) }
+    support.map do |s|
+      entry = Settings.theaters[theater].support[s]
+      OpenStruct.new({ key: s }.merge(entry)) if entry.present?
+    end.compact
   end
 
   def departure_name
