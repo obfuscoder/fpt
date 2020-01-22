@@ -14,25 +14,25 @@ class Position
     @dme = pos if @latitude.nil? && @longitude.nil? && @dme.nil?
   end
 
-  def coords(type = :dm)
+  def coords(format: :dm, precision: 3)
     return '' if @longitude.nil? || @latitude.nil?
 
-    case type
+    case format
     when :dms
-      "#{lat_to_dms} #{lon_to_dms}"
-    when :dmsp
-      "#{lat_to_dms(2)} #{lon_to_dms(2)}"
-    when :dmp
-      "#{lat_to_dm(4)} #{lon_to_dm(4)}"
-    else
-      "#{lat_to_dm} #{lon_to_dm}"
+      "#{lat_to_dms(precision)} #{lon_to_dms(precision)}"
+    when :dm
+      "#{lat_to_dm(precision)} #{lon_to_dm(precision)}"
+    when :d
+      "#{lat_to_d(precision)} #{lon_to_d(precision)}"
+    when :utm
+      utm(precision)
     end
   end
 
-  def to_s(type = :dm)
+  def to_s(format: :dm, precision: 3)
     return @dme if @latitude.nil? && @longitude.nil?
 
-    @dme.nil? ? coords(type) : "#{@dme} (#{coords(type)})"
+    @dme.nil? ? coords(format: format, precision: precision) : "#{@dme} (#{coords(format: format, precision: precision)})"
   end
 
   private
@@ -40,7 +40,7 @@ class Position
   MAPPINGS = { n: 1, s: -1, w: -1, e: 1 }.freeze
 
   def parse(pos)
-    match = pos.match /\A(?<lat>-?[\d\.]+),\s*(?<lon>-?[\d\.]+)\z/
+    match = pos.match /\A(?<lat>-?[\d\.]+),?\s*(?<lon>-?[\d\.]+)\z/
     if match
       @latitude = match[:lat].to_d
       @longitude = match[:lon].to_d
@@ -76,6 +76,16 @@ class Position
     MAPPINGS[letter.downcase.to_sym]
   end
 
+  def lat_to_d(precision = 5)
+    value = @latitude.abs
+    "#{lat_letter}#{to_d(value, 2, precision)}"
+  end
+
+  def lon_to_d(precision = 5)
+    value = @longitude.abs
+    "#{lon_letter}#{to_d(value, 3, precision)}"
+  end
+
   def lat_to_dm(precision = 3)
     value = @latitude.abs
     "#{lat_letter}#{to_dm(value, 2, precision)}"
@@ -102,6 +112,10 @@ class Position
 
   def lon_letter
     @longitude.negative? ? 'W' : 'E'
+  end
+
+  def to_d(value, digits, precision)
+    format "%0#{digits + precision + 1}.#{precision}f", value
   end
 
   def to_dm(value, digits, precision)
@@ -133,5 +147,9 @@ class Position
       s_format = s.frac.zero? ? '%02d' : "%0#{precision + 3}.#{precision}f"
       format "%0#{digits}d %02d #{s_format}", d, m, s
     end
+  end
+
+  def utm(precision)
+    GeoUtm::LatLon.new(@latitude, @longitude).to_utm.to_s
   end
 end

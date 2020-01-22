@@ -51,6 +51,8 @@ $(document).on('turbolinks:load', function() {
         $('#waypoint_name').val(button.data('name'))
         $('#waypoint_dme').val(button.data('dme'))
         $('#waypoint_pos').val(button.data('pos'))
+        $('#waypoint_fmt').val(button.data('fmt'))
+        $('#waypoint_prec').val(button.data('prec'))
         $('#waypoint_elev').val(button.data('elev'))
         $('#waypoint_tot').val(button.data('tot'))
 
@@ -62,6 +64,8 @@ $(document).on('turbolinks:load', function() {
             name: $('#waypoint_name').val(),
             dme: $('#waypoint_dme').val(),
             pos: $('#waypoint_pos').val(),
+            fmt: $('#waypoint_fmt').val(),
+            prec: $('#waypoint_prec').val(),
             elev: $('#waypoint_elev').val(),
             tot: $('#waypoint_tot').val()
         }, function(data) {

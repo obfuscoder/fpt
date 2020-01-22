@@ -24,6 +24,7 @@ RSpec.describe Position do
       'N34 E34' => 'N34 E034',
       'N 34 E 34' => 'N34 E034',
       '42.31506, 41.91179' => 'N42 18.904 E041 54.707',
+      '42 -115' => 'N42 W115',
       '-42.31506, -115.91179' => 'S42 18.904 W115 54.707'
     }.each do |input, output|
       context "with #{input}" do

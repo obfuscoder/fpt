@@ -13,8 +13,14 @@ class WaypointsController < ApplicationController
 
   def create
     pos, wp = to_position
-    @waypoint = @flight.waypoints.build latitude: pos.latitude, longitude: pos.longitude, dme: pos.dme, name: wp[:name], elevation: wp[:elev], tot: wp[:tot]
-
+    @waypoint = @flight.waypoints.build latitude: pos.latitude,
+                                        longitude: pos.longitude,
+                                        dme: pos.dme,
+                                        name: wp[:name],
+                                        elevation: wp[:elev],
+                                        tot: wp[:tot],
+                                        format: wp[:fmt],
+                                        precision: wp[:prec]
     if @waypoint.save
       render @waypoint
     else
@@ -24,7 +30,14 @@ class WaypointsController < ApplicationController
 
   def update
     pos, wp = to_position
-    if @waypoint.update latitude: pos.latitude, longitude: pos.longitude, dme: pos.dme, name: wp[:name], elevation: wp[:elev], tot: wp[:tot]
+    if @waypoint.update latitude: pos.latitude,
+                        longitude: pos.longitude,
+                        dme: pos.dme,
+                        name: wp[:name],
+                        elevation: wp[:elev],
+                        tot: wp[:tot],
+                        format: wp[:fmt],
+                        precision: wp[:prec]
       render @waypoint
     else
       head :bad_request
@@ -64,7 +77,7 @@ class WaypointsController < ApplicationController
   end
 
   def waypoint_params
-    params.permit(:name, :dme, :lat, :lon, :pos, :elev, :tot)
+    params.permit(:name, :dme, :lat, :lon, :pos, :elev, :tot, :fmt, :prec)
   end
 
   def position(wp)

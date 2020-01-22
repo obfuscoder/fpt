@@ -5,5 +5,5 @@
   .col-1= waypoint.elevation
   .col-2= waypoint.tot&.to_s(:time)
   .col-2
-    %button.btn.btn-primary.btn-sm(data-target="#waypointdlg" data-toggle="modal" data-id="#{waypoint.id}" data-name="#{waypoint.name}" data-lat="#{waypoint.latitude}" data-lon="#{waypoint.longitude}" data-pos="#{waypoint.coords}" data-dme="#{waypoint.dme}" data-elev="#{waypoint.elevation}" data-tot="#{waypoint.tot&.to_s(:time)}" type="button") Edit
+    %button.btn.btn-primary.btn-sm(data-target="#waypointdlg" data-toggle="modal" data-id="#{waypoint.id}" data-name="#{waypoint.name}" data-lat="#{waypoint.latitude}" data-lon="#{waypoint.longitude}" data-pos="#{waypoint.coords}" data-dme="#{waypoint.dme}" data-elev="#{waypoint.elevation}" data-tot="#{waypoint.tot&.to_s(:time)}" data-fmt="#{waypoint.format}" data-prec="#{waypoint.precision}"  type="button") Edit
     = link_to 'Destroy', flight_waypoint_path(@flight, waypoint), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'

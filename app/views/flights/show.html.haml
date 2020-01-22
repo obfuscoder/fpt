@@ -181,9 +181,16 @@
                   .form-group
                     %label.col-form-label(for="waypoint_pos") Position:
                     %input#waypoint_pos.form-control
-                  .form-group
-                    %label.col-form-label(for="waypoint_format") Format:
-                    %input#waypoint_format.form-control
+                  .form-row
+                    .col.form-group
+                      %label.col-form-label(for="waypoint_fmt") Format:
+                      %select#waypoint_fmt.form-control
+                        %option(value="dm") Dezimalminuten
+                        %option(value="dms") Dezimalsekunden
+                        %option(value="d") Dezimalgrade
+                    .col.form-group
+                      %label.col-form-label(for="waypoint_prec") Präzision:
+                      %input#waypoint_prec.form-control
                   .form-row
                     .col.form-group
                       %label.col-form-label(for="waypoint_elev") Elevation:

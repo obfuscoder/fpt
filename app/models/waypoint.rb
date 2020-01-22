@@ -1,23 +1,31 @@
 class Waypoint < ApplicationRecord
   belongs_to :flight
 
-  enum status: %i[dm dms mgrs]
+  enum format: %i[dm dms d utm mgrs]
 
   default_scope { order(:number) }
 
   before_validation :set_number
   after_destroy :destroyed
 
-  def to_s(type = :dm)
-    Position.new(latitude: latitude, longitude: longitude, dme: dme).to_s(type)
+  def to_s
+    Position.new(latitude: latitude, longitude: longitude, dme: dme).to_s(format: format || :dm, precision: precision || 3)
   end
 
-  def coords(type = :dm)
-    Position.new(latitude: latitude, longitude: longitude, dme: dme).coords(type)
+  def coords
+    Position.new(latitude: latitude, longitude: longitude, dme: dme).coords(format: format || :dm, precision: precision || 3)
   end
 
-  def position(type = :dm)
-    to_s(type)
+  def position
+    to_s
+  end
+
+  def format
+    (self[:format] ||= :dms).to_sym
+  end
+
+  def precision
+    self[:precision] ||= 3
   end
 
   private
