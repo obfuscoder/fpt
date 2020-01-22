@@ -1,5 +1,7 @@
 theaters:
   nttr:
+    name: Nellis Test & Training Range
+    link: https://www.google.com/maps/d/viewer?mid=1PZePuO8-bXETstbVcoQbbp8PmqG1QQJY&ll=36.68943668897938%2C-115.5734395&z=8
     defaults:
       tiger:
         freq: 261.15
@@ -46,7 +48,6 @@ theaters:
         freq: 134.65
         laser: 166
         group: 41
-    name: Nellis Test & Training Range
     channels:
       - name: Flight/Squadron specific
       - name: Nellis Clearance Delivery
@@ -2957,6 +2958,7 @@ theaters:
         lon: -114.850855555556
   caucasus:
     name: Caucasus
+    link: https://www.google.com/maps/d/viewer?mid=10zhS5hK6jx8uj2jVPM1vwrE4wNEl2_5i&ll=42.270911099028204%2C42.999008499999945&z=8
     channels:
       - name: Flight/Squadron specific
     navaids:

@@ -40,13 +40,18 @@ class Position
   MAPPINGS = { n: 1, s: -1, w: -1, e: 1 }.freeze
 
   def parse(pos)
-    @latitude = extract_part(pos, 'N|S', 2)
-    @longitude = extract_part(pos, 'W|E', 3)
-    @dme = extract_dmes(pos)
+    match = pos.match /\A(?<lat>-?[\d\.]+),\s*(?<lon>-?[\d\.]+)\z/
+    if match
+      @latitude = match[:lat].to_d
+      @longitude = match[:lon].to_d
+    else
+      @latitude = extract_part(pos, 'N|S', 2)
+      @longitude = extract_part(pos, 'W|E', 3)
+    end
   end
 
   def extract_part(pos, letters, deg_len)
-    regex = "(?<let>#{letters})(?<deg>\\d{#{deg_len}}(?:\\.\\d+)?)°?\\s*(?<min>\\d\\d(?:\\.\\d+)?)?'?\\s*(?<sec>\\d\\d(?:\\.\\d+)?)?"
+    regex = "(?<let>#{letters})\\s*(?<deg>\\d{1,#{deg_len}}(?:\\.\\d+)?)°?\\s*(?<min>\\d\\d(?:\\.\\d+)?)?'?\\s*(?<sec>\\d\\d(?:\\.\\d+)?)?"
     match = pos.match regex
     return nil unless match
 

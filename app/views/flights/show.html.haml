@@ -6,7 +6,8 @@
     %th.bg-secondary(colspan=6) MISSION DATA
   %tr
     %th.table-secondary Theater
-    %td= Settings.theaters[@flight.theater].name
+    %td
+      %a{ href: Settings.theaters[@flight.theater].link, target: "theater" }= Settings.theaters[@flight.theater].name
     %th.table-secondary Start
     %td= @flight.start
     %th.table-secondary Duration
