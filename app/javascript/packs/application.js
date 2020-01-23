@@ -47,16 +47,25 @@ $(document).on('turbolinks:load', function() {
 
     $('#waypointdlg').on('shown.bs.modal', function(event) {
         let button = $(event.relatedTarget)
-        $('#waypoint_id').val(button.data('id'))
-        $('#waypoint_name').val(button.data('name'))
-        $('#waypoint_dme').val(button.data('dme'))
-        $('#waypoint_pos').val(button.data('pos'))
-        $('#waypoint_fmt').val(button.data('fmt'))
-        $('#waypoint_prec').val(button.data('prec'))
-        $('#waypoint_elev').val(button.data('elev'))
-        $('#waypoint_tot').val(button.data('tot'))
-
         $('#waypoint_name').focus()
+
+        if (button.data('id') !== undefined) {
+            $('#waypoint_id').val(button.data('id'))
+            $('#waypoint_name').val(button.data('name'))
+            $('#waypoint_dme').val(button.data('dme'))
+            $('#waypoint_pos').val(button.data('pos'))
+            $('#waypoint_lat').val(button.data('lat'))
+            $('#waypoint_lon').val(button.data('lon'))
+            $('#waypoint_fmt').val(button.data('fmt'))
+            $('#waypoint_prec').val(button.data('prec'))
+            $('#waypoint_elev').val(button.data('elev'))
+            $('#waypoint_tot').val(button.data('tot'))
+        }
+    })
+
+    $('#waypoint_pos').change(function() {
+        $('#waypoint_lat').val('')
+        $('#waypoint_lon').val('')
     })
 
     $('#waypointform').submit(function(event) {
@@ -64,6 +73,8 @@ $(document).on('turbolinks:load', function() {
             name: $('#waypoint_name').val(),
             dme: $('#waypoint_dme').val(),
             pos: $('#waypoint_pos').val(),
+            lat: $('#waypoint_lat').val(),
+            lon: $('#waypoint_lon').val(),
             fmt: $('#waypoint_fmt').val(),
             prec: $('#waypoint_prec').val(),
             elev: $('#waypoint_elev').val(),
@@ -80,6 +91,8 @@ $(document).on('turbolinks:load', function() {
             $('#waypoint_name').val('')
             $('#waypoint_dme').val('')
             $('#waypoint_pos').val('')
+            $('#waypoint_lat').val('')
+            $('#waypoint_lon').val('')
             $('#waypoint_tot').val('')
 
             $('#waypointdlg').modal('hide')
@@ -104,7 +117,7 @@ $(document).on('turbolinks:load', function() {
                 if (data.length > 0) {
                     menu.empty()
                     data.forEach(function(value) {
-                        menu.append('<a class="dropdown-item" href="#" data-dme="' + value['dme'] + '" data-pos="' + value['pos'] + '">' + value['name'] + '</a>')
+                        menu.append('<a class="dropdown-item" href="#" data-dme="' + value['dme'] + '" data-pos="' + value['pos'] + '" data-lat="' + value['lat'] + '" data-lon="' + value['lon'] + '">' + value['name'] + '</a>')
                     })
                     menu.dropdown('show')
                     menu.dropdown('update')
@@ -112,6 +125,8 @@ $(document).on('turbolinks:load', function() {
                         $('#waypoint_name').val($(this).html())
                         $('#waypoint_dme').val($(this).attr('data-dme'))
                         $('#waypoint_pos').val($(this).attr('data-pos'))
+                        $('#waypoint_lat').val($(this).attr('data-lat'))
+                        $('#waypoint_lon').val($(this).attr('data-lon'))
                         $('#waypoint_elev').focus()
                         return false
                     })

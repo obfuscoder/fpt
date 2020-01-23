@@ -65,7 +65,7 @@ class WaypointsController < ApplicationController
   def to_position
     wp = waypoint_params
     pos = Position.new latitude: wp[:lat], longitude: wp[:lon], pos: wp[:pos], dme: wp[:dme]
-    return pos, wp
+    [pos, wp]
   end
 
   def set_flight

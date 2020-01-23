@@ -115,7 +115,8 @@ class Position
   end
 
   def to_d(value, digits, precision)
-    format "%0#{digits + precision + 1}.#{precision}f", value
+    format = precision.zero? ? "%0#{digits}d" : "%0#{digits + precision + 1}.#{precision}f"
+    format % value
   end
 
   def to_dm(value, digits, precision)
