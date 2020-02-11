@@ -219,8 +219,8 @@
         %pre= @flight.notes
 
 = link_to 'Edit', edit_flight_path(@flight), class: 'btn btn-primary'
-= link_to 'Print', print_flight_path(@flight), class: 'btn btn-secondary'
-= link_to 'Print Images', print_images_flight_path(@flight), class: 'btn btn-secondary'
+= link_to 'Print', print_flight_path(@flight), class: 'btn btn-secondary', data: { disable_with: 'Generating PDF ...' }
+= link_to 'Print Images', print_images_flight_path(@flight), class: 'btn btn-secondary', data: { disable_with: 'Generating images ...' }
 = link_to 'Clone', clone_flight_path(@flight), method: :post, class: 'btn btn-info'
 = link_to 'Destroy', @flight, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
 %p
