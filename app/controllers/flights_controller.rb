@@ -62,14 +62,16 @@ class FlightsController < ApplicationController
   end
 
   def print_images
-    images = Magick::Image.from_blob create_pdf
+    images = Magick::Image.from_blob(create_pdf) do
+      self.density = '300'
+      self.colorspace = Magick::RGBColorspace
+    end
     stringio = ::Zip::OutputStream.write_buffer do |zip|
       images.each_with_index do |image, index|
-        image.resize! 540, 814
+        image.resize! 540*2, 814*2
         image.alpha Magick::RemoveAlphaChannel
-        image.background_color = 'white'
-        image.format = 'jpg'
-        zip.put_next_entry sprintf('mdc_%d_%02d.jpg', @flight.id, index + 1)
+        image.format = 'png'
+        zip.put_next_entry sprintf('mdc_%d_%02d.png', @flight.id, index + 1)
         zip.write image.to_blob
       end
     end
