@@ -63,7 +63,7 @@ class FlightsController < ApplicationController
 
   def print_images
     images = Magick::Image.from_blob(create_pdf) do
-      self.density = '300'
+      self.density = '150'
       self.colorspace = Magick::RGBColorspace
     end
     stringio = ::Zip::OutputStream.write_buffer do |zip|
