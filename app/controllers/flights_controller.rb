@@ -68,7 +68,7 @@ class FlightsController < ApplicationController
     end
     stringio = ::Zip::OutputStream.write_buffer do |zip|
       images.each_with_index do |image, index|
-        image.resize! 540*2, 814*2
+        image.resize! 540, 814
         image.alpha Magick::RemoveAlphaChannel
         image.format = 'png'
         zip.put_next_entry sprintf('mdc_%d_%02d.png', @flight.id, index + 1)
