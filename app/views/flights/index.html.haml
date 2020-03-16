@@ -22,6 +22,7 @@
       %th Land
       %th Recovery
       %th Task
+      %th Min WX Reqs
       %th
   %tbody
     - @flights.each do |flight|
@@ -38,6 +39,7 @@
         %td= link_to_land_airbase(flight)
         %td= link_to_recovery(flight)
         %td= flight.task
+        %td= flight.minimum_weather_requirements
         %td= link_to 'Show', flight, class: 'btn btn-primary btn-sm'
 %br
 = link_to 'New Flight', new_flight_path, class: 'btn btn-primary'

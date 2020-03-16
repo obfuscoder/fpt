@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_20_183036) do
+ActiveRecord::Schema.define(version: 2020_03_16_161613) do
 
   create_table "flights", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_01_20_183036) do
     t.string "divert_airbase"
     t.string "departure"
     t.string "recovery"
+    t.string "flights"
     t.string "ao"
     t.string "divert"
     t.string "support"
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_01_20_183036) do
     t.string "radio2"
     t.string "radio3"
     t.string "radio4"
+    t.string "minimum_weather_requirements"
   end
 
   create_table "pilots", force: :cascade do |t|
@@ -58,9 +60,11 @@ ActiveRecord::Schema.define(version: 2020_01_20_183036) do
     t.integer "flight_id", null: false
     t.integer "number"
     t.string "name"
+    t.string "position"
     t.string "elevation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "waypoints"
     t.time "tot"
     t.string "dme"
     t.decimal "latitude", precision: 16, scale: 14
