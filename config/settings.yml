@@ -253,7 +253,7 @@ theaters:
           htz21l: HI-TACAN Z RWY 21L
           ilx21l: ILS or LOC/DME X RWY 21L
           iz21l: ILS or LOC/DME Z RWY 21L
-          ly21L: LOC Y RWY 21L
+          ly21l: LOC Y RWY 21L
           t21l: TACAN RWY 21L
           tx21l: TACAN X RWY 21L
       creech:
