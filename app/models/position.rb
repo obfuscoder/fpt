@@ -26,6 +26,8 @@ class Position
       "#{lat_to_d(precision)} #{lon_to_d(precision)}"
     when :utm
       utm(precision)
+    when :export
+      "#{lat_to_dm(3, full: true).tr('. ', '')} #{lon_to_dm(3, full: true).tr('. ', '')}"
     end
   end
 
@@ -86,14 +88,14 @@ class Position
     "#{lon_letter}#{to_d(value, 3, precision)}"
   end
 
-  def lat_to_dm(precision = 3)
+  def lat_to_dm(precision = 3, full: false)
     value = @latitude.abs
-    "#{lat_letter}#{to_dm(value, 2, precision)}"
+    "#{lat_letter}#{to_dm(value: value, digits: 2, precision: precision, full: full)}"
   end
 
-  def lon_to_dm(precision = 3)
+  def lon_to_dm(precision = 3, full: false)
     value = @longitude.abs
-    "#{lon_letter}#{to_dm(value, 3, precision)}"
+    "#{lon_letter}#{to_dm(value: value, digits: 3, precision: precision, full: full)}"
   end
 
   def lat_to_dms(precision = 0)
@@ -119,14 +121,14 @@ class Position
     format % value
   end
 
-  def to_dm(value, digits, precision)
+  def to_dm(value:, digits:, precision:, full: false)
     d = value.to_i
     m = (value.frac * 60).round(precision)
 
-    if m.zero?
+    if m.zero? && !full
       format "%0#{digits}d", d
     else
-      m_format = m.frac.zero? ? '%02d' : "%0#{precision + 3}.#{precision}f"
+      m_format = (m.frac.zero? && !full) ? '%02d' : "%0#{precision + 3}.#{precision}f"
 
       format "%0#{digits}d #{m_format}", d, m
     end

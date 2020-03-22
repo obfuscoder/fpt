@@ -60,6 +60,10 @@ class WaypointsController < ApplicationController
     redirect_to flight_path(@flight), notice: 'Waypoints successfully copied.'
   end
 
+  def export
+    send_data export_data, filename: "mission_#{@flight.id}.txt", type: 'text/plain'
+  end
+
   private
 
   def to_position
@@ -82,5 +86,9 @@ class WaypointsController < ApplicationController
 
   def position(wp)
     Position.new(latitude: wp.lat, longitude: wp.lon, pos: wp.pos, dme: wp.dme)
+  end
+
+  def export_data
+    @flight.waypoints.map(&:export).join("\n")
   end
 end

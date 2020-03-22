@@ -28,6 +28,14 @@ class Waypoint < ApplicationRecord
     self[:precision] ||= 3
   end
 
+  def export
+    sprintf '%s EL%05d T%06d %s', Position.new(latitude: latitude, longitude: longitude).to_s(format: :export),
+            elevation.to_i,
+            tot&.strftime('%H%M%S') || '000000',
+            name
+
+  end
+
   private
 
   def set_number
