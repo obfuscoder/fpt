@@ -4031,7 +4031,6 @@ missions:
 pilots:
   - Butcher
   - Chatterbox
-  - DC
   - DirtDiver
   - G-Rex
   - Ghost
@@ -4041,10 +4040,12 @@ pilots:
   - Jabba
   - Jemi
   - Loki
+  - Lenzi
   - MKay
   - Marsy
   - Mütze
   - Nerkub
+  - Obi
   - Poet
   - Prinz
   - Retai
@@ -4061,5 +4062,4 @@ pilots:
   - toto
   - Tronix
   - Warblade
-  - Obi
-  - Lenzi
+  - Chance
