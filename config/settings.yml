@@ -4705,9 +4705,14 @@ weapons:
     name: TGM-65H
     type: agm
     weight: 458
+  ft600:
+    name: Fuel tank FT600
+    type: tank
+    weight: 243
+    fuel: 4000
 loadout:
   a10:
-    1:
+    1: &a10station1
       - weapon: aim9m
         pylon: lau105
       - weapon: aim9m
@@ -4742,7 +4747,7 @@ loadout:
       - weapon: smokewhite
       - weapon: smokeyellow
       - pylon: lau105
-    2:
+    2: &a10station2
       - weapon: bdu50hd
       - weapon: bdu50ld
       - weapon: bdu50lgb
@@ -4769,7 +4774,7 @@ loadout:
       - weapon: lau131mk1
       - weapon: lau131mk61
       - weapon: lau131wtu1b
-    3:
+    3: &a10station3
       - weapon: bdu50hd
       - weapon: bdu50ld
       - weapon: bdu50lgb
@@ -4899,3 +4904,151 @@ loadout:
       - weapon: agm65h
         pylon: lau88
         amount: 3
+    4: &a10station4
+      - weapon: bdu50hd
+      - weapon: bdu50ld
+      - weapon: bdu50lgb
+      - weapon: cbu87
+      - weapon: cbu97
+      - weapon: gbu12
+      - weapon: mk82
+      - weapon: mk82air
+      - weapon: cbu103
+      - weapon: cbu105
+      - weapon: gbu10
+      - weapon: gbu31
+      - weapon: gbu31v3b
+      - weapon: gbu38
+      - weapon: mk84
+      - weapon: suuluu
+      - weapon: bdu33
+        amount: 3
+        pylon: bru42
+      - weapon: gbu12
+        amount: 3
+        pylon: bru42
+      - weapon: mk82
+        amount: 3
+        pylon: bru42
+      - weapon: mk82air
+        amount: 3
+        pylon: bru42
+      - weapon: suuluu
+        amount: 3
+        pylon: bru42
+      - weapon: lau68m151
+      - weapon: lau68m156
+      - weapon: lau68m257
+      - weapon: lau68m274
+      - weapon: lau68mk5
+      - weapon: lau68mk1
+      - weapon: lau68mk61
+      - weapon: lau68wtu1b
+      - weapon: lau131m151
+      - weapon: lau131m156
+      - weapon: lau131m257
+      - weapon: lau131m274
+      - weapon: lau131mk5
+      - weapon: lau131mk1
+      - weapon: lau131mk61
+      - weapon: lau131wtu1b
+      - weapon: lau68m151
+        amount: 3
+        pylon: bru42
+      - weapon: lau68m156
+        amount: 3
+        pylon: bru42
+      - weapon: lau68m257
+        amount: 3
+        pylon: bru42
+      - weapon: lau68m274
+        amount: 3
+        pylon: bru42
+      - weapon: lau68mk5
+        amount: 3
+        pylon: bru42
+      - weapon: lau68mk1
+        amount: 3
+        pylon: bru42
+      - weapon: lau68mk61
+        amount: 3
+        pylon: bru42
+      - weapon: lau68wtu1b
+        amount: 3
+        pylon: bru42
+      - weapon: lau131m151
+        amount: 3
+        pylon: bru42
+      - weapon: lau131m156
+        amount: 3
+        pylon: bru42
+      - weapon: lau131m257
+        amount: 3
+        pylon: bru42
+      - weapon: lau131m274
+        amount: 3
+        pylon: bru42
+      - weapon: lau131mk5
+        amount: 3
+        pylon: bru42
+      - weapon: lau131mk1
+        amount: 3
+        pylon: bru42
+      - weapon: lau131mk61
+        amount: 3
+        pylon: bru42
+      - weapon: lau131wtu1b
+        amount: 3
+        pylon: bru42
+      - pylon: bru42
+      - weapon: mxu648
+      - weapon: ft600
+    5: &a10station5
+      - weapon: bdu50hd
+      - weapon: bdu50ld
+      - weapon: bdu50lgb
+      - weapon: cbu87
+      - weapon: cbu97
+      - weapon: gbu12
+      - weapon: mk82
+      - weapon: mk82air
+      - weapon: cbu103
+      - weapon: cbu105
+      - weapon: gbu10
+      - weapon: gbu31
+      - weapon: gbu31v3b
+      - weapon: gbu38
+      - weapon: mk84
+      - weapon: bdu33
+        amount: 3
+        pylon: bru42
+      - weapon: mk82
+        amount: 3
+        pylon: bru42
+      - weapon: mk82air
+        amount: 3
+        pylon: bru42
+      - pylon: bru42
+      - weapon: mxu648
+    6:
+      - weapon: bdu50hd
+      - weapon: bdu50ld
+      - weapon: bdu50lgb
+      - weapon: cbu87
+      - weapon: cbu97
+      - weapon: gbu10
+      - weapon: gbu12
+      - weapon: mk82
+      - weapon: mk82air
+      - weapon: mk84
+      - weapon: bdu33
+        amount: 3
+        pylon: bru42
+      - pylon: bru42
+      - weapon: mxu648
+      - weapon: ft600
+    7: *a10station5
+    8: *a10station4
+    9: *a10station3
+    10: *a10station2
+    11: *a10station1
