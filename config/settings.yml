@@ -4481,7 +4481,7 @@ weapons:
     type: a2a
     weight: 188
     mount: lau105
-  lau115Clau127:
+  lau115clau127:
     name: LAU-115C + LAU-127
     type: pylon
     weight: 406
@@ -4504,7 +4504,7 @@ weapons:
   bru41a:
     name: BRU-41A
     type: pylon
-    weight: 432
+    weight: 228
   bdu50ld:
     name: BDU-50LD
     type: a2g
@@ -4525,54 +4525,18 @@ weapons:
     name: GBU-12
     type: a2g
     weight: 606
-  gbu38:
-    name: GBU-38
-    type: a2g
-    weight: 531
-  gbu31:
-    name: GBU-31
-    type: a2g
-    weight: 1971
-  gbu31v3:
-    Name: GBU-31(V)3/B
-    type: a2g
-    weight: 2163
   gbu16:
     name: GBU-16
     type: a2g
     weight: 1243
   bru55:
-    name: BRU-55 - 2 x GBU-38
+    name: BRU-55
     type: pylon
-    weight: 1237
-  bru33mk83:
-    name: BRU-33 - 2 x MK-83
+    weight: 175
+  bru33:
+    name: BRU-33
     type: pylon
-    weight: 2145
-  bru33mk82y:
-    name: BRU-33 - 2 x MK-82Y
-    type: pylon
-    weight: 1197
-  bru33mk82s:
-    name: BRU-33 - 2 x MK-82 SnakeEye
-    type: pylon
-    weight: 1197
-  bru33mk82:
-    name: BRU-33 - 2 x MK-82
-    type: pylon
-    weight: 1237
-  bru33mk20:
-    name: BRU-33 - 2 x MK-20
-    name: pylon
-    weight: 1153
-  bru33gbu12:
-    name: BRU-33 - 2 x GBU-12
-    type: pylon
-    weight: 1387
-  bru33cbu99:
-    name: BRU-33 - 2 x CBU-99
-    type: pylon
-    weight: 1153
+    weight: 175
   agm154a:
     name: AGM-154A
     type: a2g
@@ -4589,14 +4553,6 @@ weapons:
     name: AGM-88C
     type: a2g
     weight: 796
-  bru55a:
-    name: BRU-55 - 2 x AGM-154A
-    type: pylon
-    weight: 2249
-  bru55c:
-    name: BRU-55 - 2 x AGM-154C
-    type: pylon
-    weight: 2244
   agm65e:
     name: AGM-65E
     type: a2g
@@ -4653,14 +4609,10 @@ weapons:
     name: AIM-120C
     type: a2a
     weight: 476
-  lau115b:
+  lau115:
     name: LAU-115 -2 AIM-120B
     type: pylon
-    weight: 1016
-  lau115c:
-    name: LAU-115 -2 AIM-120C
-    type: pylon
-    weight: 1032
+    weight: 64
   aim7mh:
     name: AIM-7MH
     type: a2a
@@ -4781,36 +4733,20 @@ weapons:
     name: LAU-131 - 7x WTU1B (Practice)
     type: rockets
     weight: 225
-  bru33lau10:
-    name: BRU-33 - 2 x LAU 10 - 4 ZUNI MK 71
-    type: pylon
-    weight: 2114
   lau10:
-    name: 4 ZUNI MK 71
+    name: 4x ZUNI MK 71
     type: rockets
     weight: 1144
-  bru33lau61:
-    name: BRU-33 - 2x LAU-61 - 19 2.75' ROCKETS MK151 HE
-    type: pylon
-    weight: 1455
   lau61:
-    name: LAU-61 - 19 2.75' ROCKETS MK151 HE
+    name: 19x 2.75' ROCKETS MK151 HE
     type: rockets
     weight: 816
-  bru33lau68151:
-    name: BRU-33 - 2 x LAU-68 - 7 2.75' ROCKETS M151 HE
-    type: pylon
-    weight: 679
   lau68151:
-    name: LAU-68 - 7 2.75' ROCKETS M151 HE
+    name: 7x 2.75' ROCKETS M151 HE
     type: rockets
     weight: 428
-  bru33lau685:
-    name: BRU-33 - 2 x LAU-68 - 7 2.75' ROCKETS MK5 HE
-    type: pylon
-    weight: 628
   lau685:
-    name: LAU68 - 7 2.75' ROCKETS MK5 HE
+    name: 7x 2.75' ROCKETS MK5 HE
     type: rockets
     weight: 401
   cbu103:
@@ -4830,7 +4766,7 @@ weapons:
     type: a2g
     weight: 1971
   gbu31v3b:
-    name: GBU-10
+    name: GBU-31(V)3/B
     type: a2g
     weight: 2163
   gbu38:
@@ -4901,7 +4837,7 @@ weapons:
   fpu8a:
     name: FPU-8A Fuel Tank 330 Gallons
     type: tank
-    weight: 291
+    weight: 3050
 loadout:
   a10:
     1: &a10station1
@@ -5256,26 +5192,26 @@ fa18:
       - weapon: aim120b
       - weapon: aim120b
         amount: 2
-        pylon: lau115b
+        pylon: lau115
       - weapon: aim120c
       - weapon: aim120c
         amount: 2
-        pylon: lau115c
+        pylon: lau115
       - weapon: aim9l
         amount: 1
-        pylon: lau115Clau127
+        pylon: lau115clau127
       - weapon: aim9l
         amount: 2
         pylon: lau115
       - weapon: cap9m
         amount: 1
-        pylon: lau115Clau127
+        pylon: lau115clau127
       - weapon: cap9m
         amount: 2
         pylon: lau115
       - weapon: aim9m
         amount: 1
-        pylon: lau115Clau127
+        pylon: lau115clau127
       - weapon: aim9m
         amount: 2
         pylon: lau115
@@ -5290,29 +5226,32 @@ fa18:
       - weapon: cbu99
       - weapon: cbu99
         amount: 2
-        pylon: bru33cbu99
+        pylon: bru33
       - weapon: gbu10
       - weapon: gbu12
       - weapon: gbu12
         amount: 2
-        pylon: bru33gbu12
+        pylon: bru33
       - weapon: gbu16
       - weapon: gbu31
       - weapon: gbu31v3
       - weapon: gbu38
+      - weapon: gbu38
+        amount: 2
+        pylon: bru55      
       - weapon: mk20
       - weapon: mk82
       - weapon: mk82
         amount: 2
-        pylon: bru33mk82
+        pylon: bru33
       - weapon: mk82snake
         amount: 2
-        pylon: bru33mk82s
+        pylon: bru33
       - weapon: mk82snake
       - weapon: mk82y
       - weapon: mk82y
         amount: 2
-        pylon: bru33mk82y
+        pylon: bru33
       - weapon: mk83
       - weapon: mk84
       - weapon: agm154a
@@ -5321,10 +5260,10 @@ fa18:
       - weapon: agm88c
       - weapon: agm154a
         amount: 2
-        pylon: bru55a
+        pylon: bru55
       - weapon: agm154c
         amount: 2
-        pylon: bru55c
+        pylon: bru55
       - weapon: agm65e
       - weapon: agm65f
       - weapon: bdu33
@@ -5334,19 +5273,19 @@ fa18:
       - weapon: lau10
       - weapon: lau10
         amount: 2
-        pylon: bru33lau10
+        pylon: bru33
       - weapon: lau61
       - weapon: lau61
         amount: 2
-        pylon: bru33lau61
+        pylon: bru33
       - weapon: lau68151
       - weapon: lau68151
         amount: 2
-        pylon: bru33lau68151
+        pylon: bru33
       - weapon: lau685
       - weapon: lau685
         amount: 2
-        pylon: bru33lau685
+        pylon: bru33
     3: &fa18station3
       - weapon: aim120b
       - weapon: aim120b
@@ -5363,29 +5302,32 @@ fa18:
       - weapon: cbu99
       - weapon: cbu99
         amount: 2
-        pylon: bru33cbu99
+        pylon: bru33
       - weapon: gbu10
       - weapon: gbu12
       - weapon: gbu12
         amount: 2
-        pylon: bru33gbu12
+        pylon: bru33
       - weapon: gbu16
       - weapon: gbu31
-      - weapon: gbu31v3
+      - weapon: gbu31v3b
       - weapon: gbu38
+      - weapon: gbu38
+        amount: 2
+        pylon: bru55
       - weapon: mk20
       - weapon: mk82
       - weapon: mk82
         amount: 2
-        pylon: bru33mk82
+        pylon: bru33
       - weapon: mk82snake
         amount: 2
-        pylon: bru33mk82s
+        pylon: bru33
       - weapon: mk82snake
       - weapon: mk82y
       - weapon: mk82y
         amount: 2
-        pylon: bru33mk82y
+        pylon: bru33
       - weapon: mk83
       - weapon: mk84
       - weapon: agm154a
@@ -5394,10 +5336,10 @@ fa18:
       - weapon: agm88c
       - weapon: agm154a
         amount: 2
-        pylon: bru55a
+        pylon: bru55
       - weapon: agm154c
         amount: 2
-        pylon: bru55c
+        pylon: bru55
       - weapon: agm65e
       - weapon: agm65f
       - weapon: bdu33
@@ -5407,19 +5349,19 @@ fa18:
       - weapon: lau10
       - weapon: lau10
         amount: 2
-        pylon: bru33lau10
+        pylon: bru33
       - weapon: lau61
       - weapon: lau61
         amount: 2
-        pylon: bru33lau61
+        pylon: bru33
       - weapon: lau68151
       - weapon: lau68151
         amount: 2
-        pylon: bru33lau68151
+        pylon: bru33
       - weapon: lau685
       - weapon: lau685
         amount: 2
-        pylon: bru33lau685
+        pylon: bru33
       - weapon: fpu8a
     4: &fa18station4
       - weapon: aim120b
@@ -5432,34 +5374,33 @@ fa18:
       - weapon: cbu99
       - weapon: cbu99
         amount: 2
-        pylon: bru33cbu99
+        pylon: bru33
       - weapon: mk20
       - wepaon: mk20
         amount: 2
-        pylon: bru33mk20
+        pylon: bru33
       - weapon: mk82
       - weapon: mk82
         amount: 2
-        pylon: bru33mk82
+        pylon: bru33
       - weapon: mk82snake
       - weapon: mk82snake
         amount: 2
-        pylon: bru33mk82s
+        pylon: bru33
       - weapon: mk82y
       - weapon: mk82y
         amount: 2
-        pylon: bru33mk82y   
+        pylon: bru33 
       - weapons: mk83
       - weapons: fpu8a
       - weapon: aaq28
-    6: &fa18station5
+      - weapon: aww13
+    6: &fa18station6
       - weapon: aim120b
       - weapon: aim120c
       - weapon: aim7m
       - weapon: aim7f
       - weapon: aim7mh
-    7: *a10station5
-    8: *a10station4
-    9: *a10station3
-    10: *a10station2
-    11: *a10station1
+    7: *fa18station3
+    8: *fa18station2
+    9: *fa18station1
