@@ -4476,6 +4476,10 @@ weapons:
     name: AIM-9M Sidewinder IR AAM
     type: a2a
     weight: 191
+  aim9x:
+    name: AIM-9X Sidewinder IR AAM
+    type: a2a
+    weight: 185
   cap9m:
     name: CAP-9M
     type: a2a
@@ -4501,7 +4505,7 @@ weapons:
     name: CBU-87
     type: a2g
     weight: 948
-  cbu87:
+  cbu97:
     name: CBU-97
     type: a2g
     weight: 919
@@ -4517,6 +4521,10 @@ weapons:
     name: Mk-82AIR
     type: a2g
     weight: 531
+  mk82se:
+    name: Mk-82Snake-Eye
+    type: a2g
+    weight: 511
   alq131:
     name: ALQ-131
     type: pod
@@ -4710,6 +4718,44 @@ weapons:
     type: tank
     weight: 243
     fuel: 4000
+  mk151he:
+    name: Rockets MK151 HE
+    type: rockets
+    weight: 516
+  mk156wp:
+    name: Rockets MK156 WP
+    type: rockets
+    weight: 516
+  mk5heat:
+    name: Rockets MK5 HEAT
+    type: rockets
+    weight: 516
+  wtu1bwp:
+    name: Rockets WTU-1/B WP
+    type: rockets
+    weight: 516
+  ter9a:
+    type: pylon
+    name: TER-9A
+    weight: 117
+  ft300:
+    name: Fuel tanl 300 gal
+    type: tank
+    weight: 110
+    fuel: 2003
+  ft370:
+    name: Fuel tanl 370 gal
+    type: tank
+    weight: 110
+    fuel: 2470
+  aim120b:
+    name: AIM-120B
+    type: a2a
+    weight: 348
+  aim120c:
+    name: AIM-120C
+    type: a2a
+    weight: 357
 loadout:
   a10:
     1: &a10station1
@@ -5052,3 +5098,217 @@ loadout:
     9: *a10station3
     10: *a10station2
     11: *a10station1
+  f16:
+    1: &f16station1
+      - weapon: aim120b
+      - weapon: aim120c
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim9x
+      - weapon: cap9m
+    2: &f16station2
+      - weapon: aim120b
+      - weapon: aim120c
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim9x
+      - weapon: cap9m
+    3: &f16station3
+      - weapon: aim120b
+      - weapon: aim120c
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim9x
+      - weapon: cap9m
+      - weapon: cbu87
+      - weapon: cbu87
+        amount: 2
+        pylon: ter9a
+      - weapon: cbu97
+      - weapon: cbu97
+        amount: 2
+        pylon: ter9a
+      - weapon: gbu10
+      - weapon: gbu12
+      - weapon: gbu12
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+      - weapon: mk82
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82se
+      - weapon: mk82se
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82se
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82air
+      - weapon: mk82air
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82air
+        amount: 3
+        pylon: ter9a
+      - weapon: mk151he
+      - weapon: mk156wp
+      - weapon: mk5heat
+      - weapon: mk156wp
+      - weapon: wtu1bwp
+    4: &f16station4
+      - weapon: cbu87
+      - weapon: cbu87
+        amount: 2
+        pylon: ter9a
+      - weapon: cbu97
+      - weapon: cbu97
+        amount: 2
+        pylon: ter9a
+      - weapon: gbu10
+      - weapon: gbu12
+      - weapon: gbu12
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+      - weapon: mk82
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82se
+      - weapon: mk82se
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82se
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82air
+      - weapon: mk82air
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82air
+        amount: 3
+        pylon: ter9a
+      - weapon: bdu33
+        amount: 3
+        pylon: ter9a
+      - weapon: mk151he
+      - weapon: mk156wp
+      - weapon: mk5heat
+      - weapon: mk156wp
+      - weapon: wtu1bwp
+      - weapon: ft370
+    5: &f16station5
+    6: &f16station6
+      - weapon: ft300
+    7: &f16station7
+      - weapon: aaq28
+    8: &f16station8
+      - weapon: cbu87
+      - weapon: cbu87
+        amount: 2
+        pylon: ter9a
+      - weapon: cbu97
+      - weapon: cbu97
+        amount: 2
+        pylon: ter9a
+      - weapon: gbu10
+      - weapon: gbu12
+      - weapon: gbu12
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+      - weapon: mk82
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82se
+      - weapon: mk82se
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82se
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82air
+      - weapon: mk82air
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82air
+        amount: 3
+        pylon: ter9a
+      - weapon: mk151he
+      - weapon: mk156wp
+      - weapon: mk5heat
+      - weapon: mk156wp
+      - weapon: wtu1bwp
+      - weapon: ft370
+    9: &f16station9
+      - weapon: aim120b
+      - weapon: aim120c
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim9x
+      - weapon: cap9m
+      - weapon: cbu87
+      - weapon: cbu87
+        amount: 2
+        pylon: ter9a
+      - weapon: cbu97
+      - weapon: cbu97
+        amount: 2
+        pylon: ter9a
+      - weapon: gbu10
+      - weapon: gbu12
+      - weapon: gbu12
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+      - weapon: mk82
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82se
+      - weapon: mk82se
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82se
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82air
+      - weapon: mk82air
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82air
+        amount: 3
+        pylon: ter9a
+      - weapon: bdu33
+        amount: 3
+        pylon: ter9a
+      - weapon: mk151he
+      - weapon: mk156wp
+      - weapon: mk5heat
+      - weapon: mk156wp
+      - weapon: wtu1bwp
+    10: &f16station10
+      - weapon: aim120b
+      - weapon: aim120c
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim9x
+      - weapon: cap9m
+    11: &f16station11
+      - weapon: aim120b
+      - weapon: aim120c
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim9x
+      - weapon: cap9m
