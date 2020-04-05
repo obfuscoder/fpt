@@ -3997,17 +3997,125 @@ theaters:
         lat: 40.5789
         lon: 43.09908333333333
 airframes:
-  a10: A-10C
-  f18: F/A-18C
-  av8b: AV-8B N/A
-  f16: F-16C
-  f5: F-5E
-  f14: F-14
-  jf17: JF-17
-  m2000: M-2000C
-  l39: L-39
-  c101: C-101
-  uh1h: UH-1H
+  a10:
+    name: A-10C
+    gun:
+      - amount: 1150
+        weight: 1775
+        type: CM
+      - amount: 1150
+        weight: 1775
+        type: HEI
+      - amount: 1150
+        weight: 1775
+        type: TP
+    cms:
+      - chaff: 0
+        flares: 240
+      - chaff: 60
+        flares: 210
+      - chaff: 120
+        flares: 180
+      - chaff: 180
+        flares: 150
+      - chaff: 240
+        flares: 120
+      - chaff: 300
+        flares: 90
+      - chaff: 360
+        flares: 60
+      - chaff: 420
+        flares: 30
+      - chaff: 480
+        flares: 0
+    weight:
+      empty: 25000
+      fuel: 11000
+      tol: 46000
+      flt: 51000
+  f18:
+    name: F/A-18C
+    weight:
+      empty: 25642
+      fuel: 10803
+      tol: 51900
+    gun:
+      - amount: 300
+        weight: 331
+        type: DEF
+      - amount: 300
+        weight: 331
+        type: No-T
+    cms:
+      - chaff: 0
+        flares: 60
+      - chaff: 30
+        flares: 45
+      - chaff: 60
+        flares: 35
+      - chaff: 90
+        flares: 15
+      - chaff: 120
+        flares: 0
+  av8b:
+    name: AV-8B N/A
+    cms:
+      - chaff: 60
+        flares: 120
+    weight:
+      empty: 14800
+      fuel: 7758
+      tol: 31000
+  f16:
+    name: F-16C
+    weight:
+      empty: 19900
+      fuel: 7163
+      tol: 42300
+    gun:
+      - amount: 300
+        weight: 293
+        type: HEI-T
+      - amount: 300
+        weight: 293
+        type: HEI
+      - amount: 300
+        weight: 293
+        type: AP
+      - amount: 300
+        weight: 293
+        type: TP
+      - amount: 300
+        weight: 293
+        type: SAPHEI
+      - amount: 300
+        weight: 293
+        type: TP PGU
+    cms:
+      - chaff: 120
+        flares: 0
+      - chaff: 90
+        flares: 30
+      - chaff: 60
+        flares: 60
+      - chaff: 30
+        flares: 90
+      - chaff: 0
+        flares: 120
+  f5:
+    name: F-5E
+  f14:
+    name: F-14
+  jf17:
+    name: JF-17
+  m2000:
+    name: M-2000C
+  l39:
+    name: L-39
+  c101:
+    name: C-101
+  uh1h:
+    name: UH-1H
 callsigns:
   - Cougar
   - Edelweiss
