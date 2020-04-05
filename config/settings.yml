@@ -4469,15 +4469,18 @@ ramrods:
 payload:
   aim9l:
     name: AIM-9L Sidewinder IR AAM
+    short: A9L
     type: a2a
     weight: 188
     mount: lau105
   aim9m:
     name: AIM-9M Sidewinder IR AAM
+    short: A9M
     type: a2a
     weight: 191
   cap9m:
     name: CAP-9M
+    short: C9M
     type: a2a
     weight: 188
     mount: lau105
@@ -4487,46 +4490,57 @@ payload:
     weight: 67 # alone = 54 ?)
   bdu50hd:
     name: BDU-50HD
+    short: B50H
     type: a2g
     weight: 511
   bdu50ld:
     name: BDU-50LD
+    short: B50
     type: a2g
     weight: 511
   bdu50lgb:
     name: BDU-50LGB
+    short: B50L
     type: a2g
     weight: 617
   cbu87:
     name: CBU-87
+    short: C87
     type: a2g
     weight: 948
   cbu97:
     name: CBU-97
+    short: C97
     type: a2g
     weight: 919
   gbu12:
     name: GBU-12
+    short: G12
     type: a2g
     weight: 606
   mk82:
     name: Mk-82
+    short: M82
     type: a2g
     weight: 531
   mk82air:
     name: Mk-82AIR
+    short: M82A
     type: a2g
     weight: 531
   alq131:
     name: ALQ-131
+    short: A131
     type: pod
     weight: 672
   alq184:
     name: ALQ-184
+    short: A184
     type: pod
     weight: 474
   asqt50:
     name: AN/ASQ-T50 TCTS Pod
+    short: AT50
     type: pod
     weight: 145
   smokeblue:
@@ -4555,106 +4569,132 @@ payload:
     weight: 441
   suuluu:
     name: SUU-25 * 8 LUU-2
+    short: LU2
     type: a2g
     weight: 287
   aaq28:
     name: AN/AAQ-28 LITENING
+    short: TGP
     type: pod
     weight: 661
   lau68m151:
     name: LAU-68/A - 7x M151 (HE)
+    short: 7M151
     type: rockets
     weight: 254
   lau131m151:
     name: LAU-131 - 7x M151 (HE)
+    short: 7M151
     type: rockets
     weight: 225
   lau68m156:
     name: LAU-68/A - 7x M156 (WP)
+    short: 7M156
     type: rockets
     weight: 256
   lau131m156:
     name: LAU-131 - 7x M156 (WP)
+    short: 7M156
     type: rockets
     weight: 229
   lau68m257:
     name: LAU-68/A - 7x M257 (Parachute Illumination)
+    short: 7M257
     type: rockets
     weight: 265
   lau131m257:
     name: LAU-131 - 7x M257 (Parachute Illumination)
+    short: 7M257
     type: rockets
     weight: 238
   lau68m274:
     name: LAU-68/A - 7x M274 (Practice smoke)
+    short: 7M274
     type: rockets
     weight: 254
   lau131m274:
     name: LAU-131 - 7x M274 (Practice smoke)
+    short: 7M274
     type: rockets
     weight: 225
   lau68mk5:
     name: LAU-68/A - 7x MK5 (HE)
+    short: 7MK5
     type: rockets
     weight: 227
   lau131mk5:
     name: LAU-131 - 7x MK5 (HE)
+    short: 7MK5
     type: rockets
     weight: 201
   lau68mk1:
     name: LAU-68/A - 7x MK1 (Practice)
+    short: 7MK1
     type: rockets
     weight: 234
   lau131mk1:
     name: LAU-131 - 7x MK1 (Practice)
+    short: 7MK1
     type: rockets
     weight: 205
   lau68mk61:
     name: LAU-68/A - 7x MK61 (Practice)
+    short: 7MK61
     type: rockets
     weight: 234
   lau131mk61:
     name: LAU-131 - 7x MK61 (Practice)
+    short: 7MK61
     type: rockets
     weight: 205
   lau68wtu1b:
     name: LAU-68/A - 7x WTU1B (Practice)
+    short: 7WTU1B
     type: rockets
     weight: 254
   lau131wtu1b:
     name: LAU-131 - 7x WTU1B (Practice)
+    short: 7WTU1B
     type: rockets
     weight: 225
   cbu103:
     name: CBU-103
+    short: C103
     type: a2g
     weight: 948
   cbu105:
     name: CBU-105
+    short: C105
     type: a2g
     weight: 919
   gbu10:
     name: GBU-10
+    short: G10
     type: a2g
     weight: 2562
   gbu31:
     name: GBU-31
+    short: G31
     type: a2g
     weight: 1971
   gbu31v3b:
     name: GBU-31(V)3/B
+    short: G31B
     type: a2g
     weight: 2163
   gbu38:
     name: GBU-38
+    short: G38
     type: a2g
     weight: 531
   mk84:
     name: Mk-84
+    short: M84
     type: a2g
     weight: 1971
   bdu33:
     name: BDU-33
+    short: B33
     type: a2g
     weight: 34
   bru42:
@@ -4663,6 +4703,7 @@ payload:
     weight: 114
   mxu648:
     name: MXU-648 Travel Pod
+    short: MX648
     type: pod
     weight: 661
   lau88:
@@ -4675,38 +4716,47 @@ payload:
     weight: 131
   agm65d:
     name: AGM-65D
+    short: A65D
     type: agm
     weight: 480
   agm65g:
     name: AGM-65G
+    short: A65G
     type: agm
     weight: 663
   agm65h:
     name: AGM-65H
+    short: A65H
     type: agm
     weight: 458
   agm65k:
     name: AGM-65K
+    short: A65K
     type: agm
     weight: 793
   catm65k:
     name: CATM-65K
+    short: C65K
     type: agm
     weight: 793
   tgm65d:
     name: TGM-65D
+    short: T65D
     type: agm
     weight: 480
   tgm65g:
     name: TGM-65G
+    short: T65G
     type: agm
     weight: 663
   tgm65h:
     name: TGM-65H
+    short: T65H
     type: agm
     weight: 458
   ft600:
     name: Fuel tank FT600
+    short: FT600
     type: tank
     weight: 243
     fuel: 4000

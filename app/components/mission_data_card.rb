@@ -21,6 +21,7 @@ class MissionDataCard < Prawn::Document
     set_white_background
 
     flight_info
+    loadout
     airbases
     start_new_page
     flight_plan
@@ -95,6 +96,37 @@ class MissionDataCard < Prawn::Document
       cell(9, pilot.tacan)
       next_row
     end
+    next_row
+  end
+
+  def loadout
+    loadout = Loadout.parse(@flight.loadout)
+    define_columns 12
+    header('LOADOUT')
+    cell(0, 'A/A', header: true)
+    cell([1, 8], loadout.a2a)
+    cell(9, 'GUN', header: true)
+    cell([10, 11], loadout.gun)
+    next_row
+
+    cell(0, 'A/G', header: true)
+    cell([1, 8], loadout.a2g)
+    cell(9, 'CHF', header: true)
+    cell([10, 11], loadout.chaff)
+    next_row
+
+    cell(0, 'POD', header: true)
+    cell([1, 8], loadout.pods)
+    cell(9, 'FLR', header: true)
+    cell([10, 11], loadout.flares)
+    next_row
+
+    cell(0, 'TKS', header: true)
+    cell([1, 8], loadout.tanks)
+    cell(9, 'FUEL', header: true)
+    cell([10, 11], loadout.fuel)
+    next_row
+
     next_row
   end
 

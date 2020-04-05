@@ -33,11 +33,29 @@ class Loadout < OpenStruct
     select_payload %w[pod]
   end
 
+  def gun
+  end
+
+  def flares
+  end
+
+  def chaff
+  end
+
+  def fuel
+  end
+
   private
 
   def select_payload(types)
     payload_amounts.select { |key| types.include? Settings.payload[key].type }
-                   .map { |key, amount| "#{amount}x #{Settings.payload[key].name}" }.join(', ')
+                   .map { |key, amount| payload_text(amount, key) }.join(', ')
+  end
+
+  def payload_text(amount, key)
+    amount = amount > 1 ? "#{amount}x" : ''
+    name = Settings.payload[key].short || Settings.payload[key].name
+    amount + name
   end
 
   def payload_amounts
