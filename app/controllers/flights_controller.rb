@@ -9,7 +9,9 @@ class FlightsController < ApplicationController
     @all = all_flights?
   end
 
-  def show; end
+  def show
+    @loadout = Loadout.parse @flight.loadout
+  end
 
   def new
     @flight = Flight.new theater: Settings.theaters.first.first,

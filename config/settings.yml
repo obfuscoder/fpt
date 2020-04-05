@@ -4870,7 +4870,6 @@ loadout:
       - weapon: lau131wtu1b
         amount: 3
         pylon: bru42
-      - pylon: bru42
       - weapon: mxu648
       - weapon: agm65d
         pylon: lau117
@@ -5000,7 +4999,6 @@ loadout:
       - weapon: lau131wtu1b
         amount: 3
         pylon: bru42
-      - pylon: bru42
       - weapon: mxu648
       - weapon: ft600
     5: &a10station5
@@ -5028,7 +5026,6 @@ loadout:
       - weapon: mk82air
         amount: 3
         pylon: bru42
-      - pylon: bru42
       - weapon: mxu648
     6:
       - weapon: bdu50hd
@@ -5044,7 +5041,6 @@ loadout:
       - weapon: bdu33
         amount: 3
         pylon: bru42
-      - pylon: bru42
       - weapon: mxu648
       - weapon: ft600
     7: *a10station5
