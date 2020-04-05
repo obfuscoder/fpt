@@ -1,0 +1,14 @@
+%h1 Edit loadout
+%img(src="/loadout/#{@flight.airframe}.png" width=600)
+= form_for @loadout, url: flight_loadout_path(@flight), method: :put do |f|
+  %table.table.table-striped.table-bordered.table-sm.table-hover
+    %tr
+      %th.bg-secondary Station
+      %th.bg-secondary Payload
+    - @stations.each do |station|
+      %tr
+        %th.table-secondary= station.number
+        %td= f.select station.number, station.options, { include_blank: 'Empty' }, class: 'form-control'
+  = f.submit 'Save', class: 'btn btn-primary'
+%p
+= link_to 'Back', flight_path(@flight)

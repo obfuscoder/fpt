@@ -4466,7 +4466,7 @@ ramrods:
   - womanliest
   - workplaces
   - worshipful
-weapons:
+payload:
   aim9l:
     name: AIM-9L Sidewinder IR AAM
     type: a2a
