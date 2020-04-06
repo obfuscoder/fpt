@@ -19,7 +19,7 @@
       %td= f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }, {}, class: 'form-control update-defaults', data: { remote: true, url: airbases_path, defaults_url: defaults_flights_path }
       %th.table-secondary Airframe
       %td
-        = f.select :airframe, Settings.airframes.to_h.invert, {}, class: 'form-control'
+        = f.select :airframe, airframe_options, {}, class: 'form-control'
       %th.table-secondary Slots
       %td= f.select :slots, 1..4, {}, class: 'form-control'
     %tr

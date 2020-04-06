@@ -29,7 +29,7 @@
       %tr(scope="row")
         %td= flight.start
         %td= flight.full_callsign
-        %td= Settings.airframes[flight.airframe]
+        %td= Settings.airframes[flight.airframe].name
         %td= "#{flight.pilots.count}/#{flight.slots}"
         %td= flight.mission
         %td= flight.ao
