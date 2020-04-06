@@ -5296,11 +5296,11 @@ loadout:
       - weapon: lau68wtu1b
         amount: 3
         pylon: bru42
-    4: &av8bstation4a
+    4a: &av8bstation4a
       - weapon: gau12
-    5: &av8bstation4b
+    4b: &av8bstation4b
       - weapon: aaq28
       - weapon: alq164
-    6: *av8bstation3
-    7: *av8bstation2
-    8: *av8bstation1
+    5: *av8bstation3
+    6: *av8bstation2
+    7: *av8bstation1
