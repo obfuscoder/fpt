@@ -4575,6 +4575,14 @@ ramrods:
   - workplaces
   - worshipful
 payload:
+  types:
+    a2a: A2A
+    a2g: A2G
+    agm: Mavericks
+    rockets: Rockets
+    pylon: Pylons
+    pod: Pods
+    tank: Fuel Tanks
   aim9l:
     name: AIM-9L Sidewinder IR AAM
     short: A9L

@@ -8,7 +8,7 @@
     - @stations.each do |station|
       %tr
         %th.table-secondary= station.number
-        %td= f.select station.number, station.options, { include_blank: 'Empty' }, class: 'form-control'
+        %td= f.select station.number, grouped_options_for_select(station.options, f.object.send(station.number)), { include_blank: 'Empty' }, class: 'form-control'
   = f.submit 'Save', class: 'btn btn-primary'
 %p
 = link_to 'Back', flight_path(@flight)
