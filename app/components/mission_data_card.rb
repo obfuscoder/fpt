@@ -104,25 +104,25 @@ class MissionDataCard < Prawn::Document
     define_columns 12
     header('LOADOUT')
     cell(0, 'A/A', header: true)
-    cell([1, 8], loadout.a2a)
+    cell([1, 8], loadout.a2a(text: :short))
     cell(9, 'GUN', header: true)
     cell([10, 11], loadout.gun)
     next_row
 
     cell(0, 'A/G', header: true)
-    cell([1, 8], loadout.a2g)
+    cell([1, 8], loadout.a2g(text: :short))
     cell(9, 'CHF', header: true)
     cell([10, 11], loadout.chaff)
     next_row
 
     cell(0, 'POD', header: true)
-    cell([1, 8], loadout.pods)
+    cell([1, 8], loadout.pods(text: :short))
     cell(9, 'FLR', header: true)
     cell([10, 11], loadout.flares)
     next_row
 
     cell(0, 'TKS', header: true)
-    cell([1, 8], loadout.tanks)
+    cell([1, 8], loadout.tanks(text: :short))
     cell(9, 'FUEL', header: true)
     cell([10, 11], loadout.fuel)
     next_row
@@ -302,19 +302,18 @@ class MissionDataCard < Prawn::Document
     next_row
 
     airbase = Settings.theaters[@flight.theater].airbases[@flight.start_airbase]
-    cell(0, 'Dep')
-    cell([1, 3], airbase.name)
-    cell(4, airbase.tacan)
-    cell(5, airbase.atis)
-    cell(6, airbase.ground)
-    cell(7, airbase.tower)
-    cell(8, airbase.takeoff)
-    cell(9, airbase.elevation)
-    cell(10, airbase.ils)
-    next_row
-
+    airbase_line(airbase, 'Dep')
     airbase = Settings.theaters[@flight.theater].airbases[@flight.land_airbase]
-    cell(0, 'Arr')
+    airbase_line(airbase, 'Arr')
+    if @flight.divert_airbase
+      airbase = Settings.theaters[@flight.theater].airbases[@flight.divert_airbase]
+      airbase_line(airbase, 'Div')
+    end
+    next_row
+  end
+
+  def airbase_line(airbase, type)
+    cell(0, type)
     cell([1, 3], airbase.name)
     cell(4, airbase.tacan)
     cell(5, airbase.atis)
@@ -323,22 +322,6 @@ class MissionDataCard < Prawn::Document
     cell(8, airbase.land)
     cell(9, airbase.elevation)
     cell(10, airbase.ils)
-    next_row
-
-    if @flight.divert_airbase
-      airbase = Settings.theaters[@flight.theater].airbases[@flight.divert_airbase]
-      cell(0, 'Div')
-      cell([1, 3], airbase.name)
-      cell(4, airbase.tacan)
-      cell(5, airbase.atis)
-      cell(6, airbase.ground)
-      cell(7, airbase.tower)
-      cell(8, airbase.land)
-      cell(9, airbase.elevation)
-      cell(10, airbase.ils)
-      next_row
-    end
-
     next_row
   end
 
@@ -408,7 +391,7 @@ class MissionDataCard < Prawn::Document
   end
 
   def start_new_page(options = {})
-    return if @row == 0
+    return if @row.zero?
 
     super(options)
     @row = 0

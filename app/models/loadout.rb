@@ -17,20 +17,20 @@ class Loadout < OpenStruct
     to_h.map { |k, v| "#{k}:#{v}" }.join ' '
   end
 
-  def a2a
-    select_payload %w[a2a]
+  def a2a(text: :name)
+    select_payload types: %w[a2a], text: text
   end
 
-  def a2g
-    select_payload %w[a2g agm rockets]
+  def a2g(text: :name)
+    select_payload types: %w[a2g agm rockets], text: text
   end
 
-  def tanks
-    select_payload %w[tank]
+  def tanks(text: :name)
+    select_payload types: %w[tank], text: text
   end
 
-  def pods
-    select_payload %w[pod]
+  def pods(text: :name)
+    select_payload types: %w[pod], text: text
   end
 
   def gun
@@ -47,14 +47,14 @@ class Loadout < OpenStruct
 
   private
 
-  def select_payload(types)
+  def select_payload(types:, text:)
     payload_amounts.select { |key| types.include? Settings.payload[key].type }
-                   .map { |key, amount| payload_text(amount, key) }.join(', ')
+                   .map { |key, amount| payload_text(amount, key, text) }.join(', ')
   end
 
-  def payload_text(amount, key)
+  def payload_text(amount, key, text)
     amount = amount > 1 ? "#{amount}x" : ''
-    name = Settings.payload[key].short || Settings.payload[key].name
+    name = Settings.payload[key].send(text) || Settings.payload[key].name
     amount + name
   end
 
