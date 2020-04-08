@@ -51,7 +51,13 @@ const update_loadout_data = function() {
     $('#fuel_weight').text(total_fuel)
 
     let empty_weight = $('#empty_weight').text()
-    $('#total_weight').text(payload_weight + +empty_weight + gun_weight + total_fuel)
+    let total_weight = payload_weight + +empty_weight + gun_weight + total_fuel
+    $('#total_weight').text(total_weight)
+    let max_weight = $('#total_weight').data('max')
+    if (total_weight > max_weight)
+        $('#total_weight').addClass('bg-danger text-white')
+    else
+        $('#total_weight').removeClass('bg-danger text-white')
 }
 
 $(document).on('turbolinks:load', function() {

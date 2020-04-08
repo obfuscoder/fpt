@@ -39,22 +39,18 @@
       %th.bg-secondary(colspan=6) Weight
     %tr
       %th.table-secondary Empty
-      %th.table-secondary Max
+      %th.table-secondary Max TO/L
+      %th.table-secondary Max Flt
       %th.table-secondary Payload
       %th.table-secondary Fuel
-      %th.table-secondary
       %th.table-secondary Total
     %tr
       %td#empty_weight= Settings.airframes[@flight.airframe].weight.empty
-      %td
-        Takeoff/Landing:
-        = Settings.airframes[@flight.airframe].weight.tol
-        \- Flight:
-        = Settings.airframes[@flight.airframe].weight.flt
+      %td= Settings.airframes[@flight.airframe].weight.tol
+      %td= Settings.airframes[@flight.airframe].weight.flt
       %td#payload_weight
       %td#fuel_weight
-      %td
-      %td#total_weight
+      %td#total_weight{ data: { max: Settings.airframes[@flight.airframe].weight.tol } }
 
   = f.submit 'Save', class: 'btn btn-primary'
 %p
