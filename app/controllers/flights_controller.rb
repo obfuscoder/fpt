@@ -10,7 +10,7 @@ class FlightsController < ApplicationController
   end
 
   def show
-    @loadout = Loadout.parse @flight.loadout
+    @loadout = Loadout.parse @flight.airframe, @flight.loadout
   end
 
   def new
@@ -97,8 +97,6 @@ class FlightsController < ApplicationController
   def flight_params
     params.require(:flight).permit(:theater, :airframe, :ao, :start, :duration, :callsign, :callsign_number, :slots, :mission, :task, :minimum_weather_requirements, :group_id, :laser, :tacan_channel, :tacan_polarization, :frequency, :notes, :start_airbase, :land_airbase, :divert_airbase, :departure, :recovery, :divert, :radio1, :radio2, :radio3, :radio4, support: [])
   end
-
-  private
 
   def create_pdf
     mdc = MissionDataCard.new @flight

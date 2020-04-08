@@ -1,16 +1,17 @@
 class Loadout < OpenStruct
   extend ActiveModel::Naming
 
-  def initialize(hash = {})
+  def initialize(airframe, hash = {})
+    @airframe = airframe
     super hash.to_h.reject { |_, v| v.blank? }
   end
 
-  def self.parse(loadout)
+  def self.parse(airframe, loadout)
     data = loadout&.split&.map do |e|
       k, v = e.split /:/
       [k.to_sym, v]
     end
-    new(data.to_h)
+    new(airframe, data.to_h)
   end
 
   def to_s
@@ -33,16 +34,31 @@ class Loadout < OpenStruct
     select_payload types: %w[pod], text: text
   end
 
-  def gun
+  def gun_amount
+    @table[:g]&.split(/,/)&.first || 100
   end
 
-  def flares
+  def gun_type
+    @table[:g]&.split(/,/)&.second
+  end
+
+  def gun
+    return '' unless @table[:g]
+
+    type = Settings.airframes[@airframe].gun.types[gun_type]
+    "#{gun_amount}% #{type}"
   end
 
   def chaff
+
+  end
+
+  def flares
+
   end
 
   def fuel
+    @table[:f]
   end
 
   private
@@ -59,7 +75,7 @@ class Loadout < OpenStruct
   end
 
   def payload_amounts
-    @table.values.each_with_object({}) do |v, h|
+    @table.reject { |k, _| %i[g f d].include? k }.values.each_with_object({}) do |v, h|
       amount, payload = v.split /x/, 2
       amount = amount.to_i
       payload = v if amount.zero?

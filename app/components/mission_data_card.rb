@@ -2,6 +2,9 @@ class MissionDataCard < Prawn::Document
   INCHES_PER_MM = 0.0393701
 
   def initialize(flight, options = {})
+    @flight = flight
+    @row = 0
+
     page_size = [137.0 * 72 * INCHES_PER_MM, 210.0 * 72 * INCHES_PER_MM]
     super(options.merge(page_layout: :portrait, page_size: page_size, margin: 10))
 
@@ -12,9 +15,6 @@ class MissionDataCard < Prawn::Document
       bold_italic: 'lib/assets/ttf/FreeSansBoldOblique.ttf'
     }
     font 'freesans'
-
-    @flight = flight
-    @row = 0
   end
 
   def render
@@ -100,31 +100,31 @@ class MissionDataCard < Prawn::Document
   end
 
   def loadout
-    loadout = Loadout.parse(@flight.loadout)
+    l = Loadout.parse(@flight.airframe, @flight.loadout)
     define_columns 12
     header('LOADOUT')
     cell(0, 'A/A', header: true)
-    cell([1, 8], loadout.a2a(text: :short))
+    cell([1, 8], l.a2a(text: :short))
     cell(9, 'GUN', header: true)
-    cell([10, 11], loadout.gun)
+    cell([10, 11], l.gun)
     next_row
 
     cell(0, 'A/G', header: true)
-    cell([1, 8], loadout.a2g(text: :short))
+    cell([1, 8], l.a2g(text: :short))
     cell(9, 'CHF', header: true)
-    cell([10, 11], loadout.chaff)
+    cell([10, 11], l.chaff)
     next_row
 
     cell(0, 'POD', header: true)
-    cell([1, 8], loadout.pods(text: :short))
+    cell([1, 8], l.pods(text: :short))
     cell(9, 'FLR', header: true)
-    cell([10, 11], loadout.flares)
+    cell([10, 11], l.flares)
     next_row
 
     cell(0, 'TKS', header: true)
-    cell([1, 8], loadout.tanks(text: :short))
+    cell([1, 8], l.tanks(text: :short))
     cell(9, 'FUEL', header: true)
-    cell([10, 11], loadout.fuel)
+    cell([10, 11], l.fuel)
     next_row
 
     next_row

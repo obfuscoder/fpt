@@ -4000,15 +4000,12 @@ airframes:
   a10:
     name: A-10C
     gun:
-      - amount: 1150
-        weight: 1775
-        type: CM
-      - amount: 1150
-        weight: 1775
-        type: HEI
-      - amount: 1150
-        weight: 1775
-        type: TP
+      amount: 1150
+      weight: 1775
+      types:
+        cm: CM
+        hei: HEI
+        tp: TP
     cms:
       - chaff: 0
         flares: 240
@@ -4040,12 +4037,11 @@ airframes:
       fuel: 10803
       tol: 51900
     gun:
-      - amount: 300
-        weight: 331
-        type: DEF
-      - amount: 300
-        weight: 331
-        type: No-T
+      amount: 300
+      weight: 331
+      types:
+        def: DEF
+        not: No-T
     cms:
       - chaff: 0
         flares: 60
@@ -4073,24 +4069,15 @@ airframes:
       fuel: 7163
       tol: 42300
     gun:
-      - amount: 300
-        weight: 293
-        type: HEI-T
-      - amount: 300
-        weight: 293
-        type: HEI
-      - amount: 300
-        weight: 293
-        type: AP
-      - amount: 300
-        weight: 293
-        type: TP
-      - amount: 300
-        weight: 293
-        type: SAPHEI
-      - amount: 300
-        weight: 293
-        type: TP PGU
+      amount: 300
+      weight: 293
+      types:
+        heit: HEI-T
+        hei: HEI
+        ap: AP
+        tp: TP
+        saphei: SAPHEI
+        tppgu: TP PGU
     cms:
       - chaff: 120
         flares: 0

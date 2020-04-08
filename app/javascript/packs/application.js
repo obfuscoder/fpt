@@ -17,6 +17,29 @@ import '../stylesheets/application';
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+const update_loadout_data = function() {
+    if ($('#total_weight').length == 0) return
+
+    let payload_weight = 0
+
+    $('select[id^="loadout_"]').each(function() {
+        let weight = $("option:selected", this).data('weight')
+        if (weight !== undefined)
+            payload_weight += weight
+        $('*[data-ref="' + this.id + '"]').text(weight)
+    })
+    $('#payload_weight').text(payload_weight)
+
+    let gun_percentage = $('#loadout_gun_amount').val()
+    let gun_amount = Math.round(+$('#loadout_gun_amount').data('amount') * gun_percentage / 100)
+    let gun_weight = Math.round(+$('#loadout_gun_amount').data('weight') * gun_percentage / 100)
+    $('#gun_amount').text(gun_percentage + "% / " + gun_amount)
+    $('#gun_weight').text(gun_weight)
+
+    let empty_weight = $('#empty_weight').text()
+    $('#total_weight').text(payload_weight + +empty_weight + gun_weight)
+}
+
 $(document).on('turbolinks:load', function() {
     $('.dropdown-toggle').keypress(function() {
         $('.dropdown-menu').dropdown('show')
@@ -136,4 +159,11 @@ $(document).on('turbolinks:load', function() {
             })
         }
     })
+
+    $('select[id^="loadout_"]').change(update_loadout_data)
+    $('#loadout_gun_amount').on('change mousemove', update_loadout_data)
+    $('form#new_loadout').submit(function() {
+        $('#loadout_g').val($('#loadout_gun_amount').val() + ',' + $('#loadout_gun_type').val())
+    })
+    update_loadout_data()
 })
