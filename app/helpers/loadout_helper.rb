@@ -4,7 +4,8 @@ module LoadoutHelper
       [
         Settings.payload.types[k],
         v.map do |o|
-          [o.text, o.value, { data: { weight: o.weight } }]
+          data = { weight: o.weight, fuel: o.fuel }.compact
+          [o.text, o.value, { data: data }]
         end
       ]
     end

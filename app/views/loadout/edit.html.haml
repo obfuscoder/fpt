@@ -30,11 +30,11 @@
       %th.bg-secondary(colspan=6) Fuel
     %tr
       %th.table-secondary Internal
-      %td= f.range_field :fuel, class: 'custom-range'
-      %td NNNN
+      %td= f.range_field :f, class: 'custom-range', data: { weight: Settings.airframes[@flight.airframe].weight.fuel }
+      %td#internal_fuel
       %th.table-secondary External
-      %td XXXXX
-      %td NNNN
+      %td#external_fuel
+      %td#total_fuel
     %tr
       %th.bg-secondary(colspan=6) Weight
     %tr
@@ -52,7 +52,7 @@
         \- Flight:
         = Settings.airframes[@flight.airframe].weight.flt
       %td#payload_weight
-      %td FLW
+      %td#fuel_weight
       %td
       %td#total_weight
 

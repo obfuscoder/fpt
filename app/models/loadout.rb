@@ -58,7 +58,9 @@ class Loadout < OpenStruct
   end
 
   def fuel
-    @table[:f]
+    return '' unless @table[:f]
+
+    "#{@table[:f]}%"
   end
 
   private

@@ -11,6 +11,10 @@ class LoadoutOption
     amount * weapon_weight + pylon_weight
   end
 
+  def fuel
+    Settings.payload[payload_id].fuel
+  end
+
   def value
     result = [weapon_id, pylon_id].compact.join ','
     weapon? ? "#{amount}x#{result}" : result

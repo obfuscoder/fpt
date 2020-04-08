@@ -21,14 +21,20 @@ const update_loadout_data = function() {
     if ($('#total_weight').length == 0) return
 
     let payload_weight = 0
+    let external_fuel = 0
 
     $('select[id^="loadout_"]').each(function() {
         let weight = $("option:selected", this).data('weight')
         if (weight !== undefined)
             payload_weight += weight
         $('*[data-ref="' + this.id + '"]').text(weight)
+
+        let fuel = $("option:selected", this).data('fuel')
+        if (fuel !== undefined)
+            external_fuel += fuel
     })
     $('#payload_weight').text(payload_weight)
+    $('#external_fuel').text(external_fuel)
 
     let gun_percentage = $('#loadout_gun_amount').val()
     let gun_amount = Math.round(+$('#loadout_gun_amount').data('amount') * gun_percentage / 100)
@@ -36,8 +42,16 @@ const update_loadout_data = function() {
     $('#gun_amount').text(gun_percentage + "% / " + gun_amount)
     $('#gun_weight').text(gun_weight)
 
+    let fuel_percentage = $('#loadout_f').val()
+    let internal_fuel = Math.round(+$('#loadout_f').data('weight') * fuel_percentage / 100)
+    $('#internal_fuel').text(fuel_percentage + "% / " + internal_fuel)
+
+    let total_fuel = external_fuel + internal_fuel
+    $('#total_fuel').text(total_fuel)
+    $('#fuel_weight').text(total_fuel)
+
     let empty_weight = $('#empty_weight').text()
-    $('#total_weight').text(payload_weight + +empty_weight + gun_weight)
+    $('#total_weight').text(payload_weight + +empty_weight + gun_weight + total_fuel)
 }
 
 $(document).on('turbolinks:load', function() {
@@ -162,6 +176,7 @@ $(document).on('turbolinks:load', function() {
 
     $('select[id^="loadout_"]').change(update_loadout_data)
     $('#loadout_gun_amount').on('change mousemove', update_loadout_data)
+    $('#loadout_f').on('change mousemove', update_loadout_data)
     $('form#new_loadout').submit(function() {
         $('#loadout_g').val($('#loadout_gun_amount').val() + ',' + $('#loadout_gun_type').val())
     })
