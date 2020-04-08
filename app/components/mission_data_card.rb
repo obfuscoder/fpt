@@ -2,9 +2,6 @@ class MissionDataCard < Prawn::Document
   INCHES_PER_MM = 0.0393701
 
   def initialize(flight, options = {})
-    @flight = flight
-    @row = 0
-
     page_size = [137.0 * 72 * INCHES_PER_MM, 210.0 * 72 * INCHES_PER_MM]
     super(options.merge(page_layout: :portrait, page_size: page_size, margin: 10))
 
@@ -15,6 +12,9 @@ class MissionDataCard < Prawn::Document
       bold_italic: 'lib/assets/ttf/FreeSansBoldOblique.ttf'
     }
     font 'freesans'
+
+    @flight = flight
+    @row = 0
   end
 
   def render
@@ -391,7 +391,7 @@ class MissionDataCard < Prawn::Document
   end
 
   def start_new_page(options = {})
-    return if @row.zero?
+    return if @row == 0
 
     super(options)
     @row = 0
