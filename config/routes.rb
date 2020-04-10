@@ -25,4 +25,5 @@ Rails.application.routes.draw do
 
   get 'airbases', to: 'airbases#index'
   get 'procedures', to: 'airbases#procedures'
+  get 'spins', to: 'spins#show'
 end

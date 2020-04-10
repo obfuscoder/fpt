@@ -35,6 +35,8 @@ class MissionDataCard < Prawn::Document
     start_new_page
     channels
     start_new_page
+    auth
+    start_new_page
     navaids
     super
   end
@@ -339,6 +341,36 @@ class MissionDataCard < Prawn::Document
       cell(0, i + 1)
       cell(1, channel.freq)
       cell([2, 5], channel.name)
+      next_row
+    end
+  end
+
+  def auth
+    ramrod
+    next_row
+    code_table
+  end
+
+  def ramrod
+    define_columns 10
+    header('RAMROD')
+    crypto = Crypto.new @flight.start.to_date
+    0.upto(9).each { |i| cell(i, i, header: true, align: :center) }
+    next_row
+    crypto.ramrod.chars.each_with_index { |c, i| cell(i, c, align: :center) }
+  end
+
+  def code_table
+    crypto = Crypto.new @flight.start.to_date
+    define_columns 12
+    header('KTC 1400 C')
+    dryad = crypto.dryad
+    cell(0, '', header: true)
+    0.upto(9).each { |i| cell(i.zero? ? [1, 2] : i + 2, i, header: true, align: :center) }
+    next_row
+    dryad.rows.each do |row|
+      cell(0, row.header, header: true, align: :center)
+      row.columns.each_with_index { |c, i| cell(i.zero? ? [1, 2] : i + 2, c, align: :center) }
       next_row
     end
   end

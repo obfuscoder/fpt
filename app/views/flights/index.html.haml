@@ -8,7 +8,10 @@
     Showing current and upcoming flights.
     = link_to 'Also show past flights.', root_path(params: { all: true })
 - @dates.each do |date|
-  %h2= date
+  %h2
+    = date
+    \/
+    = link_to 'SPINS', spins_path(params: { date: date })
   %table.table.table-striped.table-bordered.table-sm.table-hover
     %thead.thead-dark
       %tr
