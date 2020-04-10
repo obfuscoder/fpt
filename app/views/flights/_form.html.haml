@@ -35,6 +35,18 @@
       %th.table-secondary Comms
       %td= f.text_field :frequency, class: 'form-control'
     %tr
+      %th.table-secondary Grp Id
+      %td= f.select :group_id, 1..41, { include_blank: true }, class: 'form-control'
+      %th.table-secondary Lasercode
+      %td= f.select :laser, 111..175, {}, class: 'form-control'
+      %th.table-secondary TACAN
+      %td
+        .form-row
+          .col-md-8
+            = f.select :tacan_channel, 1..48, {}, class: 'form-control'
+          .col-md-4
+            = f.select :tacan_polarization, %w[X Y], {}, class: 'form-control'
+    %tr
       %th.bg-secondary(colspan=3) AIRBASES
       %th.bg-secondary(colspan=3) TASK
     %tr
@@ -58,18 +70,22 @@
       %td= f.select :divert, diverts(@flight), {}, class: 'form-control'
       %th.table-secondary Min WX Reqs
       %td(colspan=2)= f.text_field :minimum_weather_requirements, class: 'form-control'
-    %tr
-      %th.table-secondary Grp Id
-      %td= f.select :group_id, 1..41, { include_blank: true }, class: 'form-control'
-      %th.table-secondary Lasercode
-      %td= f.select :laser, 111..175, {}, class: 'form-control'
-      %th.table-secondary TACAN
-      %td
-        .form-row
-          .col-md-8
-            = f.select :tacan_channel, 1..48, {}, class: 'form-control'
-          .col-md-4
-            = f.select :tacan_polarization, %w[X Y], {}, class: 'form-control'
+    -# %tr
+      %th.bg-secondary(colspan=6) TOLD
+    -# %tr
+      %th.table-secondary FUEL
+      %th.table-secondary Takeoff
+      %th.table-secondary Target
+      %th.table-secondary Joker
+      %th.table-secondary Bingo
+      %th.table-secondary Landing
+    -# %tr
+      %th.table-secondary
+      %td= Loadout.parse(@flight.airframe, @flight.loadout).fuel_weight
+      %td= f.number_field :target_fuel, class: 'form-control'
+      %td= f.number_field :joker_fuel, class: 'form-control'
+      %td= f.number_field :bingo_fuel, class: 'form-control'
+      %td= f.number_field :landing_fuel, class: 'form-control'
     %tr
       %th.bg-secondary(colspan=6) SUPPORT
     %tr

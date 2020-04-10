@@ -11,4 +11,8 @@ module LoadoutHelper
     end
     grouped_options_for_select data, selected_value, prompt: 'Empty'
   end
+
+  def expendable_options(flight)
+    Settings.airframes[flight.airframe].expendables.map { |o| ["Chaff: #{o.chaff}, Flares: #{o.flares}", "#{o.chaff},#{o.flares}"] }
+  end
 end

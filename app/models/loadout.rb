@@ -50,17 +50,51 @@ class Loadout < OpenStruct
   end
 
   def chaff
-
+    @table[:e]&.split(/,/)&.first
   end
 
   def flares
-
+    @table[:e]&.split(/,/)&.last
   end
 
   def fuel
     return '' unless @table[:f]
 
     "#{@table[:f]}%"
+  end
+
+  def total_weight
+    empty_weight + payload_weight + fuel_weight
+  end
+
+  def empty_weight
+    Settings.airframes[@airframe].weight.empty
+  end
+
+  def payload_weight
+    @payload_weight ||= options.map(&:weight).sum + gun_weight
+  end
+
+  def gun_weight
+    g = @table[:g]&.to_i || 100
+    Settings.airframes[@airframe].gun.weight * g / 100
+  end
+
+  def fuel_weight
+    external_fuel_weight + internal_fuel_weight
+  end
+
+  def external_fuel_weight
+    options.map(&:fuel).compact.sum
+  end
+
+  def internal_fuel_weight
+    f = @table[:f]&.to_i || 100
+    Settings.airframes[@airframe].weight.fuel * f / 100
+  end
+
+  def options
+    @options ||= @table.reject { |k, _| %i[g f e].include? k }.values.map { |v| LoadoutOption.parse v }
   end
 
   private
@@ -77,8 +111,8 @@ class Loadout < OpenStruct
   end
 
   def payload_amounts
-    @table.reject { |k, _| %i[g f d].include? k }.values.each_with_object({}) do |v, h|
-      amount, payload = v.split /x/, 2
+    @table.reject { |k, _| %i[g f e].include? k }.values.each_with_object({}) do |v, h|
+      amount, payload = v.split /\*/, 2
       amount = amount.to_i
       payload = v if amount.zero?
       payload = payload.split(/,/).first

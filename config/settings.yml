@@ -4006,7 +4006,7 @@ airframes:
         cm: CM
         hei: HEI
         tp: TP
-    cms:
+    expendables:
       - chaff: 0
         flares: 240
       - chaff: 60
@@ -4042,7 +4042,7 @@ airframes:
       types:
         def: DEF
         not: No-T
-    cms:
+    expendables:
       - chaff: 0
         flares: 60
       - chaff: 30
@@ -4055,7 +4055,7 @@ airframes:
         flares: 0
   av8b:
     name: AV-8B N/A
-    cms:
+    expendables:
       - chaff: 60
         flares: 120
     weight:
@@ -4078,7 +4078,7 @@ airframes:
         tp: TP
         saphei: SAPHEI
         tppgu: TP PGU
-    cms:
+    expendables:
       - chaff: 120
         flares: 0
       - chaff: 90
@@ -4118,6 +4118,7 @@ missions:
   - Training
   - CAS
   - CAP
+  - Escort
   - SEAD
   - Strike
   - FAC(A)
@@ -5445,9 +5446,9 @@ loadout:
       - weapon: lau68wtu1b
         amount: 3
         pylon: bru42
-    4a: &av8bstation4a
+    4a:
       - weapon: gau12
-    4b: &av8bstation4b
+    4b:
       - weapon: aaq28
       - weapon: alq164
     5: *av8bstation3

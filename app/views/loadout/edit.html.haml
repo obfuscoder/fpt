@@ -10,7 +10,7 @@
     - @stations.each do |station|
       %tr
         %th.table-secondary= station.number
-        %td(colspan=4)= f.select station.number, station_options(station, f.object.send(station.number)), {}, class: 'form-control'
+        %td(colspan=4)= f.select station.number, station_options(station, f.object.send(station.number)), {}, class: 'form-control  form-control-sm'
         %td(data-ref="loadout_#{station.number}")
     %tr
       %th.bg-secondary(colspan=6) Gun
@@ -20,12 +20,12 @@
       /  %input.custom-range(type='range')
       %td#gun_amount
       %th.table-secondary Type
-      %td= f.select :gun_type, Settings.airframes[@flight.airframe].gun.types.to_h.invert
+      %td= f.select :gun_type, Settings.airframes[@flight.airframe].gun.types.to_h.invert, {}, class: 'form-control form-control-sm'
       %td#gun_weight
     %tr
       %th.bg-secondary Expendables
-      %td(colspan=4) XXXX / XXXX
-      %td
+      %td(colspan=2)= f.select :e, expendable_options(@flight), {}, class: 'form-control form-control-sm'
+      %td(colspan=3)
     %tr
       %th.bg-secondary(colspan=6) Fuel
     %tr

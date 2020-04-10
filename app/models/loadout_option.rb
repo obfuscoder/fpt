@@ -3,6 +3,17 @@ class LoadoutOption
     @config = config
   end
 
+  def self.parse(val)
+    amount, payload = val.split /\*/
+    amount = amount.to_i
+    items = payload.split /,/
+    config = OpenStruct.new
+    config.amount = amount
+    config.weapon = items.first
+    config.pylon = items.second if items.second.present?
+    new(config)
+  end
+
   def type
     Settings.payload[payload_id].type
   end
@@ -12,12 +23,12 @@ class LoadoutOption
   end
 
   def fuel
-    Settings.payload[payload_id].fuel
+    Settings.payload[payload_id].fuel&.to_i || 0
   end
 
   def value
     result = [weapon_id, pylon_id].compact.join ','
-    weapon? ? "#{amount}x#{result}" : result
+    weapon? ? "#{amount}*#{result}" : result
   end
 
   def text

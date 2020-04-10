@@ -95,7 +95,12 @@ class FlightsController < ApplicationController
   end
 
   def flight_params
-    params.require(:flight).permit(:theater, :airframe, :ao, :start, :duration, :callsign, :callsign_number, :slots, :mission, :task, :minimum_weather_requirements, :group_id, :laser, :tacan_channel, :tacan_polarization, :frequency, :notes, :start_airbase, :land_airbase, :divert_airbase, :departure, :recovery, :divert, :radio1, :radio2, :radio3, :radio4, support: [])
+    params.require(:flight).permit(:theater, :airframe, :ao, :start, :duration, :callsign, :callsign_number, :slots,
+                                   :mission, :task, :minimum_weather_requirements, :group_id, :laser, :tacan_channel, :tacan_polarization,
+                                   :frequency, :notes, :start_airbase, :land_airbase, :divert_airbase, :departure, :recovery, :divert,
+                                   :radio1, :radio2, :radio3, :radio4,
+                                   :target_fuel, :joker_fuel, :bingo_fuel, :landing_fuel, :landing_weight,
+                                   support: [])
   end
 
   def create_pdf
