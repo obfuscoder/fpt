@@ -27,7 +27,7 @@
         %th MWXR
         %th
     %tbody
-      - @flights.where('date(start) = ?', date).each do |flight|
+      - @flights.ordered.where('date(start) = ?', date).each do |flight|
         %tr(scope="row")
           %td= flight.start.to_s(:time)
           %td= flight.full_callsign
