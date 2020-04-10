@@ -7,7 +7,7 @@ class FlightsController < ApplicationController
     set_all_flights if params['all'].present?
     @all = all_flights?
     @flights = all_flights? ? Flight.all : Flight.current
-    @dates = @flights.select('date(start) as date').group('date(start)').map(&:date)
+    @dates = @flights.select('date(start) as date').order('date').group('date(start)').map(&:date)
   end
 
   def show
