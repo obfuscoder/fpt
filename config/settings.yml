@@ -3997,17 +3997,112 @@ theaters:
         lat: 40.5789
         lon: 43.09908333333333
 airframes:
-  a10: A-10C
-  f18: F/A-18C
-  av8b: AV-8B N/A
-  f16: F-16C
-  f5: F-5E
-  f14: F-14
-  jf17: JF-17
-  m2000: M-2000C
-  l39: L-39
-  c101: C-101
-  uh1h: UH-1H
+  a10:
+    name: A-10C
+    gun:
+      amount: 1150
+      weight: 1775
+      types:
+        cm: CM
+        hei: HEI
+        tp: TP
+    expendables:
+      - chaff: 0
+        flares: 240
+      - chaff: 60
+        flares: 210
+      - chaff: 120
+        flares: 180
+      - chaff: 180
+        flares: 150
+      - chaff: 240
+        flares: 120
+      - chaff: 300
+        flares: 90
+      - chaff: 360
+        flares: 60
+      - chaff: 420
+        flares: 30
+      - chaff: 480
+        flares: 0
+    weight:
+      empty: 25000
+      fuel: 11000
+      tol: 46000
+      flt: 51000
+  f18:
+    name: F/A-18C
+    weight:
+      empty: 25642
+      fuel: 10803
+      tol: 51900
+    gun:
+      amount: 300
+      weight: 331
+      types:
+        def: DEF
+        not: No-T
+    expendables:
+      - chaff: 0
+        flares: 60
+      - chaff: 30
+        flares: 45
+      - chaff: 60
+        flares: 35
+      - chaff: 90
+        flares: 15
+      - chaff: 120
+        flares: 0
+  av8b:
+    name: AV-8B N/A
+    expendables:
+      - chaff: 60
+        flares: 120
+    weight:
+      empty: 14800
+      fuel: 7758
+      tol: 31000
+  f16:
+    name: F-16C
+    weight:
+      empty: 19900
+      fuel: 7163
+      tol: 42300
+    gun:
+      amount: 300
+      weight: 293
+      types:
+        heit: HEI-T
+        hei: HEI
+        ap: AP
+        tp: TP
+        saphei: SAPHEI
+        tppgu: TP PGU
+    expendables:
+      - chaff: 120
+        flares: 0
+      - chaff: 90
+        flares: 30
+      - chaff: 60
+        flares: 60
+      - chaff: 30
+        flares: 90
+      - chaff: 0
+        flares: 120
+  f5:
+    name: F-5E
+  f14:
+    name: F-14
+  jf17:
+    name: JF-17
+  m2000:
+    name: M-2000C
+  l39:
+    name: L-39
+  c101:
+    name: C-101
+  uh1h:
+    name: UH-1H
 callsigns:
   - Cougar
   - Edelweiss
@@ -4023,6 +4118,7 @@ missions:
   - Training
   - CAS
   - CAP
+  - Escort
   - SEAD
   - Strike
   - FAC(A)
@@ -4466,14 +4562,24 @@ ramrods:
   - womanliest
   - workplaces
   - worshipful
-weapons:
+payload:
+  types:
+    a2a: A2A
+    a2g: A2G
+    agm: Mavericks
+    rockets: Rockets
+    pylon: Pylons
+    pod: Pods
+    tank: Fuel Tanks
   aim9l:
     name: AIM-9L Sidewinder IR AAM
+    short: A9L
     type: a2a
     weight: 188
     mount: lau105
   aim9m:
     name: AIM-9M Sidewinder IR AAM
+    short: A9M
     type: a2a
     weight: 191
   aim9x:
@@ -4482,59 +4588,91 @@ weapons:
     weight: 185
   cap9m:
     name: CAP-9M
+    short: C9M
     type: a2a
     weight: 188
     mount: lau105
+  lau7:
+    name: LAU-7
+    type: pylon
+    weight: 34
   lau105:
     name: LAU-105
     type: pylon
     weight: 67 # alone = 54 ?)
   bdu50hd:
     name: BDU-50HD
+    short: B50H
     type: a2g
     weight: 511
   bdu50ld:
     name: BDU-50LD
+    short: B50
     type: a2g
     weight: 511
   bdu50lgb:
     name: BDU-50LGB
+    short: B50L
     type: a2g
     weight: 617
   cbu87:
     name: CBU-87
+    short: C87
     type: a2g
     weight: 948
   cbu97:
     name: CBU-97
+    short: C97
     type: a2g
     weight: 919
   gbu12:
     name: GBU-12
+    short: G12
     type: a2g
     weight: 606
+  gbu16:
+    name: GBU-16
+    type: a2g
+    weight: 1243
+  mk20:
+    name: Mk-20 Rockeye
+    type: a2g
+    weight: 489
+  mk81:
+    name: Mk-81
+    type: a2g
+    weight: 260
   mk82:
     name: Mk-82
-    type: a2g
-    weight: 531
-  mk82air:
-    name: Mk-82AIR
+    short: M82
     type: a2g
     weight: 531
   mk82se:
-    name: Mk-82Snake-Eye
+    name: Mk-82 SnakeEye
     type: a2g
     weight: 511
+  mk82air:
+    name: Mk-82AIR
+    short: M82A
+    type: a2g
+    weight: 531
+  mk83:
+    name: Mk-83
+    type: a2g
+    weight: 985
   alq131:
     name: ALQ-131
+    short: A131
     type: pod
     weight: 672
   alq184:
     name: ALQ-184
+    short: A184
     type: pod
     weight: 474
   asqt50:
     name: AN/ASQ-T50 TCTS Pod
+    short: AT50
     type: pod
     weight: 145
   smokeblue:
@@ -4563,106 +4701,152 @@ weapons:
     weight: 441
   suuluu:
     name: SUU-25 * 8 LUU-2
+    short: LU2
     type: a2g
     weight: 287
   aaq28:
     name: AN/AAQ-28 LITENING
+    short: TGP
     type: pod
     weight: 661
+  alq164:
+    name: AN/ALQ-164 DECM Pod
+    type: pod
+    weight: 317
   lau68m151:
     name: LAU-68/A - 7x M151 (HE)
+    short: 7M151
     type: rockets
     weight: 254
   lau131m151:
     name: LAU-131 - 7x M151 (HE)
+    short: 7M151
     type: rockets
     weight: 225
   lau68m156:
     name: LAU-68/A - 7x M156 (WP)
+    short: 7M156
     type: rockets
     weight: 256
   lau131m156:
     name: LAU-131 - 7x M156 (WP)
+    short: 7M156
     type: rockets
     weight: 229
   lau68m257:
     name: LAU-68/A - 7x M257 (Parachute Illumination)
+    short: 7M257
     type: rockets
     weight: 265
   lau131m257:
     name: LAU-131 - 7x M257 (Parachute Illumination)
+    short: 7M257
     type: rockets
     weight: 238
   lau68m274:
     name: LAU-68/A - 7x M274 (Practice smoke)
+    short: 7M274
     type: rockets
     weight: 254
   lau131m274:
     name: LAU-131 - 7x M274 (Practice smoke)
+    short: 7M274
     type: rockets
     weight: 225
   lau68mk5:
     name: LAU-68/A - 7x MK5 (HE)
+    short: 7MK5
     type: rockets
     weight: 227
   lau131mk5:
     name: LAU-131 - 7x MK5 (HE)
+    short: 7MK5
     type: rockets
     weight: 201
   lau68mk1:
     name: LAU-68/A - 7x MK1 (Practice)
+    short: 7MK1
     type: rockets
     weight: 234
   lau131mk1:
     name: LAU-131 - 7x MK1 (Practice)
+    short: 7MK1
     type: rockets
     weight: 205
   lau68mk61:
     name: LAU-68/A - 7x MK61 (Practice)
+    short: 7MK61
     type: rockets
     weight: 234
   lau131mk61:
     name: LAU-131 - 7x MK61 (Practice)
+    short: 7MK61
     type: rockets
     weight: 205
   lau68wtu1b:
     name: LAU-68/A - 7x WTU1B (Practice)
+    short: 7WTU1B
     type: rockets
     weight: 254
   lau131wtu1b:
     name: LAU-131 - 7x WTU1B (Practice)
+    short: 7WTU1B
     type: rockets
     weight: 225
+  lau10mk71:
+    name: LAU-10 - 4 ZUNI MK 71
+    type: rockets
+    weight: 970
+  lau3m156:
+    name: LAU-3 - 19 FFAR M156 WP
+    type: rockets
+    weight: 690
+  lau3mk1:
+    name: LAU-3 - 19 FFAR Mk1 HE
+    type: rockets
+    weight: 628
+  lau3mk5:
+    name: LAU-3 - 19 FFAR Mk5 HEAT
+    type: rockets
+    weight: 631
   cbu103:
     name: CBU-103
+    short: C103
     type: a2g
     weight: 948
   cbu105:
     name: CBU-105
+    short: C105
     type: a2g
     weight: 919
   gbu10:
     name: GBU-10
+    short: G10
     type: a2g
     weight: 2562
   gbu31:
     name: GBU-31
+    short: G31
     type: a2g
     weight: 1971
   gbu31v3b:
-    name: GBU-10
+    name: GBU-31(V)3/B
+    short: G31B
     type: a2g
     weight: 2163
   gbu38:
     name: GBU-38
+    short: G38
     type: a2g
     weight: 531
   mk84:
     name: Mk-84
+    short: M84
     type: a2g
     weight: 1971
   bdu33:
     name: BDU-33
+    short: B33
     type: a2g
     weight: 34
   bru42:
@@ -4671,6 +4855,7 @@ weapons:
     weight: 114
   mxu648:
     name: MXU-648 Travel Pod
+    short: MX648
     type: pod
     weight: 661
   lau88:
@@ -4683,38 +4868,64 @@ weapons:
     weight: 131
   agm65d:
     name: AGM-65D
+    short: A65D
     type: agm
     weight: 480
+  agm65e:
+    name: AGM-65E
+    type: agm
+    weight: 630
   agm65g:
     name: AGM-65G
+    short: A65G
     type: agm
     weight: 663
   agm65h:
     name: AGM-65H
+    short: A65H
     type: agm
     weight: 458
   agm65k:
     name: AGM-65K
+    short: A65K
     type: agm
     weight: 793
   catm65k:
     name: CATM-65K
+    short: C65K
     type: agm
     weight: 793
   tgm65d:
     name: TGM-65D
+    short: T65D
     type: agm
     weight: 480
   tgm65g:
     name: TGM-65G
+    short: T65G
     type: agm
     weight: 663
   tgm65h:
     name: TGM-65H
+    short: T65H
     type: agm
     weight: 458
+  agm122:
+    name: AGM-122 Sidearm
+    type: agm
+    weight: 203
+  gau12:
+    name: GAU 12 Gunpod
+    type: pod
+    weight: 1314
+  ft300ae:
+    name: Aero 1D Fuel Tank FT300
+    type: tank
+    weight: 207
+    fuel: 3000
   ft600:
     name: Fuel tank FT600
+    short: FT600
     type: tank
     weight: 243
     fuel: 4000
@@ -4916,7 +5127,6 @@ loadout:
       - weapon: lau131wtu1b
         amount: 3
         pylon: bru42
-      - pylon: bru42
       - weapon: mxu648
       - weapon: agm65d
         pylon: lau117
@@ -5046,7 +5256,6 @@ loadout:
       - weapon: lau131wtu1b
         amount: 3
         pylon: bru42
-      - pylon: bru42
       - weapon: mxu648
       - weapon: ft600
     5: &a10station5
@@ -5074,7 +5283,6 @@ loadout:
       - weapon: mk82air
         amount: 3
         pylon: bru42
-      - pylon: bru42
       - weapon: mxu648
     6:
       - weapon: bdu50hd
@@ -5090,7 +5298,6 @@ loadout:
       - weapon: bdu33
         amount: 3
         pylon: bru42
-      - pylon: bru42
       - weapon: mxu648
       - weapon: ft600
     7: *a10station5
@@ -5212,3 +5419,194 @@ loadout:
     9: *f16station3
     10: *f16station2
     11: *f16station1
+  av8b:
+    1: &av8bstation1
+      - weapon: aim9m
+      - weapon: cap9m
+      - weapon: bdu33
+      - weapon: gbu12
+      - weapon: mk20
+      - weapon: mk81
+      - weapon: mk82
+      - weapon: mk82se
+      - weapon: mk82air
+      - weapon: agm122
+      - weapon: asqt50
+      - weapon: smokeblue
+      - weapon: smokegreen
+      - weapon: smokeorange
+      - weapon: smokered
+      - weapon: smokewhite
+      - weapon: smokeyellow
+    2: &av8bstation2
+      - weapon: aim9m
+        pylon: lau7
+      - weapon: bdu33
+      - weapon: gbu12
+      - weapon: gbu16
+      - weapon: gbu38
+      - weapon: mk20
+      - weapon: mk81
+      - weapon: mk82
+      - weapon: mk82se
+      - weapon: mk82air
+      - weapon: mk83
+      - weapon: suuluu
+      - weapon: gbu12
+        amount: 2
+        pylon: bru42
+      - weapon: gbu38
+        amount: 2
+        pylon: bru42
+      - weapon: mk82
+        amount: 2
+        pylon: bru42
+      - weapon: mk82se
+        amount: 2
+        pylon: bru42
+      - weapon: mk82air
+        amount: 2
+        pylon: bru42
+      - weapon: mk20
+        amount: 2
+        pylon: bru42
+      - weapon: bdu33
+        amount: 3
+        pylon: bru42
+      - weapon: gbu12
+        amount: 3
+        pylon: bru42
+      - weapon: gbu38
+        amount: 3
+        pylon: bru42
+      - weapon: mk81
+        amount: 3
+        pylon: bru42
+      - weapon: mk82
+        amount: 3
+        pylon: bru42
+      - weapon: mk82se
+        amount: 3
+        pylon: bru42
+      - weapon: mk82air
+        amount: 3
+        pylon: bru42
+      - weapon: suuluu
+        amount: 3
+        pylon: bru42
+      - weapon: ft300ae
+      - weapon: agm122
+        pylon: lau117
+      - weapon: agm65e
+        pylon: lau117
+      - weapon: agm65g
+        pylon: lau117
+      - weapon: tgm65g
+        pylon: lau117
+      - weapon: smokeblue
+      - weapon: smokegreen
+      - weapon: smokeorange
+      - weapon: smokered
+      - weapon: smokewhite
+      - weapon: smokeyellow
+      - weapon: lau10mk71
+      - weapon: lau3m156
+      - weapon: lau3mk1
+      - weapon: lau3mk5
+      - weapon: lau68m257
+      - weapon: lau68m274
+      - weapon: lau68wtu1b
+      - weapon: lau68m156
+      - weapon: lau68mk1
+      - weapon: lau68mk5
+    3: &av8bstation3
+      - weapon: bdu33
+      - weapon: gbu12
+      - weapon: gbu16
+      - weapon: gbu38
+      - weapon: mk20
+      - weapon: mk81
+      - weapon: mk82
+      - weapon: mk82se
+      - weapon: mk82air
+      - weapon: mk83
+      - weapon: gbu12
+        amount: 2
+        pylon: bru42
+      - weapon: gbu38
+        amount: 2
+        pylon: bru42
+      - weapon: mk82
+        amount: 2
+        pylon: bru42
+      - weapon: mk82se
+        amount: 2
+        pylon: bru42
+      - weapon: mk82air
+        amount: 2
+        pylon: bru42
+      - weapon: mk20
+        amount: 2
+        pylon: bru42
+      - weapon: bdu33
+        amount: 3
+        pylon: bru42
+      - weapon: gbu12
+        amount: 3
+        pylon: bru42
+      - weapon: mk81
+        amount: 3
+        pylon: bru42
+      - weapon: mk82
+        amount: 3
+        pylon: bru42
+      - weapon: mk82se
+        amount: 3
+        pylon: bru42
+      - weapon: mk82air
+        amount: 3
+        pylon: bru42
+      - weapon: ft300ae
+      - weapon: agm65e
+        pylon: lau117
+      - weapon: agm65g
+        pylon: lau117
+      - weapon: tgm65g
+        pylon: lau117
+      - weapon: aaq28
+      - weapon: lau10mk71
+      - weapon: lau3m156
+      - weapon: lau3mk1
+      - weapon: lau3mk5
+      - weapon: lau68m257
+      - weapon: lau68m274
+      - weapon: lau68wtu1b
+      - weapon: lau68m156
+      - weapon: lau68mk1
+      - weapon: lau68mk5
+      - weapon: lau68m151
+        amount: 3
+        pylon: bru42
+      - weapon: lau68m156
+        amount: 3
+        pylon: bru42
+      - weapon: lau68m257
+        amount: 3
+        pylon: bru42
+      - weapon: lau68m274
+        amount: 3
+        pylon: bru42
+      - weapon: lau68mk5
+        amount: 3
+        pylon: bru42
+      - weapon: lau68wtu1b
+        amount: 3
+        pylon: bru42
+    4a:
+      - weapon: gau12
+    4b:
+      - weapon: aaq28
+      - weapon: alq164
+    5: *av8bstation3
+    6: *av8bstation2
+    7: *av8bstation1

@@ -21,6 +21,7 @@ class MissionDataCard < Prawn::Document
     set_white_background
 
     flight_info
+    loadout
     airbases
     start_new_page
     flight_plan
@@ -33,6 +34,8 @@ class MissionDataCard < Prawn::Document
     other_flights
     start_new_page
     channels
+    start_new_page
+    auth
     start_new_page
     navaids
     super
@@ -95,6 +98,37 @@ class MissionDataCard < Prawn::Document
       cell(9, pilot.tacan)
       next_row
     end
+    next_row
+  end
+
+  def loadout
+    l = Loadout.parse(@flight.airframe, @flight.loadout)
+    define_columns 12
+    header('LOADOUT')
+    cell(0, 'A/A', header: true)
+    cell([1, 8], l.a2a(text: :short))
+    cell(9, 'GUN', header: true)
+    cell([10, 11], l.gun)
+    next_row
+
+    cell(0, 'A/G', header: true)
+    cell([1, 8], l.a2g(text: :short))
+    cell(9, 'CHF', header: true)
+    cell([10, 11], l.chaff)
+    next_row
+
+    cell(0, 'POD', header: true)
+    cell([1, 8], l.pods(text: :short))
+    cell(9, 'FLR', header: true)
+    cell([10, 11], l.flares)
+    next_row
+
+    cell(0, 'TKS', header: true)
+    cell([1, 8], l.tanks(text: :short))
+    cell(9, 'FUEL', header: true)
+    cell([10, 11], l.fuel)
+    next_row
+
     next_row
   end
 
@@ -270,19 +304,18 @@ class MissionDataCard < Prawn::Document
     next_row
 
     airbase = Settings.theaters[@flight.theater].airbases[@flight.start_airbase]
-    cell(0, 'Dep')
-    cell([1, 3], airbase.name)
-    cell(4, airbase.tacan)
-    cell(5, airbase.atis)
-    cell(6, airbase.ground)
-    cell(7, airbase.tower)
-    cell(8, airbase.takeoff)
-    cell(9, airbase.elevation)
-    cell(10, airbase.ils)
-    next_row
-
+    airbase_line(airbase, 'Dep')
     airbase = Settings.theaters[@flight.theater].airbases[@flight.land_airbase]
-    cell(0, 'Arr')
+    airbase_line(airbase, 'Arr')
+    if @flight.divert_airbase
+      airbase = Settings.theaters[@flight.theater].airbases[@flight.divert_airbase]
+      airbase_line(airbase, 'Div')
+    end
+    next_row
+  end
+
+  def airbase_line(airbase, type)
+    cell(0, type)
     cell([1, 3], airbase.name)
     cell(4, airbase.tacan)
     cell(5, airbase.atis)
@@ -291,22 +324,6 @@ class MissionDataCard < Prawn::Document
     cell(8, airbase.land)
     cell(9, airbase.elevation)
     cell(10, airbase.ils)
-    next_row
-
-    if @flight.divert_airbase
-      airbase = Settings.theaters[@flight.theater].airbases[@flight.divert_airbase]
-      cell(0, 'Div')
-      cell([1, 3], airbase.name)
-      cell(4, airbase.tacan)
-      cell(5, airbase.atis)
-      cell(6, airbase.ground)
-      cell(7, airbase.tower)
-      cell(8, airbase.land)
-      cell(9, airbase.elevation)
-      cell(10, airbase.ils)
-      next_row
-    end
-
     next_row
   end
 
@@ -324,6 +341,36 @@ class MissionDataCard < Prawn::Document
       cell(0, i + 1)
       cell(1, channel.freq)
       cell([2, 5], channel.name)
+      next_row
+    end
+  end
+
+  def auth
+    ramrod
+    next_row
+    code_table
+  end
+
+  def ramrod
+    define_columns 10
+    header('RAMROD')
+    crypto = Crypto.new @flight.start.to_date
+    0.upto(9).each { |i| cell(i, i, header: true, align: :center) }
+    next_row
+    crypto.ramrod.chars.each_with_index { |c, i| cell(i, c, align: :center) }
+  end
+
+  def code_table
+    crypto = Crypto.new @flight.start.to_date
+    define_columns 12
+    header('KTC 1400 C')
+    dryad = crypto.dryad
+    cell(0, '', header: true)
+    0.upto(9).each { |i| cell(i.zero? ? [1, 2] : i + 2, i, header: true, align: :center) }
+    next_row
+    dryad.rows.each do |row|
+      cell(0, row.header, header: true, align: :center)
+      row.columns.each_with_index { |c, i| cell(i.zero? ? [1, 2] : i + 2, c, align: :center) }
       next_row
     end
   end

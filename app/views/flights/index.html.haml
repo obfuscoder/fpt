@@ -7,39 +7,44 @@
   %p
     Showing current and upcoming flights.
     = link_to 'Also show past flights.', root_path(params: { all: true })
-%table.table.table-striped.table-bordered.table-sm.table-hover
-  %thead.thead-dark
-    %tr
-      %th Time
-      %th Callsign
-      %th Airframe
-      %th Pilots
-      %th Mission
-      %th AO
-      %th Frequency
-      %th Takeoff
-      %th Departure
-      %th Land
-      %th Recovery
-      %th Task
-      %th MWXR
-      %th
-  %tbody
-    - @flights.each do |flight|
-      %tr(scope="row")
-        %td= flight.start
-        %td= flight.full_callsign
-        %td= Settings.airframes[flight.airframe]
-        %td= "#{flight.pilots.count}/#{flight.slots}"
-        %td= flight.mission
-        %td= flight.ao
-        %td= flight.frequency
-        %td= link_to_start_airbase(flight)
-        %td= link_to_departure(flight)
-        %td= link_to_land_airbase(flight)
-        %td= link_to_recovery(flight)
-        %td= flight.task
-        %td= flight.minimum_weather_requirements
-        %td= link_to 'Show', flight, class: 'btn btn-primary btn-sm'
+- @dates.each do |date|
+  %h2
+    = date
+    \/
+    = link_to 'SPINS', spins_path(params: { date: date })
+  %table.table.table-striped.table-bordered.table-sm.table-hover
+    %thead.thead-dark
+      %tr
+        %th Time
+        %th Callsign
+        %th Airframe
+        %th Pilots
+        %th Mission
+        %th AO
+        %th Frequency
+        %th Takeoff
+        %th Departure
+        %th Land
+        %th Recovery
+        %th Task
+        %th MWXR
+        %th
+    %tbody
+      - @flights.ordered.where('date(start) = ?', date).each do |flight|
+        %tr(scope="row")
+          %td= flight.start.to_s(:time)
+          %td= flight.full_callsign
+          %td= Settings.airframes[flight.airframe].name
+          %td= "#{flight.pilots.count}/#{flight.slots}"
+          %td= flight.mission
+          %td= flight.ao
+          %td= flight.frequency
+          %td= link_to_start_airbase(flight)
+          %td= link_to_departure(flight)
+          %td= link_to_land_airbase(flight)
+          %td= link_to_recovery(flight)
+          %td= flight.task
+          %td= flight.minimum_weather_requirements
+          %td= link_to 'Show', flight, class: 'btn btn-primary btn-sm'
 %br
 = link_to 'New Flight', new_flight_path, class: 'btn btn-primary'

@@ -2,8 +2,8 @@ class Flight < ApplicationRecord
   has_many :pilots, -> { order(:number) }, dependent: :destroy
   has_many :waypoints, dependent: :destroy
 
-  default_scope { order(start: :desc, callsign: :asc, callsign_number: :asc) }
-  scope :current, -> { where('start > ?', 1.day.ago) }
+  scope :ordered, -> { order(start: :asc, callsign: :asc, callsign_number: :asc) }
+  scope :current, -> { where('date(start) >= ?', Date.today) }
 
   def full_callsign
     callsign_number.present? ? "#{callsign} #{callsign_number}" : callsign

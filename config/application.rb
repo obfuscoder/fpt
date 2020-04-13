@@ -31,5 +31,11 @@ module Fpt
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    
+    
+    config.action_dispatch.default_headers = {
+      'X-XSS-Protection' => '1; mode=block',
+      'X-Content-Type-Options' => 'nosniff'
+    }
   end
 end

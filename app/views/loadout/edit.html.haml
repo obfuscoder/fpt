@@ -1,0 +1,57 @@
+%h1 Edit loadout
+%img(src="/loadout/#{@flight.airframe}.png" width=600)
+= form_for @loadout, url: flight_loadout_path(@flight), method: :put do |f|
+  = f.hidden_field :g
+  %table.table.table-striped.table-bordered.table-sm.table-hover
+    %tr
+      %th.bg-secondary Station
+      %th.bg-secondary(colspan=4) Payload
+      %th.bg-secondary Weight
+    - @stations.each do |station|
+      %tr
+        %th.table-secondary= station.number
+        %td(colspan=4)= f.select station.number, station_options(station, f.object.send(station.number)), {}, class: 'form-control  form-control-sm'
+        %td(data-ref="loadout_#{station.number}")
+    %tr
+      %th.bg-secondary(colspan=6) Gun
+    %tr
+      %th.table-secondary Amount
+      %td= f.range_field :gun_amount, class: 'custom-range', data: { amount: Settings.airframes[@flight.airframe].gun.amount, weight: Settings.airframes[@flight.airframe].gun.weight }
+      /  %input.custom-range(type='range')
+      %td#gun_amount
+      %th.table-secondary Type
+      %td= f.select :gun_type, Settings.airframes[@flight.airframe].gun.types.to_h.invert, {}, class: 'form-control form-control-sm'
+      %td#gun_weight
+    %tr
+      %th.bg-secondary Expendables
+      %td(colspan=2)= f.select :e, expendable_options(@flight), {}, class: 'form-control form-control-sm'
+      %td(colspan=3)
+    %tr
+      %th.bg-secondary(colspan=6) Fuel
+    %tr
+      %th.table-secondary Internal
+      %td= f.range_field :f, class: 'custom-range', data: { weight: Settings.airframes[@flight.airframe].weight.fuel }
+      %td#internal_fuel
+      %th.table-secondary External
+      %td#external_fuel
+      %td#total_fuel
+    %tr
+      %th.bg-secondary(colspan=6) Weight
+    %tr
+      %th.table-secondary Empty
+      %th.table-secondary Max TO/L
+      %th.table-secondary Max Flt
+      %th.table-secondary Payload
+      %th.table-secondary Fuel
+      %th.table-secondary Total
+    %tr
+      %td#empty_weight= Settings.airframes[@flight.airframe].weight.empty
+      %td= Settings.airframes[@flight.airframe].weight.tol
+      %td= Settings.airframes[@flight.airframe].weight.flt
+      %td#payload_weight
+      %td#fuel_weight
+      %td#total_weight{ data: { max: Settings.airframes[@flight.airframe].weight.tol } }
+
+  = f.submit 'Save', class: 'btn btn-primary'
+%p
+= link_to 'Back', flight_path(@flight)

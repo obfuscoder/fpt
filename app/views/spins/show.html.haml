@@ -1,0 +1,29 @@
+%h1
+  SPINS for
+  = @date
+%h2 Authentication/Encryption
+%h3 RAMROD
+%table.table.table-bordered.text-center.w-auto.text-monospace
+  %tr
+    %thead.thead-dark
+      - 0.upto(9).each do |i|
+        %th= i
+  %tr
+    %tbody
+      - @ramrod.chars do |c|
+        %td= c
+%h3 Code table
+%table.table.table-bordered.text-center.text-monospace.table-sm.table-striped.table-hover
+  %tr
+    %thead.thead-dark
+      %th
+      - @dryad.headers.each_with_index do |h, i|
+        %th.align-content-center
+          = h
+          %br
+          = i
+  - @dryad.rows.each do |row|
+    %tr
+      %th.table-secondary= row.header
+      - row.columns.each do |col|
+        %td= col

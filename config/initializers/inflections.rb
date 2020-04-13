@@ -12,4 +12,5 @@
 
 ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'airbase', 'airbases'
+  inflect.uncountable 'loadout'
 end

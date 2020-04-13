@@ -29,6 +29,8 @@
     %th.table-secondary Min WX Reqs
     %td(colspan=5)= @flight.minimum_weather_requirements
   %tr
+    %th.bg-secondary(colspan=6) SLOTS
+  %tr
     %td(colspan=6)
       .container
         .row
@@ -60,6 +62,54 @@
                       = f.select :name, @flight.assignable_pilots, {}, class: 'form-control form-control-sm'
                     .col-auto
                       = f.submit 'Assign', class: 'btn btn-primary btn-sm'
+  %tr
+    %th.bg-secondary(colspan=6) LOADOUT
+  %tr
+    %th.table-secondary A/A
+    %td(colspan=3)= @loadout.a2a
+    %th.table-secondary Gun
+    %td= @loadout.gun
+  %tr
+    %th.table-secondary A/G
+    %td(colspan=3)= @loadout.a2g
+    %th.table-secondary Chaff
+    %td= @loadout.chaff
+  %tr
+    %th.table-secondary Pods
+    %td(colspan=3)= @loadout.pods
+    %th.table-secondary Flares
+    %td= @loadout.flares
+  %tr
+    %th.table-secondary Tanks
+    %td(colspan=3)= @loadout.tanks
+    %th.table-secondary Fuel
+    %td= @loadout.fuel
+  -# %tr
+    %th.table-secondary Gross Weight
+    %td(colspan=2)= @loadout.total_weight
+    %th.table-secondary Drag Index
+    %td(colspan=2)= @loadout.drag_index
+  -# %tr
+    %th.bg-secondary(colspan=6) FUEL
+  -# %tr
+    %th.table-secondary Takeoff
+    %td= @loadout.takeoff_fuel
+    %th.table-secondary Joker
+    %td= @loadout.joker_fuel
+    %th.table-secondary Bingo
+    %td= @loadout.bingo_fuel
+  -# %tr
+    %th.bg-secondary(colspan=6) TOLD
+  -# %tr
+    %th.table-secondary Takeoff
+    %td= @loadout.takeoff_speed
+    %th.table-secondary Refusal
+    %td= @loadout.refusal_speed
+    %th.table-secondary Landing
+    %td= @loadout.landing_speed
+  %tr
+    %td(colspan=6)
+      = link_to 'Edit', edit_flight_loadout_path(@flight), class: 'btn btn-primary btn-sm'
   %tr
     %th.bg-secondary(colspan=6) AIRBASES
   %tr

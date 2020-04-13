@@ -70,4 +70,8 @@ module FlightsHelper
   def link_to_divert(flight)
     link_to flight.divert_name, "/#{flight.theater}/#{flight.divert_airbase}/recoveries/#{flight.divert}.pdf" if flight.divert
   end
+
+  def airframe_options
+    Settings.airframes.map { |o| [o.first, o.second.name] }.to_h.invert
+  end
 end

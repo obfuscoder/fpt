@@ -5,11 +5,14 @@ class FlightsController < ApplicationController
 
   def index
     set_all_flights if params['all'].present?
-    @flights = all_flights? ? Flight.all : Flight.current
     @all = all_flights?
+    @flights = all_flights? ? Flight.all : Flight.current
+    @dates = @flights.select('date(start) as date').order('date').group('date(start)').map(&:date)
   end
 
-  def show; end
+  def show
+    @loadout = Loadout.parse @flight.airframe, @flight.loadout
+  end
 
   def new
     @flight = Flight.new theater: Settings.theaters.first.first,
@@ -93,10 +96,13 @@ class FlightsController < ApplicationController
   end
 
   def flight_params
-    params.require(:flight).permit(:theater, :airframe, :ao, :start, :duration, :callsign, :callsign_number, :slots, :mission, :task, :minimum_weather_requirements, :group_id, :laser, :tacan_channel, :tacan_polarization, :frequency, :notes, :start_airbase, :land_airbase, :divert_airbase, :departure, :recovery, :divert, :radio1, :radio2, :radio3, :radio4, support: [])
+    params.require(:flight).permit(:theater, :airframe, :ao, :start, :duration, :callsign, :callsign_number, :slots,
+                                   :mission, :task, :minimum_weather_requirements, :group_id, :laser, :tacan_channel, :tacan_polarization,
+                                   :frequency, :notes, :start_airbase, :land_airbase, :divert_airbase, :departure, :recovery, :divert,
+                                   :radio1, :radio2, :radio3, :radio4,
+                                   :target_fuel, :joker_fuel, :bingo_fuel, :landing_fuel, :landing_weight,
+                                   support: [])
   end
-
-  private
 
   def create_pdf
     mdc = MissionDataCard.new @flight

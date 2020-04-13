@@ -20,8 +20,10 @@ Rails.application.routes.draw do
         get :export
       end
     end
+    resource :loadout, only: %i[edit update]
   end
 
   get 'airbases', to: 'airbases#index'
   get 'procedures', to: 'airbases#procedures'
+  get 'spins', to: 'spins#show'
 end
