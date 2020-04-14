@@ -4140,6 +4140,7 @@ missions:
   - Sweep
 pilots:
   - Butcher
+  - Chance
   - Chatterbox
   - DirtDiver
   - G-Rex
@@ -4172,7 +4173,9 @@ pilots:
   - toto
   - Tronix
   - Warblade
-  - Chance
+  - Capricorn
+  - Joker
+  - Trident
 ramrods:
   - abductions
   - abridgment
