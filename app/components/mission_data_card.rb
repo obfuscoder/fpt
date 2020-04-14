@@ -80,22 +80,24 @@ class MissionDataCard < Prawn::Document
     cell(1, @flight.recovery_name)
     next_row
 
-    define_columns 10
+    define_columns 11
     cell(0, '#', header: true)
     cell([1, 5], 'Callsign', header: true)
     cell([4, 6], 'Pilot', header: true)
-    cell(7, 'Net ID', header: true)
-    cell(8, 'LSR', header: true)
-    cell(9, 'TCN', header: true)
+    cell(7, 'IFF', header: true)
+    cell(8, 'TCN', header: true)
+    cell(9, 'LSR', header: true)
+    cell(10, 'NET', header: true)
     next_row
 
     @flight.pilots.each do |pilot|
       cell(0, pilot.dash_number)
       cell([1, 5], pilot.callsign)
       cell([4, 6], pilot.name)
-      cell(7, pilot.net_id)
-      cell(8, pilot.laser)
-      cell(9, pilot.tacan)
+      cell(7, pilot.iff)
+      cell(8, pilot.tacan)
+      cell(9, pilot.laser)
+      cell(10, pilot.net_id)
       next_row
     end
     next_row

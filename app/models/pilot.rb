@@ -13,6 +13,10 @@ class Pilot < ApplicationRecord
     format('%02d', number)
   end
 
+  def iff
+    flight.iff.present? ? "#{flight.iff}#{number}" : ''
+  end
+
   def net_id
     flight.group_id.present? ? format('%02d/%02d', flight.group_id, number) : ''
   end

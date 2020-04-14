@@ -1,6 +1,6 @@
-%p
-  #notice= notice
-
+- if notice
+  %p
+    .alert.alert-success= notice
 %table.table.table-striped.table-bordered.table-sm.table-hover
   %tr
     %th.bg-secondary(colspan=6) MISSION DATA
@@ -8,10 +8,10 @@
     %th.table-secondary Theater
     %td
       %a{ href: Settings.theaters[@flight.theater].link, target: "theater" }= Settings.theaters[@flight.theater].name
-    %th.table-secondary Start
-    %td= @flight.start
-    %th.table-secondary Duration
-    %td= @flight.duration
+    %th.table-secondary Time
+    %td= "#{l(@flight.start)} +#{@flight.duration}"
+    %th.table-secondary IFF
+    %td= "#{@flight.iff}X"
   %tr
     %th.table-secondary Callsign
     %td= @flight.full_callsign
@@ -37,10 +37,11 @@
           .col-1.table-secondary #
           .col-2.table-secondary Callsign
           .col-3.table-secondary Pilot
-          .col-1.table-secondary NetId
-          .col-2.table-secondary Lasercode
+          .col-1.table-secondary IFF
           .col-1.table-secondary TCN
-          .col-2.table-secondary
+          .col-2.table-secondary Lasercode
+          .col-1.table-secondary NetId
+          .col-1.table-secondary
         - @flight.slots.times do |index|
           - number = index + 1
           .row
@@ -49,10 +50,11 @@
             - if pilot
               .col-2= pilot.callsign
               .col-3= pilot.name
-              .col-1= pilot.net_id
-              .col-2= pilot.laser
+              .col-1= pilot.iff
               .col-1= pilot.tacan
-              .col-2= link_to 'Unassign', flight_pilot_path(@flight, pilot), method: :delete, class: 'btn btn-danger btn-sm'
+              .col-2= pilot.laser
+              .col-1= pilot.net_id
+              .col-1= link_to 'Unassign', flight_pilot_path(@flight, pilot), method: :delete, class: 'btn btn-danger btn-sm'
             - else
               .col-11
                 = form_for :pilot, url: flight_pilots_path(@flight) do |f|

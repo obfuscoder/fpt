@@ -5,6 +5,9 @@ class Flight < ApplicationRecord
   scope :ordered, -> { order(start: :asc, callsign: :asc, callsign_number: :asc) }
   scope :current, -> { where('date(start) >= ?', Date.today) }
 
+  validates :start, presence: true
+  validates :iff, presence: true, numericality: { only_integer: true, greater_than: 99, less_than: 800 }
+
   def full_callsign
     callsign_number.present? ? "#{callsign} #{callsign_number}" : callsign
   end

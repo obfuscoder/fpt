@@ -83,7 +83,6 @@ class FlightsController < ApplicationController
   end
 
   def defaults
-    blank?
     callsign = [params[:cs], params[:n]].select(&:present?).join('_').downcase
     @defaults = Settings.theaters[params[:t]].defaults[callsign]
     render json: @defaults
@@ -99,7 +98,7 @@ class FlightsController < ApplicationController
     params.require(:flight).permit(:theater, :airframe, :ao, :start, :duration, :callsign, :callsign_number, :slots,
                                    :mission, :task, :minimum_weather_requirements, :group_id, :laser, :tacan_channel, :tacan_polarization,
                                    :frequency, :notes, :start_airbase, :land_airbase, :divert_airbase, :departure, :recovery, :divert,
-                                   :radio1, :radio2, :radio3, :radio4,
+                                   :radio1, :radio2, :radio3, :radio4, :iff,
                                    :target_fuel, :joker_fuel, :bingo_fuel, :landing_fuel, :landing_weight,
                                    support: [])
   end

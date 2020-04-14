@@ -1,7 +1,7 @@
 = form_for @flight do |f|
   - if @flight.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@flight.errors.count, "error")} prohibited this flight from being saved:"
+    .alert.alert-danger
+      %h4= "#{pluralize(@flight.errors.count, "error")} prohibited this flight from being saved:"
       %ul
         - @flight.errors.full_messages.each do |message|
           %li= message
@@ -9,66 +9,69 @@
     %tr
       %th.bg-secondary(colspan=6) MISSION DATA
     %tr
-      %th.table-secondary Start
-      %td(colspan=3)
-        .form-row= f.datetime_select :start,  {}, class: 'form-control col'
-      %th.table-secondary Duration
+      %th.align-middle.table-secondary Start
+      %td= f.datetime_field :start, class: 'form-control'
+      %th.align-middle.table-secondary Duration (min)
       %td= f.number_field :duration, class: 'form-control'
+      %th.align-middle.table-secondary Mission
+      %td= f.select :mission, Settings.missions, {}, class: 'form-control'
     %tr
-      %th.table-secondary Theater
+      %th.align-middle.table-secondary Theater
       %td= f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }, {}, class: 'form-control update-defaults', data: { remote: true, url: airbases_path, defaults_url: defaults_flights_path }
-      %th.table-secondary Airframe
-      %td
-        = f.select :airframe, airframe_options, {}, class: 'form-control'
-      %th.table-secondary Slots
-      %td= f.select :slots, 1..4, {}, class: 'form-control'
+      %th.align-middle.table-secondary Comms
+      %td= f.text_field :frequency, class: 'form-control'
+      %th.align-middle.table-secondary IFF
+      %td= f.text_field :iff, class: 'form-control'
     %tr
-      %th.table-secondary Callsign
+      %th.align-middle.table-secondary A/C + #
+      %td
+        .form-row
+          .col-md-8
+            = f.select :airframe, airframe_options, {}, class: 'form-control'
+          .col-md-4
+            = f.select :slots, 1..4, {}, class: 'form-control'
+      %th.align-middle.table-secondary TACAN
+      %td
+        .form-row
+          .col-md-7
+            = f.select :tacan_channel, 1..48, {}, class: 'form-control'
+          .col-md-5
+            = f.select :tacan_polarization, %w[Y X], {}, class: 'form-control'
+    %tr
+      %th.align-middle.table-secondary Callsign
       %td
         .form-row
           .col-md-8
             = f.select :callsign, Settings.callsigns, {}, class: 'form-control update-defaults', data: { defaults_url: defaults_flights_path }
           .col-md-4
             = f.select :callsign_number, 1..9, { include_blank: true }, class: 'form-control update-defaults', data: { defaults_url: defaults_flights_path }
-      %th.table-secondary Mission
-      %td= f.select :mission, Settings.missions, {}, class: 'form-control'
-      %th.table-secondary Comms
-      %td= f.text_field :frequency, class: 'form-control'
-    %tr
-      %th.table-secondary Grp Id
-      %td= f.select :group_id, 1..41, { include_blank: true }, class: 'form-control'
-      %th.table-secondary Lasercode
+      %th.align-middle.table-secondary Lasercode
       %td= f.select :laser, 111..175, {}, class: 'form-control'
-      %th.table-secondary TACAN
-      %td
-        .form-row
-          .col-md-8
-            = f.select :tacan_channel, 1..48, {}, class: 'form-control'
-          .col-md-4
-            = f.select :tacan_polarization, %w[X Y], {}, class: 'form-control'
+      %th.align-middle.table-secondary Net Id
+      %td= f.select :group_id, 1..41, { include_blank: true }, class: 'form-control'
     %tr
       %th.bg-secondary(colspan=3) AIRBASES
       %th.bg-secondary(colspan=3) TASK
     %tr
-      %th.table-secondary Type
-      %th.table-secondary Airbase
-      %th.table-secondary Procedure
+      %th.align-middle.table-secondary Type
+      %th.align-middle.table-secondary Airbase
+      %th.align-middle.table-secondary Procedure
       %td(colspan=3)= f.text_field :task, class: 'form-control'
     %tr
-      %th.table-secondary Departure
+      %th.align-middle.table-secondary Departure
       %td= f.select :start_airbase, airbases(@flight), {}, class: 'form-control', data: { remote: true, url: procedures_path }
       %td= f.select :departure, departures(@flight), {}, class: 'form-control'
-      %th.table-secondary(colspan=3) AO
+      %th.align-middle.table-secondary(colspan=3) AO
     %tr
-      %th.table-secondary Arrival
+      %th.align-middle.table-secondary Arrival
       %td= f.select :land_airbase, airbases(@flight), {}, class: 'form-control', data: { remote: true, url: procedures_path }
       %td= f.select :recovery, recoveries(@flight), {}, class: 'form-control'
       %td(colspan=3)= f.text_field :ao, class: 'form-control'
     %tr
-      %th.table-secondary Divert
+      %th.align-middle.table-secondary Divert
       %td= f.select :divert_airbase, airbases(@flight), { include_blank: true }, class: 'form-control', data: { remote: true, url: procedures_path }
       %td= f.select :divert, diverts(@flight), {}, class: 'form-control'
-      %th.table-secondary Min WX Reqs
+      %th.align-middle.table-secondary Min WX Reqs
       %td(colspan=2)= f.text_field :minimum_weather_requirements, class: 'form-control'
     -# %tr
       %th.bg-secondary(colspan=6) TOLD
@@ -115,10 +118,10 @@
               .col-1= support.altitude
               .col-1= support.speed
     %tr
-      %th.bg-secondary(colspan=6) COMMS
+      %th.bg-secondary(colspan=6) RADIO WORK
     - 1.upto(4) do |num|
       %tr
-        %td= "\##{num}"
+        %td.align-middle= "\##{num}"
         %td(colspan=5)= f.text_field "radio#{num}", class: 'form-control'
     %tr
       %th.bg-secondary(colspan=6) NOTES

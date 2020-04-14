@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_16_161613) do
+ActiveRecord::Schema.define(version: 2020_04_14_173651) do
 
   create_table "flights", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -45,6 +45,11 @@ ActiveRecord::Schema.define(version: 2020_03_16_161613) do
     t.string "radio3"
     t.string "radio4"
     t.string "minimum_weather_requirements"
+    t.integer "target_fuel"
+    t.integer "joker_fuel"
+    t.integer "bingo_fuel"
+    t.integer "landing_fuel"
+    t.integer "iff"
   end
 
   create_table "pilots", force: :cascade do |t|

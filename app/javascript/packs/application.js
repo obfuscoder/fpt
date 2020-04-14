@@ -60,33 +60,39 @@ const update_loadout_data = function() {
         $('#total_weight').removeClass('bg-danger text-white')
 }
 
+const update_defaults = function() {
+    if ($('.update-defaults').length == 0) return
+    let url = $('.update-defaults').data('defaultsUrl')
+    let theater = $('#flight_theater').val()
+    let callsign = $('#flight_callsign').val()
+    let callsign_number = $('#flight_callsign_number').val()
+    $.get(url + '?' + $.param({ t: theater, cs: callsign, n: callsign_number}), function(data) {
+        if('freq' in data) {
+            $('#flight_frequency').val(data['freq'])
+        }
+        if('group' in data) {
+            $('#flight_group_id').val(data['group'])
+        }
+        if('laser' in data) {
+            $('#flight_laser').val(data['laser'])
+        }
+        if('tcn' in data) {
+            $('#flight_tacan_channel').val(data['tcn'])
+        }
+        if('iff' in data) {
+            $('#flight_iff').val(data['iff'])
+        }
+        $('#flight_tacan_polarization').val('Y')
+    })
+}
+
 $(document).on('turbolinks:load', function() {
     $('.dropdown-toggle').keypress(function() {
         $('.dropdown-menu').dropdown('show')
         $('.dropdown-menu').dropdown('update')
     })
 
-    $('.update-defaults').change(function() {
-        let url = $(this).data('defaultsUrl')
-        let theater = $('#flight_theater').val()
-        let callsign = $('#flight_callsign').val()
-        let callsign_number = $('#flight_callsign_number').val()
-        $.get(url + '?' + $.param({ t: theater, cs: callsign, n: callsign_number}), function(data) {
-            if('freq' in data) {
-                $('#flight_frequency').val(data['freq'])
-            }
-            if('group' in data) {
-                $('#flight_group_id').val(data['group'])
-            }
-            if('laser' in data) {
-                $('#flight_laser').val(data['laser'])
-            }
-            if('tcn' in data) {
-                $('#flight_tacan_channel').val(data['tcn'])
-            }
-            $('#flight_tacan_polarization').val('Y')
-        })
-    })
+    $('.update-defaults').change(update_defaults)
 
     $('#waypointdlg').on('shown.bs.modal', function(event) {
         let button = $(event.relatedTarget)
@@ -187,4 +193,5 @@ $(document).on('turbolinks:load', function() {
         $('#loadout_g').val($('#loadout_gun_amount').val() + ',' + $('#loadout_gun_type').val())
     })
     update_loadout_data()
+    update_defaults()
 })
