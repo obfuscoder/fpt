@@ -7,47 +7,61 @@ theaters:
         freq: 261.15
         laser: 155
         tcn: 11
+        iff: 311
       cougar:
         freq: 261.25
         laser: 156
         tcn: 21
+        iff: 312
       panther:
         freq: 261.35
         laser: 157
         tcn: 31
+        iff: 313
       lion:
         freq: 261.45
         laser: 158
         tcn: 41
+        iff: 314
       monster:
         freq: 132.15
         laser: 161
         group: 21
         tcn: 25
+        iff: 321
       t-rex:
         freq: 132.25
         laser: 165
         group: 25
         tcn: 27
+        iff: 325
+      raptor:
+        iff: 326
       edelweiss_1:
         freq: 264.15
         laser: 171
+        iff: 341
       edelweiss_2:
         freq: 264.25
         laser: 172
+        iff: 342
       edelweiss_3:
         freq: 264.35
         laser: 173
+        iff: 343
       edelweiss_4:
         freq: 264.45
         laser: 174
+        iff: 344
       edelweiss_5:
         freq: 264.55
         laser: 175
+        iff: 345
       edelweiss_6:
         freq: 134.65
         laser: 166
         group: 41
+        iff: 346
     channels:
       - name: Flight/Squadron specific
       - name: Nellis Clearance Delivery
@@ -4106,7 +4120,6 @@ airframes:
 callsigns:
   - Cougar
   - Edelweiss
-  - Holiday
   - Lion
   - Monster
   - Panther
@@ -4116,14 +4129,15 @@ callsigns:
   - Vanguard
 missions:
   - Training
-  - CAS
   - CAP
+  - CAS
+  - CSAR
   - Escort
-  - SEAD
-  - Strike
   - FAC(A)
   - SCAR
-  - CSAR
+  - SEAD
+  - Strike
+  - Sweep
 pilots:
   - Butcher
   - Chatterbox
