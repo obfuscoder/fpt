@@ -4361,6 +4361,10 @@ airframes:
     name: C-101
   uh1h:
     name: UH-1H
+  ka50:
+    name: Ka-50
+  mi8:
+    name: Mi-8
 callsigns:
   - Cougar
   - Edelweiss
