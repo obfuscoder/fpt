@@ -18,15 +18,14 @@
         %th Time
         %th Callsign
         %th Airframe
-        %th Pilots
         %th Mission
         %th AO
-        %th Frequency
+        %th Task
+        %th IFF
         %th Takeoff
         %th Departure
         %th Land
         %th Recovery
-        %th Task
         %th MWXR
         %th
     %tbody
@@ -34,16 +33,17 @@
         %tr(scope="row")
           %td= flight.start.to_s(:time)
           %td= flight.full_callsign
-          %td= Settings.airframes[flight.airframe].name
-          %td= "#{flight.pilots.count}/#{flight.slots}"
+          %td
+            = "#{flight.pilots.count}/#{flight.slots}"
+            = Settings.airframes[flight.airframe].name
           %td= flight.mission
           %td= flight.ao
-          %td= flight.frequency
+          %td= flight.task
+          %td= "#{flight.iff}X"
           %td= link_to_start_airbase(flight)
           %td= link_to_departure(flight)
           %td= link_to_land_airbase(flight)
           %td= link_to_recovery(flight)
-          %td= flight.task
           %td= flight.minimum_weather_requirements
           %td= link_to 'Show', flight, class: 'btn btn-primary btn-sm'
 %br

@@ -7,61 +7,168 @@ theaters:
         freq: 261.15
         laser: 155
         tcn: 11
-        iff: 311
+        iff: 110
+      tiger_1:
+        iff: 111
+      tiger_2:
+        iff: 112
+      tiger_3:
+        iff: 113
+      tiger_4:
+        iff: 114
+      tiger_5:
+        iff: 115
+      tiger_6:
+        iff: 116
+      tiger_7:
+        iff: 117
       cougar:
         freq: 261.25
         laser: 156
         tcn: 21
-        iff: 312
+        iff: 120
+      cougar_1:
+        iff: 121
+      cougar_2:
+        iff: 122
+      cougar_3:
+        iff: 123
+      cougar_4:
+        iff: 124
+      cougar_5:
+        iff: 125
+      cougar_6:
+        iff: 126
+      cougar_7:
+        iff: 127
       panther:
         freq: 261.35
         laser: 157
         tcn: 31
-        iff: 313
+        iff: 130
+      panther_1:
+        iff: 131
+      panther_2:
+        iff: 132
+      panther_3:
+        iff: 133
+      panther_4:
+        iff: 134
+      panther_5:
+        iff: 135
+      panther_6:
+        iff: 136
+      panther_7:
+        iff: 137
       lion:
         freq: 261.45
         laser: 158
         tcn: 41
-        iff: 314
+        iff: 140
+      lion_1:
+        iff: 141
+      lion_2:
+        iff: 142
+      lion_3:
+        iff: 143
+      lion_4:
+        iff: 144
+      lion_5:
+        iff: 145
+      lion_6:
+        iff: 146
+      lion_7:
+        iff: 147
       monster:
         freq: 132.15
         laser: 161
         group: 21
         tcn: 25
-        iff: 321
+        iff: 210
+      monster_1:
+        iff: 211
+      monster_2:
+        iff: 212
+      monster_3:
+        iff: 213
+      monster_4:
+        iff: 214
+      monster_5:
+        iff: 215
+      monster_6:
+        iff: 216
+      monster_7:
+        iff: 217
       t-rex:
         freq: 132.25
         laser: 165
         group: 25
         tcn: 27
-        iff: 325
+        iff: 250
+      t-rex_1:
+        iff: 251
+      t-rex_2:
+        iff: 252
+      t-rex_3:
+        iff: 253
+      t-rex_4:
+        iff: 254
+      t-rex_5:
+        iff: 255
+      t-rex_6:
+        iff: 256
+      t-rex_7:
+        iff: 257
       raptor:
-        iff: 326
+        iff: 260
+      raptor_1:
+        iff: 261
+      raptor_2:
+        iff: 262
+      raptor_3:
+        iff: 263
+      raptor_4:
+        iff: 264
+      raptor_5:
+        iff: 265
+      raptor_6:
+        iff: 266
+      raptor_7:
+        iff: 267
+      edelweiss:
+        freq: 264.05
+        laser: 170
+        iff: 400
       edelweiss_1:
         freq: 264.15
         laser: 171
-        iff: 341
+        iff: 401
       edelweiss_2:
         freq: 264.25
         laser: 172
-        iff: 342
+        iff: 402
       edelweiss_3:
         freq: 264.35
         laser: 173
-        iff: 343
+        iff: 403
       edelweiss_4:
         freq: 264.45
         laser: 174
-        iff: 344
+        iff: 404
       edelweiss_5:
         freq: 264.55
         laser: 175
-        iff: 345
+        iff: 405
       edelweiss_6:
         freq: 134.65
-        laser: 166
-        group: 41
-        iff: 346
+        laser: 176
+        group: 46
+        iff: 406
+      edelweiss_7:
+        freq: 134.75
+        laser: 177
+        group: 47
+        iff: 407
     channels:
       - name: Flight/Squadron specific
       - name: Nellis Clearance Delivery
