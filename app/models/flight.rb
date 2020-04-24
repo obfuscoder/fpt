@@ -36,19 +36,19 @@ class Flight < ApplicationRecord
   end
 
   def departure_name
-    return unless departure
+    return unless start_airbase && departure
 
     Settings.theaters[theater].airbases[start_airbase].departures[departure]
   end
 
   def recovery_name
-    return unless recovery
+    return unless land_airbase && recovery
 
     Settings.theaters[theater].airbases[land_airbase].recoveries[recovery]
   end
 
   def divert_name
-    return unless divert
+    return unless divert_airbase && divert
 
     Settings.theaters[theater].airbases[divert_airbase].recoveries[divert]
   end
