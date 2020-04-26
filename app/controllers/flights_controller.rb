@@ -65,18 +65,15 @@ class FlightsController < ApplicationController
   end
 
   def print_images
-    images = Magick::Image.from_blob(create_pdf) do
-      self.density = '100'
-      self.colorspace = Magick::RGBColorspace
-    end
     stringio = ::Zip::OutputStream.write_buffer do |zip|
       images.each_with_index do |image, index|
         image.resize! 540, 814
         image.alpha Magick::RemoveAlphaChannel
         image.format = 'png'
-        zip.put_next_entry sprintf('mdc_%d_%02d.png', @flight.id, index + 1)
+        zip.put_next_entry sprintf('mdc_%d_%02d.png', @flight.id, index)
         zip.write image.to_blob
       end
+      add_attachments_to_zip(zip)
     end
     stringio.rewind
     send_data stringio.sysread, filename: "mission_#{@flight.id}.zip", type: 'application/zip'
@@ -89,6 +86,54 @@ class FlightsController < ApplicationController
   end
 
   private
+
+  def images
+    Magick::Image.from_blob(MissionDataCard.new(@flight).render) do
+      self.density = '100'
+      self.colorspace = Magick::RGBColorspace
+    end
+  end
+
+  def add_attachments_to_zip(zip)
+    attachments.each_with_index do |attachment, index|
+      zip.put_next_entry sprintf('mdc_%d_plate_%02d.png', @flight.id, index)
+      zip.write to_image(attachment)
+    end
+  end
+
+  def attachments
+    array = [
+      Rails.root.join('public', @flight.theater, @flight.start_airbase, 'ad.pdf'),
+      Rails.root.join('public', @flight.theater, @flight.start_airbase, 'departures', "#{@flight.departure}.pdf"),
+      Rails.root.join('public', @flight.theater, @flight.land_airbase, 'recoveries', "#{@flight.recovery}.pdf"),
+    ]
+    array << Rails.root.join('public', @flight.theater, @flight.land_airbase, 'ad.pdf') if @flight.start_airbase != @flight.land_airbase
+
+    if @flight.divert_airbase
+      array << Rails.root.join('public', @flight.theater, @flight.divert_airbase, 'recoveries', "#{@flight.divert}.pdf")
+      array << Rails.root.join('public', @flight.theater, @flight.divert_airbase, 'ad.pdf')
+    end
+
+    array
+  end
+
+  def to_image(pdf_path)
+    png_path = pdf_path.sub_ext '.png'
+    if png_path.exist? && png_path.mtime >= pdf_path.mtime
+      File.read png_path
+    else
+      images = Magick::ImageList.new(pdf_path) do
+        self.density = '200'
+        self.colorspace = Magick::RGBColorspace
+      end
+      image = images.first
+      image.resize! 540 * 2, 814 * 2
+      image.alpha Magick::RemoveAlphaChannel
+      image.format = 'png'
+      image.write png_path
+      image.to_blob
+    end
+  end
 
   def set_flight
     @flight = Flight.find(params[:id])
@@ -106,14 +151,7 @@ class FlightsController < ApplicationController
   def create_pdf
     mdc = MissionDataCard.new @flight
     combine_pdf = CombinePDF.parse mdc.render
-    combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.start_airbase, 'ad.pdf'))
-    combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.start_airbase, 'departures', "#{@flight.departure}.pdf"))
-    combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.land_airbase, 'recoveries', "#{@flight.recovery}.pdf"))
-    combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.land_airbase, 'ad.pdf')) if @flight.start_airbase != @flight.land_airbase
-    if @flight.divert_airbase
-      combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.divert_airbase, 'recoveries', "#{@flight.divert}.pdf"))
-      combine_pdf << CombinePDF.load(Rails.root.join('public', @flight.theater, @flight.divert_airbase, 'ad.pdf'))
-    end
+    attachments.each { |attachment| combine_pdf << CombinePDF.load(attachment) }
     combine_pdf.to_pdf
   end
 
