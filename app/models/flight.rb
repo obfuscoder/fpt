@@ -54,7 +54,7 @@ class Flight < ApplicationRecord
   end
 
   def airframes
-    "#{slots}x #{Settings.airframes[airframe]}"
+    "#{slots}x #{Settings.airframes[airframe].name}"
   end
 
   def tacan_channels

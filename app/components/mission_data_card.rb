@@ -138,7 +138,7 @@ class MissionDataCard < Prawn::Document
     flights = @flight.others
     return if flights.empty?
 
-    define_columns 12
+    define_columns 10
     header('OTHER FLIGHTS')
 
     cell([0, 1], 'Callsign', header: true)
@@ -148,7 +148,6 @@ class MissionDataCard < Prawn::Document
     cell(7, 'TCN', header: true)
     cell(8, 'GrpId', header: true)
     cell(9, 'Laser', header: true)
-    cell([10, 11], 'AO', header: true)
     next_row
 
     flights.each do |flight|
@@ -159,7 +158,12 @@ class MissionDataCard < Prawn::Document
       cell(7, flight.tacan_channels)
       cell(8, flight.group_id)
       cell(9, flight.laser_mask)
-      cell([10, 11], flight.ao)
+      next_row
+
+      cell(1, 'AO', header: true)
+      cell([2, 4], flight.ao)
+      cell(5, 'Task', header: true)
+      cell([6, 9], flight.task)
       next_row
     end
     next_row
