@@ -4866,6 +4866,7 @@ payload:
     weight: 191
   aim9x:
     name: AIM-9X Sidewinder IR AAM
+    short: A9X
     type: a2a
     weight: 185
   cap9m:
@@ -4914,14 +4915,17 @@ payload:
     weight: 606
   gbu16:
     name: GBU-16
+    short: G16
     type: a2g
     weight: 1243
   mk20:
     name: Mk-20 Rockeye
+    short: M20
     type: a2g
     weight: 489
   mk81:
     name: Mk-81
+    short: M81
     type: a2g
     weight: 260
   mk82:
@@ -4931,10 +4935,12 @@ payload:
     weight: 531
   mk82y:
     name: MK-82Y
+    short: M82Y
     type: a2g
     weight: 511
   mk82se:
     name: Mk-82 SnakeEye
+    short: M82SE
     type: a2g
     weight: 511
   mk82air:
@@ -4944,6 +4950,7 @@ payload:
     weight: 511
   mk83:
     name: Mk-83
+    short: M83
     type: a2g
     weight: 985
   alq131:
@@ -4987,7 +4994,7 @@ payload:
     weight: 441
   suuluu:
     name: SUU-25 * 8 LUU-2
-    short: LU2
+    short: 8LU2
     type: a2g
     weight: 287
   aaq28:
@@ -5071,28 +5078,32 @@ payload:
     weight: 205
   lau68wtu1b:
     name: LAU-68/A - 7x WTU1B (Practice)
-    short: 7WTU1B
+    short: 7WTU
     type: rockets
     weight: 254
   lau131wtu1b:
     name: LAU-131 - 7x WTU1B (Practice)
-    short: 7WTU1B
+    short: 7WTU
     type: rockets
     weight: 225
   lau10mk71:
     name: LAU-10 - 4x ZUNI MK71
+    short: 4MK71
     type: rockets
     weight: 970
   lau3m156:
     name: LAU-3 - 19x FFAR M156 WP
+    short: 19M156
     type: rockets
     weight: 690
   lau3mk1:
     name: LAU-3 - 19x FFAR MK1 HE
+    short: 19MK1
     type: rockets
     weight: 628
   lau3mk5:
     name: LAU-3 - 19x FFAR MK5 HEAT
+    short: 19MK5
     type: rockets
     weight: 631
   # same LAU3 container and rockets with different weights for Harrier and Viper??
@@ -5180,10 +5191,12 @@ payload:
     weight: 480
   agm65e:
     name: AGM-65E
+    short: A65E
     type: agm
     weight: 630
   agm65f:
     name: AGM-65F
+    short: A65F
     type: agm
     weight: 663
   agm65g:
@@ -5223,30 +5236,37 @@ payload:
     weight: 458
   agm122:
     name: AGM-122 Sidearm
+    short: A122
     type: agm
     weight: 203
   agm154a:
     name: AGM-154A
+    short: A154A
     type: a2g
     weight: 1069
   agm154c:
     name: AGM-154C
+    short: A154C
     type: a2g
     weight: 1067
   agm84d:
     name: AGM-84D
+    short: A84D
     type: a2g
     weight: 1190
   agm88c:
     name: AGM-88C
+    short: A88C
     type: a2g
     weight: 796
   gau12:
     name: GAU 12 Gunpod
+    short: GAU12
     type: pod
     weight: 1314
   ft300ae:
     name: Aero 1D Fuel Tank FT300
+    short: FT300
     type: tank
     weight: 207
     fuel: 3000
@@ -5262,40 +5282,49 @@ payload:
     weight: 117
   ft300:
     name: Fuel tank 300 gal
+    short: FT300
     type: tank
     weight: 110
     fuel: 2003
   ft370:
     name: Fuel tank 370 gal
+    short: FT370
     type: tank
     weight: 110
     fuel: 2470
   agm62:
     name: AGM-62
+    short: A62
     type: a2g
     weight: 2339
   cbu99:
     name: CBU-99
+    short: C99
     type: a2g
     weight: 489
   aim120b:
     name: AIM-120B
+    short: A120B
     type: a2a
     weight: 348
   aim120c:
     name: AIM-120C
+    short: A120C
     type: a2a
     weight: 357
   aim7m:
     name: AIM-7M
+    short: A7M
     type: a2a
     weight: 507
   aim7f:
     name: AIM-7F
+    short: A7F
     type: a2a
     weight: 507
   aim7mh:
     name: AIM-7MH
+    short: A7MH
     type: a2a
     weight: 507
   lau115:
