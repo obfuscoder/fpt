@@ -4,6 +4,7 @@ class Flight < ApplicationRecord
 
   scope :ordered, -> { order(start: :asc, callsign: :asc, callsign_number: :asc) }
   scope :current, -> { where('date(start) >= ?', Date.today) }
+  scope :with_pilot, ->(pilot) { joins(:pilots).where(pilots: { name: pilot }) }
 
   validates :start, presence: true
   validates :iff, presence: true, numericality: { only_integer: true, greater_than: 99, less_than: 800 }
@@ -71,5 +72,13 @@ class Flight < ApplicationRecord
 
   def assignable_pilots
     Settings.pilots - pilots.pluck(:name) - others.map(&:pilots).flatten.map(&:name)
+  end
+
+  def number
+    format('%03d/%04d', id, start.year)
+  end
+
+  def parsed_loadout
+    Loadout.parse(airframe, loadout)
   end
 end

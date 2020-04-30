@@ -26,4 +26,5 @@ Rails.application.routes.draw do
   get 'airbases', to: 'airbases#index'
   get 'procedures', to: 'airbases#procedures'
   get 'spins', to: 'spins#show'
+  get 'mdc/:pilot', to: 'mdc#show', as: 'mdc'
 end

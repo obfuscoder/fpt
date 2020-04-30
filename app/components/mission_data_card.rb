@@ -54,7 +54,7 @@ class MissionDataCard < Prawn::Document
     cell(3, 'Date/Time', header: true)
     next_row
 
-    cell(0, format('%03d/%04d', @flight.id, @flight.start.year))
+    cell(0, @flight.number)
     cell(1, @flight.full_callsign)
     cell(2, @flight.mission)
     cell(3, @flight.start.strftime('%d%H%M%^b%y'))
@@ -104,7 +104,7 @@ class MissionDataCard < Prawn::Document
   end
 
   def loadout
-    l = Loadout.parse(@flight.airframe, @flight.loadout)
+    l = @flight.parsed_loadout
     define_columns 12
     header('LOADOUT')
     cell(0, 'A/A', header: true)

@@ -1,0 +1,73 @@
+mdc =
+{
+    ["number"] = "<%= @flight.number %>>",
+    ["callsign"] = "<%= @flight.full_callsign %>",
+    ["mission"] = "<%= @flight.mission %>",
+    ["time"] = "<%= @flight.start.strftime('%d%H%M%^b%y') %>",
+    ["task"] = "<%= @flight.task %>",
+    ["ao"] = "<%= @flight.ao %>",
+    ["frequency"] = "<%= @flight.frequency %>",
+    ["departure"] = "<%= @flight.departure_name %>",
+    ["recovery"] = "<%= @flight.recovery_name %>",
+    ["slots"] =
+    {
+<% @flight.pilots.each do |pilot| %>
+        [<%= pilot.number %>] =
+        {
+            ["callsign"] = "<%= pilot.callsign %>",
+            ["pilot"] = "<%= pilot.name %>",
+            ["iff"] = <%= pilot.iff %>,
+            ["tcn"] = "<%= pilot.tacan %>",
+            ["laser"] = <%= pilot.laser %>,
+            ["netid"] = "<%= pilot.net_id %>",
+        },
+<% end %>
+    },
+    ["loadout"] =
+    {
+        ["a2a"] = "<%= @loadout.a2a text: :short %>",
+        ["a2g"] = "<%= @loadout.a2g text: :short %>",
+        ["pod"] = "<%= @loadout.pods text: :short %>",
+        ["tks"] = "<%= @loadout.tanks text: :short %>",
+        ["gun"] = "<%= @loadout.gun %>",
+        ["chf"] = <%= @loadout.flares %>,
+        ["flr"] = <%= @loadout.chaff %>,
+        ["fuel"] = "<%= @loadout.fuel %>",
+    },
+    ["airbases"] =
+    {
+        [1] = {
+            ["type"] = "Dep",
+            ["name"] = "Nellis AFB",
+            ["tcn"] = "12X",
+            ["atis"] = "270.1",
+            ["ground"] = "275.8",
+            ["tower"] = "327.0",
+            ["runway"] = "03R",
+            ["elevation"] = "1863",
+            ["ils"] = "129.5",
+        },
+        [2] = {
+            ["type"] = "Arr",
+            ["name"] = "Nellis AFB",
+            ["tcn"] = "12X",
+            ["atis"] = "270.1",
+            ["ground"] = "275.8",
+            ["tower"] = "327.0",
+            ["runway"] = "21R",
+            ["elevation"] = "1863",
+            ["ils"] = "129.5",
+        },
+        [3] = {
+            ["type"] = "Div",
+            ["name"] = "Creech AFB",
+            ["tcn"] = "87X",
+            ["atis"] = "122.5",
+            ["ground"] = "",
+            ["tower"] = "360.7",
+            ["runway"] = "28",
+            ["elevation"] = "1950",
+            ["ils"] = "",
+        },
+    },
+}
