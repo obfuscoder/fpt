@@ -36,39 +36,44 @@ mdc =
     },
     ["airbases"] =
     {
-        [1] = {
+        {
+<% airbase = Settings.theaters[@flight.theater].airbases[@flight.start_airbase] %>
             ["type"] = "Dep",
-            ["name"] = "Nellis AFB",
-            ["tcn"] = "12X",
-            ["atis"] = "270.1",
-            ["ground"] = "275.8",
-            ["tower"] = "327.0",
-            ["runway"] = "03R",
-            ["elevation"] = "1863",
-            ["ils"] = "129.5",
+            ["name"] = "<%= airbase.name %>",
+            ["tcn"] = "<%= airbase.tacan %>",
+            ["atis"] = "<%= airbase.atis %>",
+            ["ground"] = "<%= airbase.ground %>",
+            ["tower"] = "<%= airbase.tower %>",
+            ["runway"] = "<%= airbase.takeoff %>",
+            ["elevation"] = "<%= airbase.elevation %>",
+            ["ils"] = "<%= airbase.ils %>",
         },
-        [2] = {
+        {
+<% airbase = Settings.theaters[@flight.theater].airbases[@flight.land_airbase] %>
             ["type"] = "Arr",
-            ["name"] = "Nellis AFB",
-            ["tcn"] = "12X",
-            ["atis"] = "270.1",
-            ["ground"] = "275.8",
-            ["tower"] = "327.0",
-            ["runway"] = "21R",
-            ["elevation"] = "1863",
-            ["ils"] = "129.5",
+            ["name"] = "<%= airbase.name %>",
+            ["tcn"] = "<%= airbase.tacan %>",
+            ["atis"] = "<%= airbase.atis %>",
+            ["ground"] = "<%= airbase.ground %>",
+            ["tower"] = "<%= airbase.tower %>",
+            ["runway"] = "<%= airbase.land %>",
+            ["elevation"] = "<%= airbase.elevation %>",
+            ["ils"] = "<%= airbase.ils %>",
         },
-        [3] = {
+<% if @flight.divert_airbase %>
+        {
+<% airbase = Settings.theaters[@flight.theater].airbases[@flight.divert_airbase] %>
             ["type"] = "Div",
-            ["name"] = "Creech AFB",
-            ["tcn"] = "87X",
-            ["atis"] = "122.5",
-            ["ground"] = "",
-            ["tower"] = "360.7",
-            ["runway"] = "28",
-            ["elevation"] = "1950",
-            ["ils"] = "",
+            ["name"] = "<%= airbase.name %>",
+            ["tcn"] = "<%= airbase.tacan %>",
+            ["atis"] = "<%= airbase.atis %>",
+            ["ground"] = "<%= airbase.ground %>",
+            ["tower"] = "<%= airbase.tower %>",
+            ["runway"] = "<%= airbase.land %>",
+            ["elevation"] = "<%= airbase.elevation %>",
+            ["ils"] = "<%= airbase.ils %>",
         },
+<% end %>
     },
     ["waypoints"] =
     {
@@ -77,19 +82,102 @@ mdc =
         {
             ["name"] = "<%= wp.name %>",
             ["pos"] = "<%= wp.position %>",
+            ["lat"] = "<%= wp.latitude %>",
+            ["lon"] = "<%= wp.longitude %>",
+            ["coords" = "<%= wp.coords %>",
+            ["dme" = "<%= wp.dme %>",
             ["alt"] = <%= wp.elevation %>,
             ["tot"] = "<%= wp.tot&.to_s(:time) %>",
         },
 <% end %>
     },
-<%
-    comms = 1.upto(4).map { |num| [num, @flight.send("radio#{num}")] }.select { |e| e.last.present? }
-    unless comms.empty? do %>
     ["comms"] =
     {
+<%
+  comms = 1.upto(4).map { |num| [num, @flight.send("radio#{num}")] }.select { |e| e.last.present? }
+  unless comms.empty? %>
     <% comms.each do |c| %>
         [<%= c.first %>] = "<%= c.last %>",
     <% end %>
 <% end %>
     },
+    ["support"] =
+    {
+<% support = @flight.selected_support %>
+        ["tanker" =
+        {
+<% support.select { |s| s.type == 'TANKER' }.each do |t| %>
+            {
+                ["callsign"] = "<%= t.callsign %>",
+                ["tacan"] = "<%= t.tacan %>",
+                ["comms"] = "<%= t.comms %>",
+                ["altitude"] = "<%= t.altitude %>",
+                ["speed"] = "<%= t.speed %>",
+                ["position"] = "<%= t.position %>",
+            },
+<%  end %>
+        },
+        ["awacs" =
+        {
+<% support.select { |s| s.type == 'AWACS' }.each do |a| %>
+            {
+                ["callsign"] = "<%= a.callsign %>",
+                ["comms"] = "<%= a.comms %>",
+                ["altitude"] = "<%= a.altitude %>",
+                ["position"] = "<%= a.position %>",
+            },
+        <%  end %>
+        },
+        ["fac" =
+        {
+<% support.select { |s| s.type == 'FAC' }.each do |f| %>
+            {
+                ["callsign"] = "<%= f.callsign %>",
+                ["comms"] = "<%= f.comms %>",
+                ["altitude"] = "<%= f.altitude %>",
+                ["position"] = "<%= f.position %>",
+            },
+        <%  end %>
+        },
+    },
+    ["other"] = {
+<% @flight.others.each do |f| %>
+        {
+            ["callsign"] = "<%= f.full_callsign %>",
+            ["airframe"] = "<%= f.airframes %>",
+            ["comms"] = "<%= f.frequency %>",
+            ["tacan"] = "<%= f.tacan_channels %>",
+            ["group_id"] = "<%= f.group_id %>",
+            ["laser_mask"] = "<%= f.laser_mask %>",
+            ["mission"] = "<%= f.mission %>",
+            ["ao"] = "<%= f.ao %>",
+            ["task"] = "<%= f.task %>",
+        },
+<% end %>
+    },
+    ["presets"] =
+    {
+<% Settings.theaters[@flight.theater].channels.each_with_index do |c, i| %>
+        [<%= i+1 %>] =
+        {
+            ["freq"] = "<%= c.freq %>",
+            ["name"] = "<%= c.name %>",
+        },
+<% end %>
+    },
+<% crypto = Crypto.new @flight.start.to_date %>
+    ["ramrod"] = "<%= crypto.ramrod %>",
+    ["navaids"] =
+    {
+<% Settings.theaters[@flight.theater].navaids.each_with_index do |n, i| %>
+        {
+            ["id"] = "<%= n.id %>",
+            ["name"] = "<%= n.name %>",
+            ["tcn"] = "<%= n.channel %>",
+            ["pos"] = "<%= n.pos %>",
+            ["elev"] = "<%= n.elevation %>",
+        },
+<% end %>
+    },
+    ["notes"] = [===[<%= @flight.notes %>]===],
 }

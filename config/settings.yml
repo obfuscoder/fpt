@@ -330,6 +330,8 @@ theaters:
         tower: 327.0
         approach: 291.725
         departure: 385.4
+        elevation: 1850
+        ils: 109.1
         takeoff: 3R
         land: 21L
         runways:
