@@ -70,4 +70,26 @@ mdc =
             ["ils"] = "",
         },
     },
+    ["waypoints"] =
+    {
+<% @flight.waypoints.each do |wp| %>
+        [<%= wp.number %>] =
+        {
+            ["name"] = "<%= wp.name %>",
+            ["pos"] = "<%= wp.position %>",
+            ["alt"] = <%= wp.elevation %>,
+            ["tot"] = "<%= wp.tot&.to_s(:time) %>",
+        },
+<% end %>
+    },
+<%
+    comms = 1.upto(4).map { |num| [num, @flight.send("radio#{num}")] }.select { |e| e.last.present? }
+    unless comms.empty? do %>
+    ["comms"] =
+    {
+    <% comms.each do |c| %>
+        [<%= c.first %>] = "<%= c.last %>",
+    <% end %>
+<% end %>
+    },
 }
