@@ -6229,6 +6229,7 @@ loadout:
       - weapon: aim7m
       - weapon: aim7f
       - weapon: aim7m
+      - weapon: aim7mh
       - weapon: aaq28
     5:
       - weapon: cbu99
