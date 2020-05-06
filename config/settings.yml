@@ -5276,6 +5276,12 @@ payload:
     type: tank
     weight: 243
     fuel: 4000
+  fpu8a:
+    name: FPU-8A Fuel Tank 330 gallons
+    short: FPU-8A
+    type: tank
+    weight: 291
+    fuel: 2244
   ter9a:
     type: pylon
     name: TER-9A
@@ -6216,6 +6222,7 @@ loadout:
       - weapon: lau68mk5
         amount: 2
         pylon: bru33
+      - weapon: fpu8a
     4:
       - weapon: aim120b
       - weapon: aim120c
@@ -6247,6 +6254,7 @@ loadout:
       - weapon: mk83
       - weapon: aaq28
       - weapon: aww13
+      - weapon: fpu8a
     6:
       - weapon: aim120b
       - weapon: aim120c
