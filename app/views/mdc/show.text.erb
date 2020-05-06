@@ -104,7 +104,7 @@ mdc =
     ["support"] =
     {
 <% support = @flight.selected_support %>
-        ["tanker" =
+        ["tanker"] =
         {
 <% support.select { |s| s.type == 'TANKER' }.each do |t| %>
             {
@@ -117,7 +117,7 @@ mdc =
             },
 <%  end %>
         },
-        ["awacs" =
+        ["awacs"] =
         {
 <% support.select { |s| s.type == 'AWACS' }.each do |a| %>
             {
@@ -128,7 +128,7 @@ mdc =
             },
         <%  end %>
         },
-        ["fac" =
+        ["fac"] =
         {
 <% support.select { |s| s.type == 'FAC' }.each do |f| %>
             {
