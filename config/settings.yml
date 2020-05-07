@@ -4377,6 +4377,7 @@ callsigns:
   - T-Rex
   - Tiger
   - Vanguard
+  - Arco
   - Boar
   - Chevy
   - Colt
@@ -4384,22 +4385,29 @@ callsigns:
   - Enfield
   - Ford
   - Hawg
+  - Overlord
   - Pig
   - Pontiac
   - Springfield
+  - Texaco
   - Tusk
   - Uzi
+  - Warrior
 missions:
   - Training
+  - AWACS
   - CAP
   - CAS
   - CSAR
   - Escort
   - FAC(A)
+  - JTAC
+  - RCO
   - SCAR
   - SEAD
   - Strike
   - Sweep
+  - Tanker
 pilots:
   - Butcher
   - Chance
