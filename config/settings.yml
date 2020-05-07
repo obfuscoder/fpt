@@ -4367,6 +4367,14 @@ airframes:
     name: Ka-50
   mi8:
     name: Mi-8
+  e3a:
+    name: E-3A
+  kc135:
+    name: KC-135
+  kc135mprs:
+    name: KC-135MPRS
+  ground:
+    name: Ground
 callsigns:
   - Cougar
   - Edelweiss
