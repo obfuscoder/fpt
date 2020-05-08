@@ -3412,6 +3412,31 @@ theaters:
           e: EAST
           bs: BLACK SEA
           s: SOUTH
+      vaziani:
+        name: Vaziani
+        tacan: 22X
+        tower: 140.0
+        takeoff: 31
+        land: 31
+        ils: 108.75
+        elevation: 1526
+        runways:
+          - name: 13
+            length: 8050
+            elevation: 1526
+            ils: 108.75
+          - name: 31
+            length: 8050
+            elevation: 1526
+            ils: 108.75
+        departures:
+          n: NORTH
+          e: EAST
+          s: SOUTH
+        recoveries:
+          n: NORTH
+          e: EAST
+          s: SOUTH
       batumi:
         name: Batumi
         tacan: 16X
