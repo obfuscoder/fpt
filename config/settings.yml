@@ -1,4 +1,119 @@
 theaters:
+  pg:
+    name: Persian Gulf
+    navaids:
+      - id: KER
+        name: Kerman
+        channel: 97
+        pos: N3015.930 E05657.651
+        elevation: 5745
+      - id: SYZ
+        name: Shyraz
+        channel: 94
+        pos: N2932.516 E05235.082
+        elevation: XXX
+      - id: BND
+        name: Banda Abbas
+        channel: 78
+        pos: N2713.017 E05622.861
+        elevation: 16
+      - id: HDR
+        name: Havadarya
+        channel: 47
+        pos: N2706.634 E05610.375
+        elevation: 49
+      - id: KIH
+        name: Kish International Airport
+        channel: 112
+        pos: N2631.384 E05400.663
+        elevation: XXX
+      - id: KCK
+        name: Tunb Kochak
+        channel: 89
+        pos: N2614.543 E05508.752
+        elevation: 13
+      - id: KSB
+        name: Khasab
+        channel: 84
+        pos: N2610.670 E05614.458
+        elevation: 52
+      - id: JSK
+        name: Jask
+        channel: 78
+        pos: N2538.807 E05745.41
+        elevation: 20
+      - id: ALD
+        name: ALD
+        channel: 99
+        pos: N2505.571 E05119.554
+        elevation: 108
+      - id: MIN
+        name: Al Minhad AB
+        channel: 99
+        pos: N2501.633 E05523.733
+        elevation: 187
+      - id: MA
+        name: Al Dhafra AB
+        channel: 96
+        pos: N2414.808 E05432.723
+        elevation: 52
+    airbases:
+      liwa:
+        name: Liwa Airbase
+      aldhafra:
+        name: Al Dhafra AB
+      albateen:
+        name: Al-Bateen Airport
+      abudhabi:
+        name: Abu Dhabi International Airport
+      alain:
+        name: Al Ain International Airport
+      almaktoum:
+        name: Al Maktoum Intl
+      alminhad:
+        name: Al Minhad AB
+      fujairah:
+        name: Fujairah Intl
+      dubai:
+        name: Dubai Intl
+      sharjah:
+        name: Sharjah Intl
+      khaimah:
+        name: Ras Al Khaimah
+      khasab:
+        name: Khasab
+      abunuayr:
+        name: Sir Abu Nuayr
+      abumusa:
+        name: Abu Musa Island Airport
+      sirri:
+        name: Sirri Island
+      kochak:
+        name: Tunb Kochak
+      tunb:
+        name: Tunb Island AFB
+      jask:
+        name: Banar-e-Jask airfield
+      lavan:
+        name: Lavan Island Airport
+      kish:
+        name: Kish International Airport
+      lengeh:
+        name: Bandar Lengeh
+      qeshm:
+        name: Qeshm Island
+      havadarya:
+        name: Havadarya
+      abbas:
+        name: Bandar Abbas Intl
+      lar:
+        name: Lar Airbase
+      jiroft:
+        name: Jiroft Airport
+      shiraz:
+        name: Shiraz International Airport
+      kerman:
+        name: Kerman Airport
   nttr:
     name: Nellis Test & Training Range
     link: https://www.google.com/maps/d/viewer?mid=1PZePuO8-bXETstbVcoQbbp8PmqG1QQJY&ll=36.68943668897938%2C-115.5734395&z=8
