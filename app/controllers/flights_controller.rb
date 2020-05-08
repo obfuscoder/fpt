@@ -18,8 +18,8 @@ class FlightsController < ApplicationController
     @flight = Flight.new theater: Settings.theaters.first.first,
                          start_airbase: Settings.theaters.first.last.airbases.first.first,
                          land_airbase: Settings.theaters.first.last.airbases.first.first,
-                         departure: Settings.theaters.first.last.airbases.first.last.departures.first.first,
-                         recovery: Settings.theaters.first.last.airbases.first.last.recoveries.first.first
+                         departure: Settings.theaters.first.last.airbases.first.last.departures&.first&.first,
+                         recovery: Settings.theaters.first.last.airbases.first.last.recoveries&.first&.first
   end
 
   def edit; end

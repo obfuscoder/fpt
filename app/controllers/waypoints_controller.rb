@@ -61,7 +61,7 @@ class WaypointsController < ApplicationController
   end
 
   def export
-    send_data export_data, filename: "mission_#{@flight.id}.txt", type: 'text/plain'
+    send_data export_data, filename: "mission_#{@flight.id}.txt", type: 'text/plain', disposition: :inline
   end
 
   private

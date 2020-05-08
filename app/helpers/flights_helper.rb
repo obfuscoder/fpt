@@ -6,7 +6,7 @@ module FlightsHelper
   end
 
   def theater_support(theater)
-    return [] unless theater
+    return [] unless theater && Settings.theaters[theater].support
 
     Settings.theaters[theater].support.map { |s| OpenStruct.new({ key: s.first }.merge(s.last)) }
   end
