@@ -845,6 +845,12 @@ theaters:
       - name: Buckhorn
         lat: 34.7773774204513
         lon: -117.896163742621
+      - name: Bullseye NTTR Blue
+        lat: 37.283056
+        lon: -115.125
+      - name: Bullseye NTTR Red
+        lat: 37.231667
+        lon: -115.8025
       - name: CAHAR.1
         lat: 37.4
         lon: -115.5
