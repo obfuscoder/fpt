@@ -3372,15 +3372,23 @@ theaters:
         airframe: KC-135
         comms: 265.0
         tacan: 11X
-        position: N-S Track
+        position: AP: N41:45.545 E042:30.223
         altitude: 17000
+      texaco2:
+        type: TANKER
+        callsign: TEXACO 2
+        airframe: KC-135
+        comms: 265.0
+        tacan: 95Y
+        position: AP: N41:36.843 E042:29.959
+        altitude: 22000
       shell:
         type: TANKER
         callsign: SHELL
         airframe: KC-135MPRS
         comms: 360.8
         tacan: 45Y
-        position: N-S Track
+        position: AP: N41:48.000 E040:59.916
         altitude: FL240
       arco:
         type: TANKER
@@ -3388,23 +3396,30 @@ theaters:
         airframe: KC-130
         comms: 319.8
         tacan: 13Y
-        position: N-S Track
+        position: AP: N41:48.000 E041:44.827
         altitude: 10000
       stennis:
         type: TANKER
         callsign: S3B Stennis
         comms: 250.1
         tacan: 78Y
+        position: AP: N42:12.834 E039:06.476
+      stennis:
+        type: TANKER
+        callsign: S3B Stennis 2
+        comms: 250.5
+        tacan: 79Y
+        position: AP: N42:12.834 E039:06.476
       overlord:
         type: AWACS
         callsign: OVERLORD
         comms: 270.1
-        position: West-Georgia
+        position: AP: N41:30.373 E043:18.821
       magic:
         type: AWACS
         callsign: MAGIC
         comms: 305.6
-        position: Central Black Sea
+        position: AP: N41:37.647 E039:07.815
     waypoints:
       - name: A/LMM
         lat: 41.15673333333334
