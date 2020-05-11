@@ -3372,7 +3372,7 @@ theaters:
         airframe: KC-135
         comms: 265.0
         tacan: 11X
-        position: W-O Track
+        position: W-E Track
         altitude: 17000
       shell:
         type: TANKER
@@ -3380,7 +3380,7 @@ theaters:
         airframe: KC-135MPRS
         comms: 360.8
         tacan: 45Y
-        position: W-O Track
+        position: W-E Track
         altitude: FL240
       arco:
         type: TANKER
@@ -3388,7 +3388,7 @@ theaters:
         airframe: KC-130
         comms: 319.8
         tacan: 13Y
-        position: W-O Track
+        position: W-E Track
         altitude: 10000
       stennis:
         type: TANKER
