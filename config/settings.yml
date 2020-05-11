@@ -3378,7 +3378,7 @@ theaters:
         type: TANKER
         callsign: TEXACO 2
         airframe: KC-135
-        comms: 265.0
+        comms: 289.7
         tacan: 95Y
         position: AP: N41:36.843 E042:29.959
         altitude: 22000
