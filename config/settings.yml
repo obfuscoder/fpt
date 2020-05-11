@@ -3372,7 +3372,7 @@ theaters:
         airframe: KC-135
         comms: 265.0
         tacan: 11X
-        position: N-S Track
+        position: W-O Track
         altitude: 17000
       shell:
         type: TANKER
@@ -3380,7 +3380,7 @@ theaters:
         airframe: KC-135MPRS
         comms: 360.8
         tacan: 45Y
-        position: N-S Track
+        position: W-O Track
         altitude: FL240
       arco:
         type: TANKER
@@ -3388,13 +3388,18 @@ theaters:
         airframe: KC-130
         comms: 319.8
         tacan: 13Y
-        position: N-S Track
+        position: W-O Track
         altitude: 10000
       stennis:
         type: TANKER
         callsign: S3B Stennis
         comms: 250.1
         tacan: 78Y
+      stennis:
+        type: TANKER
+        callsign: S3B Stennis 2
+        comms: 250.5
+        tacan: 79Y
       overlord:
         type: AWACS
         callsign: OVERLORD
@@ -3541,6 +3546,42 @@ theaters:
       - name: BUKOD
         lat: 44.858333333333334
         lon: 42.255
+      - name: BULLSEYE BLUE
+        lat: 42.197222
+        lon: 41.641389
+      - name: BULLSEYE RED
+        lat: 43.610833
+        lon: 39.723889
+      - name: CP ECHO E
+        lat: 42.516667
+        lon: 41.466667
+      - name: CP ECHO I
+        lat: 42.133333
+        lon: 41.633333
+      - name: CP SIERRA I
+        lat: 42.016667
+        lon: 39.616667
+      - name: CP SIERRA E
+        lat: 42.566667
+        lon: 40.5
+      - name: CAP WHISKY FOX
+        lat: 42.283333
+        lon: 39.383333
+      - name: CAP SIERRA FOX
+        lat: 42
+        lon: 41.2
+      - name: CAP ECHO N
+        lat: 42.4
+        lon: 42.583333
+      - name: CAP WHISKY R
+        lat: 41.95
+        lon: 39.116667
+      - name: CAP SIERRA R
+        lat: 41.75
+        lon: 40.5
+      - name: CAP ECHO W
+        lat: 42.233333
+        lon: 42.05
       - name: CILDIR LAKE
         lat: 43.2383
         lon: 41.0520333333333
