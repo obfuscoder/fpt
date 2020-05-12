@@ -103,7 +103,6 @@ const import_cf = event => {
             select.empty()
             result.Mission.Routes[0].Route.forEach(route => {
                 let callsign = route.CallsignName.toString() + ' ' + route.CallsignNumber.toString()
-                console.log(route.Waypoints[0])
                 let val = ''
                 route.Waypoints[0].Waypoint.forEach(waypoint => {
                     let name = waypoint.Name.toString()
@@ -111,6 +110,7 @@ const import_cf = event => {
                     let lon = waypoint.Lon.toString()
                     let alt = waypoint.Altitude.toString()
                     val += '|' + name + '!' + lat + '!' + lon + '!' + alt
+                    console.log(val)
                 })
                 select.append('<option value="' + val + '">' + callsign + '</option>')
             })

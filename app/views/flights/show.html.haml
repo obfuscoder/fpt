@@ -202,21 +202,6 @@
         %label(for="import_cf") Import .cf
       %th.bg-secondary
         %input.form-control-file(id="import_cf" type="file" accept=".cf")
-        #importdlg.modal.fade(aria-hidden="true" aria-labelledby="importdlgtitle" role="dialog" tabindex="-1")
-          .modal-dialog.modal-dialog-centered(role="document")
-            .modal-content
-              = form_for :waypoints, url: import_flight_waypoints_path(@flight), method: :put do |f|
-                .modal-header
-                  %h5#importdlgitle.modal-title Import
-                  %button.close(aria-label="Close" data-dismiss="modal" type="button")
-                    %span(aria-hidden="true") ×
-                .modal-body
-                  .form-group.dropdown
-                    %label.col-form-label(for="route") Route:
-                    %select#routeselect.form-control(name="route")
-                .modal-footer
-                  %button.btn.btn-secondary(data-dismiss="modal" type="button") Cancel
-                  = f.submit 'Import', class: 'btn btn-primary'
       %th.bg-secondary(colspan=2)
         = form_for :waypoints, url: copy_from_flight_waypoints_path(@flight), method: :put do |f|
           .form-row
@@ -295,6 +280,22 @@
     %tr
       %td(colspan=6)
         %pre= @flight.notes
+
+#importdlg.modal.fade(aria-hidden="true" aria-labelledby="importdlgtitle" role="dialog" tabindex="-1")
+  .modal-dialog.modal-dialog-centered(role="document")
+    .modal-content
+      = form_for :waypoints, url: import_flight_waypoints_path(@flight), method: :put do |f|
+        .modal-header
+          %h5#importdlgitle.modal-title Import
+          %button.close(aria-label="Close" data-dismiss="modal" type="button")
+            %span(aria-hidden="true") ×
+        .modal-body
+          .form-group.dropdown
+            %label.col-form-label(for="route") Route:
+            %select#routeselect.form-control(name="route")
+        .modal-footer
+          %button.btn.btn-secondary(data-dismiss="modal" type="button") Cancel
+          = f.submit 'Import', class: 'btn btn-primary'
 
 = link_to 'Edit', edit_flight_path(@flight), class: 'btn btn-primary'
 = link_to 'Print', print_flight_path(@flight), class: 'btn btn-secondary', data: { disable_with: 'Generating PDF ...' }
