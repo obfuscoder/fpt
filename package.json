@@ -8,7 +8,7 @@
     "blob-to-buffer": "^1.2.8",
     "bootstrap": "^4.4.1",
     "expose-loader": "^0.7.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.16.0",
     "turbolinks": "^5.2.0",
     "xml2js": "^0.4.23"
