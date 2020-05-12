@@ -110,7 +110,6 @@ const import_cf = event => {
                     let lon = waypoint.Lon.toString()
                     let alt = waypoint.Altitude.toString()
                     val += '|' + name + '!' + lat + '!' + lon + '!' + alt
-                    console.log(val)
                 })
                 select.append('<option value="' + val + '">' + callsign + '</option>')
             })
