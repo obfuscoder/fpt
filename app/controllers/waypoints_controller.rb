@@ -60,6 +60,16 @@ class WaypointsController < ApplicationController
     redirect_to flight_path(@flight), notice: 'Waypoints successfully copied.'
   end
 
+  def import
+    @flight.waypoints.destroy_all
+    route = params[:route].split(/\|/).reject(&:empty?).drop(1)
+    route.each_with_index do |wp, i|
+      name, lat, lon, alt = wp.split /!/
+      @flight.waypoints.create name: name, latitude: lat, longitude: lon, elevation: alt
+    end
+    redirect_to flight_path(@flight), notice: 'Waypoints successfully imported.'
+  end
+
   def export
     send_data export_data, filename: "mission_#{@flight.id}.txt", type: 'text/plain', disposition: :inline
   end

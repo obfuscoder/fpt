@@ -4,11 +4,14 @@
   "dependencies": {
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "adm-zip": "^0.4.14",
+    "blob-to-buffer": "^1.2.8",
     "bootstrap": "^4.4.1",
     "expose-loader": "^0.7.5",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "xml2js": "^0.4.23"
   },
   "version": "0.1.0",
   "devDependencies": {

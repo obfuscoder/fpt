@@ -10,6 +10,10 @@ import 'expose-loader?$!jquery';
 import 'bootstrap';
 import '../stylesheets/application';
 
+let toBuffer = require('blob-to-buffer')
+let AdmZip = require('adm-zip');
+let parseString = require('xml2js').parseString;
+
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
@@ -83,6 +87,35 @@ const update_defaults = function() {
             $('#flight_iff').val(data['iff'])
         }
         $('#flight_tacan_polarization').val('Y')
+    })
+}
+
+const import_cf = event => {
+    toBuffer(event.target.files[0], (err, buffer) => {
+        if (err) throw err
+        let zip = new AdmZip(buffer)
+        let entry = zip.getEntry("mission.xml")
+        if (entry == null) return
+        let xml = zip.readAsText(entry)
+        parseString(xml, (err, result) => {
+            if (err) throw err
+            let select = $('#routeselect')
+            select.empty()
+            result.Mission.Routes[0].Route.forEach(route => {
+                let callsign = route.CallsignName.toString() + ' ' + route.CallsignNumber.toString()
+                console.log(route.Waypoints[0])
+                let val = ''
+                route.Waypoints[0].Waypoint.forEach(waypoint => {
+                    let name = waypoint.Name.toString()
+                    let lat = waypoint.Lat.toString()
+                    let lon = waypoint.Lon.toString()
+                    let alt = waypoint.Altitude.toString()
+                    val += '|' + name + '!' + lat + '!' + lon + '!' + alt
+                })
+                select.append('<option value="' + val + '">' + callsign + '</option>')
+            })
+            $("#importdlg").modal()
+        })
     })
 }
 
@@ -194,4 +227,6 @@ $(document).on('turbolinks:load', function() {
     })
     update_loadout_data()
     update_defaults()
+
+    $('#import_cf').change(import_cf)
 })

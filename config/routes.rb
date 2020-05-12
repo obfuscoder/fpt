@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       end
       collection do
         put :copy_from
+        put :import
         get :export
       end
     end
