@@ -3416,7 +3416,7 @@ theaters:
         comms: 250.1
         tacan: 78Y
         position: AP: N42 12.834 E039 06.476
-      stennis:
+      stennis2:
         type: TANKER
         callsign: S3B Stennis 2
         comms: 250.5
@@ -3432,9 +3432,6 @@ theaters:
         callsign: MAGIC
         comms: 305.6
         position: AP: N41 37.647 E039 07.815
-    waypoints:
-      - name: A/LMM
-        lat: 41.15673333333334
     waypoints:
       - name: A/LMM
         lat: 41.15673333333334
