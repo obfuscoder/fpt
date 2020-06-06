@@ -22,7 +22,7 @@ class Pilot < ApplicationRecord
   end
 
   def laser
-    (flight.laser * 10 + number).to_s
+    flight.laser.present? ? (flight.laser * 10 + number).to_s : ''
   end
 
   def tacan
