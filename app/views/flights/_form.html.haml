@@ -59,18 +59,18 @@
       %td(colspan=3)= f.text_field :task, class: 'form-control'
     %tr
       %th.align-middle.table-secondary Departure
-      %td= f.select :start_airbase, airbases(@flight), {}, class: 'form-control', data: { remote: true, url: procedures_path }
-      %td= f.select :departure, departures(@flight), {}, class: 'form-control'
+      %td= f.select :start_airbase, airbases(@flight), { include_blank: 'AIRSTART' }, class: 'form-control', data: { remote: true, url: procedures_path }
+      %td= f.select :departure, departures(@flight), { include_blank: true }, class: 'form-control'
       %th.align-middle.table-secondary(colspan=3) AO
     %tr
       %th.align-middle.table-secondary Arrival
-      %td= f.select :land_airbase, airbases(@flight), {}, class: 'form-control', data: { remote: true, url: procedures_path }
-      %td= f.select :recovery, recoveries(@flight), {}, class: 'form-control'
+      %td= f.select :land_airbase, airbases(@flight), { include_blank: 'NOLAND' }, class: 'form-control', data: { remote: true, url: procedures_path }
+      %td= f.select :recovery, recoveries(@flight), { include_blank: true }, class: 'form-control'
       %td(colspan=3)= f.text_field :ao, class: 'form-control'
     %tr
       %th.align-middle.table-secondary Divert
       %td= f.select :divert_airbase, airbases(@flight), { include_blank: true }, class: 'form-control', data: { remote: true, url: procedures_path }
-      %td= f.select :divert, diverts(@flight), {}, class: 'form-control'
+      %td= f.select :divert, diverts(@flight), { include_blank: true }, class: 'form-control'
       %th.align-middle.table-secondary Min WX Reqs
       %td(colspan=2)= f.text_field :minimum_weather_requirements, class: 'form-control'
     -# %tr

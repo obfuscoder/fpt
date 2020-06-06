@@ -309,10 +309,14 @@ class MissionDataCard < Prawn::Document
     cell(10, 'ILS', header: true)
     next_row
 
-    airbase = Settings.theaters[@flight.theater].airbases[@flight.start_airbase]
-    airbase_line(airbase, 'Dep')
-    airbase = Settings.theaters[@flight.theater].airbases[@flight.land_airbase]
-    airbase_line(airbase, 'Arr')
+    if @flight.start_airbase
+      airbase = Settings.theaters[@flight.theater].airbases[@flight.start_airbase]
+      airbase_line(airbase, 'Dep')
+    end
+    if @flight.land_airbase
+      airbase = Settings.theaters[@flight.theater].airbases[@flight.land_airbase]
+      airbase_line(airbase, 'Arr') if airbase
+    end
     if @flight.divert_airbase
       airbase = Settings.theaters[@flight.theater].airbases[@flight.divert_airbase]
       airbase_line(airbase, 'Div')

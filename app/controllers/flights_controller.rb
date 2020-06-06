@@ -102,13 +102,15 @@ class FlightsController < ApplicationController
   end
 
   def attachments
-    array = [
-      Rails.root.join('public', @flight.theater, @flight.start_airbase, 'ad.pdf'),
-      Rails.root.join('public', @flight.theater, @flight.start_airbase, 'departures', "#{@flight.departure}.pdf"),
-      Rails.root.join('public', @flight.theater, @flight.land_airbase, 'recoveries', "#{@flight.recovery}.pdf"),
-    ]
-    array << Rails.root.join('public', @flight.theater, @flight.land_airbase, 'ad.pdf') if @flight.start_airbase != @flight.land_airbase
-
+    array = []
+    if @flight.start_airbase
+      array << Rails.root.join('public', @flight.theater, @flight.start_airbase, 'ad.pdf')
+      array << Rails.root.join('public', @flight.theater, @flight.start_airbase, 'departures', "#{@flight.departure}.pdf")
+    end
+    if @flight.land_airbase
+      array << Rails.root.join('public', @flight.theater, @flight.land_airbase, 'recoveries', "#{@flight.recovery}.pdf")
+      array << Rails.root.join('public', @flight.theater, @flight.land_airbase, 'ad.pdf') if @flight.start_airbase != @flight.land_airbase
+    end
     if @flight.divert_airbase
       array << Rails.root.join('public', @flight.theater, @flight.divert_airbase, 'recoveries', "#{@flight.divert}.pdf")
       array << Rails.root.join('public', @flight.theater, @flight.divert_airbase, 'ad.pdf')
