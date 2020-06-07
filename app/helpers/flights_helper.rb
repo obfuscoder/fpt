@@ -60,15 +60,15 @@ module FlightsHelper
   end
 
   def link_to_departure(flight)
-    link_to flight.departure_name, "/#{flight.theater}/#{flight.start_airbase}/departures/#{flight.departure}.pdf" if flight.departure
+    link_to flight.departure_name, "/#{flight.theater}/#{flight.start_airbase}/departures/#{flight.departure}.pdf" if flight.start_airbase && flight.departure
   end
 
   def link_to_recovery(flight)
-    link_to flight.recovery_name, "/#{flight.theater}/#{flight.land_airbase}/recoveries/#{flight.recovery}.pdf" if flight.recovery
+    link_to flight.recovery_name, "/#{flight.theater}/#{flight.land_airbase}/recoveries/#{flight.recovery}.pdf" if flight.land_airbase && flight.recovery
   end
 
   def link_to_divert(flight)
-    link_to flight.divert_name, "/#{flight.theater}/#{flight.divert_airbase}/recoveries/#{flight.divert}.pdf" if flight.divert
+    link_to flight.divert_name, "/#{flight.theater}/#{flight.divert_airbase}/recoveries/#{flight.divert}.pdf" if flight.divert_airbase && flight.divert
   end
 
   def airframe_options
