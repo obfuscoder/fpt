@@ -3342,6 +3342,32 @@ theaters:
           n: NORTH
           e: EAST
           s: SOUTH
+      roosevelt:
+        name: CVN-71 T.Roosevelt
+        tacan: 74X
+        tower: 127.5
+        approach: 264.0
+        clearance: 265.0
+        ground: ICLS 12
+        departures:
+          cat: CAT
+        recoveries:
+          case1: CASE I
+          case2: CASE II
+          case3: CASE III
+      lincoln:
+        name: CVN-72 A.Lincoln
+        tacan: 75X
+        tower: 128.5
+        approach: 264.0
+        clearance: 265.0
+        ground: ICLS 13
+        departures:
+          cat: CAT
+        recoveries:
+          case1: CASE I
+          case2: CASE II
+          case3: CASE III          
       stennis:
         name: CV-74 Stennis
         tacan: 55X
@@ -4501,6 +4527,11 @@ airframes:
       empty: 14800
       fuel: 7758
       tol: 31000
+      gun:
+        amount: 300
+        weight: 331
+        types:
+          def: DEF       
   f16:
     name: F-16C
     weight:
@@ -4532,10 +4563,49 @@ airframes:
     name: F-5E
   f14:
     name: F-14
+    weight:
+      empty: 44040
+      fuel: 16200
+      tol: 74349
+    gun:
+      amount: 676
+      weight: 520
+      types:
+        hei: HEI
+        api: API
+        aphe: AP&HE
+        tp: TP
+    expendables:
+      - chaff: 200
+        flares: 0
+      - chaff: 140
+        flares: 60
+      - chaff: 120
+        flares: 80              
+      - chaff: 100
+        flares: 100
+      - chaff: 120
+        flares: 80        
+      - chaff: 60
+        flares: 140
+      - chaff: 0
+        flares: 200  
   jf17:
     name: JF-17
   m2000:
     name: M-2000C
+    weight:
+      empty: 16755
+      fuel: 6978
+      tol: 36376
+    gun:
+      amount: 300
+      weight: 313
+      types:
+        def: DEF
+    expendables:
+      - chaff: 0
+        flares: 60
   l39:
     name: L-39
   c101:
@@ -5564,6 +5634,36 @@ payload:
     name: BRU-41A
     type: pylon
     weight: 228
+  aim54cm47:
+    name: AIM-54C-MK47
+    short: A54CM47
+    type: a2a
+    weight: 1127
+  aim54am60:
+    name: AIM-54A-MK60
+    short: A54AM60
+    type: a2a
+    weight: 1140  
+  aim54am47:
+    name: AIM-54A-MK47
+    short: A54AM47
+    type: a2a
+    weight: 1078
+  lantirn:
+    name: LANTIRN
+    short: LANTIRN
+    type: pod
+    weight: 754
+  adm141a:
+    name: ADM-141A
+    short: A141
+    type: pod
+    weight: 805
+  gbu24:
+    name: GBU-24
+    short: G24
+    type: a2g
+    weight: 2441
 loadout:
   a10:
     1: &a10station1
@@ -6472,3 +6572,271 @@ loadout:
     7: *f18station3
     8: *f18station2
     9: *f18station1
+  f14:
+    1a: &f14station1a
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: cap9m
+      - weapon: asqt50
+    1b:  &f14station1b
+      - weapon: aim54am47
+      - weapon: aim54am60      
+      - weapon: aim54cm47
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim7m
+        pylon: lau115
+      - weapon: aim7f
+        pylon: lau115
+      - weapon: aim7mh
+        pylon: lau115
+      - weapon: mk20
+        amount: 2
+      - weapon: mk81
+        amount: 2
+      - weapon: mk82
+        amount: 2
+      - weapon: mk82se
+        amount: 2
+      - weapon: mk82air
+        amount: 2
+      - weapon: mk83
+      - weapon: bdu33
+        amount: 3    
+      - weapon: lau10mk71  
+    2: &f14station2
+      - weapon: ft300
+      - weapon: ft300ae
+    3: &f14station3
+      - weapon: aim54am47
+      - weapon: aim54am60      
+      - weapon: aim54cm47
+      - weapon: aim7m
+        pylon: lau115
+      - weapon: aim7f
+        pylon: lau115
+      - weapon: aim7mh
+        pylon: lau115
+      - weapon: adm141a
+      - weapon: gbu10
+      - weapon: gbu12
+      - weapon: gbu16
+      - weapon: gbu24
+      - weapon: lau10mk71    
+      - weapon: mk81
+        amount: 4
+      - weapon: mk82
+      - weapon: mk82
+        amount: 4
+      - weapon: mk82se
+      - weapon: mk82se
+        amount: 4
+      - weapon: mk82air
+      - weapon: mk82air
+        amount: 4
+      - weapon: mk83
+      - weapon: mk20
+      - weapon: mk84
+      - weapon: bdu33
+        amount: 3
+    4: &f14station4
+      - weapon: aim54am47
+      - weapon: aim54am60      
+      - weapon: aim54cm47
+      - weapon: aim7m
+        pylon: lau115
+      - weapon: aim7f
+        pylon: lau115
+      - weapon: aim7mh
+        pylon: lau115
+      - weapon: adm141a
+      - weapon: gbu12
+      - weapon: gbu16
+      - weapon: suuluu    
+      - weapon: mk81
+        amount: 3
+      - weapon: mk20
+      - weapon: mk84
+      - weapon: mk82
+      - weapon: mk82
+        amount: 3
+      - weapon: mk82se
+      - weapon: mk82se
+        amount: 3
+      - weapon: mk82air
+      - weapon: mk82air
+        amount: 3
+      - weapon: mk83
+      - weapon: bdu33
+        amount: 3
+    5: &f14station5
+      - weapon: aim54am47
+      - weapon: aim54am60      
+      - weapon: aim54cm47
+      - weapon: aim7m
+        pylon: lau115
+      - weapon: aim7f
+        pylon: lau115
+      - weapon: aim7mh
+        pylon: lau115
+      - weapon: adm141a
+      - weapon: gbu12
+      - weapon: gbu16
+      - weapon: gbu24
+      - weapon: suuluu    
+      - weapon: mk81
+        amount: 3
+      - weapon: mk20
+      - weapon: mk84
+      - weapon: mk82
+      - weapon: mk82
+        amount: 3
+      - weapon: mk82se
+      - weapon: mk82se
+        amount: 3
+      - weapon: mk82air
+      - weapon: mk82air
+        amount: 3
+      - weapon: mk83
+      - weapon: bdu33
+        amount: 3
+    6: *f14station3
+    7: *f14station2
+    8a: &f14station8b
+      - weapon: aim54am47
+      - weapon: aim54am60      
+      - weapon: aim54cm47
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim7m
+        pylon: lau115
+      - weapon: aim7f
+        pylon: lau115
+      - weapon: aim7mh
+        pylon: lau115
+      - weapon: mk20
+        amount: 2
+      - weapon: mk81
+        amount: 2
+      - weapon: mk82
+        amount: 2
+      - weapon: mk82se
+        amount: 2
+      - weapon: mk82air
+        amount: 2
+      - weapon: mk83
+      - weapon: bdu33
+        amount: 3    
+      - weapon: lantirn
+      - weapon: lau10mk71  
+    8b: *f14station1a
+  m2000:
+    1: &m2kstation1
+      - weapon: aim120b
+      - weapon: aim120c
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim9x
+      - weapon: cap9m
+    2: &m2kstation2
+      - weapon: aim120b
+      - weapon: aim120c
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim9x
+      - weapon: cap9m
+    3: &m2kstation3
+      - weapon: aim120b
+      - weapon: aim120c
+      - weapon: aim9l
+      - weapon: aim9m
+      - weapon: aim9x
+      - weapon: cap9m
+      - weapon: cbu87
+      - weapon: cbu87
+        amount: 2
+        pylon: ter9a
+      - weapon: cbu97
+      - weapon: cbu97
+        amount: 2
+        pylon: ter9a
+      - weapon: gbu10
+      - weapon: gbu12
+      - weapon: gbu12
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+      - weapon: mk82
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82se
+      - weapon: mk82se
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82se
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82air
+      - weapon: mk82air
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82air
+        amount: 3
+        pylon: ter9a
+      - weapon: lau3mk151
+      - weapon: lau3mk156
+      - weapon: lau3mk5f
+      - weapon: lau3wtu1b
+    4: &m2kstation4
+      - weapon: cbu87
+      - weapon: cbu87
+        amount: 2
+        pylon: ter9a
+      - weapon: cbu97
+      - weapon: cbu97
+        amount: 2
+        pylon: ter9a
+      - weapon: gbu10
+      - weapon: gbu12
+      - weapon: gbu12
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+      - weapon: mk82
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82se
+      - weapon: mk82se
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82se
+        amount: 3
+        pylon: ter9a
+      - weapon: mk82air
+      - weapon: mk82air
+        amount: 2
+        pylon: ter9a
+      - weapon: mk82air
+        amount: 3
+        pylon: ter9a
+      - weapon: bdu33
+        amount: 3
+        pylon: ter9a
+      - weapon: lau3mk151
+      - weapon: lau3mk156
+      - weapon: lau3mk5f
+      - weapon: lau3wtu1b
+      - weapon: ft370
+    6:
+      - weapon: ft300
+    7:
+      - weapon: aaq28
+    8: *m2kstation4
+    9: *m2kstation3
+    10: *m2kstation2    
