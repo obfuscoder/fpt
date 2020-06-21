@@ -4476,7 +4476,7 @@ airframes:
       fuel: 10803
       tol: 51900
     gun:
-      amount: 300
+      amount: 768
       weight: 331
       types:
         def: DEF
@@ -4484,12 +4484,28 @@ airframes:
     expendables:
       - chaff: 0
         flares: 60
+      - chaff: 10
+        flares: 55
+      - chaff: 20
+        flares: 50
       - chaff: 30
         flares: 45
-      - chaff: 60
+      - chaff: 40
+        flares: 40
+      - chaff: 50
         flares: 35
+      - chaff: 60
+        flares: 30
+      - chaff: 70
+        flares: 25
+      - chaff: 80
+        flares: 20
       - chaff: 90
         flares: 15
+      - chaff: 100
+        flares: 10
+      - chaff: 110
+        flares: 5
       - chaff: 120
         flares: 0
   av8b:
