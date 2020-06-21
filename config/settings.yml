@@ -5580,6 +5580,10 @@ payload:
     name: BRU-41A
     type: pylon
     weight: 228
+  agm84e:
+    name: AGM-84E
+    type: a2g
+    weight: 1385
 loadout:
   a10:
     1: &a10station1
@@ -6302,6 +6306,7 @@ loadout:
       - weapon: agm154a
       - weapon: agm154c
       - weapon: agm84d
+      - weapon: agm84e
       - weapon: agm88c
       - weapon: agm154a
         amount: 2
@@ -6412,6 +6417,7 @@ loadout:
       - weapon: agm154a
       - weapon: agm154c
       - weapon: agm84d
+      - weapon: agm84e
       - weapon: agm88c
       - weapon: agm154a
         amount: 2
