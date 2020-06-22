@@ -3341,33 +3341,7 @@ theaters:
         recoveries:
           n: NORTH
           e: EAST
-          s: SOUTH
-      roosevelt:
-        name: CVN-71 T.Roosevelt
-        tacan: 74X
-        tower: 127.5
-        approach: 264.0
-        clearance: 265.0
-        ground: ICLS 12
-        departures:
-          cat: CAT
-        recoveries:
-          case1: CASE I
-          case2: CASE II
-          case3: CASE III
-      lincoln:
-        name: CVN-72 A.Lincoln
-        tacan: 75X
-        tower: 128.5
-        approach: 264.0
-        clearance: 265.0
-        ground: ICLS 13
-        departures:
-          cat: CAT
-        recoveries:
-          case1: CASE I
-          case2: CASE II
-          case3: CASE III          
+          s: SOUTH  
       stennis:
         name: CV-74 Stennis
         tacan: 55X
@@ -6578,7 +6552,7 @@ loadout:
       - weapon: aim9m
       - weapon: cap9m
       - weapon: asqt50
-    1b:  &f14station1b
+    1b:
       - weapon: aim54am47
       - weapon: aim54am60      
       - weapon: aim54cm47
@@ -6639,7 +6613,7 @@ loadout:
       - weapon: mk84
       - weapon: bdu33
         amount: 3
-    4: &f14station4
+    4:
       - weapon: aim54am47
       - weapon: aim54am60      
       - weapon: aim54cm47
@@ -6669,7 +6643,7 @@ loadout:
       - weapon: mk83
       - weapon: bdu33
         amount: 3
-    5: &f14station5
+    5:
       - weapon: aim54am47
       - weapon: aim54am60      
       - weapon: aim54cm47
@@ -6702,7 +6676,7 @@ loadout:
         amount: 3
     6: *f14station3
     7: *f14station2
-    8a: &f14station8b
+    8a:
       - weapon: aim54am47
       - weapon: aim54am60      
       - weapon: aim54cm47
