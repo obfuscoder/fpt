@@ -4777,7 +4777,7 @@ airframes:
     expendables:
       - chaff: 0
         flares: 32
-  sa342m:
+  sa342mistral:
     name: SA342Mistral
     weight:
       empty: 3437
