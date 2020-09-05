@@ -8,7 +8,11 @@ mdc =
     ["ao"] = "<%= @flight.ao %>",
     ["frequency"] = "<%= @flight.frequency %>",
     ["departure"] = "<%= @flight.departure_name %>",
+    ["departure_airbase_img"] ="<%= link_to_start_airbase_image(@flight) %>",
+    ["departure_img"] ="<%= link_to_departure_image(@flight) %>",
     ["recovery"] = "<%= @flight.recovery_name %>",
+    ["recovery_airbase_img"] ="<%= link_to_land_airbase_image(@flight) %>",
+    ["recovery_img"] ="<%= link_to_recovery_image(@flight) %>",
     ["slots"] =
     {
 <% @flight.pilots.each do |pilot| %>
