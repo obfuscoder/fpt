@@ -72,27 +72,27 @@ module FlightsHelper
   end
 
   def link_to_start_airbase_image(flight)
-    url_for "/#{flight.theater}/#{flight.start_airbase}/ad.png", only_path: false if flight.start_airbase
+    "https://jabog32-fpt.herokuapp.com/#{flight.theater}/#{flight.start_airbase}/ad.png" if flight.start_airbase
   end
 
   def link_to_land_airbase_image(flight)
-    url_for "/#{flight.theater}/#{flight.land_airbase}/ad.png", only_path: false if flight.land_airbase
+    "https://jabog32-fpt.herokuapp.com/#{flight.theater}/#{flight.land_airbase}/ad.png" if flight.land_airbase
   end
 
   def link_to_divert_airbase_image(flight)
-    url_for "/#{flight.theater}/#{flight.divert_airbase}/ad.png", only_path: false if flight.divert_airbase
+    "https://jabog32-fpt.herokuapp.com/#{flight.theater}/#{flight.divert_airbase}/ad.png" if flight.divert_airbase
   end
 
   def link_to_departure_image(flight)
-    url_for "/#{flight.theater}/#{flight.start_airbase}/departures/#{flight.departure}.png", only_path: false if flight.start_airbase && flight.departure
+    "https://jabog32-fpt.herokuapp.com/#{flight.theater}/#{flight.start_airbase}/departures/#{flight.departure}.png" if flight.start_airbase && flight.departure
   end
 
   def link_to_recovery_image(flight)
-    url_for "/#{flight.theater}/#{flight.land_airbase}/recoveries/#{flight.recovery}.png", only_path: false if flight.land_airbase && flight.recovery
+    "https://jabog32-fpt.herokuapp.com/#{flight.theater}/#{flight.land_airbase}/recoveries/#{flight.recovery}.png" if flight.land_airbase && flight.recovery
   end
 
   def link_to_divert_image(flight)
-    url_for "/#{flight.theater}/#{flight.divert_airbase}/recoveries/#{flight.divert}.png", only_path: false if flight.divert_airbase && flight.divert
+    "https://jabog32-fpt.herokuapp.com/#{flight.theater}/#{flight.divert_airbase}/recoveries/#{flight.divert}.png" if flight.divert_airbase && flight.divert
   end
   
   def airframe_options
