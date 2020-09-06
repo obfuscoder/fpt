@@ -8,11 +8,25 @@ mdc =
     ["ao"] = "<%= @flight.ao %>",
     ["frequency"] = "<%= @flight.frequency %>",
     ["departure"] = "<%= @flight.departure_name %>",
-    ["departure_airbase_img"] ="<%= link_to_start_airbase_image(@flight) %>",
-    ["departure_img"] ="<%= link_to_departure_image(@flight) %>",
     ["recovery"] = "<%= @flight.recovery_name %>",
-    ["recovery_airbase_img"] ="<%= link_to_land_airbase_image(@flight) %>",
-    ["recovery_img"] ="<%= link_to_recovery_image(@flight) %>",
+    ["plates"] =
+    {
+        ["departure"] =
+        {
+            ["ad"] = "<%= "#{@flight.theater}/#{@flight.start_airbase}/ad.png" if @flight.start_airbase %>",
+            ["procedure"] = "<%= "#{@flight.theater}/#{@flight.start_airbase}/departures/#{@flight.departure}.png" if @flight.departure %>",
+        },
+        ["recovery"] =
+        {
+            ["ad"] = "<%= "#{@flight.theater}/#{@flight.land_airbase}/ad.png" if @flight.land_airbase %>",
+            ["procedure"] = "<%= "#{@flight.theater}/#{@flight.start_airbase}/recoveries/#{@flight.recovery}.png" if @flight.recovery %>",
+        },
+        ["divert"] =
+        {
+            ["ad"] = "<%= "#{@flight.theater}/#{@flight.divert_airbase}/ad.png" if @flight.divert_airbase %>",
+            ["procedure"] = "<%= "#{@flight.theater}/#{@flight.start_airbase}/recoveries/#{@flight.divert}.png" if @flight.divert %>",
+        },
+    },
     ["slots"] =
     {
 <% @flight.pilots.each do |pilot| %>
