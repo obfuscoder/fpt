@@ -24,7 +24,7 @@ mdc =
         ["divert"] =
         {
             ["ad"] = "<%= "#{@flight.theater}/#{@flight.divert_airbase}/ad.png" if @flight.divert_airbase %>",
-            ["procedure"] = "<%= "#{@flight.theater}/#{@flight.start_airbase}/recoveries/#{@flight.divert}.png" if @flight.divert %>",
+            ["procedure"] = "<%= "#{@flight.theater}/#{@flight.divert_airbase}/recoveries/#{@flight.divert}.png" if @flight.divert %>",
         },
     },
     ["slots"] =
