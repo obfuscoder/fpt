@@ -4435,6 +4435,46 @@ theaters:
         name: Shiraz International Airport
       kerman:
         name: Kerman Airport
+  syria:
+    name: Syria
+    navaids:
+      - id: DAN
+        name: Incirlik
+        channel: 21
+        pos: N37 00.950 E035 26.883
+        elevation: 243
+    airbases:
+      llrd:
+        name: Ramat David Intl
+        ground: 
+        atis: 118.4
+        tower: 118.6
+        elevation: 125
+        takeoff: 27
+        land: 27
+        runways:
+          - name: 27
+            length: 7900
+            elevation: 144
+          - name: 09
+            length: 7900
+            elevation: 105
+          - name: 15
+            length: 7900
+            elevation: 135
+          - name: 33
+            length: 7900
+            elevation: 138
+          - name: 29
+            length: 7950
+            elevation: 125
+          - name: 11
+            length: 7950
+            elevation: 102
+        departures:
+          none: straight
+        recoveries:
+          none: none
 airframes:
   a10:
     name: A-10C
