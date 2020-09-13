@@ -4472,7 +4472,7 @@ theaters:
             length: 7950
             elevation: 102
         departures:
-          none: straight
+          none: none
         recoveries:
           none: none
 airframes:
