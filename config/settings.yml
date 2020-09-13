@@ -4322,6 +4322,8 @@ theaters:
         lon: 43.09908333333333
   pg:
     name: Persian Gulf
+    channels:
+      - name: Flight/Squadron specific
     navaids:
       - id: KER
         name: Kerman
@@ -4437,6 +4439,8 @@ theaters:
         name: Kerman Airport
   syria:
     name: Syria
+    channels:
+      - name: Flight/Squadron specific
     navaids:
       - id: DAN
         name: Incirlik
