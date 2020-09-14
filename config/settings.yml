@@ -4558,9 +4558,9 @@ airframes:
       - chaff: 60
         flares: 120
     weight:
-      empty: 14800
+      empty: 14804
       fuel: 7758
-      tol: 31000
+      tol: 31085
   f16:
     name: F-16C
     weight:
@@ -4590,28 +4590,352 @@ airframes:
         flares: 120
   f5:
     name: F-5E
-  f14:
-    name: F-14
+    weight:
+      empty: 10659
+      fuel: 4511
+      tol: 24663
+    gun:
+      amount: 280
+      weight: 392
+      types:
+        hei: HEI
+        cm: CM
+        tp: TP
+        ap: AP
+    expendables:
+      - chaff: 60
+        flares: 0
+      - chaff: 30
+        flares: 15
+      - chaff: 0
+        flares: 30
+  f14b:
+    name: F-14B
+    weight:
+      empty: 44040
+      fuel: 16200
+      tol: 74349
+    gun:
+      amount: 676
+      weight: 520
+      types:
+        hei: HEI
+        api: API
+        aphe: AP&HE
+        tp: TP
+    expendables:
+      - chaff: 140
+        flares: 60
   jf17:
     name: JF-17
+    weight:
+      empty: 14520
+      fuel: 5126
+      tol: 27558
+    gun:
+      amount: 180
+      weight: 174
+      types:
+        def: DEF
+    expendables:
+      - chaff: 0
+        flares: 68
+      - chaff: 4
+        flares: 64
+      - chaff: 8
+        flares: 60
+      - chaff: 12
+        flares: 56
+      - chaff: 16
+        flares: 52
+      - chaff: 20
+        flares: 48
+      - chaff: 24
+        flares: 44
+      - chaff: 28
+        flares: 40
+      - chaff: 32
+        flares: 36
+      - chaff: 36
+        flares: 32
+      - chaff: 40
+        flares: 28
+      - chaff: 44
+        flares: 24
+      - chaff: 48
+        flares: 20
+      - chaff: 52
+        flares: 16
+      - chaff: 56
+        flares: 12
+      - chaff: 60
+        flares: 8
+      - chaff: 64
+        flares: 4
+      - chaff: 68
+        flares: 0
   m2000:
     name: M-2000C
-  l39:
-    name: L-39
-  c101:
-    name: C-101
+    weight:
+      empty: 16755
+      fuel: 6978
+      tol: 36376
+    gun:
+      amount: 125
+      weight: 313
+      types:
+        def: DEF
+    expendables:
+      - chaff: 162
+        flares: 0
+      - chaff: 112
+        flares: 16
+      - chaff: 112
+        flares: 32
+      - chaff: 112
+        flares: 48
+      - chaff: 0
+        flares: 64
+      - chaff: 0
+        flares: 80
+      - chaff: 0
+        flares: 96
+      - chaff: 0
+        flares: 112
+      - chaff: 0
+        flares: 128
+      - chaff: 0
+        flares: 144
+      - chaff: 0
+        flares: 160
+      - chaff: 0
+        flares: 162
+  l39c:
+    name: L-39C
+    weight:
+      empty: 7668
+      fuel: 2161
+      tol: 10362
+  l39za:
+    name: L-39ZA
+    weight:
+      empty: 7968
+      fuel: 2161
+      tol: 12346
+    gun:
+      amount: 150
+      weight: 146
+      types:
+        def: DEF
+  c101eb:
+    name: C-101EB
+    weight:
+      empty: 7445
+      fuel: 4148
+      tol: 12346
+  c101cc:
+    name: C-101CC
+    weight:
+      empty: 7848
+      fuel: 4148
+      tol: 13889
   uh1h:
     name: UH-1H
+    weight:
+      empty: 6356
+      fuel: 1391
+      tol: 9502
   ka50:
     name: Ka-50
+    weight:
+      empty: 17703
+      fuel: 3197
+      tol: 26235
+    gun:
+      amount: 460
+      weight: 994
+      types:
+        aphe: AP&HE
+    expendables:
+      - chaff: 0
+        flares: 128
+      - chaff: 0
+        flares: 96
+      - chaff: 0
+        flares: 64
+      - chaff: 0
+        flares: 32
+      - chaff: 0
+        flares: 0
   mi8:
-    name: Mi-8
+    name: Mi-8MTV2
+    weight:
+      empty: 19546
+      fuel: 4253
+      tol: 28660
+    expendables:
+      - chaff: 0
+        flares: 128
+      - chaff: 0
+        flares: 96
+      - chaff: 0
+        flares: 64
+      - chaff: 0
+        flares: 32
+      - chaff: 0
+        flares: 0
+  sa342l:
+    name: SA342L
+    weight:
+      empty: 3489
+      fuel: 918
+      tol: 4630
+    gun:
+      amount: 240
+      weight: 53
+      types:
+        def: DEF
+    expendables:
+      - chaff: 0
+        flares: 32
+  sa342m:
+    name: SA342M
+    weight:
+      empty: 3704
+      fuel: 918
+      tol: 4630
+    expendables:
+      - chaff: 0
+        flares: 32
+  sa342minigun:
+    name: SA342Minigun
+    weight:
+      empty: 3704
+      fuel: 918
+      tol: 4630
+    gun:
+      amount: 4000
+      weight: 82
+      types:
+        def: DEF
+    expendables:
+      - chaff: 0
+        flares: 32
+  sa342mistral:
+    name: SA342Mistral
+    weight:
+      empty: 3437
+      fuel: 918
+      tol: 4630
+    expendables:
+      - chaff: 0
+        flares: 32
+  e2d:
+    name: E-2D
+    weight:
+      empty: 37677
+      fuel: 12399
+      tol: 54426
+    expendables:
+      - chaff: 240
+        flares: 0
+      - chaff: 210
+        flares: 15
+      - chaff: 180
+        flares: 30
+      - chaff: 150
+        flares: 45
+      - chaff: 120
+        flares: 60
+      - chaff: 90
+        flares: 75
+      - chaff: 60
+        flares: 90
+      - chaff: 30
+        flares: 105
+      - chaff: 0
+        flares: 120
   e3a:
     name: E-3A
+    weight:
+      empty: 132277
+      fuel: 143300
+      tol: 326284
+    expendables:
+      - chaff: 240
+        flares: 0
+      - chaff: 210
+        flares: 15
+      - chaff: 180
+        flares: 30
+      - chaff: 150
+        flares: 45
+      - chaff: 120
+        flares: 60
+      - chaff: 90
+        flares: 75
+      - chaff: 60
+        flares: 90
+      - chaff: 30
+        flares: 105
+      - chaff: 0
+        flares: 120
   kc135:
     name: KC-135
+    weight:
+      empty: 98465
+      fuel: 199959
+      tol: 321875
   kc135mprs:
     name: KC-135MPRS
+    weight:
+      empty: 98465
+      fuel: 199959
+      tol: 321875
+    expendables:
+      - chaff: 240
+        flares: 0
+      - chaff: 210
+        flares: 15
+      - chaff: 180
+        flares: 30
+      - chaff: 150
+        flares: 45
+      - chaff: 120
+        flares: 60
+      - chaff: 90
+        flares: 75
+      - chaff: 60
+        flares: 90
+      - chaff: 30
+        flares: 105
+      - chaff: 0
+        flares: 120
+  kc130:
+    name: KC-130
+    weight:
+      empty: 80248
+      fuel: 66139
+      tol: 175003
+    expendables:
+      - chaff: 240
+        flares: 0
+      - chaff: 210
+        flares: 15
+      - chaff: 180
+        flares: 30
+      - chaff: 150
+        flares: 45
+      - chaff: 120
+        flares: 60
+      - chaff: 90
+        flares: 75
+      - chaff: 60
+        flares: 90
+      - chaff: 30
+        flares: 105
+      - chaff: 0
+        flares: 120
   ground:
     name: Ground
 callsigns:
