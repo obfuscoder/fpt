@@ -4629,12 +4629,19 @@ callsigns:
   - Beast
   - Boar
   - Chevy
+  - Claw
+  - Cobra
   - Colt
   - Darkstar
   - Dodge
   - Enfield
+  - Falcon
   - Ford
+  - Fury
   - Hawg
+  - Jedi
+  - Knight
+  - Lugar
   - Magic
   - Mig
   - Misty
@@ -4644,12 +4651,15 @@ callsigns:
   - Pig
   - Pontiac
   - Shell
+  - Spectre
   - Springfield
   - Texaco
   - Tusk
   - Uzi
+  - Viper
   - Warrior
   - Wizzard
+  - Zapper
 missions:
   - Training
   - AWACS
