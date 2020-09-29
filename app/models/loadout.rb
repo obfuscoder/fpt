@@ -43,9 +43,9 @@ class Loadout < OpenStruct
   end
 
   def gun
-    return '' unless @table[:g]
+    return '' unless @table[:g] && Settings.airframes[@airframe].gun
 
-    type = Settings.airframes[@airframe].gun&.types[gun_type]
+    type = Settings.airframes[@airframe].gun.types[gun_type]
     "#{gun_amount}% #{type}"
   end
 
