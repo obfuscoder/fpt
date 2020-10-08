@@ -7,21 +7,21 @@ theaters:
         freq: 261.15
         laser: 155
         tcn: 11
-        iff: 110
+        iff: 100
       tiger_1:
-        iff: 111
+        iff: 101
       tiger_2:
-        iff: 112
+        iff: 102
       tiger_3:
-        iff: 113
+        iff: 103
       tiger_4:
-        iff: 114
+        iff: 104
       tiger_5:
-        iff: 115
+        iff: 105
       tiger_6:
-        iff: 116
+        iff: 106
       tiger_7:
-        iff: 117
+        iff: 107
       cougar:
         freq: 261.25
         laser: 156
@@ -45,96 +45,96 @@ theaters:
         freq: 261.35
         laser: 157
         tcn: 31
-        iff: 130
+        iff: 140
       panther_1:
-        iff: 131
+        iff: 141
       panther_2:
-        iff: 132
+        iff: 142
       panther_3:
-        iff: 133
+        iff: 143
       panther_4:
-        iff: 134
+        iff: 144
       panther_5:
-        iff: 135
+        iff: 145
       panther_6:
-        iff: 136
+        iff: 146
       panther_7:
-        iff: 137
+        iff: 147
       lion:
         freq: 261.45
         laser: 158
         tcn: 41
-        iff: 140
+        iff: 170
       lion_1:
-        iff: 141
+        iff: 171
       lion_2:
-        iff: 142
+        iff: 172
       lion_3:
-        iff: 143
+        iff: 173
       lion_4:
-        iff: 144
+        iff: 174
       lion_5:
-        iff: 145
+        iff: 175
       lion_6:
-        iff: 146
+        iff: 176
       lion_7:
-        iff: 147
+        iff: 177
       monster:
         freq: 132.15
         laser: 161
         group: 21
         tcn: 25
-        iff: 210
+        iff: 200
       monster_1:
-        iff: 211
+        iff: 201
       monster_2:
-        iff: 212
+        iff: 202
       monster_3:
-        iff: 213
+        iff: 203
       monster_4:
-        iff: 214
+        iff: 204
       monster_5:
-        iff: 215
+        iff: 205
       monster_6:
-        iff: 216
+        iff: 206
       monster_7:
-        iff: 217
+        iff: 207
       t-rex:
         freq: 132.25
         laser: 165
         group: 25
         tcn: 27
-        iff: 250
+        iff: 220
       t-rex_1:
-        iff: 251
+        iff: 221
       t-rex_2:
-        iff: 252
+        iff: 222
       t-rex_3:
-        iff: 253
+        iff: 223
       t-rex_4:
-        iff: 254
+        iff: 224
       t-rex_5:
-        iff: 255
+        iff: 225
       t-rex_6:
-        iff: 256
+        iff: 226
       t-rex_7:
-        iff: 257
+        iff: 227
       raptor:
-        iff: 260
+        iff: 250
       raptor_1:
-        iff: 261
+        iff: 251
       raptor_2:
-        iff: 262
+        iff: 252
       raptor_3:
-        iff: 263
+        iff: 253
       raptor_4:
-        iff: 264
+        iff: 254
       raptor_5:
-        iff: 265
+        iff: 255
       raptor_6:
-        iff: 266
+        iff: 256
       raptor_7:
-        iff: 267
+        iff: 257
       edelweiss:
         freq: 264.05
         laser: 170
@@ -169,6 +169,20 @@ theaters:
         laser: 177
         group: 47
         iff: 407
+      mig_1:
+        iff: 571
+      mig_2:
+        iff: 572
+      mig_3:
+        iff: 573
+      mig_4:
+        iff: 574
+      mig_5:
+        iff: 575
+      mig_6:
+        iff: 576
+      mig_7:
+        iff: 577
     channels:
       - name: Flight/Squadron specific
       - name: Nellis Clearance Delivery
@@ -3090,21 +3104,21 @@ theaters:
     link: https://www.google.com/maps/d/viewer?mid=10zhS5hK6jx8uj2jVPM1vwrE4wNEl2_5i&ll=42.270911099028204%2C42.999008499999945&z=8
     defaults:
       tiger:
-        iff: 110
+        iff: 100
       tiger_1:
-        iff: 111
+        iff: 101
       tiger_2:
-        iff: 112
+        iff: 102
       tiger_3:
-        iff: 113
+        iff: 103
       tiger_4:
-        iff: 114
+        iff: 104
       tiger_5:
-        iff: 115
+        iff: 105
       tiger_6:
-        iff: 116
+        iff: 106
       tiger_7:
-        iff: 117
+        iff: 107
       cougar:
         iff: 120
       cougar_1:
@@ -3122,93 +3136,93 @@ theaters:
       cougar_7:
         iff: 127
       panther:
-        iff: 130
-      panther_1:
-        iff: 131
-      panther_2:
-        iff: 132
-      panther_3:
-        iff: 133
-      panther_4:
-        iff: 134
-      panther_5:
-        iff: 135
-      panther_6:
-        iff: 136
-      panther_7:
-        iff: 137
-      lion:
         iff: 140
-      lion_1:
+      panther_1:
         iff: 141
-      lion_2:
+      panther_2:
         iff: 142
-      lion_3:
+      panther_3:
         iff: 143
-      lion_4:
+      panther_4:
         iff: 144
-      lion_5:
+      panther_5:
         iff: 145
-      lion_6:
+      panther_6:
         iff: 146
-      lion_7:
+      panther_7:
         iff: 147
+      lion:
+        iff: 170
+      lion_1:
+        iff: 171
+      lion_2:
+        iff: 172
+      lion_3:
+        iff: 173
+      lion_4:
+        iff: 174
+      lion_5:
+        iff: 175
+      lion_6:
+        iff: 176
+      lion_7:
+        iff: 177
       monster:
         freq: 32.15
         laser: 161
         group: 21
         tcn: 21
-        iff: 210
+        iff: 200
       monster_1:
-        iff: 211
+        iff: 201
       monster_2:
-        iff: 212
+        iff: 202
       monster_3:
-        iff: 213
+        iff: 203
       monster_4:
-        iff: 214
+        iff: 204
       monster_5:
-        iff: 215
+        iff: 205
       monster_6:
-        iff: 216
+        iff: 206
       monster_7:
-        iff: 217
+        iff: 207
       t-rex:
         freq: 32.25
         laser: 165
         group: 25
         tcn: 27
-        iff: 250
+        iff: 220
       t-rex_1:
-        iff: 251
+        iff: 221
       t-rex_2:
-        iff: 252
+        iff: 222
       t-rex_3:
-        iff: 253
+        iff: 223
       t-rex_4:
-        iff: 254
+        iff: 224
       t-rex_5:
-        iff: 255
+        iff: 225
       t-rex_6:
-        iff: 256
+        iff: 226
       t-rex_7:
-        iff: 257
+        iff: 227
       raptor:
-        iff: 260
+        iff: 250
       raptor_1:
-        iff: 261
+        iff: 251
       raptor_2:
-        iff: 262
+        iff: 252
       raptor_3:
-        iff: 263
+        iff: 253
       raptor_4:
-        iff: 264
+        iff: 254
       raptor_5:
-        iff: 265
+        iff: 255
       raptor_6:
-        iff: 266
+        iff: 256
       raptor_7:
-        iff: 267
+        iff: 257
       edelweiss:
         iff: 400
       edelweiss_1:
@@ -3225,6 +3239,20 @@ theaters:
         iff: 406
       edelweiss_7:
         iff: 407
+      mig_1:
+        iff: 571
+      mig_2:
+        iff: 572
+      mig_3:
+        iff: 573
+      mig_4:
+        iff: 574
+      mig_5:
+        iff: 575
+      mig_6:
+        iff: 576
+      mig_7:
+        iff: 577
     channels:
       - name: Flight/Squadron specific
     navaids:
