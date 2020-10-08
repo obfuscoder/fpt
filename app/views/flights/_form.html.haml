@@ -44,7 +44,7 @@
           .col-md-8
             = f.select :callsign, Settings.callsigns, {}, class: 'form-control update-defaults', data: { defaults_url: defaults_flights_path }
           .col-md-4
-            = f.select :callsign_number, 1..9, { include_blank: true }, class: 'form-control update-defaults', data: { defaults_url: defaults_flights_path }
+            = f.select :callsign_number, 1..7, { include_blank: true }, class: 'form-control update-defaults', data: { defaults_url: defaults_flights_path }
       %th.align-middle.table-secondary Lasercode
       %td= f.select :laser, 111..175, {}, class: 'form-control'
       %th.align-middle.table-secondary Net Id
