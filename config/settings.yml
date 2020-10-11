@@ -4507,6 +4507,26 @@ theaters:
           none: none
         recoveries:
           none: none
+      ltag:
+        name: Incirlik Military AB
+        ground: 
+        atis: 129.6
+        tower: 129.2
+        elevation: 190
+        takeoff: 05
+        tacan: 21X
+        land: 05
+        runways:
+          - name: 05
+            length: 10000
+            elevation: 154
+          - name: 23
+            length: 10000
+            elevation: 230
+        departures:
+          none: none
+        recoveries:
+          none: none
 airframes:
   a10:
     name: A-10C
