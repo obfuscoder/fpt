@@ -5252,6 +5252,11 @@ payload:
     short: G16
     type: a2g
     weight: 1243
+  gbu54:
+    name: GBU-54
+    short: G54
+    type: a2g
+    weight: 558
   mk20:
     name: Mk-20 Rockeye
     short: M20
@@ -5420,6 +5425,16 @@ payload:
     short: 7WTU
     type: rockets
     weight: 225
+  lau131m151l:
+    name: LAU-131 - 7x M151L (HE APKWS)
+    short: 7M151L
+    type: rockets
+    weight: 298
+  lau131m282l:
+    name: LAU-131 - 7x M282L (MPP APKWS)
+    short: 7M282L
+    type: rockets
+    weight: 298
   lau10mk71:
     name: LAU-10 - 4x ZUNI MK71
     short: 4MK71
@@ -5553,6 +5568,11 @@ payload:
     short: C65K
     type: agm
     weight: 793
+  agm65l:
+    name: AGM-65L
+    short: A65L
+    type: agm
+    weight: 774
   tgm65d:
     name: TGM-65D
     short: T65D
@@ -5759,6 +5779,8 @@ loadout:
       - weapon: lau131mk1
       - weapon: lau131mk61
       - weapon: lau131wtu1b
+      - weapon: lau131m151l
+      - weapon: lau131m282l
     3: &a10station3
       - weapon: bdu50hd
       - weapon: bdu50ld
@@ -5766,6 +5788,7 @@ loadout:
       - weapon: cbu87
       - weapon: cbu97
       - weapon: gbu12
+      - weapon: gbu54
       - weapon: mk82
       - weapon: mk82air
       - weapon: cbu103
@@ -5807,6 +5830,8 @@ loadout:
       - weapon: lau131mk1
       - weapon: lau131mk61
       - weapon: lau131wtu1b
+      - weapon: lau131m151l
+      - weapon: lau131m282l
       - weapon: lau68m151
         amount: 3
         pylon: bru42
@@ -5855,6 +5880,12 @@ loadout:
       - weapon: lau131wtu1b
         amount: 3
         pylon: bru42
+      - weapon: lau131m151l
+        amount: 3
+        pylon: bru42
+      - weapon: lau131m282l
+        amount: 3
+        pylon: bru42
       - weapon: mxu648
       - weapon: agm65d
         pylon: lau117
@@ -5863,6 +5894,8 @@ loadout:
       - weapon: agm65g
         pylon: lau117
       - weapon: agm65k
+        pylon: lau117
+      - weapon: agm65l
         pylon: lau117
       - weapon: catm65k
         pylon: lau117
@@ -5903,6 +5936,7 @@ loadout:
       - weapon: gbu31
       - weapon: gbu31v3b
       - weapon: gbu38
+      - weapon: gbu54
       - weapon: mk84
       - weapon: suuluu
       - weapon: bdu33
@@ -5936,6 +5970,8 @@ loadout:
       - weapon: lau131mk1
       - weapon: lau131mk61
       - weapon: lau131wtu1b
+      - weapon: lau131m151l
+      - weapon: lau131m282l
       - weapon: lau68m151
         amount: 3
         pylon: bru42
@@ -5984,6 +6020,12 @@ loadout:
       - weapon: lau131wtu1b
         amount: 3
         pylon: bru42
+      - weapon: lau131m151l
+        amount: 3
+        pylon: bru42
+      - weapon: lau131m282l
+        amount: 3
+        pylon: bru42
       - weapon: mxu648
       - weapon: ft600
     5: &a10station5
@@ -6001,6 +6043,7 @@ loadout:
       - weapon: gbu31
       - weapon: gbu31v3b
       - weapon: gbu38
+      - weapon: gbu54
       - weapon: mk84
       - weapon: bdu33
         amount: 3
