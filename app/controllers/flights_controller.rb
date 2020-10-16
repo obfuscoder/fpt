@@ -36,7 +36,7 @@ class FlightsController < ApplicationController
 
   def update
     data = flight_params
-    data.merge! { loadout: nil } if @flight.airframe != data['airframe']
+    data.merge!(loadout: nil) if @flight.airframe != data['airframe']
     if @flight.update(data)
       redirect_to @flight, notice: 'Flight was successfully updated.'
     else
