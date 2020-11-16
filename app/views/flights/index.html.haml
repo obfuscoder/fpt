@@ -12,39 +12,31 @@
     = date
     \/
     = link_to 'SPINS', spins_path(params: { date: date })
-  %table.table.table-striped.table-bordered.table-sm.table-hover
-    %thead.thead-dark
-      %tr
-        %th Time
-        %th Callsign
-        %th Airframe
-        %th Mission
-        %th AO
-        %th Task
-        %th IFF
-        %th Takeoff
-        %th Departure
-        %th Land
-        %th Recovery
-        %th MWXR
-        %th
-    %tbody
-      - @flights.ordered.where('date(start) = ?', date).each do |flight|
-        %tr(scope="row")
-          %td= flight.start.to_s(:time)
-          %td= flight.full_callsign
-          %td
-            = "#{flight.pilots.count}/#{flight.slots}"
-            = Settings.airframes[flight.airframe].name
-          %td= flight.mission
-          %td= flight.ao
-          %td= flight.task
-          %td= "#{flight.iff}X"
-          %td= link_to_start_airbase(flight)
-          %td= link_to_departure(flight)
-          %td= link_to_land_airbase(flight)
-          %td= link_to_recovery(flight)
-          %td= flight.minimum_weather_requirements
-          %td= link_to 'Show', flight, class: 'btn btn-primary btn-sm'
-%br
+  - @flights.ordered.where('date(start) = ?', date).each do |flight|
+    .container.border.rounded-sm.border-dark.bg-light
+      .row.border.font-weight-bold
+        .col= link_to flight.full_callsign, flight
+        .col
+          = "#{flight.slots}x"
+          = Settings.airframes[flight.airframe].name
+        .col= flight.frequency
+      - flight.slots.times.each_with_index do |i|
+        - pilot = flight.pilots.find_by(number: i+1)
+        .row.border.small
+          .col= pilot&.callsign
+          .col= pilot&.name
+          .col= pilot&.iff
+      .row.border.font-weight-bold
+        .col= flight.mission
+        .col= flight.task
+        .col= flight.ao
+      .row.border
+        .col= link_to_start_airbase(flight)
+        .col= link_to_departure(flight)
+        .col= "#{flight.iff}X"
+      .row.border
+        .col= link_to_land_airbase(flight)
+        .col= link_to_recovery(flight)
+        .col= flight.minimum_weather_requirements
+    %br
 = link_to 'New Flight', new_flight_path, class: 'btn btn-primary'

@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.6.6'
 
 gem 'bootstrap'
 gem 'combine_pdf'
 gem 'config'
 gem 'haml-rails'
 gem 'prawn'
-gem 'rmagick'
+gem 'rmagick', platforms: :ruby
 gem 'rubyzip'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
