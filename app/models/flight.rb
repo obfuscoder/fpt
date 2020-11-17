@@ -71,7 +71,7 @@ class Flight < ApplicationRecord
   end
 
   def assignable_pilots
-    Settings.pilots - pilots.pluck(:name) - others.map(&:pilots).flatten.map(&:name)
+    Settings.pilots - pilots.pluck(:name).flatten.map { |n| n.split(%r{/}) }.flatten - others.map(&:pilots).flatten.map(&:name).map { |n| n.split(%r{/}) }.flatten
   end
 
   def number

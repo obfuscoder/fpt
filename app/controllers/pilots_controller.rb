@@ -20,6 +20,8 @@ class PilotsController < ApplicationController
   private
 
   def pilot_params
-    params.require(:pilot).permit(:number, :name)
+    result = params.require(:pilot).permit(:number, name: []).to_h
+    result['name'] = result['name'].join('/')
+    result
   end
 end

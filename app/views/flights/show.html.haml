@@ -36,7 +36,7 @@
         .row
           .col-1.table-secondary #
           .col-2.table-secondary Callsign
-          .col-3.table-secondary Pilot
+          .col-3.table-secondary Pilot(s)
           .col-1.table-secondary IFF
           .col-1.table-secondary TCN
           .col-2.table-secondary Lasercode
@@ -60,8 +60,10 @@
                 = form_for :pilot, url: flight_pilots_path(@flight) do |f|
                   .form-row
                     = f.hidden_field :number, value: number
-                    .col-auto
-                      = f.select :name, @flight.assignable_pilots, {}, class: 'form-control form-control-sm'
+                    - seats = Settings.airframes[@flight.airframe].seats || 1
+                    - seats.times do
+                      .col-auto
+                        = select_tag 'pilot[name][]', options_for_select(@flight.assignable_pilots), { class: 'form-control form-control-sm' }
                     .col-auto
                       = f.submit 'Assign', class: 'btn btn-primary btn-sm'
   %tr

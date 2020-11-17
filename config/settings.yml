@@ -3843,12 +3843,14 @@ airframes:
     name: F-5E
   f14:
     name: F-14
+    seats: 2
   jf17:
     name: JF-17
   m2000:
     name: M-2000C
   l39:
     name: L-39
+    seats: 2
   c101:
     name: C-101
   uh1h:
