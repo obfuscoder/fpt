@@ -2631,11 +2631,6 @@ theaters:
         callsign: S3B Stennis
         comms: 250.1
         tacan: 78Y
-      stennis:
-        type: TANKER
-        callsign: S3B Stennis 2
-        comms: 250.5
-        tacan: 79Y
       overlord:
         type: AWACS
         callsign: OVERLORD
