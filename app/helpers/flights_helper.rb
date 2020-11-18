@@ -12,19 +12,19 @@ module FlightsHelper
   end
 
   def departures(flight)
-    return [] unless flight&.start_airbase
+    return [] unless flight&.start_airbase && Settings.theaters[flight.theater].airbases[flight.start_airbase]
 
     Settings.theaters[flight.theater].airbases[flight.start_airbase].departures.to_h.invert
   end
 
   def recoveries(flight)
-    return [] unless flight&.land_airbase
+    return [] unless flight&.land_airbase && Settings.theaters[flight.theater].airbases[flight.land_airbase]
 
     Settings.theaters[flight.theater].airbases[flight.land_airbase].recoveries.to_h.invert
   end
 
   def diverts(flight)
-    return [] unless flight&.divert_airbase
+    return [] unless flight&.divert_airbase && Settings.theaters[flight.theater].airbases[flight.divert_airbase]
 
     Settings.theaters[flight.theater].airbases[flight.divert_airbase].recoveries.to_h.invert
   end
