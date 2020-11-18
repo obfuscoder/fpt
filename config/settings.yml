@@ -3553,6 +3553,7 @@ theaters:
         lon: 43.09908333333333
   pg:
     name: Persian Gulf
+    link: https://www.google.com/maps/d/u/0/edit?mid=15WFUXJOeGr3Z0YqcXE1esi3l86axxRTZ&usp=sharing
     channels:
       - name: Flight/Squadron specific
     navaids:
