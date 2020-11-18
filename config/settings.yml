@@ -3721,6 +3721,17 @@ theaters:
         name: Shiraz International Airport
       kerman:
         name: Kerman Airport
+      carrier:
+        name: CV-73 USS G. Washington
+        tacan: 73X
+        tower: 305.0
+        ground: ICLS 12
+        departures:
+          cat: CAT
+        recoveries:
+          case1: CASE I
+          case2: CASE II
+          case3: CASE III
   syria:
     name: Syria
     channels:
@@ -3783,6 +3794,17 @@ theaters:
           none: none
         recoveries:
           none: none
+      carrier:
+        name: CV-73 USS G. Washington
+        tacan: 73X
+        tower: 305.0
+        ground: ICLS 12
+        departures:
+          cat: CAT
+        recoveries:
+          case1: CASE I
+          case2: CASE II
+          case3: CASE III
 airframes:
   a10:
     name: A-10C
