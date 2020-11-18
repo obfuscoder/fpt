@@ -21,7 +21,7 @@ end
 
 desc 'Updates all outdated plate images'
 task :update_plates do
-  %w[caucasus nttr].each do |folder|
+  %w[caucasus nttr pg syria].each do |folder|
     root_path = Rails.root.join('public', folder)
     Dir.glob(root_path + '**/*.pdf').each do |pdf_path|
       puts "Updating plate for #{pdf_path} ..."
