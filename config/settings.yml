@@ -3614,8 +3614,63 @@ theaters:
     airbases:
       liwa:
         name: Liwa Airbase
-      aldhafra:
+      omam:
         name: Al Dhafra AB
+        atis: 119.4
+        ground: 119.6
+        tower: 118.3
+        tacan: 96X
+        elevation: 52
+        takeoff: 31R
+        land: 31R
+        runways:
+          - name: 31R
+            length: 12012
+            elevation: 52
+          - name: 13L
+            length: 12012
+            elevation: 52
+          - name: 31L
+            length: 12012
+            elevation: 52
+          - name: 13R
+            length: 12012
+            elevation: 52
+        departures:
+          13r: Rwy 13R Departures
+          31r: Rwy 31R Departures
+          13l: Rwy 13L Departures
+        recoveries:
+          t13l: TACAN RWY 13L
+          t13r: TACAN RWY 13R
+          vor31l: VOR/DME RWY 31L
+          vor31r: VOR/DME RWY 31R
+      omdm:
+        name: Al Minhad AB
+        atis: 118.4
+        ground: 118.1
+        tower: 118.6
+        tacan: 99X
+        ils: 109.9
+        elevation: 180
+        takeoff: 27
+        land: 27
+        runways:
+          - name: 27
+            length: 12901
+            elevation: 190
+            ils: 109.9
+          - name: 09
+            length: 12901
+            elevation: 171
+            ils: 109.9
+        departures:
+          sid: Rwy 09/27 SID
+        recoveries:
+          ils09: ILS/DME Rwy 09
+          ils27: ILS/DME Rwy 27
+          t09: TACAN Rwy 09
+          t27: TACAN Rwy 27
       albateen:
         name: Al-Bateen Airport
       abudhabi:
@@ -3624,8 +3679,6 @@ theaters:
         name: Al Ain International Airport
       almaktoum:
         name: Al Maktoum Intl
-      alminhad:
-        name: Al Minhad AB
       fujairah:
         name: Fujairah Intl
       dubai:
