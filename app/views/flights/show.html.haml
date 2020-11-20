@@ -61,9 +61,9 @@
                   .form-row
                     = f.hidden_field :number, value: number
                     - seats = Settings.airframes[@flight.airframe].seats || 1
-                    - seats.times do
+                    - seats.times do |i|
                       .col-auto
-                        = select_tag 'pilot[name][]', options_for_select(@flight.assignable_pilots), { class: 'form-control form-control-sm' }
+                        = select_tag 'pilot[name][]', options_for_select(@flight.assignable_pilots), class: 'form-control form-control-sm', include_blank: i > 0
                     .col-auto
                       = f.submit 'Assign', class: 'btn btn-primary btn-sm'
   %tr

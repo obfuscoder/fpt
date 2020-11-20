@@ -21,7 +21,7 @@ class PilotsController < ApplicationController
 
   def pilot_params
     result = params.require(:pilot).permit(:number, name: []).to_h
-    result['name'] = result['name'].join('/')
+    result['name'] = result['name'].select(&:present?).join('/')
     result
   end
 end
