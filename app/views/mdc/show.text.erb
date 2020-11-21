@@ -197,7 +197,7 @@ mdc =
 <% dryad.rows.each_with_index do |row, i| %>
             [<%= i + 1 %>] = {
                 ["header"] = "<%= row.header %>",
-                ["columns" = {
+                ["columns"] = {
     <% row.columns.each_with_index do |col, i| %>
                     [<%= i + 1 %>] = "<%= col %>",
     <% end %>
