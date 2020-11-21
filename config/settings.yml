@@ -1,3 +1,132 @@
+defaults:
+  tiger:
+    iff: 100
+  tiger_1:
+    iff: 101
+  tiger_2:
+    iff: 102
+  tiger_3:
+    iff: 103
+  tiger_4:
+    iff: 104
+  tiger_5:
+    iff: 105
+  tiger_6:
+    iff: 106
+  tiger_7:
+    iff: 107
+  cougar:
+    iff: 120
+  cougar_1:
+    iff: 121
+  cougar_2:
+    iff: 122
+  cougar_3:
+    iff: 123
+  cougar_4:
+    iff: 124
+  cougar_5:
+    iff: 125
+  cougar_6:
+    iff: 126
+  cougar_7:
+    iff: 127
+  panther:
+    iff: 140
+  panther_1:
+    iff: 141
+  panther_2:
+    iff: 142
+  panther_3:
+    iff: 143
+  panther_4:
+    iff: 144
+  panther_5:
+    iff: 145
+  panther_6:
+    iff: 146
+  panther_7:
+    iff: 147
+  lion:
+    iff: 170
+  lion_1:
+    iff: 171
+  lion_2:
+    iff: 172
+  lion_3:
+    iff: 173
+  lion_4:
+    iff: 174
+  lion_5:
+    iff: 175
+  lion_6:
+    iff: 176
+  lion_7:
+    iff: 177
+  monster:
+    iff: 200
+  monster_1:
+    iff: 201
+  monster_2:
+    iff: 202
+  monster_3:
+    iff: 203
+  monster_4:
+    iff: 204
+  monster_5:
+    iff: 205
+  monster_6:
+    iff: 206
+  monster_7:
+    iff: 207
+  t-rex:
+    iff: 220
+  t-rex_1:
+    iff: 221
+  t-rex_2:
+    iff: 222
+  t-rex_3:
+    iff: 223
+  t-rex_4:
+    iff: 224
+  t-rex_5:
+    iff: 225
+  t-rex_6:
+    iff: 226
+  t-rex_7:
+    iff: 227
+  raptor:
+    iff: 250
+  raptor_1:
+    iff: 251
+  raptor_2:
+    iff: 252
+  raptor_3:
+    iff: 253
+  raptor_4:
+    iff: 254
+  raptor_5:
+    iff: 255
+  raptor_6:
+    iff: 256
+  raptor_7:
+    iff: 257
+  edelweiss:
+    iff: 400
+  edelweiss_1:
+    iff: 401
+  edelweiss_2:
+    iff: 402
+  edelweiss_3:
+    iff: 403
+  edelweiss_4:
+    iff: 404
+  edelweiss_5:
+    iff: 405
+  edelweiss_6:
+    iff: 406
+  edelweiss_7:
+    iff: 407
 theaters:
   nttr:
     name: Nellis Test & Training Range
@@ -7,182 +136,54 @@ theaters:
         freq: 261.15
         laser: 155
         tcn: 11
-        iff: 100
-      tiger_1:
-        iff: 101
-      tiger_2:
-        iff: 102
-      tiger_3:
-        iff: 103
-      tiger_4:
-        iff: 104
-      tiger_5:
-        iff: 105
-      tiger_6:
-        iff: 106
-      tiger_7:
-        iff: 107
       cougar:
         freq: 261.25
         laser: 156
         tcn: 21
-        iff: 120
-      cougar_1:
-        iff: 121
-      cougar_2:
-        iff: 122
-      cougar_3:
-        iff: 123
-      cougar_4:
-        iff: 124
-      cougar_5:
-        iff: 125
-      cougar_6:
-        iff: 126
-      cougar_7:
-        iff: 127
       panther:
         freq: 261.35
         laser: 157
         tcn: 31
-        iff: 140
-      panther_1:
-        iff: 141
-      panther_2:
-        iff: 142
-      panther_3:
-        iff: 143
-      panther_4:
-        iff: 144
-      panther_5:
-        iff: 145
-      panther_6:
-        iff: 146
-      panther_7:
-        iff: 147
       lion:
         freq: 261.45
         laser: 158
         tcn: 41
-        iff: 170
-      lion_1:
-        iff: 171
-      lion_2:
-        iff: 172
-      lion_3:
-        iff: 173
-      lion_4:
-        iff: 174
-      lion_5:
-        iff: 175
-      lion_6:
-        iff: 176
-      lion_7:
-        iff: 177
       monster:
         freq: 132.15
         laser: 161
         group: 21
         tcn: 25
-        iff: 200
-      monster_1:
-        iff: 201
-      monster_2:
-        iff: 202
-      monster_3:
-        iff: 203
-      monster_4:
-        iff: 204
-      monster_5:
-        iff: 205
-      monster_6:
-        iff: 206
-      monster_7:
-        iff: 207
       t-rex:
         freq: 132.25
         laser: 165
         group: 25
         tcn: 27
-        iff: 220
-      t-rex_1:
-        iff: 221
-      t-rex_2:
-        iff: 222
-      t-rex_3:
-        iff: 223
-      t-rex_4:
-        iff: 224
-      t-rex_5:
-        iff: 225
-      t-rex_6:
-        iff: 226
-      t-rex_7:
-        iff: 227
-      raptor:
-        iff: 250
-      raptor_1:
-        iff: 251
-      raptor_2:
-        iff: 252
-      raptor_3:
-        iff: 253
-      raptor_4:
-        iff: 254
-      raptor_5:
-        iff: 255
-      raptor_6:
-        iff: 256
-      raptor_7:
-        iff: 257
       edelweiss:
         freq: 264.05
         laser: 170
-        iff: 400
       edelweiss_1:
         freq: 264.15
         laser: 171
-        iff: 401
       edelweiss_2:
         freq: 264.25
         laser: 172
-        iff: 402
       edelweiss_3:
         freq: 264.35
         laser: 173
-        iff: 403
       edelweiss_4:
         freq: 264.45
         laser: 174
-        iff: 404
       edelweiss_5:
         freq: 264.55
         laser: 175
-        iff: 405
       edelweiss_6:
         freq: 134.65
         laser: 176
         group: 46
-        iff: 406
       edelweiss_7:
         freq: 134.75
         laser: 177
         group: 47
-        iff: 407
-      mig_1:
-        iff: 571
-      mig_2:
-        iff: 572
-      mig_3:
-        iff: 573
-      mig_4:
-        iff: 574
-      mig_5:
-        iff: 575
-      mig_6:
-        iff: 576
-      mig_7:
-        iff: 577
     channels:
       - name: Flight/Squadron specific
       - name: Nellis Clearance Delivery
