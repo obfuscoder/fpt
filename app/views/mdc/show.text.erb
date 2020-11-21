@@ -189,16 +189,19 @@ mdc =
     ["dryad"] = {
         ["header"] = {
 <% dryad = crypto.dryad %>
-<% dryad.headers.each_with_index do |h, i| %>
-            ["<%= h %>"] = <%= i %>,
+<% dryad.headers.each_with_index do |head, i| %>
+            [<%= i + 1 %>] = "<%= head %>",
 <% end %>
         },
         ["rows"] = {
-<% dryad.rows.each do |row| %>
-            ["<%= row.header %>"] = {
+<% dryad.rows.each_with_index do |row, i| %>
+            [<%= i + 1 %>] = {
+                ["header"] = "<%= row.header %>",
+                ["columns" = {
     <% row.columns.each_with_index do |col, i| %>
-                [<%= i + 1 %>] = "<%= col %>",
+                    [<%= i + 1 %>] = "<%= col %>",
     <% end %>
+                },
             },
 <% end %>
         },
