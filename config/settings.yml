@@ -4746,6 +4746,21 @@ airframes:
   f14:
     name: F-14
     seats: 2
+    weight:
+      empty: 44000
+      fuel: 16200
+      tol: 74300
+    gun:
+      amount: 675
+      weight: 520
+      types:
+        hei: HEI
+        api: API
+        aphe: AP/HE
+        tp: TP
+    expendables:
+      - chaff: 140
+        flares: 60
   jf17:
     name: JF-17
   m2000:
@@ -5466,6 +5481,7 @@ payload:
     name: SUU-25 * 8 LUU-2
     short: 8LU2
     type: a2g
+    weight: 287
   aaq28:
     name: AN/AAQ-28 LITENING
     short: TGP
@@ -6817,11 +6833,11 @@ loadout:
       - weapon: smokewhite
       - weapon: smokeyellow
     1b:
-      - weapon: aim54amk47
+      - weapon: aim54am47
         pylon: lau93
-      - weapon: aim54cmk47
+      - weapon: aim54cm47
         pylon: lau93
-      - weapon: aim54amk60
+      - weapon: aim54am60
         pylon: lau93
       - weapon: aim9l
         pylon: lau7
@@ -6856,9 +6872,9 @@ loadout:
     2:
       - weapon: ft300
     3:
-      - weapon: aim54amk47
-      - weapon: aim54cmk47
-      - weapon: aim54amk60
+      - weapon: aim54am47
+      - weapon: aim54cm47
+      - weapon: aim54am60
       - weapon: aim7f
       - weapon: aim7m
       - weapon: aim7mh
@@ -6911,9 +6927,9 @@ loadout:
         amount: 2
         pylon: bru34
     4:
-      - weapon: aim54amk47
-      - weapon: aim54cmk47
-      - weapon: aim54amk60
+      - weapon: aim54am47
+      - weapon: aim54cm47
+      - weapon: aim54am60
       - weapon: aim7f
       - weapon: aim7m
       - weapon: aim7mh
@@ -6960,9 +6976,9 @@ loadout:
         amount: 2
         pylon: bru34
     5:
-      - weapon: aim54amk47
-      - weapon: aim54cmk47
-      - weapon: aim54amk60
+      - weapon: aim54am47
+      - weapon: aim54cm47
+      - weapon: aim54am60
       - weapon: aim7f
       - weapon: aim7m
       - weapon: aim7mh
@@ -7010,9 +7026,9 @@ loadout:
       - weapon: suuluu
         pylon: bru34
     6:
-      - weapon: aim54amk47
-      - weapon: aim54cmk47
-      - weapon: aim54amk60
+      - weapon: aim54am47
+      - weapon: aim54cm47
+      - weapon: aim54am60
       - weapon: aim7f
       - weapon: aim7m
       - weapon: aim7mh
@@ -7065,11 +7081,11 @@ loadout:
     7:
       - weapon: ft300
     8b:
-      - weapon: aim54amk47
+      - weapon: aim54am47
         pylon: lau93
-      - weapon: aim54cmk47
+      - weapon: aim54cm47
         pylon: lau93
-      - weapon: aim54amk60
+      - weapon: aim54am60
         pylon: lau93
       - weapon: aim9l
         pylon: lau7
