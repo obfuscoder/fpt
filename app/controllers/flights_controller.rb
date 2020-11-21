@@ -22,7 +22,9 @@ class FlightsController < ApplicationController
                          recovery: Settings.theaters.first.last.airbases.first.last.recoveries&.first&.first
   end
 
-  def edit; end
+  def edit
+    @loadout = Loadout.parse @flight.airframe, @flight.loadout
+  end
 
   def create
     @flight = Flight.new(flight_params)

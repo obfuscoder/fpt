@@ -1,5 +1,4 @@
-mdc =
-{
+mdc = {
     ["number"] = "<%= @flight.number %>",
     ["callsign"] = "<%= @flight.full_callsign %>",
     ["mission"] = "<%= @flight.mission %>",
@@ -9,29 +8,23 @@ mdc =
     ["frequency"] = "<%= @flight.frequency %>",
     ["departure"] = "<%= @flight.departure_name %>",
     ["recovery"] = "<%= @flight.recovery_name %>",
-    ["plates"] =
-    {
-        ["departure"] =
-        {
+    ["plates"] = {
+        ["departure"] = {
             ["ad"] = "<%= "#{@flight.theater}/#{@flight.start_airbase}/ad.png" if @flight.start_airbase %>",
             ["procedure"] = "<%= "#{@flight.theater}/#{@flight.start_airbase}/departures/#{@flight.departure}.png" if @flight.departure %>",
         },
-        ["recovery"] =
-        {
+        ["recovery"] = {
             ["ad"] = "<%= "#{@flight.theater}/#{@flight.land_airbase}/ad.png" if @flight.land_airbase %>",
             ["procedure"] = "<%= "#{@flight.theater}/#{@flight.start_airbase}/recoveries/#{@flight.recovery}.png" if @flight.recovery %>",
         },
-        ["divert"] =
-        {
+        ["divert"] = {
             ["ad"] = "<%= "#{@flight.theater}/#{@flight.divert_airbase}/ad.png" if @flight.divert_airbase %>",
             ["procedure"] = "<%= "#{@flight.theater}/#{@flight.divert_airbase}/recoveries/#{@flight.divert}.png" if @flight.divert %>",
         },
     },
-    ["slots"] =
-    {
+    ["slots"] = {
 <% @flight.pilots.each do |pilot| %>
-        [<%= pilot.number %>] =
-        {
+        [<%= pilot.number %>] = {
             ["callsign"] = "<%= pilot.callsign %>",
             ["pilot"] = "<%= pilot.name %>",
             ["iff"] = <%= pilot.iff %>,
@@ -41,19 +34,26 @@ mdc =
         },
 <% end %>
     },
-    ["loadout"] =
-    {
+    ["loadout"] = {
         ["a2a"] = "<%= @loadout.a2a text: :short %>",
         ["a2g"] = "<%= @loadout.a2g text: :short %>",
         ["pod"] = "<%= @loadout.pods text: :short %>",
         ["tks"] = "<%= @loadout.tanks text: :short %>",
         ["gun"] = "<%= @loadout.gun %>",
-        ["chf"] = "<%= @loadout.flares %>",
-        ["flr"] = "<%= @loadout.chaff %>",
+        ["chf"] = "<%= @loadout.chaff %>",
+        ["flr"] = "<%= @loadout.flares %>",
         ["fuel"] = "<%= @loadout.fuel %>",
     },
-    ["airbases"] =
-    {
+    ["told"] = {
+        ["fuel"] = {
+            ["takeoff"] = "<%= @loadout.fuel_weight %>",
+            ["target"] = "<%= @flight.target_fuel %>",
+            ["joker"] = "<%= @flight.joker_fuel %>",
+            ["bingo"] = "<%= @flight.bingo_fuel %>",
+            ["land"] = "<%= @flight.landing_fuel %>",
+        },
+    },
+    ["airbases"] = {
         {
 <% airbase = Settings.theaters[@flight.theater].airbases[@flight.start_airbase] %>
             ["type"] = "Dep",
@@ -93,11 +93,9 @@ mdc =
         },
 <% end %>
     },
-    ["waypoints"] =
-    {
+    ["waypoints"] = {
 <% @flight.waypoints.each do |wp| %>
-        [<%= wp.number %>] =
-        {
+        [<%= wp.number %>] = {
             ["name"] = "<%= wp.name %>",
             ["pos"] = "<%= wp.position %>",
             ["lat"] = "<%= wp.latitude %>",
@@ -110,8 +108,7 @@ mdc =
         },
 <% end %>
     },
-    ["comms"] =
-    {
+    ["comms"] = {
 <%
   comms = 1.upto(4).map { |num| [num, @flight.send("radio#{num}")] }.select { |e| e.last.present? }
   unless comms.empty? %>
@@ -120,11 +117,9 @@ mdc =
     <% end %>
 <% end %>
     },
-    ["support"] =
-    {
+    ["support"] = {
 <% support = @flight.selected_support %>
-        ["tanker"] =
-        {
+        ["tanker"] = {
 <% support.select { |s| s.type == 'TANKER' }.each do |t| %>
             {
                 ["callsign"] = "<%= t.callsign %>",
@@ -136,8 +131,7 @@ mdc =
             },
 <%  end %>
         },
-        ["awacs"] =
-        {
+        ["awacs"] = {
 <% support.select { |s| s.type == 'AWACS' }.each do |a| %>
             {
                 ["callsign"] = "<%= a.callsign %>",
@@ -147,8 +141,7 @@ mdc =
             },
         <%  end %>
         },
-        ["fac"] =
-        {
+        ["fac"] = {
 <% support.select { |s| s.type == 'FAC' }.each do |f| %>
             {
                 ["callsign"] = "<%= f.callsign %>",
@@ -174,11 +167,9 @@ mdc =
         },
 <% end %>
     },
-    ["presets"] =
-    {
+    ["presets"] = {
 <% Settings.theaters[@flight.theater].channels.each_with_index do |c, i| %>
-        [<%= i+1 %>] =
-        {
+        [<%= i+1 %>] = {
             ["freq"] = "<%= c.freq %>",
             ["name"] = "<%= c.name %>",
         },

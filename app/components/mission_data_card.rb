@@ -22,6 +22,7 @@ class MissionDataCard < Prawn::Document
 
     flight_info
     loadout
+    told
     airbases
     start_new_page
     flight_plan
@@ -129,6 +130,29 @@ class MissionDataCard < Prawn::Document
     cell([1, 8], l.tanks(text: :short))
     cell(9, 'FUEL', header: true)
     cell([10, 11], l.fuel)
+    next_row
+
+    next_row
+  end
+
+  def told
+    l = @flight.parsed_loadout
+    define_columns 6
+    header('TOLD')
+    cell(0, '', header: true)
+    cell(1, 'Takeoff')
+    cell(2, 'Target')
+    cell(3, 'Joker')
+    cell(4, 'Bingo')
+    cell(5, 'Land')
+    next_row
+
+    cell(0, 'FUEL', header: true)
+    cell(1, l.fuel_weight)
+    cell(2, @flight.target_fuel)
+    cell(3, @flight.joker_fuel)
+    cell(4, @flight.bingo_fuel)
+    cell(5, @flight.landing_fuel)
     next_row
 
     next_row
