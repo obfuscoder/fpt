@@ -206,10 +206,9 @@ mdc =
 <% end %>
         },
     },
-    ["navaids"] =
-    {
+    ["navaids"] = {
 <% Settings.theaters[@flight.theater].navaids.each_with_index do |n, i| %>
-        {
+        [<%= i %>] = {
             ["id"] = "<%= n.id %>",
             ["name"] = "<%= n.name %>",
             ["tcn"] = "<%= n.channel %>",
