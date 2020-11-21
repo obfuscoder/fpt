@@ -186,6 +186,23 @@ mdc =
     },
 <% crypto = Crypto.new @flight.start.to_date %>
     ["ramrod"] = "<%= crypto.ramrod %>",
+    ["dryad"] = {
+        ["header"] = {
+<% dryad = crypto.dryad %>
+<% dryad.headers.each_with_index do |h, i| %>
+            ["<%= h %>"] = <%= i %>,
+<% end %>
+        },
+        ["rows"] = {
+<% dryad.rows.each do |row| %>
+            ["<%= row.header %>"] = {
+    <% row.columns.each_with_index do |col, i| %>
+                [<%= i + 1 %>] = "<%= col %>",
+    <% end %>
+            },
+<% end %>
+        },
+    },
     ["navaids"] =
     {
 <% Settings.theaters[@flight.theater].navaids.each_with_index do |n, i| %>
