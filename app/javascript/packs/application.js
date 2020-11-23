@@ -4,7 +4,6 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-require("turbolinks").start()
 
 import 'expose-loader?$!jquery';
 import 'bootstrap';
@@ -118,7 +117,7 @@ const import_cf = event => {
     })
 }
 
-$(document).on('turbolinks:load', function() {
+$(document).ready(function() {
     $('.dropdown-toggle').keypress(function() {
         $('.dropdown-menu').dropdown('show')
         $('.dropdown-menu').dropdown('update')
