@@ -16,117 +16,357 @@ defaults:
   tiger_7:
     iff: 107
   cougar:
-    iff: 120
+    iff: 110
   cougar_1:
-    iff: 121
+    iff: 111
   cougar_2:
-    iff: 122
+    iff: 112
   cougar_3:
-    iff: 123
+    iff: 113
   cougar_4:
-    iff: 124
+    iff: 114
   cougar_5:
-    iff: 125
+    iff: 115
   cougar_6:
-    iff: 126
+    iff: 116
   cougar_7:
-    iff: 127
+    iff: 117
   panther:
-    iff: 140
+    iff: 120
   panther_1:
-    iff: 141
+    iff: 121
   panther_2:
-    iff: 142
+    iff: 122
   panther_3:
-    iff: 143
+    iff: 123
   panther_4:
-    iff: 144
+    iff: 124
   panther_5:
-    iff: 145
+    iff: 125
   panther_6:
-    iff: 146
+    iff: 126
   panther_7:
-    iff: 147
+    iff: 127
   lion:
-    iff: 170
+    iff: 130
   lion_1:
-    iff: 171
+    iff: 131
   lion_2:
-    iff: 172
+    iff: 132
   lion_3:
-    iff: 173
+    iff: 133
   lion_4:
-    iff: 174
+    iff: 134
   lion_5:
-    iff: 175
+    iff: 135
   lion_6:
-    iff: 176
+    iff: 136
   lion_7:
-    iff: 177
+    iff: 137
   monster:
-    iff: 200
+    iff: 140
   monster_1:
-    iff: 201
+    iff: 141
   monster_2:
-    iff: 202
+    iff: 142
   monster_3:
-    iff: 203
+    iff: 143
   monster_4:
-    iff: 204
+    iff: 144
   monster_5:
-    iff: 205
+    iff: 145
   monster_6:
-    iff: 206
+    iff: 146
   monster_7:
-    iff: 207
+    iff: 147
   t-rex:
-    iff: 220
+    iff: 150
   t-rex_1:
-    iff: 221
+    iff: 151
   t-rex_2:
-    iff: 222
+    iff: 152
   t-rex_3:
-    iff: 223
+    iff: 153
   t-rex_4:
-    iff: 224
+    iff: 154
   t-rex_5:
-    iff: 225
+    iff: 155
   t-rex_6:
-    iff: 226
+    iff: 156
   t-rex_7:
-    iff: 227
+    iff: 157
   raptor:
-    iff: 250
+    iff: 160
   raptor_1:
-    iff: 251
+    iff: 161
   raptor_2:
-    iff: 252
+    iff: 162
   raptor_3:
-    iff: 253
+    iff: 163
   raptor_4:
-    iff: 254
+    iff: 164
   raptor_5:
-    iff: 255
+    iff: 165
   raptor_6:
-    iff: 256
+    iff: 166
   raptor_7:
-    iff: 257
+    iff: 167
   edelweiss:
-    iff: 400
+    iff: 170
   edelweiss_1:
-    iff: 401
+    iff: 171
   edelweiss_2:
-    iff: 402
+    iff: 172
   edelweiss_3:
-    iff: 403
+    iff: 173
   edelweiss_4:
-    iff: 404
+    iff: 174
   edelweiss_5:
-    iff: 405
+    iff: 175
   edelweiss_6:
-    iff: 406
+    iff: 176
   edelweiss_7:
-    iff: 407
+    iff: 177
+  axe:
+    iff: 200
+  axe_1:
+    iff: 201
+  axe_2:
+    iff: 202
+  axe_3:
+    iff: 203
+  axe_4:
+    iff: 204
+  axe_5:
+    iff: 205
+  axe_6:
+    iff: 206
+  axe_7:
+    iff: 207
+  beast:
+    iff: 210
+  beast_1:
+    iff: 211
+  beast_2:
+    iff: 212
+  beast_3:
+    iff: 213
+  beast_4:
+    iff: 214
+  beast_5:
+    iff: 215
+  beast_6:
+    iff: 216
+  beast_7:
+    iff: 217
+  boar:
+    iff: 220
+  boar_1:
+    iff: 221
+  boar_2:
+    iff: 222
+  boar_3:
+    iff: 223
+  boar_4:
+    iff: 224
+  boar_5:
+    iff: 225
+  boar_6:
+    iff: 226
+  boar_7:
+    iff: 227
+  chevy:
+    iff: 230
+  chevy_1:
+    iff: 231
+  chevy_2:
+    iff: 232
+  chevy_3:
+    iff: 233
+  chevy_4:
+    iff: 234
+  chevy_5:
+    iff: 235
+  chevy_6:
+    iff: 236
+  chevy_7:
+    iff: 237
+  colt:
+    iff: 240
+  colt_1:
+    iff: 241
+  colt_2:
+    iff: 242
+  colt_3:
+    iff: 243
+  colt_4:
+    iff: 244
+  colt_5:
+    iff: 245
+  colt_6:
+    iff: 246
+  colt_7:
+    iff: 247
+  dodge:
+    iff: 250
+  dodge_1:
+    iff: 251
+  dodge_2:
+    iff: 252
+  dodge_3:
+    iff: 253
+  dodge_4:
+    iff: 254
+  dodge_5:
+    iff: 255
+  dodge_6:
+    iff: 256
+  dodge_7:
+    iff: 257
+  ford:
+    iff: 260
+  ford_1:
+    iff: 261
+  ford_2:
+    iff: 262
+  ford_3:
+    iff: 263
+  ford_4:
+    iff: 264
+  ford_5:
+    iff: 265
+  ford_6:
+    iff: 266
+  ford_7:
+    iff: 267
+  hawg:
+    iff: 270
+  hawg_1:
+    iff: 271
+  hawg_2:
+    iff: 272
+  hawg_3:
+    iff: 273
+  hawg_4:
+    iff: 274
+  hawg_5:
+    iff: 275
+  hawg_6:
+    iff: 276
+  hawg_7:
+    iff: 277
+  mig:
+    iff: 300
+  mig_1:
+    iff: 301
+  mig_2:
+    iff: 302
+  mig_3:
+    iff: 303
+  mig_4:
+    iff: 304
+  mig_5:
+    iff: 305
+  mig_6:
+    iff: 306
+  mig_7:
+    iff: 307
+  misty:
+    iff: 310
+  misty_1:
+    iff: 311
+  misty_2:
+    iff: 312
+  misty_3:
+    iff: 313
+  misty_4:
+    iff: 314
+  misty_5:
+    iff: 315
+  misty_6:
+    iff: 316
+  misty_7:
+    iff: 317
+  navy:
+    iff: 320
+  navy_1:
+    iff: 321
+  navy_2:
+    iff: 322
+  navy_3:
+    iff: 323
+  navy_4:
+    iff: 324
+  navy_5:
+    iff: 325
+  navy_6:
+    iff: 326
+  navy_7:
+    iff: 327
+  pig:
+    iff: 330
+  pig_1:
+    iff: 331
+  pig_2:
+    iff: 332
+  pig_3:
+    iff: 333
+  pig_4:
+    iff: 334
+  pig_5:
+    iff: 335
+  pig_6:
+    iff: 336
+  pig_7:
+    iff: 337
+  pontiac:
+    iff: 340
+  pontiac_1:
+    iff: 341
+  pontiac_2:
+    iff: 342
+  pontiac_3:
+    iff: 343
+  pontiac_4:
+    iff: 344
+  pontiac_5:
+    iff: 345
+  pontiac_6:
+    iff: 346
+  pontiac_7:
+    iff: 347
+  warrior:
+    iff: 350
+  warrior_1:
+    iff: 351
+  warrior_2:
+    iff: 352
+  warrior_3:
+    iff: 353
+  warrior_4:
+    iff: 354
+  warrior_5:
+    iff: 355
+  warrior_6:
+    iff: 356
+  warrior_7:
+    iff: 357
+  wizzard:
+    iff: 360
+  wizzard_1:
+    iff: 361
+  wizzard_2:
+    iff: 362
+  wizzard_3:
+    iff: 363
+  wizzard_4:
+    iff: 364
+  wizzard_5:
+    iff: 365
+  wizzard_6:
+    iff: 366
+  wizzard_7:
+    iff: 367
 theaters:
   nttr:
     name: Nellis Test & Training Range
