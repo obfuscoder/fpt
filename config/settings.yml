@@ -2819,7 +2819,7 @@ theaters:
           n: NORTH
           e: EAST
           s: SOUTH
-      stennis:
+      carrier:
         name: CV-73 USS G. Washington
         tacan: 55X
         tower: 305.0
@@ -2867,7 +2867,7 @@ theaters:
         tacan: 13Y
         position: W-E Track
         altitude: 10000
-      stennis:
+      carrier:
         type: TANKER
         callsign: S3B Stennis
         comms: 250.1
