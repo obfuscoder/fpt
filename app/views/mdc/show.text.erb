@@ -54,6 +54,7 @@ mdc = {
         },
     },
     ["airbases"] = {
+<% if @flight.start_airbase %>
         {
 <% airbase = Settings.theaters[@flight.theater].airbases[@flight.start_airbase] %>
             ["type"] = "Dep",
@@ -66,6 +67,8 @@ mdc = {
             ["elevation"] = "<%= airbase.elevation %>",
             ["ils"] = "<%= airbase.ils %>",
         },
+<% end %>
+<% if @flight.land_airbase %>
         {
 <% airbase = Settings.theaters[@flight.theater].airbases[@flight.land_airbase] %>
             ["type"] = "Arr",
@@ -78,6 +81,7 @@ mdc = {
             ["elevation"] = "<%= airbase.elevation %>",
             ["ils"] = "<%= airbase.ils %>",
         },
+<% end %>
 <% if @flight.divert_airbase %>
         {
 <% airbase = Settings.theaters[@flight.theater].airbases[@flight.divert_airbase] %>
