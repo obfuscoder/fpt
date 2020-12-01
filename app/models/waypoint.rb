@@ -8,6 +8,8 @@ class Waypoint < ApplicationRecord
   before_validation :set_number
   after_destroy :destroyed
 
+  validates :number, uniqueness: { scope: :flight_id }
+
   def to_s
     Position.new(latitude: latitude, longitude: longitude, dme: dme).to_s(format: format || :dm, precision: precision || 3)
   end
@@ -34,6 +36,18 @@ class Waypoint < ApplicationRecord
             tot&.strftime('%H%M%S') || '000000',
             name
 
+  end
+
+  def previous
+    return nil unless number > 1
+
+    flight.waypoints.find_by number: number - 1
+  end
+
+  def next
+    return nil unless number < flight.waypoints.count
+
+    flight.waypoints.find_by number: number + 1
   end
 
   private

@@ -1,6 +1,7 @@
 class WaypointsController < ApplicationController
   before_action :set_flight
-  before_action :set_waypoint, only: %i[update destroy]
+  before_action :set_waypoint, only: %i[update destroy up down]
+  around_action :wrap_in_transaction, only: [:create, :up, :down]
 
   def index
     wps = Settings.theaters[@flight.theater].waypoints.map do |wp|
@@ -13,19 +14,25 @@ class WaypointsController < ApplicationController
 
   def create
     pos, wp = to_position
-    @waypoint = @flight.waypoints.build latitude: pos.latitude,
-                                        longitude: pos.longitude,
-                                        dme: pos.dme,
-                                        name: wp[:name],
-                                        elevation: wp[:elev],
-                                        tot: wp[:tot],
-                                        format: wp[:fmt],
-                                        precision: wp[:prec]
-    if @waypoint.save
-      render @waypoint
-    else
-      head :bad_request
+    attribs = { latitude: pos.latitude,
+                longitude: pos.longitude,
+                dme: pos.dme,
+                name: wp[:name],
+                elevation: wp[:elev],
+                tot: wp[:tot],
+                format: wp[:fmt],
+                precision: wp[:prec]
+    }
+    if wp[:insert].present?
+      first_wp_to_move = @flight.waypoints.find wp[:insert]
+      attribs.merge! number: first_wp_to_move.number
+      @flight.waypoints.where('number >= ?', first_wp_to_move.number).reorder(number: :desc).each do |e|
+        e.update! number: e.number + 1
+      end
     end
+    @waypoint = @flight.waypoints.build attribs
+    @waypoint.save!
+    render @waypoint
   end
 
   def update
@@ -74,6 +81,26 @@ class WaypointsController < ApplicationController
     send_data export_data, filename: "mission_#{@flight.id}.txt", type: 'text/plain', disposition: :inline
   end
 
+  def up
+    prev = @waypoint.previous
+    if prev
+      prev.update! number: nil
+      @waypoint.update! number: @waypoint.number - 1
+      prev.update! number: @waypoint.number + 1
+    end
+    redirect_to flight_path(@flight)
+  end
+
+  def down
+    next_waypoint = @waypoint.next
+    if next_waypoint
+      next_waypoint.update! number: nil
+      @waypoint.update! number: @waypoint.number + 1
+      next_waypoint.update! number: @waypoint.number - 1
+    end
+    redirect_to flight_path(@flight)
+  end
+
   private
 
   def to_position
@@ -91,7 +118,7 @@ class WaypointsController < ApplicationController
   end
 
   def waypoint_params
-    params.permit(:name, :dme, :lat, :lon, :pos, :elev, :tot, :fmt, :prec)
+    params.permit(:name, :dme, :lat, :lon, :pos, :elev, :tot, :fmt, :prec, :insert)
   end
 
   def position(wp)

@@ -221,12 +221,14 @@
         - @flight.waypoints.each do |waypoint|
           = render waypoint
         .row#add-waypoint
-          %button.btn.btn-primary.btn-sm(data-target="#waypointdlg" data-toggle="modal" type="button") Add waypoint
+          %button.btn.btn-primary.btn-sm(data-target="#waypointdlg" data-toggle="modal" data-id="" type="button") Add waypoint
         #waypointdlg.modal.fade(aria-hidden="true" aria-labelledby="waypointdlgtitle" role="dialog" tabindex="-1")
           .modal-dialog.modal-dialog-centered(role="document")
             .modal-content
               %form#waypointform
                 %input#waypoint_id(type='hidden')
+                %input#waypoint_insert(type='hidden')
+                %input#waypoint_num(type='hidden')
                 %input#waypoint_lat(type='hidden')
                 %input#waypoint_lon(type='hidden')
                 .modal-header

@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     resources :waypoints, only: %i[index create destroy] do
       member do
         post :update
+        post :up
+        post :down
       end
       collection do
         put :copy_from

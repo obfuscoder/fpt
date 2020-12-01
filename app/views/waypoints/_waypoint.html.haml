@@ -3,7 +3,16 @@
   .col-2= waypoint.name
   .col-4= waypoint.position
   .col-1= waypoint.elevation
-  .col-2= waypoint.tot&.to_s(:time)
-  .col-2
-    %button.btn.btn-primary.btn-sm(data-target="#waypointdlg" data-toggle="modal" data-id="#{waypoint.id}" data-name="#{waypoint.name}" data-lat="#{waypoint.latitude}" data-lon="#{waypoint.longitude}" data-pos="#{waypoint.coords}" data-dme="#{waypoint.dme}" data-elev="#{waypoint.elevation}" data-tot="#{waypoint.tot&.to_s(:time)}" data-fmt="#{waypoint.format}" data-prec="#{waypoint.precision}"  type="button") Edit
-    = link_to 'Destroy', flight_waypoint_path(@flight, waypoint), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'
+  .col-1= waypoint.tot&.to_s(:time)
+  .col-3
+    %button.btn.btn-primary.btn-sm(data-target="#waypointdlg" data-toggle="modal" data-id="#{waypoint.id}" data-name="#{waypoint.name}" data-lat="#{waypoint.latitude}" data-lon="#{waypoint.longitude}" data-pos="#{waypoint.coords}" data-dme="#{waypoint.dme}" data-elev="#{waypoint.elevation}" data-tot="#{waypoint.tot&.to_s(:time)}" data-fmt="#{waypoint.format}" data-prec="#{waypoint.precision}"  type="button")
+      = bootstrap_icon 'pencil-fill', width: 16, height: 20, viewbox: '0 0 16 20'
+    %button.btn.btn-secondary.btn-sm(data-target="#waypointdlg" data-toggle="modal" data-insert="#{waypoint.id}" type="button")
+      = bootstrap_icon 'plus', width: 16, height: 20, viewbox: '4 4 8 8'
+    = link_to flight_waypoint_path(@flight, waypoint), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' do
+      = bootstrap_icon 'x', width: 16, height: 20, viewbox: '4 4 8 8'
+    /
+    = link_to up_flight_waypoint_path(@flight, waypoint), method: :post, class: 'btn btn-default btn-sm' do
+      = bootstrap_icon 'arrow-up-short', width: 16, height: 20, viewbox: '4 4 8 8'
+    = link_to down_flight_waypoint_path(@flight, waypoint), method: :post, class: 'btn btn-default btn-sm' do
+      = bootstrap_icon 'arrow-down-short', width: 16, height: 20, viewbox: '4 4 8 8'

@@ -129,8 +129,9 @@ $(document).ready(function() {
         let button = $(event.relatedTarget)
         $('#waypoint_name').focus()
 
-        if (button.data('id') !== undefined) {
-            $('#waypoint_id').val(button.data('id'))
+        $('#waypoint_id').val(button.data('id'))
+        $('#waypoint_insert').val(button.data('insert'))
+        if (button.data('id') !== undefined && button.data('id') !== '') {
             $('#waypoint_name').val(button.data('name'))
             $('#waypoint_dme').val(button.data('dme'))
             $('#waypoint_pos').val(button.data('pos'))
@@ -150,6 +151,7 @@ $(document).ready(function() {
 
     $('#waypointform').submit(function(event) {
         $.post(window.location.href + '/waypoints/' + $('#waypoint_id').val(), {
+            insert: $('#waypoint_insert').val(),
             name: $('#waypoint_name').val(),
             dme: $('#waypoint_dme').val(),
             pos: $('#waypoint_pos').val(),
@@ -162,12 +164,18 @@ $(document).ready(function() {
         }, function(data) {
             let id = $('#waypoint_id').val()
             if (id === '') {
-                $('#add-waypoint').before(data)
+                let insert_id = $('#waypoint_insert').val()
+                if (insert_id === '') {
+                    $('#add-waypoint').before(data)
+                } else {
+                    $('#waypoint_' + insert_id).before(data)
+                }
             } else {
                 $('#waypoint_' + id).replaceWith(data)
             }
 
             $('#waypoint_id').val('')
+            $('#waypoint_insert').val('')
             $('#waypoint_name').val('')
             $('#waypoint_dme').val('')
             $('#waypoint_pos').val('')
