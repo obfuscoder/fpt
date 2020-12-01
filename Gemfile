@@ -9,6 +9,7 @@ gem 'combine_pdf'
 gem 'config'
 gem 'haml-rails'
 gem 'prawn'
+gem 'rmagick', platforms: :ruby
 gem 'rubyzip'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
