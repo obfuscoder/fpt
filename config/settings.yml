@@ -3889,14 +3889,15 @@ theaters:
           vor31r: VOR/DME RWY 31R
       omdm:
         name: Al Minhad AB
-        atis: 118.4
-        ground: 118.1
-        tower: 118.6
+        atis: 131.7
+        ground: 121.92
+        tower: 118.55
+        approach: 122.5
         tacan: 99X
         ils: 109.9
         elevation: 180
-        takeoff: 27
-        land: 27
+        takeoff: 09
+        land: 09
         runways:
           - name: 27
             length: 12901
@@ -3907,12 +3908,18 @@ theaters:
             elevation: 171
             ils: 109.9
         departures:
-          sid: Rwy 09/27 SID
+          vfr: VFR Visual
+          mike09: Mike 09 SID
+          mike27: Mike 27 SID
+          27victor: 27 Victor VFR
         recoveries:
-          ils09: ILS/DME Rwy 09
+          vfr: VFR Visual
+          ils09: ILS/DME Rwy Z 09
           ils27: ILS/DME Rwy 27
-          t09: TACAN Rwy 09
-          t27: TACAN Rwy 27
+          tcn09: TACAN Rwy 09
+          tcn27: TACAN Rwy 27
+          vor09: VOR/DME Rwy 09
+          vor27: VOR/DME Rwy 27
       albateen:
         name: Al-Bateen Airport
       abudhabi:
