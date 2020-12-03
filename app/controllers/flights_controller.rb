@@ -85,8 +85,8 @@ class FlightsController < ApplicationController
 
   def defaults
     callsign = [params[:cs], params[:n]].select(&:present?).join('_').downcase
-    global_defaults = Settings.defaults[callsign]&.to_h || {}
-    theater_defaults = Settings.theaters[params[:t]].defaults[callsign]&.to_h || {}
+    global_defaults = Settings.defaults && Settings.defaults[callsign]&.to_h || {}
+    theater_defaults = Settings.theaters[params[:t]].defaults && Settings.theaters[params[:t]].defaults[callsign]&.to_h || {}
     @defaults = global_defaults.merge theater_defaults
     render json: @defaults
   end
