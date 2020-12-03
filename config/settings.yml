@@ -335,38 +335,70 @@ defaults:
     iff: 346
   pontiac_7:
     iff: 347
-  warrior:
+  tusk:
     iff: 350
-  warrior_1:
+  tusk_1:
     iff: 351
-  warrior_2:
+  tusk_2:
     iff: 352
-  warrior_3:
+  tusk_3:
     iff: 353
-  warrior_4:
+  tusk_4:
     iff: 354
-  warrior_5:
+  tusk_5:
     iff: 355
-  warrior_6:
+  tusk_6:
     iff: 356
-  warrior_7:
+  tusk_7:
     iff: 357
-  wizzard:
+  uzi:
     iff: 360
-  wizzard_1:
+  uzi_1:
     iff: 361
-  wizzard_2:
+  uzi_2:
     iff: 362
-  wizzard_3:
+  uzi_3:
     iff: 363
-  wizzard_4:
+  uzi_4:
     iff: 364
-  wizzard_5:
+  uzi_5:
     iff: 365
-  wizzard_6:
+  uzi_6:
     iff: 366
-  wizzard_7:
+  uzi_7:
     iff: 367
+  warrior:
+    iff: 370
+  warrior_1:
+    iff: 371
+  warrior_2:
+    iff: 372
+  warrior_3:
+    iff: 373
+  warrior_4:
+    iff: 374
+  warrior_5:
+    iff: 375
+  warrior_6:
+    iff: 376
+  warrior_7:
+    iff: 377
+  wizzard:
+    iff: 400
+  wizzard_1:
+    iff: 401
+  wizzard_2:
+    iff: 402
+  wizzard_3:
+    iff: 403
+  wizzard_4:
+    iff: 404
+  wizzard_5:
+    iff: 405
+  wizzard_6:
+    iff: 406
+  wizzard_7:
+    iff: 407
 theaters:
   nttr:
     name: Nellis Test & Training Range
