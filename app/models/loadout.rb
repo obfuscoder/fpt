@@ -89,6 +89,8 @@ class Loadout < OpenStruct
   end
 
   def internal_fuel_weight
+    return 0 unless Settings.airframes[@airframe].weight&.fuel
+
     f = @table[:f]&.to_i || 100
     Settings.airframes[@airframe].weight.fuel * f / 100
   end
