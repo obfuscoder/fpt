@@ -335,6 +335,22 @@ defaults:
     iff: 346
   pontiac_7:
     iff: 347
+  sandy:
+    iff: 410
+  sandy_1:
+    iff: 411
+  sandy_2:
+    iff: 412
+  sandy_3:
+    iff: 413
+  sandy_4:
+    iff: 414
+  sandy_5:
+    iff: 415
+  sandy_6:
+    iff: 416
+  sandy_7:
+    iff: 417
   tusk:
     iff: 350
   tusk_1:
@@ -5101,6 +5117,7 @@ callsigns:
   - Pig
   - Playboy
   - Pontiac
+  - Sandy
   - Shell
   - Spectre
   - Springfield
