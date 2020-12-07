@@ -5147,14 +5147,18 @@ callsigns:
   - Zapper
 missions:
   - Training
+  - AI
+  - AR
   - AWACS
+  - BAI
   - CAP
   - CAS
+  - CASEVAC
   - CSAR
+  - DEAD
   - Escort
   - FAC(A)
   - JTAC
-  - CASEVAC
   - RCO
   - SCAR
   - SEAD
