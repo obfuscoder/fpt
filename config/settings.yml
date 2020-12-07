@@ -466,12 +466,12 @@ theaters:
         laser: 175
       edelweiss_6:
         freq: 134.65
-        laser: 176
-        group: 46
+        laser: 166
+        group: 40
       edelweiss_7:
         freq: 134.75
-        laser: 177
-        group: 47
+        laser: 167
+        group: 41
     channels:
       - name: Flight/Squadron specific
       - name: Nellis Clearance Delivery
@@ -5128,6 +5128,8 @@ callsigns:
   - Warrior
   - Wizzard
   - Zapper
+  - Dustoff
+  - Medevac
 missions:
   - Training
   - AWACS
