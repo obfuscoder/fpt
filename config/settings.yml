@@ -5010,6 +5010,11 @@ airframes:
       empty: 14800
       fuel: 7758
       tol: 31000
+    gun:
+      amount: 0
+      weight: 0
+      types:
+        none: none
   f16:
     name: F-16C
     weight:
@@ -5072,6 +5077,18 @@ airframes:
     name: Ka-50
   mi8:
     name: Mi-8
+    weight:
+      empty: 19546
+      fuel: 4253
+      tol: 28660
+    expendables:
+      - chaff: 0
+        flares: 128
+    gun:
+      amount: 0
+      weight: 0
+      types:
+        none: none
   e3a:
     name: E-3A
   kc135:
@@ -5137,6 +5154,7 @@ missions:
   - Escort
   - FAC(A)
   - JTAC
+  - CASEVAC
   - RCO
   - SCAR
   - SEAD
@@ -6184,6 +6202,58 @@ payload:
     name: AGM-84E
     type: a2g
     weight: 1385
+  pkt762:
+    name: PKT 7.62 Gun
+    type: pod
+    weight: 198
+  kord127:
+    name: KORD 12.7 Gun
+    type: pod
+    weight: 209
+  fab100:
+    name: FAB-100
+    type: a2g
+    weight: 220
+  fab250:
+    name: FAB-250
+    type: a2g
+    weight: 551
+  fab500:
+    name: FAB-500 M62
+    type: a2g
+    weight: 1116
+  sab100:
+    name: SAB-100
+    type: a2g
+    weight: 220
+  guvap30:
+    name: GUV AP-30
+    type: pod
+    weight: 604
+  guvyakp:
+    name: GUV YakP GSHP
+    type: pod
+    weight: 996
+  upk23:
+    name: UPK-23-250
+    type: pod
+    weight: 481
+  s8kom:
+    name: 20x S-8KOM
+    type: rockets
+    weight: 769
+  s8ofp2:
+    name: 20x S-8OFP2
+    type: rockets
+    weight: 1008
+  s8om:
+    name: 20x S-8OM
+    type: rockets
+    weight: 805
+  s8tsm:
+    name: 20x S-8TsM
+    type: rockets
+    weight: 761
 loadout:
   a10:
     1: &a10station1
@@ -7416,3 +7486,40 @@ loadout:
         pylon: bru34
       - weapon: lantirn
     8a: *f14station1a
+  mi8:
+    1: &mi8station1
+      - weapon: fab100
+      - weapon: fab250
+      - weapon: sab100
+      - weapon: guvap30
+      - weapon: s8kom
+      - weapon: s8ofp2
+      - weapon: s8om
+      - weapon: s8tsm
+    2: &mi8station2
+      - weapon: fab100
+      - weapon: fab250
+      - weapon: fab500
+      - weapon: sab100
+      - weapon: guvap30
+      - weapon: guvyakp
+      - weapon: upk23
+      - weapon: s8kom
+      - weapon: s8ofp2
+      - weapon: s8om
+      - weapon: s8tsm
+    3: &mi8station3
+      - weapon: fab100
+      - weapon: fab250
+      - weapon: sab100
+      - weapon: s8kom
+      - weapon: s8ofp2
+      - weapon: s8om
+      - weapon: s8tsm
+    4: *mi8station3
+    5: *mi8station2
+    6: *mi8station1
+    KORD:
+      - weapon: kord127
+    PKT:
+      - weapon: pkt762
