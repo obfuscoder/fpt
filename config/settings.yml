@@ -223,6 +223,22 @@ defaults:
     iff: 256
   dodge_7:
     iff: 257
+  enfield:
+    iff: 420
+  enfield_1:
+    iff: 421
+  enfield_2:
+    iff: 422
+  enfield_3:
+    iff: 423
+  enfield_4:
+    iff: 424
+  enfield_5:
+    iff: 425
+  enfield_6:
+    iff: 426
+  enfield_7:
+    iff: 427
   ford:
     iff: 260
   ford_1:
@@ -351,6 +367,22 @@ defaults:
     iff: 416
   sandy_7:
     iff: 417
+  springfield:
+    iff: 430
+  springfield_1:
+    iff: 431
+  springfield_2:
+    iff: 432
+  springfield_3:
+    iff: 433
+  springfield_4:
+    iff: 434
+  springfield_5:
+    iff: 435
+  springfield_6:
+    iff: 436
+  springfield_7:
+    iff: 437
   tusk:
     iff: 350
   tusk_1:
