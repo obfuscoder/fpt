@@ -6304,6 +6304,14 @@ payload:
     name: 20x S-8TsM
     type: rockets
     weight: 761
+  bdu45:
+    name: BDU-45
+    type: a2g
+    weight: 511
+  bdu45b:
+    name: BDU-45B
+    type: a2g
+    weight: 511
 loadout:
   a10:
     1: &a10station1
@@ -7085,6 +7093,18 @@ loadout:
       - weapon: lau68mk5
         amount: 2
         pylon: bru33
+      - weapon: bdu45
+      - weapon: bdu45
+        amount: 2
+        pylon: bru33
+      - weapon: bdu45b
+      - weapon: bdu45b
+        amount: 2
+        pylon: bru33
+      - weapon: gbu24
+      - weapon: gbu32v2b
+      - weapon: gbu31v4b
+      - weapon: gbu31v2b
     3: &f18station3
       - weapon: aim120b
         pylon: lau115
@@ -7195,6 +7215,17 @@ loadout:
         amount: 2
         pylon: bru33
       - weapon: fpu8a
+      - weapon: bdu45
+      - weapon: bdu45
+        amount: 2
+        pylon: bru33
+      - weapon: bdu45b
+      - weapon: bdu45b
+        amount: 2
+        pylon: bru33
+      - weapon: gbu32v2b
+      - weapon: gbu31v4b
+      - weapon: gbu31v2b
     4:
       - weapon: aim120b
       - weapon: aim120c
@@ -7228,6 +7259,14 @@ loadout:
       - weapon: aaq28
       - weapon: aww13
       - weapon: fpu8a
+      - weapon: bdu45
+      - weapon: bdu45
+        amount: 2
+        pylon: bru33
+      - weapon: bdu45b
+      - weapon: bdu45b
+        amount: 2
+        pylon: bru33
     6:
       - weapon: aim120b
       - weapon: aim120c
