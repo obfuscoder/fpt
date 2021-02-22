@@ -4018,6 +4018,22 @@ theaters:
         name: Ras Al Khaimah
       khasab:
         name: Khasab
+        ground: 124.35
+        tower: 124.35
+        elevation: 72
+        takeoff: 01
+        land: 19
+        runways:
+          - name: 01
+            length: 7513
+            elevation: 43
+          - name: 19
+            length: 7513
+            elevation: 102
+        departures:
+          vfr: VFR
+        recoveries:
+          vfr: VFR
       abunuayr:
         name: Sir Abu Nuayr
       abumusa:
