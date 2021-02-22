@@ -4972,21 +4972,21 @@ airframes:
         tp: TP
     expendables:
       - chaff: 0
-        flares: 240
+        flares: 480
       - chaff: 60
-        flares: 210
+        flares: 420
       - chaff: 120
-        flares: 180
+        flares: 360
       - chaff: 180
-        flares: 150
+        flares: 300
       - chaff: 240
-        flares: 120
+        flares: 240
       - chaff: 300
-        flares: 90
+        flares: 180
       - chaff: 360
-        flares: 60
+        flares: 120
       - chaff: 420
-        flares: 30
+        flares: 60
       - chaff: 480
         flares: 0
     weight:
