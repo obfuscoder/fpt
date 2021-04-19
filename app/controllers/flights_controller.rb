@@ -6,7 +6,7 @@ class FlightsController < ApplicationController
   def index
     set_all_flights if params['all'].present?
     @all = all_flights?
-    @flights = all_flights? ? Flight.all : Flight.current
+    @flights = all_flights? ? Flight.all.offset([Flight.count - 100, 0].max) : Flight.current
     @dates = @flights.select('date(start) as date').order('date').group('date(start)').map(&:date)
   end
 
