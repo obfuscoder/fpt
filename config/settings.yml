@@ -6022,7 +6022,7 @@ payload:
     name: GBU-10
     short: G10
     type: a2g
-    weight: 2562  
+    weight: 2562
   gbu31:
     name: GBU-31
     short: G31
