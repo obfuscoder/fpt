@@ -7133,6 +7133,14 @@ loadout:
       - weapon: gbu31v4b
       - weapon: gbu31v2b
       - weapon: gbu31v1b
+      - weapon: bdu45
+      - weapon: bdu45
+        amount: 2
+        pylon: bru33
+      - weapon: bdu45b
+      - weapon: bdu45b
+        amount: 2
+        pylon: bru33
     3: &f18station3
       - weapon: aim120b
         pylon: lau115

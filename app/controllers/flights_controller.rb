@@ -7,7 +7,8 @@ class FlightsController < ApplicationController
     set_all_flights if params['all'].present?
     @all = all_flights?
     @flights = all_flights? ? Flight.all : Flight.current
-    @dates = @flights.select('date(start) as date').order('date').group('date(start)').map(&:date)
+    min_id = all_flights? ? Flight.offset([Flight.count - 500, 0].max).first.id : 0
+    @dates = @flights.where('id >= ?', min_id).select('date(start) as date').order('date').group('date(start)').map(&:date)
   end
 
   def show
