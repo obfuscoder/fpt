@@ -6328,6 +6328,26 @@ payload:
     name: BDU-45B
     type: a2g
     weight: 511
+  gbu31v1b:
+    name: GBU-31(V)1/B
+    short: G311B
+    type: a2g
+    weight: 2059
+  gbu31v2b:
+    name: GBU-31(V)2/B
+    short: G312B
+    type: a2g
+    weight: 2059
+  gbu31v4b:
+    name: GBU-31(V)4/B
+    short: G314B
+    type: a2g
+    weight: 2138
+  gbu32v2b:
+    name: GBU-32(V)2/B
+    short: G322B
+    type: a2g
+    weight: 1030 
 loadout:
   a10:
     1: &a10station1
@@ -7109,6 +7129,10 @@ loadout:
       - weapon: lau68mk5
         amount: 2
         pylon: bru33
+      - weapon: gbu32v2b
+      - weapon: gbu31v4b
+      - weapon: gbu31v2b
+      - weapon: gbu31v1b
       - weapon: bdu45
       - weapon: bdu45
         amount: 2
@@ -7235,6 +7259,10 @@ loadout:
       - weapon: bdu45b
         amount: 2
         pylon: bru33
+      - weapon: gbu32v2b
+      - weapon: gbu31v4b
+      - weapon: gbu31v2b
+      - weapon: gbu31v1b
     4:
       - weapon: aim120b
       - weapon: aim120c
