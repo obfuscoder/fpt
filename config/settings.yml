@@ -777,7 +777,7 @@ theaters:
         type: TANKER
         airframe: KC-130
         comms: 300.05
-        tacan: 31Y
+        tacan: 22Y
         position: "AR-231V: BTY 126/37 (N3620 W11614)"
         altitude: 8000
         speed: 320
