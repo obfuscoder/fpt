@@ -1462,6 +1462,42 @@ theaters:
       - name: LAS
         lat: 36.079694
         lon: -115.159806
+      - name: LATNWSAM1
+        lat: 36.51891667
+        lon: -116.46785
+      - name: LATNWAAA01
+        lat: 36.618
+        lon: -116.548
+      - name: LATNWAAA02
+        lat: 36.68333333
+        lon: -116.625
+      - name: LATNWAAA03
+        lat: 36.75833333
+        lon: -116.6916667
+      - name: LATNCSAM1
+        lat: 36.31083333
+        lon: -114.4238333
+      - name: LATNCAAA01
+        lat: 36.17675
+        lon: -114.4475
+      - name: LATNCAAA02
+        lat: 36.08743333
+        lon: -114.47305
+      - name: LATNCAAA03
+        lat: 36.0984
+        lon: -114.1437
+      - name: LATNESAM1
+        lat: 36.77076667
+        lon: -114.1443333
+      - name: LATNEAAA01
+        lat: 36.77896667
+        lon: -114
+      - name: LATNEAAA02
+        lat: 36.91971667
+        lon: -113.942
+      - name: LATNEAAA03
+        lat: 37.0977
+        lon: -114.0683
       - name: LATNC1
         lat: 36.4333333333333
         lon: -115.4
