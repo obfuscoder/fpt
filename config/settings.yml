@@ -542,7 +542,7 @@ theaters:
         freq: 360.8
       - name: KC-135MPRS AR-625
         freq: 319.8
-      - name: HAVE QUICK 20
+      - name: KC-135 AR-231V
         freq: 300.05
     navaids:
       - id: BCE
@@ -775,12 +775,12 @@ theaters:
       ar231:
         callsign: TEXACO 3
         type: TANKER
-        airframe: KC-130
+        airframe: KC-135
         comms: 300.05
         tacan: 22Y
         position: "AR-231V: BTY 126/37 (N3620 W11614)"
-        altitude: 8000
-        speed: 320
+        altitude: 12000
+        speed: 280
     waypoints:
       - name: 4807A
         lat: 37.7268285760516
