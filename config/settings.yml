@@ -5042,9 +5042,9 @@ airframes:
       - chaff: 480
         flares: 0
     weight:
-      empty: 25000
-      fuel: 11000
-      tol: 46000
+      empty: 25629
+      fuel: 11087
+      tol: 46476
       flt: 51000
   f18:
     name: F/A-18C
@@ -5059,32 +5059,6 @@ airframes:
         def: DEF
         not: No-T
     expendables:
-      - chaff: 0
-        flares: 60
-      - chaff: 10
-        flares: 55
-      - chaff: 20
-        flares: 50
-      - chaff: 30
-        flares: 45
-      - chaff: 40
-        flares: 40
-      - chaff: 50
-        flares: 35
-      - chaff: 60
-        flares: 30
-      - chaff: 70
-        flares: 25
-      - chaff: 80
-        flares: 20
-      - chaff: 90
-        flares: 15
-      - chaff: 100
-        flares: 10
-      - chaff: 110
-        flares: 5
-      - chaff: 120
-        flares: 0
       - chaff: 120
         flares: 0
       - chaff: 110
@@ -5095,8 +5069,6 @@ airframes:
         flares: 30
       - chaff: 80
         flares: 40
-      - chaff: 70
-        flares: 50
       - chaff: 70
         flares: 50
       - chaff: 60
@@ -5119,9 +5091,9 @@ airframes:
       - chaff: 60
         flares: 120
     weight:
-      empty: 14800
+      empty: 14804
       fuel: 7758
-      tol: 31000
+      tol: 31085
     gun:
       amount: 0
       weight: 0
@@ -5160,9 +5132,9 @@ airframes:
     name: F-14
     seats: 2
     weight:
-      empty: 44000
+      empty: 44040
       fuel: 16200
-      tol: 74300
+      tol: 74349
     gun:
       amount: 675
       weight: 520
@@ -5233,6 +5205,7 @@ callsigns:
   - Vanguard
   - Arco
   - Axe
+  - BamBam
   - Beast
   - Boar
   - Chevy
@@ -5247,12 +5220,15 @@ callsigns:
   - Fury
   - Hawg
   - Jedi
+  - Joker
+  - Knife
   - Knight
   - Lugar
   - Magic
   - Mig
   - Misty
   - Moonbeam
+  - Nasty
   - Navy
   - Overlord
   - Pig
@@ -5280,10 +5256,12 @@ missions:
   - CAS
   - CASEVAC
   - CSAR
+  - DCA
   - DEAD
   - Escort
   - FAC(A)
   - JTAC
+  - OCA
   - RCO
   - SCAR
   - SEAD
@@ -5755,12 +5733,12 @@ payload:
   aww13:
     name: AWW-13 Datalink Pod
     type: pod
-    weight: 441
+    weight: 580
   aim9l:
     name: AIM-9L Sidewinder IR AAM
     short: A9L
     type: a2a
-    weight: 187
+    weight: 190
   aim9m:
     name: AIM-9M Sidewinder IR AAM
     short: A9M
@@ -5832,17 +5810,17 @@ payload:
     name: GBU-12
     short: G12
     type: a2g
-    weight: 606
+    weight: 611
   gbu16:
     name: GBU-16
     short: G16
     type: a2g
-    weight: 1243
+    weight: 1131
   gbu24:
     name: GBU-24
     short: G24
     type: a2g
-    weight: 2315
+    weight: 2396
   gbu54:
     name: GBU-54
     short: G54
@@ -5897,7 +5875,7 @@ payload:
     name: AN/ASQ-T50 TCTS Pod
     short: AT50
     type: pod
-    weight: 145
+    weight: 165
   smokeblue:
     name: Smokewinder - blue
     type: pod
