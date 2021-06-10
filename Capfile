@@ -7,7 +7,7 @@ require "capistrano/deploy"
 require "capistrano/scm/git"
 require "capistrano/rvm"
 require "capistrano/bundler"
-require "capistrano/rails"
+require "capistrano/rails/migrations"
 require 'capistrano/puma'
 
 install_plugin Capistrano::SCM::Git
