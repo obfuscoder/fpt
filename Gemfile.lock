@@ -102,6 +102,9 @@ GEM
       deep_merge (~> 1.2, >= 1.2.1)
       dry-validation (~> 1.0, >= 1.0.0)
     crass (1.0.6)
+    debase (0.2.4.1)
+      debase-ruby_core_source (>= 0.10.2)
+    debase-ruby_core_source (0.10.12)
     deep_merge (1.2.1)
     diff-lcs (1.4.4)
     dry-configurable (0.12.1)
@@ -263,6 +266,8 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
+    ruby-debug-ide (0.7.2)
+      rake (>= 0.8.1)
     ruby-rc4 (0.1.5)
     ruby_dep (1.5.0)
     ruby_parser (3.16.0)
@@ -338,6 +343,7 @@ DEPENDENCIES
   capybara
   combine_pdf
   config
+  debase
   factory_bot_rails
   geoutm
   haml-rails
@@ -352,6 +358,7 @@ DEPENDENCIES
   rmagick
   rspec-its
   rspec-rails
+  ruby-debug-ide
   rubyzip
   sass-rails (>= 6)
   selenium-webdriver
