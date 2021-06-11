@@ -22,5 +22,4 @@ test:
 
 production:
   timeout: 5000
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   url: <%= ENV['DATABASE_URL'] %>
