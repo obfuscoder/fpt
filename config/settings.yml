@@ -5022,7 +5022,7 @@ airframes:
         cm: CM
         hei: HEI
         tp: TP
-   expendables:
+    expendables:
       - chaff: 0
         flares: 480
       - chaff: 60
@@ -5074,7 +5074,7 @@ airframes:
       types:
         def: DEF
         not: No-T
-   expendables:
+    expendables:
       - chaff: 120
         flares: 0
       - chaff: 110
