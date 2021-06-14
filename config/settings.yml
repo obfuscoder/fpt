@@ -6805,6 +6805,10 @@ loadout:
       - weapon: mk82air
         amount: 3
         pylon: ter9a
+      - weapon: bdu33
+        amount: 3
+        pylon: ter9a
+      - weapon: lau3mk
       - weapon: lau3mk151
       - weapon: lau3mk156
       - weapon: lau3mk5f
@@ -6875,6 +6879,10 @@ loadout:
       - weapon: mk82air
         amount: 3
         pylon: ter9a
+      - weapon: bdu33
+        amount: 3
+        pylon: ter9a
+      - weapon: lau3mk
       - weapon: lau3mk151
       - weapon: lau3mk156
       - weapon: lau3mk5f
