@@ -6417,7 +6417,6 @@ payload:
     name: BDU-45B
     type: a2g
     weight: 511
-
 loadout:
   a10:
     1: &a10station1
