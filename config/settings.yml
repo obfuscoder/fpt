@@ -6754,6 +6754,7 @@ loadout:
       - weapon: aim9m
       - weapon: aim9x
       - weapon: cap9m
+      - weapon: asqt50
     2: &f16station2
       - weapon: aim120b
       - weapon: aim120c
@@ -6761,6 +6762,7 @@ loadout:
       - weapon: aim9m
       - weapon: aim9x
       - weapon: cap9m
+      - weapon: asqt50
     3: &f16station3
       - weapon: aim120b
       - weapon: aim120c
@@ -6768,6 +6770,7 @@ loadout:
       - weapon: aim9m
       - weapon: aim9x
       - weapon: cap9m
+      - weapon: asqt50
       - weapon: cbu87
       - weapon: cbu87
         amount: 2
@@ -6806,6 +6809,32 @@ loadout:
       - weapon: lau3mk156
       - weapon: lau3mk5f
       - weapon: lau3wtu1b
+      - weapon: agm65d
+        pylon: lau117
+      - weapon: agm65h
+        pylon: lau117
+      - weapon: agm65g
+        pylon: lau117
+      - weapon: agm65k
+        pylon: lau117
+      - weapon: agm65d
+        pylon: lau88
+      - weapon: agm65h
+        pylon: lau88
+      - weapon: agm65d
+        pylon: lau88
+        amount: 2
+      - weapon: agm65h
+        pylon: lau88
+        amount: 2
+      - weapon: agm65d
+        pylon: lau88
+        amount: 3
+      - weapon: agm65h
+        pylon: lau88
+        amount: 3
+      - weapon: agm88c
+      - weapon: mxu648
     4: &f16station4
       - weapon: cbu87
       - weapon: cbu87
@@ -6815,11 +6844,16 @@ loadout:
       - weapon: cbu97
         amount: 2
         pylon: ter9a
+      - weapon: cbu87
+      - weapon: cbu87
+        amount: 3
+        pylon: ter9a
+      - weapon: cbu97
+      - weapon: cbu97
+        amount: 3
+        pylon: ter9a
       - weapon: gbu10
       - weapon: gbu12
-      - weapon: gbu12
-        amount: 2
-        pylon: ter9a
       - weapon: mk82
       - weapon: mk82
         amount: 2
@@ -6839,20 +6873,19 @@ loadout:
         amount: 2
         pylon: ter9a
       - weapon: mk82air
-        amount: 3
-        pylon: ter9a
-      - weapon: bdu33
         amount: 3
         pylon: ter9a
       - weapon: lau3mk151
       - weapon: lau3mk156
       - weapon: lau3mk5f
       - weapon: lau3wtu1b
-      - weapon: ft370
+      - weapon: agm88c
+      - weapon: mxu648
     6:
       - weapon: ft300
     7:
       - weapon: aaq28
+      - weapon: mxu648
     8: *f16station4
     9: *f16station3
     10: *f16station2
