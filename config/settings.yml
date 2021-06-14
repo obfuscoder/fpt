@@ -5058,33 +5058,6 @@ airframes:
       types:
         def: DEF
         not: No-T
-    expendables:
-      - chaff: 120
-        flares: 0
-      - chaff: 110
-        flares: 10
-      - chaff: 100
-        flares: 20
-      - chaff: 90
-        flares: 30
-      - chaff: 80
-        flares: 40
-      - chaff: 70
-        flares: 50
-      - chaff: 60
-        flares: 60
-      - chaff: 50
-        flares: 70
-      - chaff: 40
-        flares: 80
-      - chaff: 30
-        flares: 90
-      - chaff: 20
-        flares: 100
-      - chaff: 10
-        flares: 110
-      - chaff: 0
-        flares: 120
   av8b:
     name: AV-8B N/A
     expendables:
