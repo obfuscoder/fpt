@@ -1,97 +1,8 @@
 airframes:
-  - id: P-51D
-    name: P-51D-25-NA
-    weight:
-      empty: 3549
-      fuel: 732
-      max: 4800
-    gun:
-      amount: 270
-      types:
-        - CM Combat Mix
-        - AG Ground Attack
-        - CS No Tracers
-    loadout:
-      1:
-        - "{HVAR}"
-        - "{HVAR_SMOKE_GENERATOR}"
-      2:
-        - "{HVAR}"
-      3:
-        - "{HVAR}"
-      4:
-        - "{AN-M64}"
-        - "{DT75GAL}"
-        - "{HVAR}"
-      5:
-        - "{HVAR}"
-      6:
-        - "{HVAR}"
-      7:
-        - "{AN-M64}"
-        - "{DT75GAL}"
-        - "{HVAR}"
-      8:
-        - "{HVAR}"
-      9:
-        - "{HVAR}"
-      10:
-        - "{HVAR}"
-        - "{HVAR_SMOKE_GENERATOR}"
-  - id: P-51D-30-NA
-    name: P-51D-30-NA
-    weight:
-      empty: 3549
-      fuel: 732
-      max: 4800
-    gun:
-      amount: 270
-      types:
-        - CM Combat Mix
-        - AG Ground Attack
-        - CS No Tracers
-    loadout:
-      1:
-        - "{HVAR}"
-        - "{HVAR_SMOKE_GENERATOR}"
-      2:
-        - "{HVAR}"
-      3:
-        - "{HVAR}"
-      4:
-        - "{AN-M64}"
-        - "{DT75GAL}"
-        - "{HVAR}"
-      5:
-        - "{HVAR}"
-      6:
-        - "{HVAR}"
-      7:
-        - "{AN-M64}"
-        - "{DT75GAL}"
-        - "{HVAR}"
-      8:
-        - "{HVAR}"
-      9:
-        - "{HVAR}"
-      10:
-        - "{HVAR}"
-        - "{HVAR_SMOKE_GENERATOR}"
-  - id: A-20G
-    name: A-20G
-    weight:
-      empty: 8010
-      fuel: 1500
-      max: 13608
-    gun:
-      amount: 350
-    loadout:
-      1:
-        - "{4xAN-M64_on_InvCountedAttachmentPoints}"
   - id: A-10A
     name: A-10A
     weight:
-      empty: 11325
+      empty: 11625
       fuel: 5029
       max: 21081
     gun:
@@ -143,6 +54,7 @@ airframes:
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "LAU-105_AIS_ASQ_T50_L"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
       2:
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "{CAE48299-A294-4bad-8EE6-89EFC5DCDF00}"
@@ -167,6 +79,7 @@ airframes:
         - "{DAD45FE5-CFF0-4a2b-99D4-5D044D3BC22F}"
         - "{6D6D5C07-2A90-4a68-9A74-C5D0CFFB05D9}"
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
       3:
         - "{69DC8AE7-8F77-427B-B8AA-B19D3F478B66}"
         - "{444BA8AE-82A7-4345-842E-76154EFCCA46}"
@@ -202,6 +115,7 @@ airframes:
         - "{DAD45FE5-CFF0-4a2b-99D4-5D044D3BC22F}"
         - "{6D6D5C07-2A90-4a68-9A74-C5D0CFFB05D9}"
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
       4:
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}"
@@ -230,6 +144,7 @@ airframes:
         - "{6D6D5C07-2A90-4a68-9A74-C5D0CFFB05D9}"
         - "Fuel_Tank_FT600"
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
       5:
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}"
@@ -239,6 +154,7 @@ airframes:
         - "{BDU-50HD}"
         - "BRU-42_3*BDU-33"
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
       6:
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}"
@@ -249,6 +165,7 @@ airframes:
         - "BRU-42_3*BDU-33"
         - "Fuel_Tank_FT600"
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
       7:
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}"
@@ -258,6 +175,7 @@ airframes:
         - "{BDU-50HD}"
         - "BRU-42_3*BDU-33"
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
       8:
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}"
@@ -286,6 +204,7 @@ airframes:
         - "{6D6D5C07-2A90-4a68-9A74-C5D0CFFB05D9}"
         - "Fuel_Tank_FT600"
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
       9:
         - "{69DC8AE7-8F77-427B-B8AA-B19D3F478B66}"
         - "{444BA8AE-82A7-4345-842E-76154EFCCA46}"
@@ -321,6 +240,7 @@ airframes:
         - "{DAD45FE5-CFF0-4a2b-99D4-5D044D3BC22F}"
         - "{6D6D5C07-2A90-4a68-9A74-C5D0CFFB05D9}"
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
       10:
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "{CAE48299-A294-4bad-8EE6-89EFC5DCDF00}"
@@ -345,6 +265,7 @@ airframes:
         - "{DAD45FE5-CFF0-4a2b-99D4-5D044D3BC22F}"
         - "{6D6D5C07-2A90-4a68-9A74-C5D0CFFB05D9}"
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
       11:
         - "LAU-105_2*AIM-9L"
         - "LAU-105_1*AIM-9L_R"
@@ -367,10 +288,11 @@ airframes:
         - "{5335D97A-35A5-4643-9D9B-026C75961E52}"
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "LAU-105_AIS_ASQ_T50_R"
+        - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
   - id: A-10C
     name: A-10C
     weight:
-      empty: 11325
+      empty: 11625
       fuel: 5029
       max: 21081
     gun:
@@ -834,7 +756,7 @@ airframes:
   - id: A-10C_2
     name: A-10C II
     weight:
-      empty: 11325
+      empty: 11625
       fuel: 5029
       max: 21081
     gun:
@@ -2225,13 +2147,13 @@ airframes:
         - "DIS_GBU_12"
         - "DIS_TYPE200"
         - "DIS_TYPE200_DUAL_L"
-        - "{BRU33_2X_MK-82}"
-        - "{BRU33_2X_MK-82_Snakeye}"
-        - "{BRU33_2X_ROCKEYE}"
-        - "DIS_GBU_12_DUAL"
+        - "DIS_MK_82_DUAL_GDJ_II19_L"
+        - "DIS_MK_82S_DUAL_GDJ_II19_L"
+        - "DIS_MK_20_DUAL_GDJ_II19_L"
+        - "DIS_GBU_12_DUAL_GDJ_II19_L"
         - "DIS_BRM1_90"
         - "DIS_RKT_90_UG"
-        - "{BRU33_2*LAU68_MK5}"
+        - "DIS_LAU68_MK5_DUAL_GDJ_II19_L"
         - "DIS_WMD7"
         - "DIS_AKG_DLPOD"
         - "DIS_SPJ_POD"
@@ -2250,6 +2172,7 @@ airframes:
         - "DIS_GB6_HE"
         - "DIS_TANK800"
         - "DIS_TANK1100"
+        - "{Mk82SNAKEYE}"
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}"
         - "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}"
@@ -2281,6 +2204,7 @@ airframes:
         - "DIS_GB6_HE"
         - "DIS_TANK800"
         - "DIS_TANK1100"
+        - "{Mk82SNAKEYE}"
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}"
         - "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}"
@@ -2304,13 +2228,13 @@ airframes:
         - "DIS_GBU_12"
         - "DIS_TYPE200"
         - "DIS_TYPE200_DUAL_R"
-        - "{BRU33_2X_MK-82}"
-        - "{BRU33_2X_MK-82_Snakeye}"
-        - "{BRU33_2X_ROCKEYE}"
-        - "DIS_GBU_12_DUAL"
+        - "DIS_MK_82_DUAL_GDJ_II19_R"
+        - "DIS_MK_82S_DUAL_GDJ_II19_R"
+        - "DIS_MK_20_DUAL_GDJ_II19_R"
+        - "DIS_GBU_12_DUAL_GDJ_II19_R"
         - "DIS_BRM1_90"
         - "DIS_RKT_90_UG"
-        - "{BRU33_2*LAU68_MK5}"
+        - "DIS_LAU68_MK5_DUAL_GDJ_II19_R"
         - "DIS_WMD7"
         - "DIS_AKG_DLPOD"
         - "DIS_SPJ_POD"
@@ -3363,7 +3287,7 @@ airframes:
   - id: FA-18C_hornet
     name: F/A-18C Lot 20
     weight:
-      empty: 11631
+      empty: 11382
       fuel: 4900
       max: 23541
     gun:
@@ -3374,29 +3298,29 @@ airframes:
         - No Tracers
       expendables:
         - chaff: 0
-          flare: 60
+          flare: 120
         - chaff: 10
-          flare: 55
+          flare: 110
         - chaff: 20
-          flare: 50
+          flare: 100
         - chaff: 30
-          flare: 45
+          flare: 90
         - chaff: 40
-          flare: 40
+          flare: 80
         - chaff: 50
-          flare: 35
+          flare: 70
         - chaff: 60
-          flare: 30
+          flare: 60
         - chaff: 70
-          flare: 25
+          flare: 50
         - chaff: 80
-          flare: 20
+          flare: 40
         - chaff: 90
-          flare: 15
+          flare: 30
         - chaff: 100
-          flare: 10
+          flare: 20
         - chaff: 110
-          flare: 5
+          flare: 10
         - chaff: 120
           flare: 0
     loadout:
@@ -3411,15 +3335,9 @@ airframes:
         - "LAU-115_2*LAU-127_CATM-9M"
         - "LAU-115_2*LAU-127_AIM-9L"
         - "LAU-115_2*LAU-127_AIM-9X"
-        - "LAU-115_LAU-127_AIM-9X"
-        - "LAU-115_LAU-127_CATM-9M"
-        - "LAU-115_LAU-127_AIM-9L"
-        - "LAU-115_LAU-127_AIM-9M"
         - "{LAU-115 - AIM-7M}"
         - "{LAU-115 - AIM-7F}"
         - "{LAU-115 - AIM-7H}"
-        - "{LAU-115 - AIM-120B}"
-        - "{LAU-115 - AIM-120C}"
         - "LAU-115_2*LAU-127_AIM-120B"
         - "LAU-115_2*LAU-127_AIM-120C"
         - "{F16A4DE0-116C-4A71-97F0-2CF85B0313EC}"
@@ -3455,7 +3373,6 @@ airframes:
         - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
         - "{BRU33_2X_CBU-99}"
         - "{BRU33_2X_GBU-12}"
-        - "<CLEAN>"
         - "{AGM-154A}"
         - "{BRU55_2*AGM-154A}"
         - "{9BCC2A2B-5708-4860-B1F1-053A18442067}"
@@ -3470,14 +3387,20 @@ airframes:
         - "{BRU55_2*GBU-38}"
         - "{AGM_84D}"
         - "{AF42E6DF-9A60-46D8-A9A0-1708B241AADB}"
+        - "{AGM_84H}"
         - "{C40A1E3A-DD05-40D9-85A4-217729E37FAE}"
         - "{AWW-13}"
+        - "<CLEAN>"
+        - "LAU-115_LAU-127_AIM-9X"
+        - "LAU-115_LAU-127_AIM-9L"
+        - "LAU-115_LAU-127_AIM-9M"
+        - "LAU-115_LAU-127_CATM-9M"
+        - "{LAU-115 - AIM-120B}"
+        - "{LAU-115 - AIM-120C}"
       3:
         - "{LAU-115 - AIM-7M}"
         - "{LAU-115 - AIM-7F}"
         - "{LAU-115 - AIM-7H}"
-        - "{LAU-115 - AIM-120B}"
-        - "{LAU-115 - AIM-120C}"
         - "LAU-115_2*LAU-127_AIM-120B"
         - "LAU-115_2*LAU-127_AIM-120C"
         - "{F16A4DE0-116C-4A71-97F0-2CF85B0313EC}"
@@ -3514,7 +3437,6 @@ airframes:
         - "{BRU33_2X_CBU-99}"
         - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
         - "{BRU33_2X_GBU-12}"
-        - "<CLEAN>"
         - "{AGM-154A}"
         - "{BRU55_2*AGM-154A}"
         - "{9BCC2A2B-5708-4860-B1F1-053A18442067}"
@@ -3529,7 +3451,11 @@ airframes:
         - "{BRU55_2*GBU-38}"
         - "{AGM_84D}"
         - "{AF42E6DF-9A60-46D8-A9A0-1708B241AADB}"
+        - "{AGM_84H}"
         - "{AWW-13}"
+        - "<CLEAN>"
+        - "{LAU-115 - AIM-120B}"
+        - "{LAU-115 - AIM-120C}"
       4:
         - "{8D399DDA-FF81-4F14-904D-099B34FE7918}"
         - "{AIM-7F}"
@@ -3537,6 +3463,7 @@ airframes:
         - "{C8E06185-7CD6-4C90-959F-044679E90751}"
         - "{40EF17B7-F508-45de-8566-6FFECC0C1AB8}"
         - "{AAQ-28_LEFT}"
+        - "{AN_ASQ_228}"
       5:
         - "{FPU_8A_FUEL_TANK}"
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
@@ -3568,8 +3495,6 @@ airframes:
         - "{LAU-115 - AIM-7M}"
         - "{LAU-115 - AIM-7F}"
         - "{LAU-115 - AIM-7H}"
-        - "{LAU-115 - AIM-120B}"
-        - "{LAU-115 - AIM-120C}"
         - "LAU-115_2*LAU-127_AIM-120B"
         - "LAU-115_2*LAU-127_AIM-120C"
         - "{F16A4DE0-116C-4A71-97F0-2CF85B0313EC}"
@@ -3606,7 +3531,6 @@ airframes:
         - "{BRU33_2X_CBU-99}"
         - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
         - "{BRU33_2X_GBU-12}"
-        - "<CLEAN>"
         - "{AGM-154A}"
         - "{BRU55_2*AGM-154A}"
         - "{9BCC2A2B-5708-4860-B1F1-053A18442067}"
@@ -3621,21 +3545,19 @@ airframes:
         - "{BRU55_2*GBU-38}"
         - "{AGM_84D}"
         - "{AF42E6DF-9A60-46D8-A9A0-1708B241AADB}"
+        - "{AGM_84H}"
         - "{AWW-13}"
+        - "<CLEAN>"
+        - "{LAU-115 - AIM-120B_R}"
+        - "{LAU-115 - AIM-120C_R}"
       8:
         - "LAU-115_2*LAU-127_AIM-9M"
         - "LAU-115_2*LAU-127_CATM-9M"
         - "LAU-115_2*LAU-127_AIM-9L"
         - "LAU-115_2*LAU-127_AIM-9X"
-        - "LAU-115_LAU-127_AIM-9X"
-        - "LAU-115_LAU-127_CATM-9M"
-        - "LAU-115_LAU-127_AIM-9L"
-        - "LAU-115_LAU-127_AIM-9M"
         - "{LAU-115 - AIM-7M}"
         - "{LAU-115 - AIM-7F}"
         - "{LAU-115 - AIM-7H}"
-        - "{LAU-115 - AIM-120B}"
-        - "{LAU-115 - AIM-120C}"
         - "LAU-115_2*LAU-127_AIM-120B"
         - "LAU-115_2*LAU-127_AIM-120C"
         - "{F16A4DE0-116C-4A71-97F0-2CF85B0313EC}"
@@ -3671,7 +3593,6 @@ airframes:
         - "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
         - "{BRU33_2X_CBU-99}"
         - "{BRU33_2X_GBU-12}"
-        - "<CLEAN>"
         - "{AGM-154A}"
         - "{BRU55_2*AGM-154A}"
         - "{9BCC2A2B-5708-4860-B1F1-053A18442067}"
@@ -3686,8 +3607,16 @@ airframes:
         - "{BRU55_2*GBU-38}"
         - "{AGM_84D}"
         - "{AF42E6DF-9A60-46D8-A9A0-1708B241AADB}"
+        - "{AGM_84H}"
         - "{C40A1E3A-DD05-40D9-85A4-217729E37FAE}"
         - "{AWW-13}"
+        - "<CLEAN>"
+        - "LAU-115_LAU-127_AIM-9X_R"
+        - "LAU-115_LAU-127_AIM-9L_R"
+        - "LAU-115_LAU-127_AIM-9M_R"
+        - "LAU-115_LAU-127_CATM-9M_R"
+        - "{LAU-115 - AIM-120B_R}"
+        - "{LAU-115 - AIM-120C_R}"
       9:
         - "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}"
         - "CATM-9M"
@@ -3745,8 +3674,10 @@ airframes:
         - "I16_RS_82"
       4:
         - "I16_FAB_100SV"
+        - "I16_DROP_FUEL_TANK"
       5:
         - "I16_FAB_100SV"
+        - "I16_DROP_FUEL_TANK"
       6:
         - "I16_RS_82"
       7:
@@ -4064,9 +3995,6 @@ airframes:
         - "{X-29L}"
         - "{X-31A}"
         - "{X-31P}"
-        - "{X-25MPU}"
-        - "{X-25ML}"
-        - "{X-25MR}"
         - "{F72F47E5-C83A-4B85-96ED-D3E46671EE9A}"
         - "{FC56DF80-9B09-44C5-8976-DCFAFF219062}"
         - "{35B698AC-9FEF-4EC4-AD29-484A0085F62B}"
@@ -4097,9 +4025,6 @@ airframes:
         - "{X-29L}"
         - "{X-31A}"
         - "{X-31P}"
-        - "{X-25MPU}"
-        - "{X-25ML}"
-        - "{X-25MR}"
         - "{F72F47E5-C83A-4B85-96ED-D3E46671EE9A}"
         - "{FC56DF80-9B09-44C5-8976-DCFAFF219062}"
         - "{35B698AC-9FEF-4EC4-AD29-484A0085F62B}"
@@ -4219,9 +4144,6 @@ airframes:
         - "{X-29L}"
         - "{X-31A}"
         - "{X-31P}"
-        - "{X-25MPU}"
-        - "{X-25ML}"
-        - "{X-25MR}"
         - "{F72F47E5-C83A-4B85-96ED-D3E46671EE9A}"
         - "{FC56DF80-9B09-44C5-8976-DCFAFF219062}"
         - "{35B698AC-9FEF-4EC4-AD29-484A0085F62B}"
@@ -4256,9 +4178,6 @@ airframes:
         - "{X-29L}"
         - "{X-31A}"
         - "{X-31P}"
-        - "{X-25MPU}"
-        - "{X-25ML}"
-        - "{X-25MR}"
         - "{F72F47E5-C83A-4B85-96ED-D3E46671EE9A}"
         - "{FC56DF80-9B09-44C5-8976-DCFAFF219062}"
         - "{35B698AC-9FEF-4EC4-AD29-484A0085F62B}"
