@@ -1601,12 +1601,12 @@ airframes:
         - "{A111396E-D3E8-4b9c-8AC9-2432489304D5}"
         - "{AV8BNA_AERO1D}"
         - "{AV8BNA_AERO1D_EMPTY}"
-      4:
+      4A:
         - "{GAU_12_Equalizer}"
-      5:
+      4B:
         - "{ALQ_164_RF_Jammer}"
         - "{A111396E-D3E8-4b9c-8AC9-2432489304D5}"
-      6:
+      5:
         - "{90321C8E-7ED1-47D4-A160-E074D5ABD902}"
         - "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
         - "{Mk82SNAKEYE}"
@@ -1644,7 +1644,7 @@ airframes:
         - "{A111396E-D3E8-4b9c-8AC9-2432489304D5}"
         - "{AV8BNA_AERO1D}"
         - "{AV8BNA_AERO1D_EMPTY}"
-      7:
+      6:
         - "{AIM-9M-ON-ADAPTER}"
         - "{LAU_7_AGM_122_SIDEARM}"
         - "{90321C8E-7ED1-47D4-A160-E074D5ABD902}"
@@ -1696,7 +1696,7 @@ airframes:
         - "{A4BCC903-06C8-47bb-9937-A30FEDB4E746}"
         - "{AV8BNA_AERO1D}"
         - "{AV8BNA_AERO1D_EMPTY}"
-      8:
+      7:
         - "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}"
         - "{AGM_122_SIDEARM}"
         - "{90321C8E-7ED1-47D4-A160-E074D5ABD902}"
@@ -2491,8 +2491,8 @@ airframes:
         - "{40EF17B7-F508-45de-8566-6FFECC0C1AB8}"
         - "CATM-9M"
         - "{AIS_ASQ_T50}"
-      10:
-      11:
+      5L:
+      5R:
         - "{A111396E-D3E8-4b9c-8AC9-2432489304D5}"
   - id: F-5E
     name: F-5E
@@ -2925,7 +2925,7 @@ airframes:
         - chaff: 140
           flare: 60
     loadout:
-      1:
+      1A:
         - "{LAU-138 wtip - AIM-9M}"
         - "{LAU-138 wtip - AIM-9L}"
         - "{AIS_ASQ_T50}"
@@ -2936,7 +2936,7 @@ airframes:
         - "{A4BCC903-06C8-47bb-9937-A30FEDB4E744}"
         - "{A4BCC903-06C8-47bb-9937-A30FEDB4E745}"
         - "{A4BCC903-06C8-47bb-9937-A30FEDB4E746}"
-      2:
+      1B:
         - "{SHOULDER AIM_54C_Mk47 L}"
         - "{SHOULDER AIM_54A_Mk47 L}"
         - "{SHOULDER AIM_54A_Mk60 L}"
@@ -2953,10 +2953,10 @@ airframes:
         - "{PHXBRU3242_2*MK20 LS}"
         - "{PHXBRU3242_MK83 LS}"
         - "{PHXBRU3242_BDU33}"
-      3:
+      2:
         - "{F14-300gal}"
         - "{F14-300gal-empty}"
-      4:
+      3:
         - "{AIM_54A_Mk47}"
         - "{AIM_54A_Mk60}"
         - "{AIM_54C_Mk47}"
@@ -2984,7 +2984,7 @@ airframes:
         - "{BRU-32 GBU-10}"
         - "{MAK79_MK20 2L}"
         - "{BRU-32 GBU-24}"
-      5:
+      4:
         - "{AIM_54A_Mk47}"
         - "{AIM_54A_Mk60}"
         - "{AIM_54C_Mk47}"
@@ -3010,7 +3010,7 @@ airframes:
         - "{BRU3242_ADM141}"
         - "{BRU-32 MK-84}"
         - "{MAK79_MK20 1L}"
-      6:
+      5:
         - "{AIM_54A_Mk47}"
         - "{AIM_54A_Mk60}"
         - "{AIM_54C_Mk47}"
@@ -3037,7 +3037,7 @@ airframes:
         - "{BRU-32 MK-84}"
         - "{MAK79_MK20 1R}"
         - "{BRU-32 GBU-24}"
-      7:
+      6:
         - "{AIM_54A_Mk47}"
         - "{AIM_54A_Mk60}"
         - "{AIM_54C_Mk47}"
@@ -3064,10 +3064,10 @@ airframes:
         - "{BRU-32 MK-84}"
         - "{BRU-32 GBU-10}"
         - "{MAK79_MK20 2R}"
-      8:
+      7:
         - "{F14-300gal}"
         - "{F14-300gal-empty}"
-      9:
+      8B:
         - "{SHOULDER AIM_54C_Mk47 R}"
         - "{SHOULDER AIM_54A_Mk47 R}"
         - "{SHOULDER AIM_54A_Mk60 R}"
@@ -3085,7 +3085,7 @@ airframes:
         - "{PHXBRU3242_MK83 RS}"
         - "{PHXBRU3242_BDU33}"
         - "{F14-LANTIRN-TP}"
-      10:
+      8A:
         - "{LAU-138 wtip - AIM-9M}"
         - "{LAU-138 wtip - AIM-9L}"
         - "{AIS_ASQ_T50}"
@@ -3113,7 +3113,7 @@ airframes:
         - chaff: 140
           flare: 60
     loadout:
-      1:
+      1A:
         - "{LAU-138 wtip - AIM-9M}"
         - "{LAU-138 wtip - AIM-9L}"
         - "{AIS_ASQ_T50}"
@@ -3124,7 +3124,7 @@ airframes:
         - "{A4BCC903-06C8-47bb-9937-A30FEDB4E744}"
         - "{A4BCC903-06C8-47bb-9937-A30FEDB4E745}"
         - "{A4BCC903-06C8-47bb-9937-A30FEDB4E746}"
-      2:
+      1B:
         - "{SHOULDER AIM_54C_Mk47 L}"
         - "{SHOULDER AIM_54A_Mk47 L}"
         - "{SHOULDER AIM_54A_Mk60 L}"
@@ -3141,10 +3141,10 @@ airframes:
         - "{PHXBRU3242_2*MK20 LS}"
         - "{PHXBRU3242_MK83 LS}"
         - "{PHXBRU3242_BDU33}"
-      3:
+      2:
         - "{F14-300gal}"
         - "{F14-300gal-empty}"
-      4:
+      3:
         - "{AIM_54A_Mk47}"
         - "{AIM_54A_Mk60}"
         - "{AIM_54C_Mk47}"
@@ -3172,7 +3172,7 @@ airframes:
         - "{BRU-32 GBU-10}"
         - "{MAK79_MK20 2L}"
         - "{BRU-32 GBU-24}"
-      5:
+      4:
         - "{AIM_54A_Mk47}"
         - "{AIM_54A_Mk60}"
         - "{AIM_54C_Mk47}"
@@ -3198,7 +3198,7 @@ airframes:
         - "{BRU3242_ADM141}"
         - "{BRU-32 MK-84}"
         - "{MAK79_MK20 1L}"
-      6:
+      5:
         - "{AIM_54A_Mk47}"
         - "{AIM_54A_Mk60}"
         - "{AIM_54C_Mk47}"
@@ -3225,7 +3225,7 @@ airframes:
         - "{BRU-32 MK-84}"
         - "{MAK79_MK20 1R}"
         - "{BRU-32 GBU-24}"
-      7:
+      6:
         - "{AIM_54A_Mk47}"
         - "{AIM_54A_Mk60}"
         - "{AIM_54C_Mk47}"
@@ -3252,10 +3252,10 @@ airframes:
         - "{BRU-32 MK-84}"
         - "{BRU-32 GBU-10}"
         - "{MAK79_MK20 2R}"
-      8:
+      7:
         - "{F14-300gal}"
         - "{F14-300gal-empty}"
-      9:
+      8B:
         - "{SHOULDER AIM_54C_Mk47 R}"
         - "{SHOULDER AIM_54A_Mk47 R}"
         - "{SHOULDER AIM_54A_Mk60 R}"
@@ -3273,7 +3273,7 @@ airframes:
         - "{PHXBRU3242_MK83 RS}"
         - "{PHXBRU3242_BDU33}"
         - "{F14-LANTIRN-TP}"
-      10:
+      8A:
         - "{LAU-138 wtip - AIM-9M}"
         - "{LAU-138 wtip - AIM-9L}"
         - "{AIS_ASQ_T50}"
@@ -3623,7 +3623,7 @@ airframes:
         - "{AIM-9L}"
         - "{5CE2FF2A-645A-4197-B48D-8720AC69394F}"
         - "{AIS_ASQ_T50}"
-      10:
+      SMK:
         - "{INV-SMOKE-RED}"
         - "{INV-SMOKE-GREEN}"
         - "{INV-SMOKE-BLUE}"
@@ -3704,14 +3704,14 @@ airframes:
         - "{D3F65166-1AB8-490f-AF2F-2FB6E22568B4}"
         - "{D3F65166-1AB8-490f-AF2F-2FB6E22568B5}"
         - "{D3F65166-1AB8-490f-AF2F-2FB6E22568B6}"
-      2:
+      SMK:
         - "{INV-SMOKE-RED}"
         - "{INV-SMOKE-GREEN}"
         - "{INV-SMOKE-BLUE}"
         - "{INV-SMOKE-WHITE}"
         - "{INV-SMOKE-YELLOW}"
         - "{INV-SMOKE-ORANGE}"
-      3:
+      2:
         - "{FB3CE165-BF07-4979-887C-92B87F13276B}"
         - "{0511E528-EA28-4caf-A212-00D1408DF10A}"
         - "{UB-16-57UMP}"
@@ -3762,14 +3762,14 @@ airframes:
         - "{PK-3}"
         - "{PTB_150L_L39}"
         - "{PTB_350L_L39}"
-      3:
+      SMK:
         - "{INV-SMOKE-RED}"
         - "{INV-SMOKE-GREEN}"
         - "{INV-SMOKE-BLUE}"
         - "{INV-SMOKE-WHITE}"
         - "{INV-SMOKE-YELLOW}"
         - "{INV-SMOKE-ORANGE}"
-      4:
+      3:
         - "{FB3CE165-BF07-4979-887C-92B87F13276B}"
         - "{0511E528-EA28-4caf-A212-00D1408DF10A}"
         - "{3C612111-C7AD-476E-8A8E-2485812F4E5C}"
@@ -3780,7 +3780,7 @@ airframes:
         - "{PK-3}"
         - "{PTB_150L_L39}"
         - "{PTB_350L_L39}"
-      5:
+      4:
         - "{FB3CE165-BF07-4979-887C-92B87F13276B}"
         - "{0511E528-EA28-4caf-A212-00D1408DF10A}"
         - "{3C612111-C7AD-476E-8A8E-2485812F4E5C}"
