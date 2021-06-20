@@ -1,0 +1,4203 @@
+payload:
+  - id: "{6D21ECEA-F85B-4E8D-9D51-31DC9B8AA4EF}"
+    name: "ALQ-131"
+    weight: 305
+    type: pod
+  - id: "ALQ_184"
+    name: "ALQ-184"
+    weight: 215
+    type: pod
+  - id: "{F75187EF-1D9E-4DA9-84B4-1A1A14A3973A}"
+    name: "SPS-141"
+    weight: 150
+    type: pod
+  - id: "{44EE8698-89F9-48EE-AF36-5FD31896A82F}"
+    name: "L005 Sorbtsiya ECM pod (left)"
+    weight: 150
+    type: pod
+  - id: "{44EE8698-89F9-48EE-AF36-5FD31896A82A}"
+    name: "L005 Sorbtsiya ECM pod (right)"
+    weight: 150
+    type: pod
+  - id: "{44EE8698-89F9-48EE-AF36-5FD31896A82D}"
+    name: "MPS-410"
+    weight: 150
+    type: pod
+  - id: "{44EE8698-89F9-48EE-AF36-5FD31896A82C}"
+    name: "MPS-410"
+    weight: 150
+    type: pod
+  - id: "{CAAC1CFD-6745-416B-AFA4-CB57414856D0}"
+    name: "Lantirn F-16"
+    weight: 445
+    type: pod
+  - id: "{D1744B93-2A8A-4C4D-B004-7A09CD8C8F3F}"
+    name: "Lantirn Target Pod"
+    weight: 200
+    type: pod
+  - id: "{199D6D51-1764-497E-9AE5-7D07C8D4D87E}"
+    name: "Pavetack F-111"
+    weight: 200
+    type: pod
+  - id: "{8C3F26A1-FA0F-11d5-9190-00A0249B6F00}"
+    name: "BOZ-107"
+    weight: 200
+    type: pod
+  - id: "{8C3F26A2-FA0F-11d5-9190-00A0249B6F00}"
+    name: "Sky-Shadow ECM Pod"
+    weight: 200
+    type: pod
+  - id: "{B1EF6B0E-3D91-4047-A7A5-A99E7D8B4A8B}"
+    name: "Mercury LLTV Pod"
+    weight: 230
+    type: pod
+  - id: "{0519A261-0AB6-11d6-9193-00A0249B6F00}"
+    name: "ETHER"
+    weight: 200
+    type: pod
+  - id: "{0519A262-0AB6-11d6-9193-00A0249B6F00}"
+    name: "Tangazh ELINT pod"
+    weight: 200
+    type: pod
+  - id: "{0519A263-0AB6-11d6-9193-00A0249B6F00}"
+    name: "Shpil-2M Laser Intelligence Pod"
+    weight: 200
+    type: pod
+  - id: "{0519A264-0AB6-11d6-9193-00A0249B6F00}"
+    name: "L-081 Fantasmagoria ELINT pod"
+    weight: 300
+    type: pod
+  - id: "{D3F65166-1AB8-490f-AF2F-2FB6E22568B1}"
+    name: "Smoke Generator - red_smk"
+    weight: 220
+    type: pod
+  - id: "{D3F65166-1AB8-490f-AF2F-2FB6E22568B2}"
+    name: "Smoke Generator - green"
+    weight: 220
+    type: pod
+  - id: "{D3F65166-1AB8-490f-AF2F-2FB6E22568B3}"
+    name: "Smoke Generator - blue_smk"
+    weight: 220
+    type: pod
+  - id: "{D3F65166-1AB8-490f-AF2F-2FB6E22568B4}"
+    name: "Smoke Generator - white"
+    weight: 220
+    type: pod
+  - id: "{D3F65166-1AB8-490f-AF2F-2FB6E22568B5}"
+    name: "Smoke Generator - yellow"
+    weight: 220
+    type: pod
+  - id: "{D3F65166-1AB8-490f-AF2F-2FB6E22568B6}"
+    name: "Smoke Generator - orange"
+    weight: 220
+    type: pod
+  - id: "{A4BCC903-06C8-47bb-9937-A30FEDB4E741}"
+    name: "Smokewinder - red_smk"
+    weight: 200
+    type: pod
+  - id: "{A4BCC903-06C8-47bb-9937-A30FEDB4E742}"
+    name: "Smokewinder - green"
+    weight: 200
+    type: pod
+  - id: "{A4BCC903-06C8-47bb-9937-A30FEDB4E743}"
+    name: "Smokewinder - blue_smk"
+    weight: 200
+    type: pod
+  - id: "{A4BCC903-06C8-47bb-9937-A30FEDB4E744}"
+    name: "Smokewinder - white"
+    weight: 200
+    type: pod
+  - id: "{A4BCC903-06C8-47bb-9937-A30FEDB4E745}"
+    name: "Smokewinder - yellow"
+    weight: 200
+    type: pod
+  - id: "{A4BCC903-06C8-47bb-9937-A30FEDB4E746}"
+    name: "Smokewinder - orange"
+    weight: 200
+    type: pod
+  - id: "{INV-SMOKE-RED}"
+    name: "Smoke Generator - red_smk"
+    weight: 0
+    type: pod
+  - id: "{INV-SMOKE-GREEN}"
+    name: "Smoke Generator - green"
+    weight: 0
+    type: pod
+  - id: "{INV-SMOKE-BLUE}"
+    name: "Smoke Generator - blue_smk"
+    weight: 0
+    type: pod
+  - id: "{INV-SMOKE-WHITE}"
+    name: "Smoke Generator - white"
+    weight: 0
+    type: pod
+  - id: "{INV-SMOKE-YELLOW}"
+    name: "Smoke Generator - yellow"
+    weight: 0
+    type: pod
+  - id: "{INV-SMOKE-ORANGE}"
+    name: "Smoke Generator - orange"
+    weight: 0
+    type: pod
+  - id: "{6C0D552F-570B-42ff-9F6D-F10D9C1D4E1C}"
+    name: "AN/AAS-38 FLIR"
+    weight: 200
+    type: pod
+  - id: "{1C2B16EB-8EB0-43de-8788-8EBB2D70B8BC}"
+    name: "AN/ASQ-173 LST/SCAM"
+    weight: 250
+    type: pod
+  - id: "{F4920E62-A99A-11d8-9897-000476191836}"
+    name: "Kopyo radar pod"
+    weight: 115
+    type: pod
+  - id: "{A111396E-D3E8-4b9c-8AC9-2432489304D5}"
+    name: "AN/AAQ-28 LITENING"
+    weight: 300
+    type: pod
+  - id: "{05544F1A-C39C-466b-BC37-5BD1D52E57BB}"
+    name: "UPK-23-250"
+    weight: 218
+    type: pod
+  - id: "{E92CBFE5-C153-11d8-9897-000476191836}"
+    name: "SPPU-22-1 Gun pod"
+    weight: 290
+    type: pod
+  - id: "oh-58-brauning"
+    name: "OH-58D Brauning"
+    weight: 290
+    type: pod
+  - id: "MXU-648-TP"
+    name: "MXU-648 Travel Pod"
+    weight: 300
+    type: pod
+  - id: "BRU-42_LS"
+    name: "BRU-42LS"
+    count: 0
+    weight: 65
+    type: pod
+  - id: "LAU-105"
+    name: "LAU-105"
+    count: 0
+    weight: 18
+    type: pod
+  - id: "M134_L"
+    name: "M134 MiniGun Left"
+    weight: 146.4
+    type: pod
+  - id: "M134_R"
+    name: "M134 MiniGun Right"
+    weight: 146.4
+    type: pod
+  - id: "GUV_VOG"
+    name: "GUV AP-30"
+    weight: 274
+    type: pod
+  - id: "GUV_YakB_GSHP"
+    name: "GUV YakB GSHP"
+    weight: 452
+    type: pod
+  - id: "{HVAR_SMOKE_GENERATOR}"
+    name: "HVAR Smoke Generator"
+    weight: 64
+    type: pod
+  - id: "M134_SIDE_L"
+    name: "M134 MiniGun Left Door"
+    weight: 270.4
+    type: pod
+  - id: "M134_SIDE_R"
+    name: "M134 MiniGun Right Door"
+    weight: 270.4
+    type: pod
+  - id: "M60_SIDE_L"
+    name: "M60 Gun Left Door"
+    weight: 141.4
+    type: pod
+  - id: "M60_SIDE_R"
+    name: "M60 Gun Right Door"
+    weight: 141.4
+    type: pod
+  - id: "KORD_12_7"
+    name: "KORD 12.7 Gun"
+    weight: 95
+    type: pod
+  - id: "PKT_7_62"
+    name: "PKT 7.62 Gun"
+    weight: 90
+    type: pod
+  - id: "TOW"
+    name: "BGM-71 TOW"
+    type: missile
+  - id: "9M14"
+    name: "AT-3 SAGGER"
+    type: missile
+  - id: "9M133"
+    name: "AT-14 KORNET"
+    type: missile
+  - id: "9Ì111"
+    name: "AT-4 SPIGOT"
+    type: missile
+  - id: "9Ì117"
+    name: "AT-10 SABBER"
+    type: missile
+  - id: "REFLEX_9Ì119"
+    name: "9M119 Reflex"
+    type: missile
+  - id: "SVIR_9Ì119"
+    name: "9M119 Svir"
+    type: missile
+  - id: "9M311"
+    name: "SA-19 GRISON"
+    type: missile
+  - id: "9Ì38"
+    name: "SA-11 GADFLY"
+    type: missile
+  - id: "9Ì37"
+    name: "SA-13 GOPHER"
+    type: missile
+  - id: "9M331"
+    name: "SA-15 GAUNTLET"
+    type: missile
+  - id: "9M31"
+    name: "SA-9 GASKIN"
+    type: missile
+  - id: "9M33"
+    name: "SA-8 GECKO"
+    type: missile
+  - id: "MIM_72"
+    name: "M48 CHAPARRAL"
+    type: missile
+  - id: "MIM_104"
+    name: "M901 PATRIOT"
+    type: missile
+  - id: "ROLAND"
+    name: "ROLAND"
+    type: missile
+  - id: "SEASPARROW"
+    name: "SEASPARROW"
+    type: missile
+  - id: "5V55"
+    name: "5V55"
+    type: missile
+  - id: "48N6E2"
+    name: "48N6E2"
+    type: missile
+  - id: "3M45"
+    name: "SS-N-19 SHIPWRECK"
+    type: missile
+  - id: "4Ê80"
+    name: "SS-N-12 SANDBOX"
+    type: missile
+  - id: "SM2"
+    name: "SM2"
+    type: missile
+  - id: "AGM_84"
+    name: "AGM-84 HARPOON"
+    type: missile
+  - id: "BGM_109"
+    name: "BGM-109 TOMAHAWK"
+    type: missile
+  - id: "FIM_92"
+    name: "STINGER"
+    type: missile
+  - id: "9Ì39"
+    name: "SA-18 GROUSE"
+    type: missile
+  - id: "{12429ECF-03F0-4DF6-BCBD-5D38B6343DE1}"
+    name: "Kh-22N"
+    weight: 6800
+    type: missile
+  - id: "{9F390892-E6F9-42C9-B84E-1136A881DCB2}"
+    name: "Kh-23L"
+    weight: 288
+    type: missile
+  - id: "{3468C652-E830-4E73-AFA9-B5F260AB7C3D}"
+    name: "Kh-29L"
+    count: 1
+    weight: 747
+    type: missile
+  - id: "{D4A8D9B9-5C45-42e7-BBD2-0E54F8308432}"
+    name: "Kh-29L"
+    count: 1
+    weight: 747
+    type: missile
+  - id: "{B4FC81C9-B861-4E87-BBDC-A1158E648EBF}"
+    name: "Kh-29T"
+    count: 1
+    weight: 760
+    type: missile
+  - id: "{601C99F7-9AF3-4ed7-A565-F8B8EC0D7AAC}"
+    name: "Kh-29T"
+    count: 1
+    weight: 760
+    type: missile
+  - id: "{FE382A68-8620-4AC0-BDF5-709BFE3977D7}"
+    name: "Kh-58U"
+    count: 1
+    weight: 730
+    type: missile
+  - id: "{B5CA9846-776E-4230-B4FD-8BCC9BFB1676}"
+    name: "Kh-58U"
+    count: 1
+    weight: 730
+    type: missile
+  - id: "{4D13E282-DF46-4B23-864A-A9423DFDE504}"
+    name: "Kh-31A"
+    count: 1
+    weight: 690
+    type: missile
+  - id: "{4D13E282-DF46-4B23-864A-A9423DFDE50A}"
+    name: "Kh-31A"
+    count: 1
+    weight: 690
+    type: missile
+  - id: "{D8F2C90B-887B-4B9E-9FE2-996BC9E9AF03}"
+    name: "Kh-31P"
+    count: 1
+    weight: 690
+    type: missile
+  - id: "{D8F2C90B-887B-4B9E-9FE2-996BC9E9AF0A}"
+    name: "Kh-31P"
+    count: 1
+    weight: 690
+    type: missile
+  - id: "{6DADF342-D4BA-4D8A-B081-BA928C4AF86D}"
+    name: "Kh-25ML"
+    count: 1
+    weight: 360
+    type: missile
+  - id: "{79D73885-0801-45a9-917F-C90FE1CE3DFC}"
+    name: "Kh-25ML"
+    count: 1
+    weight: 360
+    type: missile
+  - id: "{E86C5AA5-6D49-4F00-AD2E-79A62D6DDE26}"
+    name: "Kh-25MPU"
+    count: 1
+    weight: 370
+    type: missile
+  - id: "{752AF1D2-EBCC-4bd7-A1E7-2357F5601C70}"
+    name: "Kh-25MPU"
+    count: 1
+    weight: 370
+    type: missile
+  - id: "{292960BB-6518-41AC-BADA-210D65D5073C}"
+    name: "Kh-25MR"
+    count: 1
+    weight: 360
+    type: missile
+  - id: "{2234F529-1D57-4496-8BB0-0150F9BDBBD2}"
+    name: "Kh-35"
+    weight: 480
+    type: missile
+  - id: "{3F26D9C5-5CC3-4E42-BC79-82FAA54E9F26}"
+    name: "Kh-41"
+    weight: 4500
+    type: missile
+  - id: "{40AB87E8-BEFB-4D85-90D9-B2753ACF9514}"
+    name: "Kh-59M"
+    count: 1
+    weight: 850
+    type: missile
+  - id: "{BADAF2DE-68B5-472A-8AAC-35BAEFF6B4A1}"
+    name: "Kh-65"
+    weight: 1250
+    type: missile
+  - id: "{F789E86A-EE2E-4E6B-B81E-D5E5F903B6ED}"
+    name: "APU-8 - 8 9A4172 Vikhr"
+    count: 8
+    weight: 404
+    type: missile
+  - id: "{A6FD14D3-6D30-4C85-88A7-8D17BEE120E2}"
+    name: "APU-6 - 6 9A4172 Vikhr"
+    count: 6
+    weight: 330
+    type: missile
+  - id: "{B919B0F4-7C25-455E-9A02-CEA51DB895E3}"
+    name: "9M114 Shturm-V - 2"
+    count: 2
+    weight: 230
+    type: missile
+  - id: "{3EA17AB0-A805-4D9E-8732-4CE00CB00F17}"
+    name: "BGM-71D Tow * 4"
+    count: 4
+    weight: 250
+    type: missile
+  - id: "{E6747967-B1F0-4C77-977B-AB2E6EB0C102}"
+    name: "ALARM"
+    weight: 268
+    type: missile
+  - id: "{07BE2D19-0E48-4B0B-91DA-5F6C8F9E3C75}"
+    name: "ALARM*2"
+    count: 2
+    weight: 200
+    type: missile
+  - id: "{3E6B632D-65EB-44D2-9501-1C2D04515404}"
+    name: "AGM-45B"
+    weight: 177
+    type: missile
+  - id: "{69DC8AE7-8F77-427B-B8AA-B19D3F478B65}"
+    name: "AGM-65K"
+    weight: 360
+    type: missile
+  - id: "{69DC8AE7-8F77-427B-B8AA-B19D3F478B66}"
+    name: "LAU-117,AGM-65K"
+    count: 1
+    weight: 356
+    type: missile
+  - id: "{D7670BC7-881B-4094-906C-73879CF7EB28}"
+    name: "LAU-88,AGM-65K*2"
+    count: 2
+    weight: 805
+    type: missile
+  - id: "{D7670BC7-881B-4094-906C-73879CF7EB27}"
+    name: "LAU-88,AGM-65K*2"
+    count: 2
+    weight: 805
+    type: missile
+  - id: "{907D835F-E650-4154-BAFD-C656882555C0}"
+    name: "LAU-88,AGM-65K*3"
+    count: 3
+    weight: 1102
+    type: missile
+  - id: "LAU_117_CATM_65K"
+    name: "LAU-117,CATM-65K"
+    count: 1
+    weight: 356
+    type: missile
+  - id: "{444BA8AE-82A7-4345-842E-76154EFCCA47}"
+    name: "AGM-65D"
+    weight: 218
+    type: missile
+  - id: "{444BA8AE-82A7-4345-842E-76154EFCCA46}"
+    name: "LAU-117,AGM-65D"
+    count: 1
+    weight: 277
+    type: missile
+  - id: "LAU_88_AGM_65D_ONE"
+    name: "LAU-88,AGM-65D*1"
+    count: 1
+    weight: 429
+    type: missile
+  - id: "{E6A6262A-CA08-4B3D-B030-E1A993B98452}"
+    name: "LAU-88,AGM-65D*2"
+    count: 2
+    weight: 647
+    type: missile
+  - id: "{E6A6262A-CA08-4B3D-B030-E1A993B98453}"
+    name: "LAU-88,AGM-65D*2"
+    count: 2
+    weight: 647
+    type: missile
+  - id: "{DAC53A2F-79CA-42FF-A77A-F5649B601308}"
+    name: "LAU-88,AGM-65D*3"
+    count: 3
+    weight: 865
+    type: missile
+  - id: "LAU_117_TGM_65D"
+    name: "LAU-117,TGM-65D"
+    count: 1
+    weight: 277
+    type: missile
+  - id: "{F16A4DE0-116C-4A71-97F0-2CF85B0313EF}"
+    name: "AGM-65E"
+    weight: 286
+    type: missile
+  - id: "{F16A4DE0-116C-4A71-97F0-2CF85B0313EC}"
+    name: "LAU-117,AGM-65E"
+    count: 1
+    weight: 345
+    type: missile
+  - id: "{2CC29C7A-E863-411C-8A6E-BD6F0E730548}"
+    name: "LAU-88,AGM-65E*2"
+    count: 2
+    weight: 783
+    type: missile
+  - id: "{2CC29C7A-E863-411C-8A6E-BD6F0E730547}"
+    name: "LAU-88,AGM-65E*2"
+    count: 2
+    weight: 783
+    type: missile
+  - id: "{71AAB9B8-81C1-4925-BE50-1EF8E9899271}"
+    name: "LAU-88,AGM-65E*3"
+    count: 3
+    weight: 1069
+    type: missile
+  - id: "LAU_117_AGM_65H"
+    name: "LAU-117,AGM-65H"
+    count: 1
+    weight: 267
+    type: missile
+  - id: "LAU_88_AGM_65H"
+    name: "LAU-88,AGM-65H*1"
+    count: 1
+    weight: 419
+    type: missile
+  - id: "LAU_88_AGM_65H_2_R"
+    name: "LAU-88,AGM-65H*2"
+    count: 2
+    weight: 627
+    type: missile
+  - id: "LAU_88_AGM_65H_2_L"
+    name: "LAU-88,AGM-65H*2"
+    count: 2
+    weight: 627
+    type: missile
+  - id: "LAU_88_AGM_65H_3"
+    name: "LAU-88,AGM-65H*3"
+    count: 3
+    weight: 835
+    type: missile
+  - id: "TGM_65H"
+    name: "TGM-65H"
+    weight: 208
+    type: missile
+  - id: "LAU_117_TGM_65H"
+    name: "LAU-117,TGM-65H"
+    count: 1
+    weight: 267
+    type: missile
+  - id: "LAU_117_TGM_65G"
+    name: "LAU-117,TGM-65G"
+    count: 1
+    weight: 360
+    type: missile
+  - id: "LAU_117_AGM_65G"
+    name: "LAU-117,AGM-65G"
+    count: 1
+    weight: 360
+    type: missile
+  - id: "{8B7CADF9-4954-46B3-8CFB-93F2F5B90B03}"
+    name: "AGM-84A"
+    weight: 661.5
+    type: missile
+  - id: "{AF42E6DF-9A60-46D8-A9A0-1708B241AADB}"
+    name: "AGM-84E"
+    weight: 628
+    type: missile
+  - id: "{769A15DF-6AFB-439F-9B24-5B7A45C59D16}"
+    name: "AGM-86C"
+    weight: 1950
+    type: missile
+  - id: "{B06DD79A-F21E-4EB9-BD9D-AB3844618C9C}"
+    name: "AGM-88C"
+    weight: 361
+    type: missile
+  - id: "AGM114x2_OH_58"
+    name: "AGM-114K * 2"
+    count: 2
+    weight: 250
+    type: missile
+  - id: "{88D18A5E-99C8-4B04-B40B-1C02F2018B6E}"
+    name: "AGM-114K * 4"
+    count: 4
+    weight: 250
+    type: missile
+  - id: "{0180F983-C14A-11d8-9897-000476191836}"
+    name: "S-25L"
+    count: 1
+    weight: 500
+    type: missile
+  - id: "{7B8DCEB4-820B-4015-9B48-1028A4195692}"
+    name: "AGM-119B Penguin"
+    weight: 300
+    type: missile
+  - id: "{7210496B-7B81-4B52-80D6-8529ECF847CD}"
+    name: "Kormoran"
+    weight: 660
+    type: missile
+  - id: "{1461CD18-429A-42A9-A21F-4C621ECD4573}"
+    name: "Sea Eagle"
+    weight: 600
+    type: missile
+  - id: "{CD9417DF-455F-4176-A5A2-8C58D61AA00B}"
+    name: "Kh-65*8"
+    count: 8
+    weight: 10000
+    type: missile
+  - id: "{0290F5DE-014A-4BB1-9843-D717749B1DED}"
+    name: "Kh-65*6"
+    count: 6
+    weight: 7500
+    type: missile
+  - id: "{C42EE4C3-355C-4B83-8B22-B39430B8F4AE}"
+    name: "Kh-35*6"
+    count: 6
+    weight: 2880
+    type: missile
+  - id: "{9BCC2A2B-5708-4860-B1F1-053A18442067}"
+    name: "AGM-154C"
+    weight: 484
+    type: missile
+  - id: "{AABA1A14-78A1-4E85-94DD-463CF75BD9E4}"
+    name: "AGM-154C*4"
+    count: 4
+    weight: 2560
+    type: missile
+  - id: "{22906569-A97F-404B-BA4F-D96DBF94D05E}"
+    name: "AGM-86C*20"
+    count: 20
+    weight: 39000
+    type: missile
+  - id: "{46ACDCF8-5451-4E26-BDDB-E78D5830E93C}"
+    name: "AGM-84A*8"
+    count: 8
+    weight: 5292
+    type: missile
+  - id: "{8DCAF3A3-7FCF-41B8-BB88-58DEDA878EDE}"
+    name: "AGM-86C*8"
+    count: 8
+    weight: 15600
+    type: missile
+  - id: "{45447F82-01B5-4029-A572-9AAD28AF0275}"
+    name: "MER*6 AGM-86C"
+    count: 6
+    weight: 11760
+    type: missile
+  - id: "{2234F529-1D57-4496-8BB0-0150F9BDBBD3}"
+    name: "Kh-35"
+    count: 1
+    weight: 570
+    type: missile
+  - id: "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}"
+    name: "AGM-88C"
+    count: 1
+    weight: 361
+    type: missile
+  - id: "{3E6B632D-65EB-44D2-9501-1C2D04515405}"
+    name: "AGM-45B"
+    count: 1
+    weight: 177
+    type: missile
+  - id: "{ee368869-c35a-486a-afe7-284beb7c5d52}"
+    name: "AGM-114K"
+    weight: 65
+    type: missile
+  - id: "{57232979-8B0F-4db7-8D9A-55197E06B0F5}"
+    name: "9M114 Shturm-V x 8"
+    count: 8
+    weight: 300
+    type: missile
+  - id: "BGM-109B"
+    name: "BGM-109B"
+    type: missile
+  - id: "{637334E4-AB5A-47C0-83A6-51B7F1DF3CD5}"
+    name: "UB-32A - 32 S-5KO"
+    count: 32
+    weight: 275
+    type: rocket
+  - id: "{F72F47E5-C83A-4B85-96ED-D3E46671EE9A}"
+    name: "B-8M1 - 20 S-8KOM"
+    count: 20
+    weight: 363.5
+    type: rocket
+  - id: "{FC56DF80-9B09-44C5-8976-DCFAFF219062}"
+    name: "B-13L - 5 S-13 OF"
+    count: 5
+    weight: 510
+    type: rocket
+  - id: "{1FA14DEA-8CDB-45AD-88A8-EC068DF1E65A}"
+    name: "S-24B"
+    weight: 235
+    type: rocket
+  - id: "{3858707D-F5D5-4bbb-BDD8-ABB0530EBC7C}"
+    name: "S-24B"
+    count: 1
+    weight: 295
+    type: rocket
+  - id: "{A0648264-4BC0-4EE8-A543-D119F6BA4257}"
+    name: "S-25 OFM"
+    count: 1
+    weight: 495
+    type: rocket
+  - id: "{F3EFE0AB-E91A-42D8-9CA2-B63C91ED570A}"
+    name: "LAU-10 - 4 ZUNI MK 71"
+    count: 4
+    weight: 440
+    type: rocket
+  - id: "{FD90A1DC-9147-49FA-BF56-CB83EF0BD32B}"
+    name: "LAU-61 - 19 2.75' rockets MK151 HE"
+    count: 19
+    weight: 290.59
+    type: rocket
+  - id: "{A76344EB-32D2-4532-8FA2-0C1BDC00747E}"
+    name: "LAU-61*3 - 57 2.75' rockets MK151 (HE)"
+    count: 57
+    weight: 922.57
+    type: rocket
+  - id: "{FC85D2ED-501A-48ce-9863-49D468DDD5FC}"
+    name: "LAU-68 - 7 2.75' rockets MK1 (Practice)"
+    count: 7
+    weight: 105.5
+    type: rocket
+  - id: "{174C6E6D-0C3D-42ff-BCB3-0853CB371F5C}"
+    name: "LAU-68 - 7 2.75' rockets MK5 (HE)"
+    count: 7
+    weight: 103.4
+    type: rocket
+  - id: "{65396399-9F5C-4ec3-A7D2-5A8F4C1D90C4}"
+    name: "LAU-68 - 7 2.75' rockets MK61 (Practice)"
+    count: 7
+    weight: 105.5
+    type: rocket
+  - id: "{A021F29D-18AB-4d3e-985C-FC9C60E35E9E}"
+    name: "LAU-68 - 7 2.75' rockets M151 (HE)"
+    count: 7
+    weight: 114.53
+    type: rocket
+  - id: "{4F977A2A-CD25-44df-90EF-164BFA2AE72F}"
+    name: "LAU-68 - 7 2.75' rockets M156(WP)"
+    count: 7
+    weight: 115.79
+    type: rocket
+  - id: "{1F7136CB-8120-4e77-B97B-945FF01FB67C}"
+    name: "LAU-68 - 7 2.75' rockets WTU1B (Practice)"
+    count: 7
+    weight: 114.53
+    type: rocket
+  - id: "{0877B74B-5A00-4e61-BA8A-A56450BA9E27}"
+    name: "LAU-68 - 7 2.75' rockets M274 (Practice smoke)"
+    count: 7
+    weight: 114.53
+    type: rocket
+  - id: "{647C5F26-BDD1-41e6-A371-8DE1E4CC0E94}"
+    name: "LAU-68 - 7 2.75' rockets M257 (Parachute illumination)"
+    count: 7
+    weight: 120.13
+    type: rocket
+  - id: "{D22C2D63-E5C9-4247-94FB-5E8F3DE22B71}"
+    name: "LAU-131 - 7 2.75' rockets Mk1 (Practice)"
+    count: 7
+    weight: 93.27
+    type: rocket
+  - id: "{319293F2-392C-4617-8315-7C88C22AF7C4}"
+    name: "LAU-131 - 7 2.75' rockets MK5 (HE)"
+    count: 7
+    weight: 91.17
+    type: rocket
+  - id: "{1CA5E00B-D545-4ff9-9B53-5970E292F14D}"
+    name: "LAU-131 - 7 2.75' rockets MK61 (Practice)"
+    count: 7
+    weight: 93.27
+    type: rocket
+  - id: "{69926055-0DA8-4530-9F2F-C86B157EA9F6}"
+    name: "LAU-131 - 7 2.75' rockets M151 (HE)"
+    count: 7
+    weight: 102.3
+    type: rocket
+  - id: "{2AF2EC3F-9065-4de5-93E1-1739C9A71EF7}"
+    name: "LAU-131 - 7 2.75' rockets M156 (WP)"
+    count: 7
+    weight: 103.56
+    type: rocket
+  - id: "{DDCE7D70-5313-4181-8977-F11018681662}"
+    name: "LAU-131 - 7 2.75' rockets WTU1B (Practice)"
+    count: 7
+    weight: 102.3
+    type: rocket
+  - id: "{DAD45FE5-CFF0-4a2b-99D4-5D044D3BC22F}"
+    name: "LAU-131 - 7 2.75' rockets M257 (Parachute illumination)"
+    count: 7
+    weight: 107.9
+    type: rocket
+  - id: "{6D6D5C07-2A90-4a68-9A74-C5D0CFFB05D9}"
+    name: "LAU-131 - 7 2.75' rockets M274 (Practice smoke)"
+    count: 7
+    weight: 102.3
+    type: rocket
+  - id: "{443364AE-D557-488e-9499-45EDB3BA6730}"
+    name: "LAU-68*3 - 7 2.75' rockets MK1 (Practice)"
+    count: 21
+    weight: 367.3
+    type: rocket
+  - id: "{9BC82B3D-FE70-4910-B2B7-3E54EFE73262}"
+    name: "LAU-68*3 - 7 2.75' rockets MK5 (HE)"
+    count: 21
+    weight: 361
+    type: rocket
+  - id: "{C0FA251E-B645-4ce5-926B-F4BC20822F8B}"
+    name: "LAU-68*3 - 7 2.75' rockets MK61 (Practice)"
+    count: 21
+    weight: 367.3
+    type: rocket
+  - id: "{64329ED9-B14C-4c0b-A923-A3C911DA1527}"
+    name: "LAU-68*3 - 7 2.75' rockets M151 (HE)"
+    count: 21
+    weight: 394.39
+    type: rocket
+  - id: "{C2593383-3CA8-4b18-B73D-0E750BCA1C85}"
+    name: "LAU-68*3 - 7 2.75' rockets M156 (WP)"
+    count: 21
+    weight: 398.17
+    type: rocket
+  - id: "{A1853B38-2160-4ffe-B7E9-9BF81E6C3D77}"
+    name: "LAU-68*3 - 7 2.75' rockets WTU1B (Practice)"
+    count: 21
+    weight: 394.39
+    type: rocket
+  - id: "{4C044B08-886B-46c8-9B1F-AB05B3ED9C1D}"
+    name: "LAU-68*3 - 7 2.75' rockets M274 (Practice smoke)"
+    count: 21
+    weight: 394.39
+    type: rocket
+  - id: "{E6966004-A525-4f47-AF94-BCFEDF8FDBDA}"
+    name: "LAU-68*3 - 7 2.75' rockets M257 (Parachute illumination)"
+    count: 21
+    weight: 411.19
+    type: rocket
+  - id: "LAU_131x3_HYDRA_70_MK1"
+    name: "LAU-131*3 - 7 2.75' rockets MK1 (Practice)"
+    count: 21
+    weight: 330.61
+    type: rocket
+  - id: "LAU_131x3_HYDRA_70_MK5"
+    name: "LAU-131*3 - 7 2.75' rockets MK5 (HE)"
+    count: 21
+    weight: 324.31
+    type: rocket
+  - id: "LAU_131x3_HYDRA_70_MK61"
+    name: "LAU-131*3 - 7 2.75' rockets MK61 (Practice)"
+    count: 21
+    weight: 330.61
+    type: rocket
+  - id: "LAU_131x3_HYDRA_70_M151"
+    name: "LAU-131*3 - 7 2.75' rockets M151 (HE)"
+    count: 21
+    weight: 357.7
+    type: rocket
+  - id: "LAU_131x3_HYDRA_70_M156"
+    name: "LAU-131*3 - 7 2.75' rockets M156 (WP)"
+    count: 21
+    weight: 361.48
+    type: rocket
+  - id: "LAU_131x3_HYDRA_70_WTU1B"
+    name: "LAU-131*3 - 7 2.75' rockets WTU1B (Practice)"
+    count: 21
+    weight: 357.7
+    type: rocket
+  - id: "LAU_131x3_HYDRA_70_M274"
+    name: "LAU-131*3 - 7 2.75' rockets M274 (Practice Smoke)"
+    count: 21
+    weight: 357.7
+    type: rocket
+  - id: "LAU_131x3_HYDRA_70_M257"
+    name: "LAU-131*3 - 7 2.75' rockets M257 (Parachute illumination)"
+    count: 21
+    weight: 374.5
+    type: rocket
+  - id: "{3DFB7320-AB0E-11d7-9897-000476191836}"
+    name: "B-8M1 - 20 S-8TsM"
+    count: 20
+    weight: 359.5
+    type: rocket
+  - id: "B-8M1 - 20 S-8OFP2"
+    name: "B-8M1 - 20 S-8OFP2"
+    count: 20
+    weight: 471.5
+    type: rocket
+  - id: "{3DFB7321-AB0E-11d7-9897-000476191836}"
+    name: "LAU-61 - 19 2.75' rockets MK156 WP"
+    count: 19
+    weight: 294.01
+    type: rocket
+  - id: "M260_HYDRA"
+    name: "M260 - 7 2.75' rockets MK156"
+    count: 7
+    weight: 112
+    type: rocket
+  - id: "M260_HYDRA_WP"
+    name: "M260 - 7 2.75' rockets MK156 WP"
+    count: 7
+    weight: 112
+    type: rocket
+  - id: "{6A4B9E69-64FE-439a-9163-3A87FB6A4D81}"
+    name: "B-8V20A - 20 S-8KOM"
+    count: 20
+    weight: 349
+    type: rocket
+  - id: "B_8V20A_CM"
+    name: "B-8V20A - 20 S-8TsM"
+    count: 20
+    weight: 345
+    type: rocket
+  - id: "B_8V20A_OFP2"
+    name: "B-8V20A - 20 S-8OFP2"
+    count: 20
+    weight: 457
+    type: rocket
+  - id: "B_8V20A_OM"
+    name: "B-8V20A - 20 S-8OM"
+    count: 20
+    weight: 365
+    type: rocket
+  - id: "XM158_MK1"
+    name: "XM158 - 7 2.75' rockets MK1 Practice"
+    count: 7
+    weight: 112
+    type: rocket
+  - id: "XM158_MK5"
+    name: "XM158 - 7 2.75' rockets MK5 HE"
+    count: 7
+    weight: 112
+    type: rocket
+  - id: "XM158_M151"
+    name: "XM158 - 7 2.75' rockets M151 HE"
+    count: 7
+    weight: 112
+    type: rocket
+  - id: "XM158_M156"
+    name: "XM158 - 7 2.75' rockets M156 WP"
+    count: 7
+    weight: 112
+    type: rocket
+  - id: "XM158_M274"
+    name: "XM158 - 7 2.75' rockets M274 Practice smoke"
+    count: 7
+    weight: 112
+    type: rocket
+  - id: "XM158_M257"
+    name: "XM158 - 7 2.75' rockets M257 Parachute illumination"
+    count: 7
+    weight: 112
+    type: rocket
+  - id: "M261_MK151"
+    name: "M261 - 19 2.75' rockets MK151 HE"
+    count: 19
+    weight: 234
+    type: rocket
+  - id: "M261_MK156"
+    name: "M261 - 19 2.75' rockets MK156 WP"
+    count: 19
+    weight: 234
+    type: rocket
+  - id: "LAU3_WP156"
+    name: "LAU-3 - 19 2.75' rockets MK156 WP"
+    count: 19
+    weight: 234
+    type: rocket
+  - id: "LAU3_WP1B"
+    name: "LAU-3 - 19 2.75' rockets WTU-1/B WP"
+    count: 19
+    weight: 234
+    type: rocket
+  - id: "LAU3_WP61"
+    name: "LAU-3 - 19 2.75' rockets MK61 WP"
+    count: 19
+    weight: 234
+    type: rocket
+  - id: "LAU3_HE5"
+    name: "LAU-3 - 19 2.75' rockets MK5 HEAT"
+    count: 19
+    weight: 234
+    type: rocket
+  - id: "LAU3_HE151"
+    name: "LAU-3 - 19 2.75' rockets MK151 HE"
+    count: 19
+    weight: 234
+    type: rocket
+  - id: "{TWIN_S25}"
+    name: "2xS-25 OFM"
+    count: 2
+    weight: 902
+    type: rocket
+  - id: "{HVAR}"
+    name: "HVAR"
+    count: 1
+    weight: 64
+    type: rocket
+  - id: "{35B698AC-9FEF-4EC4-AD29-484A0085F62B}"
+    name: "BetAB-500"
+    weight: 430
+    type: bomb
+  - id: "{BD289E34-DF84-4C5E-9220-4B14C346E79D}"
+    name: "BetAB-500ShP"
+    weight: 424
+    type: bomb
+  - id: "{FB3CE165-BF07-4979-887C-92B87F13276B}"
+    name: "FAB-100"
+    weight: 100
+    type: bomb
+  - id: "{0511E528-EA28-4caf-A212-00D1408DF10A}"
+    name: "SAB-100"
+    weight: 100
+    type: bomb
+  - id: "{3C612111-C7AD-476E-8A8E-2485812F4E5C}"
+    name: "FAB-250"
+    weight: 250
+    type: bomb
+  - id: "{37DCC01E-9E02-432F-B61D-10C166CA2798}"
+    name: "FAB-500 M62"
+    weight: 506
+    type: bomb
+  - id: "{40AA4ABE-D6EB-4CD6-AEFE-A1A0477B24AB}"
+    name: "FAB-1500 M54"
+    weight: 1392
+    type: bomb
+  - id: "{BA565F89-2373-4A84-9502-A0E017D3A44A}"
+    name: "KAB-500L"
+    weight: 534
+    type: bomb
+  - id: "{E2C426E3-8B10-4E09-B733-9CDC26520F48}"
+    name: "KAB-500kr"
+    weight: 560
+    type: bomb
+  - id: "{39821727-F6E2-45B3-B1F0-490CC8921D1E}"
+    name: "KAB-1500L"
+    weight: 1560
+    type: bomb
+  - id: "{4203753F-8198-4E85-9924-6F8FF679F9FF}"
+    name: "RBK-250 PTAB-2.5M"
+    weight: 273
+    type: bomb
+  - id: "{D5435F26-F120-4FA3-9867-34ACE562EF1B}"
+    name: "RBK-500-255 PTAB-10-5"
+    weight: 427
+    type: bomb
+  - id: "{90321C8E-7ED1-47D4-A160-E074D5ABD902}"
+    name: "Mk-81"
+    weight: 118
+    type: bomb
+  - id: "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}"
+    name: "Mk-82"
+    weight: 241
+    type: bomb
+  - id: "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}"
+    name: "Mk-83"
+    weight: 447
+    type: bomb
+  - id: "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}"
+    name: "Mk-84"
+    weight: 894
+    type: bomb
+  - id: "{00F5DAC4-0466-4122-998F-B1A298E34113}"
+    name: "M117"
+    weight: 340
+    type: bomb
+  - id: "{08164777-5E9C-4B08-B48E-5AA7AFB246E2}"
+    name: "BL755"
+    weight: 264
+    type: bomb
+  - id: "{752B9781-F962-11d5-9190-00A0249B6F00}"
+    name: "BLU-107"
+    weight: 185
+    type: bomb
+  - id: "{CBU_103}"
+    name: "CBU-103"
+    weight: 430
+    type: bomb
+  - id: "{CBU_105}"
+    name: "CBU-105"
+    weight: 417
+    type: bomb
+  - id: "{5335D97A-35A5-4643-9D9B-026C75961E52}"
+    name: "CBU-97"
+    weight: 417
+    type: bomb
+  - id: "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}"
+    name: "GBU-10"
+    weight: 1162
+    type: bomb
+  - id: "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}"
+    name: "GBU-12"
+    weight: 275
+    type: bomb
+  - id: "{0D33DDAE-524F-4A4E-B5B8-621754FE3ADE}"
+    name: "GBU-16"
+    weight: 564
+    type: bomb
+  - id: "{FAAFA032-8996-42BF-ADC4-8E2C86BCE536}"
+    name: "GBU-15"
+    weight: 1140
+    type: bomb
+  - id: "{34759BBC-AF1E-4AEE-A581-498FF7A6EBCE}"
+    name: "GBU-24"
+    weight: 900
+    type: bomb
+  - id: "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}"
+    name: "GBU-27"
+    weight: 1200
+    type: bomb
+  - id: "{F06B775B-FC70-44B5-8A9F-5B5E2EB839C7}"
+    name: "GBU-28"
+    weight: 2130
+    type: bomb
+  - id: "{GBU-31}"
+    name: "GBU-31(V)1/B"
+    weight: 934
+    type: bomb
+  - id: "{GBU-31V3B}"
+    name: "GBU-31(V)3/B"
+    weight: 981
+    type: bomb
+  - id: "{GBU-38}"
+    name: "GBU-38"
+    weight: 241
+    type: bomb
+  - id: "{BDU-50LD}"
+    name: "BDU-50LD"
+    weight: 232
+    type: bomb
+  - id: "{BDU-50HD}"
+    name: "BDU-50HD"
+    weight: 232
+    type: bomb
+  - id: "{BDU-50LGB}"
+    name: "BDU-50LGB"
+    weight: 280
+    type: bomb
+  - id: "{BDU-33}"
+    name: "BDU-33"
+    weight: 11
+    type: bomb
+  - id: "BRU-42_3*BDU-33"
+    name: "3 BDU-33"
+    count: 3
+    weight: 98
+    type: bomb
+  - id: "{CBU-87}"
+    name: "CBU-87"
+    weight: 430
+    type: bomb
+  - id: "{ADD3FAE1-EBF6-4EF9-8EFC-B36B5DDF1E6B}"
+    name: "Mk-20"
+    weight: 222
+    type: bomb
+  - id: "{C40A1E3A-DD05-40D9-85A4-217729E37FAE}"
+    name: "AGM-62"
+    weight: 1061
+    type: bomb
+  - id: "{F99BEC1A-869D-4AC7-9730-FBA0E3B1F5FC}"
+    name: "MER*6 FAB-100"
+    count: 6
+    weight: 660
+    type: bomb
+  - id: "{53BE25A4-C86C-4571-9BC0-47D668349595}"
+    name: "MER*6 FAB-250"
+    count: 6
+    weight: 1560
+    type: bomb
+  - id: "{E659C4BE-2CD8-4472-8C08-3F28ACB61A8A}"
+    name: "MER 6*2 FAB-250"
+    count: 2
+    weight: 550
+    type: bomb
+  - id: "{3E35F8C1-052D-11d6-9191-00A0249B6F00}"
+    name: "MER 6*4 FAB-250"
+    count: 4
+    weight: 1060
+    type: bomb
+  - id: "{FA673F4C-D9E4-4993-AA7A-019A92F3C005}"
+    name: "MER*6 FAB-500"
+    count: 6
+    weight: 3060
+    type: bomb
+  - id: "{F503C276-FE15-4C54-B310-17B50B735A84}"
+    name: "MER*6 RBK-500-255 PTAB-10-5"
+    count: 6
+    weight: 3060
+    type: bomb
+  - id: "{6CDB6B36-7165-47D0-889F-6625FB333561}"
+    name: "MER*6 M117AB"
+    count: 6
+    weight: 2100
+    type: bomb
+  - id: "{1C97B4A0-AA3B-43A8-8EE7-D11071457185}"
+    name: "MER*6 Mk-82"
+    count: 6
+    weight: 1506
+    type: bomb
+  - id: "{3C7CD675-7D39-41C5-8735-0F4F537818A8}"
+    name: "MER*6 Mk-20 Rockeye"
+    count: 6
+    weight: 1392
+    type: bomb
+  - id: "{752B9782-F962-11d5-9190-00A0249B6F00}"
+    name: "MER*6 BLU-107"
+    count: 6
+    weight: 1800
+    type: bomb
+  - id: "{A1E85991-B58E-4E92-AE91-DED6DC85B2E7}"
+    name: "MER-3*3 FAB-500"
+    count: 3
+    weight: 1560
+    type: bomb
+  - id: "{005E70F5-C3EA-4E95-A148-C1044C42D845}"
+    name: "MER-3*3 BetAB-500"
+    count: 3
+    weight: 1566
+    type: bomb
+  - id: "{EAD9B2C1-F3BA-4A7B-A2A5-84E2AF8A1975}"
+    name: "MER-3*3 RBK-250 PTAB-2.5M"
+    count: 3
+    weight: 885
+    type: bomb
+  - id: "{CEE04106-B9AA-46B4-9CD1-CD3FDCF0CE78}"
+    name: "MER-3*3 FAB-100"
+    count: 3
+    weight: 360
+    type: bomb
+  - id: "{D109EE9C-A1B7-4F1C-8D87-631C293A1D26}"
+    name: "MER-3*3 FAB-250"
+    count: 3
+    weight: 810
+    type: bomb
+  - id: "{919CE839-9390-4629-BAF7-229DE19B8523}"
+    name: "MER-3*3 RBK-500-255 PTAB-10-5"
+    count: 3
+    weight: 1560
+    type: bomb
+  - id: "{82F90BEC-0E2E-4CE5-A66E-1E4ADA2B5D1E}"
+    name: "MER-3*3 M117AB"
+    count: 3
+    weight: 1060
+    type: bomb
+  - id: "{7B34E0BB-E427-4C2A-A61A-8407CE18B54D}"
+    name: "MER-3*3 Mk-81"
+    count: 3
+    weight: 414
+    type: bomb
+  - id: "{60CC734F-0AFA-4E2E-82B8-93B941AB11CF}"
+    name: "3 Mk-82"
+    count: 3
+    weight: 783
+    type: bomb
+  - id: "{BRU-42_3*Mk-82AIR}"
+    name: "3 Mk-82AIR"
+    count: 3
+    weight: 783
+    type: bomb
+  - id: "{B83CB620-5BBE-4BEA-910C-EB605A327EF9}"
+    name: "3 Mk-20 Rockeye"
+    count: 3
+    weight: 726
+    type: bomb
+  - id: "{88D49E04-78DF-4F08-B47E-B81247A9E3C5}"
+    name: "3 GBU-16"
+    count: 3
+    weight: 666
+    type: bomb
+  - id: "{5A1AC2B4-CA4B-4D09-A1AF-AC52FBC4B60B}"
+    name: "MBD-2-67U - 4 FAB-100"
+    count: 4
+    weight: 465
+    type: bomb
+  - id: "{5F1C54C0-0ABD-4868-A883-B52FF9FCB422}"
+    name: "MER*9 FAB-100"
+    count: 9
+    weight: 960
+    type: bomb
+  - id: "{E1AAE713-5FC3-4CAA-9FF5-3FDCFB899E33}"
+    name: "MER*9 FAB-250"
+    count: 9
+    weight: 2310
+    type: bomb
+  - id: "{BF83E8FD-E7A2-40D2-9608-42E13AFE2193}"
+    name: "MER*9 RBK-250 PTAB-2.5M"
+    count: 9
+    weight: 2535
+    type: bomb
+  - id: "{0D945D78-542C-4E9B-9A17-9B5008CC8D39}"
+    name: "MER*6 FAB-500"
+    count: 6
+    weight: 3060
+    type: bomb
+  - id: "{436C6FB9-8BF2-46B6-9DC4-F55ABF3CD1EC}"
+    name: "MER*6 BetAB-500"
+    count: 6
+    weight: 3060
+    type: bomb
+  - id: "{E96E1EDD-FF3F-47CF-A959-576C3B682955}"
+    name: "MER*6 BetAB-500SP"
+    count: 6
+    weight: 3060
+    type: bomb
+  - id: "{4D459A95-59C0-462F-8A57-34E80697F38B}"
+    name: "MER*6 RBK-500-255 PTAB-10-5"
+    count: 6
+    weight: 3060
+    type: bomb
+  - id: "{7C5F0F5F-0A0B-46E8-937C-8922303E39A8}"
+    name: "MER*2 FAB-1500"
+    count: 2
+    weight: 3100
+    type: bomb
+  - id: "{D5D51E24-348C-4702-96AF-97A714E72697}"
+    name: "MER*2 MK-82"
+    count: 2
+    weight: 200
+    type: bomb
+  - id: "{18617C93-78E7-4359-A8CE-D754103EDF63}"
+    name: "MER*2 MK-83"
+    count: 2
+    weight: 200
+    type: bomb
+  - id: "{C535596E-F7D2-4301-8BB4-B1658BB87ED7}"
+    name: "BL-755*2"
+    count: 2
+    weight: 200
+    type: bomb
+  - id: "{0B9ABA77-93B8-45FC-9C63-82AFB2CB50A4}"
+    name: "2 Mk-20 Rockeye"
+    count: 2
+    weight: 200
+    type: bomb
+  - id: "{E79759F7-C622-4AA4-B1EF-37639A34D924}"
+    name: "Mk-20 Rockeye *6"
+    count: 6
+    weight: 1332
+    type: bomb
+  - id: "{02B81892-7E24-4795-84F9-B8110C641AF0}"
+    name: "MER*4 RBK-250 PTAB-2.5M"
+    count: 4
+    weight: 1060
+    type: bomb
+  - id: "{6A367BB4-327F-4A04-8D9E-6D86BDC98E7E}"
+    name: "MER*4 FAB-250"
+    count: 4
+    weight: 1060
+    type: bomb
+  - id: "{62BE78B1-9258-48AE-B882-279534C0D278}"
+    name: "GBU-10*2"
+    count: 2
+    weight: 1800
+    type: bomb
+  - id: "{89D000B0-0360-461A-AD83-FB727E2ABA98}"
+    name: "2xGBU-12"
+    count: 2
+    weight: 601
+    type: bomb
+  - id: "{BRU-42_2xGBU-12_right}"
+    name: "2xGBU-12"
+    count: 2
+    weight: 601
+    type: bomb
+  - id: "BRU-42_3*GBU-12"
+    name: "3 GBU-12"
+    count: 3
+    weight: 876
+    type: bomb
+  - id: "{EB969276-1922-4ED1-A5CB-18590F45D7FE}"
+    name: "GBU-27*2"
+    count: 2
+    weight: 1968
+    type: bomb
+  - id: "{D3ABF208-FA56-4D56-BB31-E0D931D57AE3}"
+    name: "Mk 84*28"
+    count: 28
+    weight: 25032
+    type: bomb
+  - id: "{B8C99F40-E486-4040-B547-6639172A5D57}"
+    name: "GBU-27*4"
+    count: 4
+    weight: 3936
+    type: bomb
+  - id: "{72CAC282-AE18-490B-BD4D-35E7EE969E73}"
+    name: "M117*51"
+    count: 51
+    weight: 17340
+    type: bomb
+  - id: "{B84DFE16-6AC7-4854-8F6D-34137892E166}"
+    name: "51 Mk-82"
+    count: 51
+    weight: 12291
+    type: bomb
+  - id: "MK_82*28"
+    name: "Mk-82*28"
+    count: 28
+    weight: 6748
+    type: bomb
+  - id: "TEST_ROTARY_LAUNCHER_MK82"
+    name: "TEST_ROTARY_LAUNCHER_MK82"
+    count: 24
+    weight: 6748
+    type: bomb
+  - id: "B-1B_Mk-84*8"
+    name: "Mk-84*8"
+    count: 8
+    weight: 7152
+    type: bomb
+  - id: "GBU-31*8"
+    name: "GBU-31*8"
+    count: 8
+    weight: 7152
+    type: bomb
+  - id: "GBU-31V3B*8"
+    name: "GBU-31(V)3/B*8"
+    count: 8
+    weight: 7848
+    type: bomb
+  - id: "GBU-38*16"
+    name: "GBU-38*16"
+    count: 16
+    weight: 3856
+    type: bomb
+  - id: "CBU87*10"
+    name: "CBU-87*10"
+    count: 10
+    weight: 4300
+    type: bomb
+  - id: "CBU97*10"
+    name: "CBU-97*10"
+    count: 10
+    weight: 4170
+    type: bomb
+  - id: "{027563C9-D87E-4A85-B317-597B510E3F03}"
+    name: "6 Mk-82"
+    count: 6
+    weight: 1446
+    type: bomb
+  - id: "{ACADB374-6D6C-45A0-BA7C-B22B2E108AE4}"
+    name: "Mk 20*18"
+    count: 18
+    weight: 3996
+    type: bomb
+  - id: "{F092B80C-BB54-477E-9408-66DEEF740008}"
+    name: "Mk 84*18"
+    count: 18
+    weight: 16092
+    type: bomb
+  - id: "{BDAD04AA-4D4A-4E51-B958-180A89F963CF}"
+    name: "FAB-250*33"
+    count: 33
+    weight: 8250
+    type: bomb
+  - id: "{AD5E5863-08FC-4283-B92C-162E2B2BD3FF}"
+    name: "FAB-500*33"
+    count: 33
+    weight: 16500
+    type: bomb
+  - id: "{B0241BD2-5628-47E0-954C-A8675B7E698E}"
+    name: "FAB-250*24"
+    count: 24
+    weight: 6000
+    type: bomb
+  - id: "{26D2AF37-B0DF-4AB6-9D61-A150FF58A37B}"
+    name: "FAB-500*6"
+    count: 6
+    weight: 3000
+    type: bomb
+  - id: "{E70446B7-C7E6-4B95-B685-DEA10CAD1A0E}"
+    name: "FAB-500*12"
+    count: 12
+    weight: 6000
+    type: bomb
+  - id: "{639DB5DD-CB7E-4E42-AC75-2112BC397B97}"
+    name: "FAB-1500*3"
+    count: 3
+    weight: 4500
+    type: bomb
+  - id: "{D9179118-E42F-47DE-A483-A6C2EA7B4F38}"
+    name: "FAB-1500*6"
+    count: 6
+    weight: 9000
+    type: bomb
+  - id: "{2B7BDB38-4F45-43F9-BE02-E7B3141F3D24}"
+    name: "BetAB-500*6"
+    count: 6
+    weight: 2868
+    type: bomb
+  - id: "{D6A0441E-6794-4FEB-87F7-E68E2290DFAB}"
+    name: "BetAB-500*12"
+    count: 1
+    weight: 478
+    type: bomb
+  - id: "{585D626E-7F42-4073-AB70-41E728C333E2}"
+    name: "MER*12 Mk-82"
+    count: 12
+    weight: 3000
+    type: bomb
+  - id: "{574EDEDF-20DE-4942-B2A2-B2EDFD621562}"
+    name: "MER*12 M117"
+    count: 12
+    weight: 4250
+    type: bomb
+  - id: "{696CFFC4-0BDE-42A8-BE4B-0BE3D9DD723C}"
+    name: "HSAB*9 Mk-84"
+    count: 9
+    weight: 8100
+    type: bomb
+  - id: "{4CD2BB0F-5493-44EF-A927-9760350F7BA1}"
+    name: "HSAB*9 Mk-20 Rockeye"
+    count: 9
+    weight: 2050
+    type: bomb
+  - id: "{6C47D097-83FF-4FB2-9496-EAB36DDF0B05}"
+    name: "27 Mk-82"
+    count: 27
+    weight: 6507
+    type: bomb
+  - id: "{Mk82AIR}"
+    name: "Mk-82AIR"
+    weight: 232
+    type: bomb
+  - id: "{Mk82SNAKEYE}"
+    name: "Mk-82 SnakeEye"
+    weight: 232
+    type: bomb
+  - id: "{B58F99BA-5480-4572-8602-28B0449F5260}"
+    name: "M117*27"
+    count: 27
+    weight: 9180
+    type: bomb
+  - id: "{29A828E2-C6BB-11d8-9897-000476191836}"
+    name: "MBD-2-67U - 4 FAB-100"
+    count: 4
+    weight: 465
+    type: bomb
+  - id: "{96A7F676-F956-404A-AD04-F33FB2C74884}"
+    name: "KMGU-2 - 96 AO-2.5RT"
+    count: 96
+    weight: 520
+    type: bomb
+  - id: "{96A7F676-F956-404A-AD04-F33FB2C74881}"
+    name: "KMGU-2 - 96 PTAB-2.5KO"
+    count: 96
+    weight: 520
+    type: bomb
+  - id: "{CAE48299-A294-4bad-8EE6-89EFC5DCDF00}"
+    name: "SUU-25 * 8 LUU-2"
+    count: 8
+    weight: 130
+    type: bomb
+  - id: "{BRU-42_LS_3*SUU-25_8*LUU-2}"
+    name: "3 SUU-25 * 8 LUU-2"
+    count: 24
+    weight: 490
+    type: bomb
+  - id: "{AN-M64}"
+    name: "AN-M64"
+    weight: 227
+    type: bomb
+  - id: "{7AEC222D-C523-425e-B714-719C0D1EB14D}"
+    name: "RBK-500 PTAB-1M"
+    weight: 427
+    type: bomb
+  - id: "{MER-5E_MK82x5}"
+    name: "5 Mk-82"
+    count: 5
+    weight: 1295.7
+    type: bomb
+  - id: "{MER-5E_Mk82SNAKEYEx5}"
+    name: "5 Mk-82 SnakeEye"
+    count: 5
+    weight: 1250.7
+    type: bomb
+  - id: "{CBU-52B}"
+    name: "CBU-52B"
+    weight: 356
+    type: bomb
+  - id: "{4EDBA993-2E34-444C-95FB-549300BF7CAF}"
+    name: "R-40R"
+    weight: 475
+    type: a2a
+  - id: "{6980735A-44CC-4BB9-A1B5-591532F1DC69}"
+    name: "R-24T"
+    weight: 215
+    type: a2a
+  - id: "{CCF898C9-5BC7-49A4-9D1E-C3ED3D5166A1}"
+    name: "R-24R"
+    weight: 215
+    type: a2a
+  - id: "{9B25D316-0434-4954-868F-D51DB1A38DF0}"
+    name: "R-27R"
+    weight: 253
+    type: a2a
+  - id: "{E8069896-8435-4B90-95C0-01A03AE6E400}"
+    name: "R-27ER"
+    weight: 350
+    type: a2a
+  - id: "{88DAC840-9F75-4531-8689-B46E64E42E53}"
+    name: "R-27T"
+    weight: 254
+    type: a2a
+  - id: "{B79C379A-9E87-4E50-A1EE-7F7E29C2E87A}"
+    name: "R-27ET"
+    weight: 343
+    type: a2a
+  - id: "{F1243568-8EF0-49D4-9CB5-4DA90D92BC1D}"
+    name: "R-33"
+    weight: 490
+    type: a2a
+  - id: "{5F26DBC2-FB43-4153-92DE-6BBCE26CB0FF}"
+    name: "R-40T"
+    weight: 475
+    type: a2a
+  - id: "{682A481F-0CB5-4693-A382-D00DD4A156D7}"
+    name: "R-60M"
+    weight: 44
+    type: a2a
+  - id: "{APU-60-1_R_60M}"
+    name: "APU-60-1 R-60M"
+    count: 1
+    weight: 76
+    type: a2a
+  - id: "{FBC29BFE-3D24-4C64-B81D-941239D12249}"
+    name: "R-73"
+    weight: 110
+    type: a2a
+  - id: "{CBC29BFE-3D24-4C64-B81D-941239D12249}"
+    name: "R-73"
+    count: 1
+    weight: 110
+    type: a2a
+  - id: "{B4C01D60-A8A3-4237-BD72-CA7655BC0FE9}"
+    name: "R-77"
+    weight: 175
+    type: a2a
+  - id: "{B4C01D60-A8A3-4237-BD72-CA7655BC0FEC}"
+    name: "R-77"
+    count: 1
+    weight: 250
+    type: a2a
+  - id: "{FC23864E-3B80-48E3-9C03-4DA8B1D7497B}"
+    name: "R.550 Magic 2"
+    weight: 89
+    type: a2a
+  - id: "{0DA03783-61E4-40B2-8FAE-6AEE0A5C5AAE}"
+    name: "MICA IR"
+    weight: 110
+    type: a2a
+  - id: "{6D778860-7BB8-4ACB-9E95-BA772C6BBC2C}"
+    name: "MICA RF"
+    weight: 110
+    type: a2a
+  - id: "{FD21B13E-57F3-4C2A-9F78-C522D0B5BCE1}"
+    name: "Super 530D"
+    weight: 270
+    type: a2a
+  - id: "{8D399DDA-FF81-4F14-904D-099B34FE7918}"
+    name: "AIM-7M"
+    weight: 230
+    type: a2a
+  - id: "{7575BA0B-7294-4844-857B-031A144B2595}"
+    name: "AIM-54C"
+    weight: 463
+    type: a2a
+  - id: "{C8E06185-7CD6-4C90-959F-044679E90751}"
+    name: "AIM-120B"
+    weight: 157.8
+    type: a2a
+  - id: "{B0DBC591-0F52-4F7D-AD7B-51E67725FB81}"
+    name: "R-60M*2"
+    count: 2
+    weight: 148
+    type: a2a
+  - id: "{275A2855-4A79-4B2D-B082-91EA2ADF4691}"
+    name: "R-60M*2"
+    count: 2
+    weight: 148
+    type: a2a
+  - id: "{40EF17B7-F508-45de-8566-6FFECC0C1AB8}"
+    name: "AIM-120C"
+    weight: 161.5
+    type: a2a
+  - id: "{414DA830-B61A-4F9E-B71B-C2F6832E1D7A}"
+    name: "M2000 Fuel tank"
+    weight: 1050
+    type: fuel
+  - id: "{EF124821-F9BB-4314-A153-E0E2FE1162C4}"
+    name: "TORNADO Fuel tank"
+    weight: 1275
+    type: fuel
+  - id: "{0395076D-2F77-4420-9D33-087A4398130B}"
+    name: "F-5 275Gal Fuel tank"
+    weight: 909
+    type: fuel
+  - id: "{7B4B122D-C12C-4DB4-834E-4D8BB4D863A8}"
+    name: "F-4 Fuel tank-W"
+    weight: 1420
+    type: fuel
+  - id: "{8B9E3FD0-F034-4A07-B6CE-C269884CC71B}"
+    name: "F-4 Fuel tank-C"
+    weight: 2345
+    type: fuel
+  - id: "{2BEC576B-CDF5-4B7F-961F-B0FA4312B841}"
+    name: "Fuel tank 1400L"
+    weight: 1262.5
+    type: fuel
+  - id: "{414E383A-59EB-41BC-8566-2B5E0788ED1F}"
+    name: "Fuel tank 1150L"
+    weight: 975.25
+    type: fuel
+  - id: "{C0FF4842-FBAC-11d5-9190-00A0249B6F00}"
+    name: "Fuel tank 1150L MiG-29"
+    weight: 975.25
+    type: fuel
+  - id: "{A5BAEAB7-6FAF-4236-AF72-0FD900F493F9}"
+    name: "Fuel tank 800L"
+    weight: 680
+    type: fuel
+  - id: "{F376DBEE-4CAE-41BA-ADD9-B2910AC95DEC}"
+    name: "Fuel tank 370 gal"
+    weight: 1338.1101068
+    type: fuel
+  - id: "{82364E69-5564-4043-A866-E13032926C3E}"
+    name: "Fuel tank 367 gal"
+    weight: 1181.8623879
+    type: fuel
+  - id: "{8A0BE8AE-58D4-4572-9263-3144C0D06364}"
+    name: "Fuel tank 300 gal"
+    weight: 1083.5076415
+    type: fuel
+  - id: "{0855A3A1-FA50-4C89-BDBB-5D5360ABA071}"
+    name: "Fuel tank 5000L"
+    weight: 4420
+    type: fuel
+  - id: "{E1F29B21-F291-4589-9FD8-3272EEC69506}"
+    name: "Fuel tank 610 gal"
+    weight: 2010.8766885
+    type: fuel
+  - id: "{7D7EC917-05F6-49D4-8045-61FC587DD019}"
+    name: "Fuel tank 3000L"
+    weight: 2550
+    type: fuel
+  - id: "{16602053-4A12-40A2-B214-AB60D481B20E}"
+    name: "Fuel tank 2000L"
+    weight: 1700
+    type: fuel
+  - id: "{E8D4652F-FD48-45B7-BA5B-2AE05BB5A9CF}"
+    name: "Fuel tank 800L Wing"
+    weight: 760
+    type: fuel
+  - id: "{A504D93B-4E80-4B4F-A533-0D9B65F2C55F}"
+    name: "Fuel tank S-3"
+    weight: 964
+    type: fuel
+  - id: "{B99EE8A8-99BC-4a8d-89AC-A26831920DCE}"
+    name: "Fuel tank Ka-50"
+    weight: 550
+    type: fuel
+  - id: "Fuel_Tank_FT600"
+    name: "Fuel tank FT600"
+    weight: 1925
+    type: fuel
+  - id: "{PTB-150GAL}"
+    name: "F-5 150Gal Fuel tank"
+    weight: 509
+    type: fuel
+  - id: "{DT75GAL}"
+    name: "75 US gal. Fuel Tank"
+    weight: 227.048087675
+    type: fuel
+  - id: "{EFEC8200-B922-11d7-9897-000476191836}"
+    name: "Fuel tank 330 gal"
+    weight: 1067.750921
+    type: fuel
+  - id: "{EFEC8201-B922-11d7-9897-000476191836}"
+    name: "Fuel tank 330 gal"
+    weight: 1067.750921
+    type: fuel
+  - id: "<CLEAN>"
+    name: "Clean Wing"
+    weight: 0
+    type: clean
+  - id: "<CLEAN-200.5>"
+    name: "Clean Wing"
+    weight: -200.5
+    type: clean
+  - id: "{SC_50}"
+    name: "SC 50"
+    count: 1
+    weight: 50
+    type: bomb
+  - id: "ER_4_SC50"
+    name: "4 * SC 50"
+    count: 4
+    weight: 220
+    type: bomb
+  - id: "{SC_250_T1_L2}"
+    name: "SC 250 Type 1 L2"
+    count: 1
+    weight: 250
+    type: bomb
+  - id: "SC_501_SC250"
+    name: "SC 250 Type 3 J"
+    count: 1
+    weight: 250
+    type: bomb
+  - id: "{Schloss500XIIC1_SC_250_T3_J}"
+    name: "SC 250 Type 3 J"
+    count: 1
+    weight: 270
+    type: bomb
+  - id: "SC_501_SC500"
+    name: "SC 500 J"
+    count: 1
+    weight: 500
+    type: bomb
+  - id: "{SC_500_L2}"
+    name: "SC 500 L2"
+    count: 1
+    weight: 500
+    type: bomb
+  - id: "{SD_250_Stg}"
+    name: "SD 250 Stg"
+    count: 1
+    weight: 250
+    type: bomb
+  - id: "{SD_500_A}"
+    name: "SD 500 A"
+    count: 1
+    weight: 500
+    type: bomb
+  - id: "{AB_250_2_SD_2}"
+    name: "AB 250-2 (w/ SD 2)"
+    count: 1
+    weight: 290
+    type: bomb
+  - id: "{AB_250_2_SD_10A}"
+    name: "AB 250-2 (w/ SD 10A)"
+    count: 1
+    weight: 253
+    type: bomb
+  - id: "{AB_500_1_SD_10A}"
+    name: "AB 500-1 (w/ SD 10A)"
+    count: 1
+    weight: 500
+    type: bomb
+  - id: "{LTF_5B}"
+    name: "LTF 5b"
+    count: 1
+    weight: 765
+    type: torpedo
+  - id: "{AN_M30A1}"
+    name: "AN-M30A1"
+    count: 1
+    weight: 45.8
+    type: bomb
+  - id: "{AN_M57}"
+    name: "AN-M57"
+    count: 1
+    weight: 113
+    type: bomb
+  - id: "{AN_M65}"
+    name: "AN-M65"
+    count: 1
+    weight: 475
+    type: bomb
+  - id: "{AN_M66}"
+    name: "AN-M66"
+    count: 1
+    weight: 977
+    type: bomb
+  - id: "{WGr21}"
+    name: "Werfer-Granate 21"
+    count: 1
+    weight: 121
+    type: rocket
+  - id: "{3xM8_ROCKETS_IN_TUBES}"
+    name: "3 x 4.5-Inch M8"
+    count: 3
+    weight: 71.72
+    type: rocket
+  - id: "BF109K_4_FUEL_TANK"
+    name: "300 liter Fuel Tank"
+    weight: 266
+    type: fuel
+  - id: "FW109_FUEL_TANK"
+    name: "300 liter Fuel Tank Type E2"
+    weight: 266
+    type: fuel
+  - id: "{US_108GAL_PAPER_FUEL_TANK}"
+    name: "108 US gal. Paper Fuel Tank"
+    weight: 319
+    type: fuel
+  - id: "{US_110GAL_FUEL_TANK}"
+    name: "110 US gal. Fuel Tank"
+    weight: 349
+    type: fuel
+  - id: "{US_150GAL_FUEL_TANK}"
+    name: "150 US gal. Fuel Tank"
+    weight: 458.8
+    type: fuel
+  - id: "{US_M10_SMOKE_TANK_RED}"
+    name: "M10 Smoke Tank - red_smk"
+    weight: 266.7
+    type: pod
+  - id: "{US_M10_SMOKE_TANK_YELLOW}"
+    name: "M10 Smoke Tank - yellow"
+    weight: 266.7
+    type: pod
+  - id: "{US_M10_SMOKE_TANK_ORANGE}"
+    name: "M10 Smoke Tank - orange"
+    weight: 266.7
+    type: pod
+  - id: "{US_M10_SMOKE_TANK_GREEN}"
+    name: "M10 Smoke Tank - green"
+    weight: 266.7
+    type: pod
+  - id: "{US_M10_SMOKE_TANK_BLUE}"
+    name: "M10 Smoke Tank - blue_smk"
+    weight: 266.7
+    type: pod
+  - id: "{US_M10_SMOKE_TANK_WHITE}"
+    name: "M10 Smoke Tank - white"
+    weight: 266.7
+    type: pod
+  - id: "{4xAN-M64_on_InvCountedAttachmentPoints}"
+    name: "4 * AN-M64"
+    count: 4
+    weight: 908
+    type: bomb
+  - id: "{AKAN}"
+    name: "AKAN Gunpod"
+    weight: 276
+    type: pod
+  - id: "{Robot24}"
+    name: "Rb 24 with launcher"
+    count: 1
+    weight: 90
+    type: a2a
+  - id: "{Robot24J}"
+    name: "Rb 24J with launcher"
+    count: 1
+    weight: 90
+    type: a2a
+  - id: "{Robot74}"
+    name: "Rb 74 with launcher"
+    count: 1
+    weight: 90
+    type: a2a
+  - id: "{Robot05}"
+    name: "Rb 05A with launcher"
+    count: 1
+    weight: 341
+    type: missile
+  - id: "{Rb15}"
+    name: "Rb 15F with launcher"
+    count: 1
+    weight: 610
+    type: missile
+  - id: "{Rb04}"
+    name: "Rb 04E with launcher"
+    count: 1
+    weight: 661
+    type: missile
+  - id: "{Rb15AI}"
+    name: "Rb 15F (for A.I.) with launcher"
+    count: 1
+    weight: 610
+    type: missile
+  - id: "{Rb04AI}"
+    name: "Rb 04E (for A.I.) with launcher"
+    count: 1
+    weight: 661
+    type: missile
+  - id: "{RB75}"
+    name: "RB-75A"
+    count: 1
+    weight: 210
+    type: missile
+  - id: "{RB75B}"
+    name: "RB-75B"
+    count: 1
+    weight: 210
+    type: missile
+  - id: "{RB75T}"
+    name: "RB-75T"
+    count: 1
+    weight: 210
+    type: missile
+  - id: "{LYSBOMB}"
+    name: "LYSBOMB Illumination bomb"
+    count: 2
+    weight: 220
+    type: bomb
+  - id: "{M71BOMBD}"
+    name: "4 M/71 HE-Bomb w chute"
+    count: 4
+    weight: 609
+    type: bomb
+  - id: "{M71BOMB}"
+    name: "4 M/71 HE-Bomb"
+    count: 4
+    weight: 609
+    type: bomb
+  - id: "{ARAKM70BHE}"
+    name: "ARAK M70B HE"
+    count: 6
+    weight: 372.2
+    type: rocket
+  - id: "{ARAKM70BAP}"
+    name: "ARAK M70B AP"
+    count: 6
+    weight: 372.2
+    type: rocket
+  - id: "{VIGGEN_X-TANK}"
+    name: "AJS X-Tank"
+    weight: 1208
+    type: fuel
+  - id: "{U22}"
+    name: "U22 Jammer"
+    weight: 348
+    type: pod
+  - id: "{U22A}"
+    name: "U22/A Jammer"
+    weight: 348
+    type: pod
+  - id: "{KB}"
+    name: "KB F/C dispenser"
+    weight: 296
+    type: pod
+  - id: "{SMOKE_WHITE}"
+    name: "Smoke - white - 21"
+    count: 1
+    weight: 30
+    type: pod
+  - id: "{BK90MJ1}"
+    name: "BK90 MJ1"
+    count: 1
+    weight: 605
+    type: missile
+  - id: "{BK90MJ2}"
+    name: "BK90 MJ2"
+    count: 1
+    weight: 605
+    type: missile
+  - id: "{BK90}"
+    name: "BK90 MJ1-MJ2"
+    count: 1
+    weight: 605
+    type: missile
+  - id: "{AV8BNA_AERO1D}"
+    name: "AERO 1D 300 Gallons Fuel Tank "
+    weight: 1002.439
+    type: fuel
+  - id: "{AV8BNA_AERO1D_EMPTY}"
+    name: "AERO 1D 300 Gallons Fuel Tank (Empty)"
+    weight: 93.89362
+    type: fuel
+  - id: "{GAU_12_Equalizer}"
+    name: "GAU 12 Gunpod"
+    weight: 283.9
+    type: pod
+  - id: "{ALQ_164_RF_Jammer}"
+    name: "AN/ALQ-164 DECM Pod"
+    weight: 143.789
+    type: pod
+  - id: "{AGM_122_SIDEARM}"
+    name: "AGM-122 Sidearm"
+    weight: 92
+    type: missile
+  - id: "{LAU_7_AGM_122_SIDEARM}"
+    name: "AGM-122 Sidearm"
+    count: 1
+    weight: 107
+    type: missile
+  - id: "{BRU-42_3*GBU-38}"
+    name: "3 GBU-38"
+    count: 3
+    weight: 820
+    type: bomb
+  - id: "{BRU-42_2*GBU-38_LEFT}"
+    name: "2 GBU-38"
+    count: 2
+    weight: 579
+    type: bomb
+  - id: "{BRU-42_2*GBU-38_RIGHT}"
+    name: "2 GBU-38"
+    count: 2
+    weight: 579
+    type: bomb
+  - id: "{BRU-42A_3*GBU-12}"
+    name: "3 GBU-12"
+    count: 3
+    weight: 772
+    type: bomb
+  - id: "{BRU-42_2*GBU-12_LEFT}"
+    name: "2 GBU-12"
+    count: 2
+    weight: 547
+    type: bomb
+  - id: "{BRU-42_2*GBU-12_RIGHT}"
+    name: "2 GBU-12"
+    count: 2
+    weight: 547
+    type: bomb
+  - id: "{BRU-42A_3*GBU-16}"
+    name: "3 GBU-16"
+    count: 3
+    weight: 1459
+    type: bomb
+  - id: "{BRU-42_2*GBU-16_LEFT}"
+    name: "2 GBU-16"
+    count: 2
+    weight: 1005
+    type: bomb
+  - id: "{BRU-42_2*GBU-16_RIGHT}"
+    name: "2 GBU-16"
+    count: 2
+    weight: 1005
+    type: bomb
+  - id: "{BRU-42_3*Mk-82LD}"
+    name: "3 Mk-82"
+    count: 3
+    weight: 820
+    type: bomb
+  - id: "{BRU-42_2*Mk-82_LEFT}"
+    name: "2 Mk-82"
+    count: 2
+    weight: 579
+    type: bomb
+  - id: "{BRU-42_2*Mk-82_RIGHT}"
+    name: "2 Mk-82"
+    count: 2
+    weight: 579
+    type: bomb
+  - id: "{BRU-42_3*MK-20}"
+    name: "3 Mk-20 Rockeye"
+    count: 3
+    weight: 763
+    type: bomb
+  - id: "{BRU-42_2*MK-20_LEFT}"
+    name: "2 Mk-20 Rockeye"
+    count: 2
+    weight: 541
+    type: bomb
+  - id: "{BRU-42_2*MK-20_RIGHT}"
+    name: "2 Mk-20 Rockeye"
+    count: 2
+    weight: 541
+    type: bomb
+  - id: "{BRU-42_3*Mk-83}"
+    name: "3 Mk-83"
+    count: 3
+    weight: 1438
+    type: bomb
+  - id: "{BRU-42_2*Mk-83_LEFT}"
+    name: "2 Mk-83"
+    count: 2
+    weight: 991
+    type: bomb
+  - id: "{BRU-42_2*Mk-83_RIGHT}"
+    name: "2 Mk-83"
+    count: 2
+    weight: 991
+    type: bomb
+  - id: "{BRU-42_3*Mk-82SNAKEYE}"
+    name: "3 Mk-82 Snakeye"
+    count: 3
+    weight: 820
+    type: bomb
+  - id: "{BRU-42_2*Mk-82SNAKEYE_LEFT}"
+    name: "2 Mk-82 Snakeye"
+    count: 2
+    weight: 579
+    type: bomb
+  - id: "{BRU-42_2*Mk-82SNAKEYE_RIGHT}"
+    name: "2 Mk-82 Snakeye"
+    count: 2
+    weight: 579
+    type: bomb
+  - id: "{BRU-42_3_MK82AIR}"
+    name: "3 Mk-82 AIR"
+    count: 3
+    weight: 820
+    type: bomb
+  - id: "{BRU-42_2*Mk-82AIR_LEFT}"
+    name: "2 Mk-82 AIR"
+    count: 2
+    weight: 579
+    type: bomb
+  - id: "{BRU-42_2*Mk-82AIR_RIGHT}"
+    name: "2 Mk-82 AIR"
+    count: 2
+    weight: 579
+    type: bomb
+  - id: "{BRU-42_3*Mk-81LD}"
+    name: "3 Mk-81"
+    count: 3
+    weight: 451
+    type: bomb
+  - id: "{BRU-70A_3*GBU-54}"
+    name: "3 GBU-54(V)1/B"
+    count: 3
+    weight: 856
+    type: bomb
+  - id: "{BRU-70A_2*GBU-54_LEFT}"
+    name: "2 GBU-54(V)1/B"
+    count: 2
+    weight: 603
+    type: bomb
+  - id: "{BRU-70A_2*GBU-54_RIGHT}"
+    name: "2 GBU-54(V)1/B"
+    count: 2
+    weight: 603
+    type: bomb
+  - id: "{AIM-9B}"
+    name: "GAR-8 Sidewinder IR AAM"
+    count: 1
+    weight: 85.5
+    type: a2a
+  - id: "{9BFD8C90-F7AE-4e90-833B-BFD0CED0E536}"
+    name: "AIM-9P Sidewinder IR AAM"
+    count: 1
+    weight: 86.18
+    type: a2a
+  - id: "{AIM-9P5}"
+    name: "AIM-9P5 Sidewinder IR AAM"
+    count: 1
+    weight: 85.5
+    type: a2a
+  - id: "{6CEB49FC-DED8-4DED-B053-E1F033FF72D3}"
+    name: "AIM-9M Sidewinder IR AAM"
+    count: 1
+    weight: 86.64
+    type: a2a
+  - id: "{5CE2FF2A-645A-4197-B48D-8720AC69394F}"
+    name: "AIM-9X Sidewinder IR AAM"
+    count: 1
+    weight: 84.46
+    type: a2a
+  - id: "CATM-9M"
+    name: "CAP-9M"
+    count: 1
+    weight: 85.5
+    type: a2a
+  - id: "{AIS_ASQ_T50}"
+    name: "AN/ASQ-T50 TCTS Pod"
+    count: 1
+    weight: 62.6
+    type: pod
+  - id: "{AIM-9L}"
+    name: "AIM-9L Sidewinder IR AAM"
+    count: 1
+    weight: 85.5
+    type: a2a
+  - id: "{GAR-8}"
+    name: "LAU-7 GAR-8 Sidewinder IR AAM"
+    count: 1
+    weight: 100.5
+    type: a2a
+  - id: "{AIM-9P-ON-ADAPTER}"
+    name: "LAU-7 AIM-9P Sidewinder IR AAM"
+    count: 1
+    weight: 101.18
+    type: a2a
+  - id: "{AIM-9P5-ON-ADAPTER}"
+    name: "LAU-7 AIM-9P5 Sidewinder IR AAM"
+    count: 1
+    weight: 100.5
+    type: a2a
+  - id: "{AIM-9M-ON-ADAPTER}"
+    name: "LAU-7 AIM-9M Sidewinder IR AAM"
+    count: 1
+    weight: 101.64
+    type: a2a
+  - id: "{AIM-9X-ON-ADAPTER}"
+    name: "LAU-7 AIM-9X Sidewinder IR AAM"
+    count: 1
+    weight: 99.46
+    type: a2a
+  - id: "{DB434044-F5D0-4F1F-9BA9-B73027E18DD3}"
+    name: "LAU-105 - 2 AIM-9M Sidewinder IR AAM"
+    count: 2
+    weight: 203.28
+    type: a2a
+  - id: "LAU-105_1*AIM-9M_L"
+    name: "LAU-105 AIM-9M Sidewinder IR AAM"
+    count: 1
+    weight: 116.64
+    type: a2a
+  - id: "LAU-105_1*AIM-9M_R"
+    name: "LAU-105 AIM-9M Sidewinder IR AAM"
+    count: 1
+    weight: 116.64
+    type: a2a
+  - id: "{3C0745ED-8B0B-42eb-B907-5BD5C1717447}"
+    name: "LAU-105 - 2 AIM-9P Sidewinder IR AAM"
+    count: 2
+    weight: 202.36
+    type: a2a
+  - id: "LAU-105_2*AIM-9P5"
+    name: "LAU-105 - 2 AIM-9P5 Sidewinder IR AAM"
+    count: 2
+    weight: 201
+    type: a2a
+  - id: "LAU-105_2*AIM-9L"
+    name: "LAU-105 - 2 AIM-9L Sidewinder IR AAM"
+    count: 2
+    weight: 201
+    type: a2a
+  - id: "LAU-105_1*AIM-9L_L"
+    name: "LAU-105 AIM-9L Sidewinder IR AAM"
+    count: 1
+    weight: 115.5
+    type: a2a
+  - id: "LAU-105_1*AIM-9L_R"
+    name: "LAU-105 AIM-9L Sidewinder IR AAM"
+    count: 1
+    weight: 115.5
+    type: a2a
+  - id: "LAU-105_2*CATM-9M"
+    name: "LAU-105 - 2 CAP-9M"
+    count: 2
+    weight: 201
+    type: a2a
+  - id: "LAU-105_1*CATM-9M_L"
+    name: "LAU-105 CAP-9M"
+    count: 1
+    weight: 115.5
+    type: a2a
+  - id: "LAU-105_1*CATM-9M_R"
+    name: "LAU-105 CAP-9M"
+    count: 1
+    weight: 115.5
+    type: a2a
+  - id: "LAU-105_AIS_ASQ_T50_L"
+    name: "LAU-105 AN/ASQ-T50 TCTS Pod"
+    count: 1
+    weight: 92.6
+    type: pod
+  - id: "LAU-105_AIS_ASQ_T50_R"
+    name: "LAU-105 AN/ASQ-T50 TCTS Pod"
+    count: 1
+    weight: 92.6
+    type: pod
+  - id: "{F4-2-AIM9B}"
+    name: "LAU-7 - 2 GAR-8 Sidewinder IR AAM"
+    count: 2
+    weight: 201
+    type: a2a
+  - id: "{773675AB-7C29-422f-AFD8-32844A7B7F17}"
+    name: "LAU-7 - 2 AIM-9P Sidewinder IR AAM"
+    count: 2
+    weight: 202.36
+    type: a2a
+  - id: "{F4-2-AIM9P5}"
+    name: "LAU-7 - 2 AIM-9P5 Sidewinder IR AAM"
+    count: 2
+    weight: 201
+    type: a2a
+  - id: "{9DDF5297-94B9-42FC-A45E-6E316121CD85}"
+    name: "LAU-7 - 2 AIM-9M Sidewinder IR AAM"
+    count: 2
+    weight: 203.28
+    type: a2a
+  - id: "{F4-2-AIM9L}"
+    name: "LAU-7 - 2 AIM-9L Sidewinder IR AAM"
+    count: 2
+    weight: 201
+    type: a2a
+  - id: "{LAU-7_AIS_ASQ_T50}"
+    name: "LAU-7 AN/ASQ-T50 TCTS Pod"
+    count: 1
+    weight: 92.6
+    type: pod
+  - id: "LAU-115_2*LAU-127_AIM-9M"
+    name: "LAU-115 - 2 LAU-127 AIM-9M Sidewinder IR AAM"
+    count: 2
+    weight: 318.28
+    type: a2a
+  - id: "LAU-115_2*LAU-127_CATM-9M"
+    name: "LAU-115 - 2 LAU-127 CAP-9M"
+    count: 2
+    weight: 316
+    type: a2a
+  - id: "LAU-115_2*LAU-127_AIM-9L"
+    name: "LAU-115 - 2 LAU-127 AIM-9L Sidewinder IR AAM"
+    count: 2
+    weight: 316
+    type: a2a
+  - id: "LAU-115_2*LAU-127_AIM-9X"
+    name: "LAU-115 - 2 LAU-127 AIM-9X Sidewinder IR AAM"
+    count: 2
+    weight: 313.92
+    type: a2a
+  - id: "LAU-127_AIM-9X"
+    name: "LAU-127 AIM-9X Sidewinder IR AAM"
+    count: 1
+    weight: 129.76
+    type: a2a
+  - id: "LAU-127_AIM-9M"
+    name: "LAU-127 AIM-9M Sidewinder IR AAM"
+    count: 1
+    weight: 131.94
+    type: a2a
+  - id: "LAU-127_AIM-9L"
+    name: "LAU-127 AIM-9L Sidewinder IR AAM"
+    count: 1
+    weight: 130.8
+    type: a2a
+  - id: "LAU-127_CATM-9M"
+    name: "LAU-127 CAP-9M"
+    count: 1
+    weight: 130.8
+    type: a2a
+  - id: "LAU-115_LAU-127_AIM-9X"
+    name: "LAU-115C LAU-127 AIM-9X Sidewinder IR AAM"
+    count: 1
+    weight: 184.16
+    type: a2a
+  - id: "LAU-115_LAU-127_AIM-9M"
+    name: "LAU-115C LAU-127 AIM-9M Sidewinder IR AAM"
+    count: 1
+    weight: 186.34
+    type: a2a
+  - id: "LAU-115_LAU-127_AIM-9L"
+    name: "LAU-115C LAU-127 AIM-9L Sidewinder IR AAM"
+    count: 1
+    weight: 185.2
+    type: a2a
+  - id: "LAU-115_LAU-127_CATM-9M"
+    name: "LAU-115C LAU-127 CAP-9M"
+    count: 1
+    weight: 185.2
+    type: a2a
+  - id: "{LAU-115 - AIM-7M}"
+    name: "LAU-115 - AIM-7M"
+    count: 1
+    weight: 284.4
+    type: a2a
+  - id: "{AIM-7E}"
+    name: "AIM-7E"
+    count: 1
+    weight: 230
+    type: a2a
+  - id: "{AIM-7F}"
+    name: "AIM-7F"
+    weight: 230
+    type: a2a
+  - id: "{AIM-7H}"
+    name: "AIM-7MH"
+    weight: 230
+    type: a2a
+  - id: "{LAU-115 - AIM-7F}"
+    name: "LAU-115C AIM-7F"
+    count: 1
+    weight: 284.4
+    type: a2a
+  - id: "{LAU-115 - AIM-7H}"
+    name: "LAU-115C AIM-7MH"
+    count: 1
+    weight: 284.4
+    type: a2a
+  - id: "{LAU-115 - AIM-7E}"
+    name: "LAU-115C AIM-7E"
+    count: 1
+    weight: 284.4
+    type: a2a
+  - id: "{LAU-115 - AIM-120B}"
+    name: "LAU-115 - AIM-120B"
+    count: 1
+    weight: 212.2
+    type: a2a
+  - id: "{LAU-115 - AIM-120C}"
+    name: "LAU-115 - AIM-120C"
+    count: 1
+    weight: 215.9
+    type: a2a
+  - id: "LAU-115_2*LAU-127_AIM-120B"
+    name: "LAU-115 - 2 AIM-120B"
+    count: 2
+    weight: 460.6
+    type: a2a
+  - id: "LAU-115_2*LAU-127_AIM-120C"
+    name: "LAU-115 - 2 AIM-120C"
+    count: 2
+    weight: 468
+    type: a2a
+  - id: "LAU_117_AGM_65F"
+    name: "LAU-117,AGM-65F"
+    count: 1
+    weight: 360
+    type: missile
+  - id: "LAU_117_AGM_65L"
+    name: "LAU-117,AGM-65L"
+    count: 1
+    weight: 351
+    type: missile
+  - id: "LAU_117_AGM_65A"
+    name: "LAU-117,AGM-65A"
+    count: 1
+    weight: 269.5
+    type: missile
+  - id: "LAU_117_AGM_65B"
+    name: "LAU-117,AGM-65B"
+    count: 1
+    weight: 269.5
+    type: missile
+  - id: "{LAU3_FFAR_WP156}"
+    name: "LAU-3 - 19 FFAR M156 WP"
+    count: 19
+    weight: 312.8707256
+    type: rocket
+  - id: "{LAU3_FFAR_MK1HE}"
+    name: "LAU-3 - 19 FFAR Mk1 HE"
+    count: 19
+    weight: 285.292332
+    type: rocket
+  - id: "{LAU3_FFAR_MK5HEAT}"
+    name: "LAU-3 - 19 FFAR Mk5 HEAT"
+    count: 19
+    weight: 286.1541568
+    type: rocket
+  - id: "{LAU68_FFAR_WP156}"
+    name: "LAU-68 - 7 FFAR M156 WP"
+    count: 7
+    weight: 120.1560568
+    type: rocket
+  - id: "{LAU68_FFAR_MK1HE}"
+    name: "LAU-68 - 7 FFAR Mk1 HE"
+    count: 7
+    weight: 109.995596
+    type: rocket
+  - id: "{LAU68_FFAR_MK5HEAT}"
+    name: "LAU-68 - 7 FFAR Mk5 HEAT"
+    count: 7
+    weight: 110.3131104
+    type: rocket
+  - id: "{KAB_1500Kr_LOADOUT}"
+    name: "KAB-1500Kr"
+    count: 1
+    weight: 1525
+    type: bomb
+  - id: "{KAB_1500LG_LOADOUT}"
+    name: "KAB-1500LG-Pr"
+    count: 1
+    weight: 1525
+    type: bomb
+  - id: "{KAB_500S_LOADOUT}"
+    name: "KAB-500S"
+    count: 1
+    weight: 500
+    type: bomb
+  - id: "{GBU-24}"
+    name: "GBU-24"
+    count: 1
+    weight: 934
+    type: bomb
+  - id: "{GBU_31_V_2B}"
+    name: "GBU-31(V)2/B"
+    count: 1
+    weight: 934
+    type: bomb
+  - id: "{GBU_31_V_4B}"
+    name: "GBU-31(V)4/B"
+    count: 1
+    weight: 970
+    type: bomb
+  - id: "{GBU_32_V_2B}"
+    name: "GBU-32(V)2/B"
+    count: 1
+    weight: 467
+    type: bomb
+  - id: "{GBU_54_V_1B}"
+    name: "GBU-54(V)1/B"
+    count: 1
+    weight: 253
+    type: bomb
+  - id: "{BLG66_AC}"
+    name: "BLG-66-AC Belouga"
+    count: 1
+    weight: 305
+    type: bomb
+  - id: "{RBK_250_275_AO_1SCH}"
+    name: "RBK-250-275 AO-1SCh"
+    count: 1
+    weight: 244.6
+    type: bomb
+  - id: "{RBK_500U_OAB_2_5RT}"
+    name: "RBK-500U OAB-2,5RT"
+    count: 1
+    weight: 427
+    type: bomb
+  - id: "{CBU_99}"
+    name: "CBU-99"
+    count: 1
+    weight: 222
+    type: bomb
+  - id: "{BRU33_2X_CBU-99}"
+    name: "BRU-33 - 2 x CBU-99"
+    count: 2
+    weight: 523
+    type: bomb
+  - id: "{BRU57_2*CBU-103}"
+    name: "BRU-57 - 2 x CBU-103"
+    count: 2
+    weight: 939
+    type: bomb
+  - id: "{BRU57_2*CBU-105}"
+    name: "BRU-57 - 2 x CBU-105"
+    count: 2
+    weight: 913
+    type: bomb
+  - id: "{TER_9A_2L*CBU-87}"
+    name: "TER-9A - 2 x CBU-87"
+    count: 2
+    weight: 913
+    type: bomb
+  - id: "{TER_9A_2R*CBU-87}"
+    name: "TER-9A - 2 x CBU-87"
+    count: 2
+    weight: 913
+    type: bomb
+  - id: "{TER_9A_3*CBU-87}"
+    name: "TER-9A - 3 x CBU-87"
+    count: 3
+    weight: 1343
+    type: bomb
+  - id: "{TER_9A_2L*CBU-97}"
+    name: "TER-9A - 2 x CBU-97"
+    count: 2
+    weight: 887
+    type: bomb
+  - id: "{TER_9A_2R*CBU-97}"
+    name: "TER-9A - 2 x CBU-97"
+    count: 2
+    weight: 887
+    type: bomb
+  - id: "{TER_9A_3*CBU-97}"
+    name: "TER-9A - 3 x CBU-97"
+    count: 3
+    weight: 1304
+    type: bomb
+  - id: "{AGM_84D}"
+    name: "AGM-84D"
+    count: 1
+    weight: 540
+    type: missile
+  - id: "{AGM_84H}"
+    name: "AGM-84H"
+    count: 1
+    weight: 675
+    type: missile
+  - id: "{AGM_84E}"
+    name: "AGM-84E SLAM"
+    count: 1
+    weight: 628
+    type: missile
+  - id: "{AGM-154A}"
+    name: "AGM-154A"
+    count: 1
+    weight: 485
+    type: missile
+  - id: "{AGM-154B}"
+    name: "AGM-154B"
+    count: 1
+    weight: 485
+    type: missile
+  - id: "{BRU55_2*AGM-154A}"
+    name: "BRU-55 - 2 x AGM-154A"
+    count: 2
+    weight: 1020
+    type: missile
+  - id: "{BRU55_2*AGM-154C}"
+    name: "BRU-55 - 2 x AGM-154C"
+    count: 2
+    weight: 1018
+    type: missile
+  - id: "{BRU57_2*AGM-154A}"
+    name: "BRU-57 - 2 x AGM-154A"
+    count: 2
+    weight: 1020
+    type: missile
+  - id: "{DWS39_MJ1}"
+    name: "DWS39 MJ1"
+    count: 1
+    weight: 605
+    type: missile
+  - id: "{DWS39_MJ2}"
+    name: "DWS39 MJ2"
+    count: 1
+    weight: 605
+    type: missile
+  - id: "{DWS39_MJ1_MJ2}"
+    name: "DWS39 MJ1-MJ2"
+    count: 1
+    weight: 605
+    type: missile
+  - id: "{Mk_82B}"
+    name: "Mk-82B"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{Mk_82YT}"
+    name: "Mk-82YT"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{Mk_82BT}"
+    name: "Mk-82BT"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{Mk_82P}"
+    name: "Mk-82P"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{Mk_82PT}"
+    name: "Mk-82PT"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{Mk_82SB}"
+    name: "Mk-82SB"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{Mk_82SP}"
+    name: "Mk-82SP"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{Mk_83BT}"
+    name: "Mk-83BT"
+    count: 1
+    weight: 454
+    type: bomb
+  - id: "{Mk_83P}"
+    name: "Mk-83P"
+    count: 1
+    weight: 454
+    type: bomb
+  - id: "{Mk_83PT}"
+    name: "Mk-83PT"
+    count: 1
+    weight: 454
+    type: bomb
+  - id: "{Mk_84T}"
+    name: "Mk-84T"
+    count: 1
+    weight: 908
+    type: bomb
+  - id: "{Mk_84P}"
+    name: "Mk-84P"
+    count: 1
+    weight: 908
+    type: bomb
+  - id: "{Mk_82Y}"
+    name: "Mk-82Y"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{Mk_83CT}"
+    name: "Mk-83CT"
+    count: 1
+    weight: 454
+    type: bomb
+  - id: "{BDU_45}"
+    name: "BDU-45"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{BDU_45B}"
+    name: "BDU-45B"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{BRU33_2X_MK-82}"
+    name: "BRU-33 - 2 x Mk-82"
+    count: 2
+    weight: 561
+    type: bomb
+  - id: "{BRU33_2X_MK-82}"
+    name: "BRU-33 - 2 x Mk-82"
+    count: 2
+    weight: 561
+    type: bomb
+  - id: "{BRU33_2X_MK-82_Snakeye}"
+    name: "BRU-33 - 2 x Mk-82 SnakeEye"
+    count: 2
+    weight: 543
+    type: bomb
+  - id: "{BRU33_2X_MK-82Y}"
+    name: "BRU-33 - 2 x Mk-82Y"
+    count: 2
+    weight: 543
+    type: bomb
+  - id: "{BRU33_2X_BDU-45}"
+    name: "BRU-33 - 2 x BDU-45 - 500lb Practice Bomb"
+    count: 2
+    weight: 543
+    type: bomb
+  - id: "{BRU33_2X_BDU-45B}"
+    name: "BRU-33 - 2 x BDU-45B - 500lb Practice Bomb"
+    count: 2
+    weight: 561
+    type: bomb
+  - id: "{BRU33_2X_ROCKEYE}"
+    name: "BRU-33 - 2 x Mk-20 Rockeye"
+    count: 2
+    weight: 523
+    type: bomb
+  - id: "{BRU33_2X_MK-83}"
+    name: "BRU-33 - 2 x Mk-83"
+    count: 2
+    weight: 973
+    type: bomb
+  - id: "{BRU33_2X_GBU-12}"
+    name: "BRU-33 - 2 x GBU-12"
+    count: 2
+    weight: 629
+    type: bomb
+  - id: "{BRU33_2X_GBU-16}"
+    name: "BRU-33 - 2 x GBU-16"
+    count: 2
+    weight: 1207
+    type: bomb
+  - id: "{BRU55_2*GBU-38}"
+    name: "BRU-55 - 2 x GBU-38"
+    count: 2
+    weight: 561
+    type: bomb
+  - id: "{BRU57_2*GBU-38}"
+    name: "BRU-57 - 2 x GBU-38"
+    count: 2
+    weight: 561
+    type: bomb
+  - id: "{BRU41_6X_MK-82}"
+    name: "BRU-41A - 6 x Mk-82"
+    count: 6
+    weight: 1573.913
+    type: bomb
+  - id: "{BRU41_6X_BDU-33}"
+    name: "BRU-41A - 6 x BDU-33"
+    count: 6
+    weight: 195.713
+    type: bomb
+  - id: "{TER_9A_2L*MK-82}"
+    name: "TER-9A - 2 x Mk-82"
+    count: 2
+    weight: 535
+    type: bomb
+  - id: "{TER_9A_2R*MK-82}"
+    name: "TER-9A - 2 x Mk-82"
+    count: 2
+    weight: 535
+    type: bomb
+  - id: "{TER_9A_3*MK-82}"
+    name: "TER-9A - 3 x Mk-82"
+    count: 3
+    weight: 776
+    type: bomb
+  - id: "{TER_9A_2L*MK-82_Snakeye}"
+    name: "TER-9A - 2 x Mk-82 SnakeEye"
+    count: 2
+    weight: 517
+    type: bomb
+  - id: "{TER_9A_2R*MK-82_Snakeye}"
+    name: "TER-9A - 2 x Mk-82 SnakeEye"
+    count: 2
+    weight: 517
+    type: bomb
+  - id: "{TER_9A_3*MK-82_Snakeye}"
+    name: "TER-9A - 3 x Mk-82 SnakeEye"
+    count: 3
+    weight: 749
+    type: bomb
+  - id: "{TER_9A_2L*MK-82AIR}"
+    name: "TER-9A - 2 x Mk-82AIR"
+    count: 2
+    weight: 517
+    type: bomb
+  - id: "{TER_9A_2R*MK-82AIR}"
+    name: "TER-9A - 2 x Mk-82AIR"
+    count: 2
+    weight: 517
+    type: bomb
+  - id: "{TER_9A_3*MK-82AIR}"
+    name: "TER-9A - 3 x Mk-82AIR"
+    count: 3
+    weight: 749
+    type: bomb
+  - id: "{TER_9A_2L*GBU-12}"
+    name: "TER-9A - 2 x GBU-12"
+    count: 2
+    weight: 603
+    type: bomb
+  - id: "{TER_9A_2R*GBU-12}"
+    name: "TER-9A - 2 x GBU-12"
+    count: 2
+    weight: 603
+    type: bomb
+  - id: "{TER_9A_3*BDU-33}"
+    name: "TER-9A - 3 x BDU-33"
+    count: 3
+    weight: 86.9
+    type: bomb
+  - id: "{MBD3_U6_3*FAB-250_fwd}"
+    name: "MER 6*3 FAB-250"
+    count: 3
+    weight: 810
+    type: bomb
+  - id: "{MBD3_U6_4*FAB-250_fwd}"
+    name: "MER 6*4 FAB-250"
+    count: 4
+    weight: 1060
+    type: bomb
+  - id: "{MBD3_U6_5*FAB-250}"
+    name: "MER 6*5 FAB-250"
+    count: 5
+    weight: 1310
+    type: bomb
+  - id: "{LAU_61R}"
+    name: "LAU-61R - 19 2.75' rockets MK151 HE"
+    count: 19
+    weight: 290.59
+    type: rocket
+  - id: "{LAU_10R}"
+    name: "LAU-10R - 4 ZUNI MK 71"
+    count: 4
+    weight: 440
+    type: rocket
+  - id: "{BRU33_2*LAU68}"
+    name: "BRU-33 - 2 LAU-68 - 7 2.75' rockets M151 (HE)"
+    count: 2
+    weight: 308.06
+    type: rocket
+  - id: "{BRU33_LAU68}"
+    name: "BRU-33 LAU-68 - 7 2.75' rockets M151 (HE)"
+    count: 1
+    weight: 193.53
+    type: rocket
+  - id: "{BRU33_LAU68_MK5}"
+    name: "BRU-33 LAU-68 - 7 2.75' rockets MK5 (HE)"
+    count: 1
+    weight: 182.2
+    type: rocket
+  - id: "{BRU33_2*LAU68_MK5}"
+    name: "BRU-33 - 2 LAU-68 - 7 2.75' rockets MK5 (HE)"
+    count: 2
+    weight: 285.4
+    type: rocket
+  - id: "{BRU33_LAU10}"
+    name: "BRU-33 LAU-10 - 4 ZUNI MK 71"
+    count: 1
+    weight: 519
+    type: rocket
+  - id: "{BRU33_2*LAU10}"
+    name: "BRU-33 - 2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 959
+    type: rocket
+  - id: "{BRU33_LAU61}"
+    name: "BRU-33 LAU-61 - 19 2.75' rockets M151 (HE)"
+    count: 1
+    weight: 369.59
+    type: rocket
+  - id: "{BRU33_2*LAU61}"
+    name: "BRU-33 - 2 LAU-61 - 19 2.75' rockets M151 (HE)"
+    count: 2
+    weight: 660.18
+    type: rocket
+  - id: "{TWIN_B13L_5OF}"
+    name: "2xB-13L - 5 S-13 OF"
+    count: 10
+    weight: 1042
+    type: rocket
+  - id: "{TWIN_B_8M1_S_8KOM}"
+    name: "2xB-8M1 - 20 S-8KOM"
+    count: 40
+    weight: 759
+    type: rocket
+  - id: "{TWIN_B_8M1_S_8_OFP2}"
+    name: "2xB-8V20A - 20 S-8OFP2"
+    count: 40
+    weight: 975
+    type: rocket
+  - id: "{TWIN_B_8M1_S_8TsM}"
+    name: "2xB-8V20A - 20 S-8TsM"
+    count: 40
+    weight: 751
+    type: rocket
+  - id: "{AGM_45A}"
+    name: "AGM-45A"
+    count: 1
+    weight: 177
+    type: missile
+  - id: "{Kh-25MP}"
+    name: "Kh-25MP"
+    count: 1
+    weight: 355
+    type: missile
+  - id: "{AGM_122}"
+    name: "AGM-122"
+    count: 1
+    weight: 88
+    type: missile
+  - id: "{Kh-28}"
+    name: "Kh-28 (AS-9 Kyle)"
+    count: 1
+    weight: 715
+    type: missile
+  - id: "{ADM_141A}"
+    name: "ADM-141A"
+    count: 1
+    weight: 180
+    type: missile
+  - id: "{ADM_141B}"
+    name: "ADM-141B"
+    count: 1
+    weight: 180
+    type: missile
+  - id: "{X-25ML}"
+    name: "Kh-25ML"
+    count: 1
+    weight: 360
+    type: missile
+  - id: "{X-25MR}"
+    name: "Kh-25MR"
+    count: 1
+    weight: 360
+    type: missile
+  - id: "{X-25MPU}"
+    name: "Kh-25MPU"
+    count: 1
+    weight: 370
+    type: missile
+  - id: "{X-29T}"
+    name: "Kh-29T"
+    count: 1
+    weight: 760
+    type: missile
+  - id: "{X-29L}"
+    name: "Kh-29L"
+    count: 1
+    weight: 747
+    type: missile
+  - id: "{X-31A}"
+    name: "Kh-31A"
+    count: 1
+    weight: 690
+    type: missile
+  - id: "{X-31P}"
+    name: "Kh-31P"
+    count: 1
+    weight: 690
+    type: missile
+  - id: "{LAU-131 - 7 AGR-20A}"
+    name: "LAU-131 pod - 7 x 2.75' Hydra - Laser Guided Rkts M151 - HE APKWS"
+    count: 7
+    weight: 134.5
+    type: missile
+  - id: "{LAU-131x3 - 7 AGR-20A}"
+    name: "3 x LAU-131 pods - 21 x 2.75' Hydra - Laser Guided M151 - HE APKWS"
+    count: 21
+    weight: 454.3
+    type: missile
+  - id: "{LAU-131 - 7 AGR-20 M282}"
+    name: "LAU-131 pod - 7 x 2.75' Hydra - Laser Guided Rkts M282 - MPP APKWS"
+    count: 7
+    weight: 148.5
+    type: missile
+  - id: "{LAU-131x3 - 7 AGR-20 M282}"
+    name: "3 x LAU-131 pods - 21 x 2.75' Hydra - Laser Guided M282 - MPP APKWS"
+    count: 21
+    weight: 496.3
+    type: missile
+  - id: "{AWW-13}"
+    name: "AWW-13 DATALINK POD"
+    count: 1
+    weight: 200
+    type: pod
+  - id: "{AAQ-28_LEFT}"
+    name: "AN/AAQ-28 LITENING"
+    count: 1
+    weight: 300
+    type: pod
+  - id: "DIS_TYPE200"
+    name: "TYPE-200A"
+    count: 1
+    weight: 200
+    type: bomb
+  - id: "DIS_TYPE200_DUAL_L"
+    name: "TYPE-200A Dual"
+    count: 2
+    weight: 400
+    type: bomb
+  - id: "DIS_TYPE200_DUAL_R"
+    name: "TYPE-200A Dual"
+    count: 2
+    weight: 400
+    type: bomb
+  - id: "{FAB_250_DUAL_L}"
+    name: "2 x FAB-250"
+    count: 2
+    weight: 532
+    type: bomb
+  - id: "{FAB_250_DUAL_R}"
+    name: "2 x FAB-250"
+    count: 2
+    weight: 532
+    type: bomb
+  - id: "{FAB_500_DUAL_L}"
+    name: "2 x FAB-500"
+    count: 2
+    weight: 1044
+    type: bomb
+  - id: "{FAB_500_DUAL_R}"
+    name: "2 x FAB-500"
+    count: 2
+    weight: 1044
+    type: bomb
+  - id: "{RBK_250_PTAB25M_DUAL_L}"
+    name: "2 x RBK-250 PTAB-2.5M"
+    count: 2
+    weight: 578
+    type: bomb
+  - id: "{RBK_250_PTAB25M_DUAL_R}"
+    name: "2 x RBK-250 PTAB-2.5M"
+    count: 2
+    weight: 578
+    type: bomb
+  - id: "{RBK_500_PTAB105_DUAL_L}"
+    name: "2 x RBK-500-255 PTAB-10-5"
+    count: 2
+    weight: 886
+    type: bomb
+  - id: "{RBK_500_PTAB105_DUAL_R}"
+    name: "2 x RBK-500-255 PTAB-10-5"
+    count: 2
+    weight: 886
+    type: bomb
+  - id: "DIS_MK_20"
+    name: "Mk-20"
+    count: 1
+    weight: 222
+    type: bomb
+  - id: "DIS_GBU_10"
+    name: "GBU-10"
+    count: 1
+    weight: 1162
+    type: bomb
+  - id: "DIS_GBU_16"
+    name: "GBU-16"
+    count: 1
+    weight: 564
+    type: bomb
+  - id: "DIS_GBU_12"
+    name: "GBU-12"
+    count: 1
+    weight: 275
+    type: bomb
+  - id: "DIS_MK_82_DUAL_L"
+    name: "GDJ-II19 - 2 x Mk-82"
+    count: 2
+    weight: 561
+    type: bomb
+  - id: "DIS_MK_82_DUAL_R"
+    name: "GDJ-II19 - 2 x Mk-82"
+    count: 2
+    weight: 561
+    type: bomb
+  - id: "DIS_MK_82S_DUAL_L"
+    name: "GDJ-II19 - 2 x Mk-82 SnakeEye"
+    count: 2
+    weight: 543
+    type: bomb
+  - id: "DIS_MK_82S_DUAL_R"
+    name: "GDJ-II19 - 2 x Mk-82 SnakeEye"
+    count: 2
+    weight: 543
+    type: bomb
+  - id: "DIS_MK_20_DUAL_L"
+    name: "GDJ-II19 - 2 x Mk-20"
+    count: 2
+    weight: 523
+    type: bomb
+  - id: "DIS_MK_20_DUAL_R"
+    name: "GDJ-II19 - 2 x Mk-20"
+    count: 2
+    weight: 523
+    type: bomb
+  - id: "DIS_GBU_12_DUAL"
+    name: "BRU-33 - 2 x GBU-12"
+    count: 2
+    weight: 629
+    type: bomb
+  - id: "DIS_GBU_12_DUAL_L"
+    name: "GDJ-II19 - 2 x GBU-12"
+    count: 2
+    weight: 629
+    type: bomb
+  - id: "DIS_GBU_12_DUAL_R"
+    name: "GDJ-II19 - 2 x GBU-12"
+    count: 2
+    weight: 629
+    type: bomb
+  - id: "DIS_LS_6_500"
+    name: "LS-6-500"
+    count: 1
+    weight: 570
+    type: missile
+  - id: "DIS_GB6"
+    name: "GB-6"
+    count: 1
+    weight: 672
+    type: missile
+  - id: "DIS_GB6_TSP"
+    name: "GB-6-SFW"
+    count: 1
+    weight: 672
+    type: missile
+  - id: "DIS_GB6_HE"
+    name: "GB-6-HE"
+    count: 1
+    weight: 672
+    type: missile
+  - id: "DIS_BRM1_90"
+    name: "BRM-1_90MM"
+    count: 16
+    weight: 462.5
+    type: rocket
+  - id: "DIS_RKT_90_UG"
+    name: "UG_90MM"
+    count: 16
+    weight: 382.5
+    type: rocket
+  - id: "{B13_5_S13OF_DUAL_L}"
+    name: "2 x B-13L - 5 S-13 OF"
+    count: 10
+    weight: 1042
+    type: rocket
+  - id: "{B13_5_S13OF_DUAL_R}"
+    name: "2 x B-13L - 5 S-13 OF"
+    count: 10
+    weight: 1042
+    type: rocket
+  - id: "{S25_DUAL_L}"
+    name: "2 x S-25"
+    count: 2
+    weight: 902
+    type: rocket
+  - id: "{S25_DUAL_R}"
+    name: "2 x S-25"
+    count: 2
+    weight: 902
+    type: rocket
+  - id: "{B8M1_20_S8KOM_DUAL_L}"
+    name: "2 x B-8M1 - 20 S-8KOM"
+    count: 40
+    weight: 975
+    type: rocket
+  - id: "{B8M1_20_S8KOM_DUAL_R}"
+    name: "2 x B-8M1 - 20 S-8KOM"
+    count: 40
+    weight: 975
+    type: rocket
+  - id: "{B8M1_20_S8TsM_DUAL_L}"
+    name: "2 x B-8M1 - 20 S-8TsM"
+    count: 40
+    weight: 751
+    type: rocket
+  - id: "{B8M1_20_S8TsM_DUAL_R}"
+    name: "2 x B-8M1 - 20 S-8TsM"
+    count: 40
+    weight: 751
+    type: rocket
+  - id: "{B8M1_20_S8OFP2_DUAL_L}"
+    name: "2 x B-8M1 - 20 S-8OFP2"
+    count: 40
+    weight: 975
+    type: rocket
+  - id: "{B8M1_20_S8OFP2_DUAL_R}"
+    name: "2 x B-8M1 - 20 S-8OFP2"
+    count: 40
+    weight: 975
+    type: rocket
+  - id: "DIS_C-701T"
+    name: "C-701T"
+    count: 1
+    weight: 170
+    type: missile
+  - id: "DIS_C-701IR"
+    name: "C-701IR"
+    count: 1
+    weight: 170
+    type: missile
+  - id: "DIS_C-802AK"
+    name: "C-802AK"
+    count: 1
+    weight: 765
+    type: missile
+  - id: "DIS_CM-802AKG"
+    name: "CM-802AKG"
+    count: 1
+    weight: 765
+    type: missile
+  - id: "DIS_LD-10"
+    name: "LD-10"
+    count: 1
+    weight: 289
+    type: missile
+  - id: "DIS_LD-10_DUAL_L"
+    name: "LD-10 x 2"
+    count: 2
+    weight: 558
+    type: missile
+  - id: "DIS_LD-10_DUAL_R"
+    name: "LD-10 x 2"
+    count: 2
+    weight: 558
+    type: missile
+  - id: "DIS_PL-5EII"
+    name: "PL-5EII"
+    count: 1
+    weight: 153
+    type: a2a
+  - id: "DIS_PL-5EII_TIP"
+    name: "PL-5EII"
+    count: 1
+    weight: 83
+    type: a2a
+  - id: "DIS_SMOKE_GENERATOR_R"
+    name: "Smoke Generator - red_smk"
+    weight: 0
+    type: pod
+  - id: "DIS_SMOKE_GENERATOR_G"
+    name: "Smoke Generator - green"
+    weight: 0
+    type: pod
+  - id: "DIS_SMOKE_GENERATOR_B"
+    name: "Smoke Generator - blue_smk"
+    weight: 0
+    type: pod
+  - id: "DIS_SMOKE_GENERATOR_W"
+    name: "Smoke Generator - white"
+    weight: 0
+    type: pod
+  - id: "DIS_SMOKE_GENERATOR_Y"
+    name: "Smoke Generator - yellow"
+    weight: 0
+    type: pod
+  - id: "DIS_SMOKE_GENERATOR_O"
+    name: "Smoke Generator - orange"
+    weight: 0
+    type: pod
+  - id: "DIS_SD-10"
+    name: "SD-10"
+    count: 1
+    weight: 289
+    type: a2a
+  - id: "DIS_SD-10_DUAL_L"
+    name: "SD-10 x 2"
+    count: 2
+    weight: 558
+    type: a2a
+  - id: "DIS_SD-10_DUAL_R"
+    name: "SD-10 x 2"
+    count: 2
+    weight: 558
+    type: a2a
+  - id: "DIS_PL-12"
+    name: "PL-12"
+    count: 1
+    weight: 199
+    type: a2a
+  - id: "DIS_PL-8B"
+    name: "PL-8B"
+    count: 1
+    weight: 115
+    type: a2a
+  - id: "DIS_PL-8A"
+    name: "PL-8A"
+    count: 1
+    weight: 115
+    type: a2a
+  - id: "DIS_AKD-10"
+    name: "AKD-10"
+    count: 1
+    weight: 58
+    type: missile
+  - id: "DIS_AKG_DLPOD"
+    name: "DATA-LINK POD"
+    weight: 295
+    type: pod
+  - id: "DIS_SPJ_POD"
+    name: "SPJ POD"
+    weight: 270
+    type: pod
+  - id: "DIS_WMD7"
+    name: "WMD7 POD"
+    weight: 295
+    type: pod
+  - id: "{RKL609_L}"
+    name: "RKL609 ECM Pod (Left)"
+    weight: 150
+    type: pod
+  - id: "{RKL609_R}"
+    name: "RKL609 ECM Pod (Right)"
+    weight: 150
+    type: pod
+  - id: "DIS_TANK800"
+    name: "800L Tank"
+    weight: 730
+    type: fuel
+  - id: "DIS_TANK1100"
+    name: "1100L Tank"
+    weight: 1064
+    type: fuel
+  - id: "DIS_YU_6"
+    name: "YU-6"
+    count: 1
+    weight: 1558
+    type: torpedo
+  - id: "{CE2_SMOKE_WHITE}"
+    name: "Smoke for Christen Eagle II, white"
+    count: 1
+    weight: 7
+    type: pod
+  - id: "{PTB_200_F86F35}"
+    name: "Fuel Tank 200 gallons"
+    weight: 675.6
+    type: fuel
+  - id: "{PTB_120_F86F35}"
+    name: "Fuel Tank 120 gallons"
+    weight: 413.36
+    type: fuel
+  - id: "{F86ANM64}"
+    name: "AN-M64"
+    weight: 227
+    type: bomb
+  - id: "{HVARx2}"
+    name: "HVARx2"
+    count: 2
+    weight: 128
+    type: rocket
+  - id: "{HVAR_SMOKE_2}"
+    name: "HVAR_SMOKE_2"
+    count: 1
+    weight: 100
+    type: pod
+  - id: "{AIM_54A_Mk47}"
+    name: "AIM-54A-Mk47"
+    count: 1
+    weight: 444
+    type: a2a
+  - id: "{AIM_54A_Mk60}"
+    name: "AIM-54A-Mk60"
+    count: 1
+    weight: 471.7
+    type: a2a
+  - id: "{AIM_54C_Mk47}"
+    name: "AIM-54C-Mk47"
+    count: 1
+    weight: 465.6
+    type: a2a
+  - id: "{SHOULDER AIM_54C_Mk47 L}"
+    name: "AIM-54C-Mk47"
+    count: 1
+    weight: 510.96
+    type: a2a
+  - id: "{SHOULDER AIM_54C_Mk47 R}"
+    name: "AIM-54C-Mk47"
+    count: 1
+    weight: 510.96
+    type: a2a
+  - id: "{SHOULDER AIM_54A_Mk60 L}"
+    name: "AIM-54A-Mk60"
+    count: 1
+    weight: 517.06
+    type: a2a
+  - id: "{SHOULDER AIM_54A_Mk60 R}"
+    name: "AIM-54A-Mk60"
+    count: 1
+    weight: 517.06
+    type: a2a
+  - id: "{SHOULDER AIM_54A_Mk47 L}"
+    name: "AIM-54A-Mk47"
+    count: 1
+    weight: 489.36
+    type: a2a
+  - id: "{SHOULDER AIM_54A_Mk47 R}"
+    name: "AIM-54A-Mk47"
+    count: 1
+    weight: 489.36
+    type: a2a
+  - id: "{LAU-7 - AIM-9M}"
+    name: "LAU-7 AIM-9M"
+    count: 1
+    weight: 101.64
+    type: a2a
+  - id: "{LAU-7 - AIM-9L}"
+    name: "LAU-7 AIM-9L"
+    count: 1
+    weight: 100.5
+    type: a2a
+  - id: "{LAU-138 wtip - AIM-9M}"
+    name: "LAU-138 AIM-9M"
+    count: 1
+    weight: 86.64
+    type: a2a
+  - id: "{LAU-138 wtip - AIM-9L}"
+    name: "LAU-138 AIM-9L"
+    count: 1
+    weight: 85.5
+    type: a2a
+  - id: "{SHOULDER AIM-7M}"
+    name: "AIM-7M"
+    count: 1
+    weight: 284.4
+    type: a2a
+  - id: "{BELLY AIM-7M}"
+    name: "AIM-7M"
+    count: 1
+    weight: 230
+    type: a2a
+  - id: "{SHOULDER AIM-7F}"
+    name: "AIM-7F"
+    count: 1
+    weight: 284.4
+    type: a2a
+  - id: "{BELLY AIM-7F}"
+    name: "AIM-7F"
+    count: 1
+    weight: 230
+    type: a2a
+  - id: "{SHOULDER AIM-7MH}"
+    name: "AIM-7MH"
+    count: 1
+    weight: 284.4
+    type: a2a
+  - id: "{BELLY AIM-7MH}"
+    name: "AIM-7MH"
+    count: 1
+    weight: 230
+    type: a2a
+  - id: "{F14-300gal-empty}"
+    name: "Fuel tank 300 gal (empty)"
+    weight: 70
+    type: fuel
+  - id: "{F14-300gal}"
+    name: "Fuel tank 300 gal"
+    weight: 958.4
+    type: fuel
+  - id: "{F14-LANTIRN-TP}"
+    name: "LANTIRN Targeting Pod"
+    weight: 342
+    type: pod
+  - id: "{BRU-32 MK-84}"
+    name: "Mk-84"
+    count: 1
+    weight: 951.38
+    type: bomb
+  - id: "{BRU-32 MK-83}"
+    name: "Mk-83"
+    count: 1
+    weight: 504.38
+    type: bomb
+  - id: "{BRU-32 MK-82}"
+    name: "Mk-82"
+    count: 1
+    weight: 298.38
+    type: bomb
+  - id: "{BRU-32 MK-82AIR}"
+    name: "Mk-82AIR"
+    count: 1
+    weight: 298.38
+    type: bomb
+  - id: "{BRU-32 MK-82SE}"
+    name: "Mk-82 SnakeEye"
+    count: 1
+    weight: 298.38
+    type: bomb
+  - id: "{BRU-32 MK-20}"
+    name: "Mk-20"
+    count: 1
+    weight: 279.38
+    type: bomb
+  - id: "{BRU-32 GBU-10}"
+    name: "GBU-10"
+    count: 1
+    weight: 997.38
+    type: bomb
+  - id: "{BRU-32 GBU-12}"
+    name: "GBU-12"
+    count: 1
+    weight: 332.38
+    type: bomb
+  - id: "{BRU-32 GBU-16}"
+    name: "GBU-16"
+    count: 1
+    weight: 621.38
+    type: bomb
+  - id: "{BRU-32 GBU-24}"
+    name: "GBU-24"
+    count: 1
+    weight: 1107.38
+    type: bomb
+  - id: "{BRU42_2*MK81 RS}"
+    name: "2 Mk-81"
+    count: 2
+    weight: 364
+    type: bomb
+  - id: "{BRU3242_2*MK81 RS}"
+    name: "2 Mk-81"
+    count: 2
+    weight: 421.38
+    type: bomb
+  - id: "{PHXBRU3242_2*MK81 RS}"
+    name: "2 Mk-81"
+    count: 2
+    weight: 421.38
+    type: bomb
+  - id: "{BRU42_2*MK81 LS}"
+    name: "2 Mk-81"
+    count: 2
+    weight: 364
+    type: bomb
+  - id: "{BRU3242_2*MK81 LS}"
+    name: "2 Mk-81"
+    count: 2
+    weight: 421.38
+    type: bomb
+  - id: "{PHXBRU3242_2*MK81 LS}"
+    name: "2 Mk-81"
+    count: 2
+    weight: 421.38
+    type: bomb
+  - id: "{BRU42_2*MK82 RS}"
+    name: "2 Mk-82"
+    count: 2
+    weight: 610
+    type: bomb
+  - id: "{BRU3242_2*MK82 RS}"
+    name: "2 Mk-82"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{PHXBRU3242_2*MK82 RS}"
+    name: "2 Mk-82"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{BRU42_2*MK82 LS}"
+    name: "2 Mk-82"
+    count: 2
+    weight: 610
+    type: bomb
+  - id: "{BRU3242_2*MK82 LS}"
+    name: "2 Mk-82"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{PHXBRU3242_2*MK82 LS}"
+    name: "2 Mk-82"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{BRU42_2*MK82AIR RS}"
+    name: "2 Mk-82AIR"
+    count: 2
+    weight: 610
+    type: bomb
+  - id: "{BRU3242_2*MK82AIR RS}"
+    name: "2 Mk-82AIR"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{PHXBRU3242_2*MK82AIR RS}"
+    name: "2 Mk-82AIR"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{BRU42_2*MK82AIR LS}"
+    name: "2 Mk-82AIR"
+    count: 2
+    weight: 610
+    type: bomb
+  - id: "{BRU3242_2*MK82AIR LS}"
+    name: "2 Mk-82AIR"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{PHXBRU3242_2*MK82AIR LS}"
+    name: "2 Mk-82AIR"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{BRU42_2*MK82SE RS}"
+    name: "2 Mk-82 SnakeEye"
+    count: 2
+    weight: 610
+    type: bomb
+  - id: "{BRU3242_2*MK82SE RS}"
+    name: "2 Mk-82 SnakeEye"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{PHXBRU3242_2*MK82SE RS}"
+    name: "2 Mk-82 SnakeEye"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{BRU42_2*MK82SE LS}"
+    name: "2 Mk-82 SnakeEye"
+    count: 2
+    weight: 610
+    type: bomb
+  - id: "{BRU3242_2*MK82SE LS}"
+    name: "2 Mk-82 SnakeEye"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{PHXBRU3242_2*MK82SE LS}"
+    name: "2 Mk-82 SnakeEye"
+    count: 2
+    weight: 667.38
+    type: bomb
+  - id: "{BRU42_2*MK20 RS}"
+    name: "2 MK-20"
+    count: 2
+    weight: 572
+    type: bomb
+  - id: "{BRU3242_2*MK20 RS}"
+    name: "2 MK-20"
+    count: 2
+    weight: 629.38
+    type: bomb
+  - id: "{PHXBRU3242_2*MK20 RS}"
+    name: "2 MK-20"
+    count: 2
+    weight: 629.38
+    type: bomb
+  - id: "{BRU42_2*MK20 LS}"
+    name: "2 MK-20"
+    count: 2
+    weight: 572
+    type: bomb
+  - id: "{BRU3242_2*MK20 LS}"
+    name: "2 MK-20"
+    count: 2
+    weight: 629.38
+    type: bomb
+  - id: "{PHXBRU3242_2*MK20 LS}"
+    name: "2 MK-20"
+    count: 2
+    weight: 629.38
+    type: bomb
+  - id: "{BRU42_MK83 RS}"
+    name: "Mk-83"
+    count: 1
+    weight: 575
+    type: bomb
+  - id: "{BRU3242_MK83 RS}"
+    name: "Mk-83"
+    count: 1
+    weight: 632.38
+    type: bomb
+  - id: "{PHXBRU3242_MK83 RS}"
+    name: "Mk-83"
+    count: 1
+    weight: 632.38
+    type: bomb
+  - id: "{BRU42_MK83 LS}"
+    name: "Mk-83"
+    count: 1
+    weight: 575
+    type: bomb
+  - id: "{BRU3242_MK83 LS}"
+    name: "Mk-83"
+    count: 1
+    weight: 632.38
+    type: bomb
+  - id: "{PHXBRU3242_MK83 LS}"
+    name: "Mk-83"
+    count: 1
+    weight: 632.38
+    type: bomb
+  - id: "{BRU42_3*BDU33}"
+    name: "3 BDU-33"
+    count: 3
+    weight: 161
+    type: bomb
+  - id: "{BRU3242_3*BDU33}"
+    name: "3 BDU-33"
+    count: 3
+    weight: 218.38
+    type: bomb
+  - id: "{BRU42_3*BDU33_N}"
+    name: "3 BDU-33"
+    count: 3
+    weight: 161
+    type: bomb
+  - id: "{BRU3242_3*BDU33_N}"
+    name: "3 BDU-33"
+    count: 3
+    weight: 218.38
+    type: bomb
+  - id: "{PHXBRU3242_BDU33}"
+    name: "3 BDU-33"
+    count: 3
+    weight: 218.38
+    type: bomb
+  - id: "{MAK79_MK81 4}"
+    name: "MAK79 4 Mk-81"
+    count: 4
+    weight: 512
+    type: bomb
+  - id: "{MAK79_MK81 3L}"
+    name: "MAK79 3 Mk-81"
+    count: 3
+    weight: 384
+    type: bomb
+  - id: "{MAK79_MK81 3R}"
+    name: "MAK79 3 Mk-81"
+    count: 3
+    weight: 384
+    type: bomb
+  - id: "{MAK79_MK82 4}"
+    name: "MAK79 4 Mk-82"
+    count: 4
+    weight: 1004
+    type: bomb
+  - id: "{MAK79_MK82 3L}"
+    name: "MAK79 3 Mk-82"
+    count: 3
+    weight: 753
+    type: bomb
+  - id: "{MAK79_MK82 3R}"
+    name: "MAK79 3 Mk-82"
+    count: 3
+    weight: 753
+    type: bomb
+  - id: "{MAK79_BDU33 4}"
+    name: "MAK79 4 BDU-33"
+    count: 4
+    weight: 84
+    type: bomb
+  - id: "{MAK79_BDU33 3L}"
+    name: "MAK79 3 BDU-33"
+    count: 3
+    weight: 63
+    type: bomb
+  - id: "{MAK79_BDU33 3R}"
+    name: "MAK79 3 BDU-33"
+    count: 3
+    weight: 63
+    type: bomb
+  - id: "{MAK79_MK82AIR 4}"
+    name: "MAK79 4 Mk-82AIR"
+    count: 4
+    weight: 1004
+    type: bomb
+  - id: "{MAK79_MK82AIR 3L}"
+    name: "MAK79 3 Mk-82AIR"
+    count: 3
+    weight: 753
+    type: bomb
+  - id: "{MAK79_MK82AIR 3R}"
+    name: "MAK79 3 Mk-82AIR"
+    count: 3
+    weight: 753
+    type: bomb
+  - id: "{MAK79_MK82SE 4}"
+    name: "MAK79 4 Mk-82 SnakeEye"
+    count: 4
+    weight: 1004
+    type: bomb
+  - id: "{MAK79_MK82SE 3L}"
+    name: "MAK79 3 Mk-82 SnakeEye"
+    count: 3
+    weight: 753
+    type: bomb
+  - id: "{MAK79_MK82SE 3R}"
+    name: "MAK79 3 Mk-82 SnakeEye"
+    count: 3
+    weight: 753
+    type: bomb
+  - id: "{MAK79_MK83 3L}"
+    name: "MAK79 3 Mk-83"
+    count: 3
+    weight: 1371
+    type: bomb
+  - id: "{MAK79_MK83 3R}"
+    name: "MAK79 3 Mk-83"
+    count: 3
+    weight: 1371
+    type: bomb
+  - id: "{MAK79_MK83 1R}"
+    name: "MAK79 Mk-83"
+    count: 1
+    weight: 457
+    type: bomb
+  - id: "{MAK79_MK83 1L}"
+    name: "MAK79 Mk-83"
+    count: 1
+    weight: 457
+    type: bomb
+  - id: "{MAK79_MK20 2L}"
+    name: "MAK79 2 MK-20"
+    count: 2
+    weight: 464
+    type: bomb
+  - id: "{MAK79_MK20 2R}"
+    name: "MAK79 2 MK-20"
+    count: 2
+    weight: 464
+    type: bomb
+  - id: "{MAK79_MK20 1R}"
+    name: "MAK79 MK-20"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{MAK79_MK20 1L}"
+    name: "MAK79 MK-20"
+    count: 1
+    weight: 232
+    type: bomb
+  - id: "{BRU42_ADM141}"
+    name: "ADM_141A"
+    count: 1
+    weight: 308
+    type: missile
+  - id: "{BRU3242_ADM141}"
+    name: "ADM_141A"
+    count: 1
+    weight: 365.38
+    type: missile
+  - id: "{BRU42_LAU10}"
+    name: "LAU-10 - 4 ZUNI MK 71"
+    count: 1
+    weight: 568
+    type: rocket
+  - id: "{BRU3242_LAU10}"
+    name: "LAU-10 - 4 ZUNI MK 71"
+    count: 1
+    weight: 625.38
+    type: rocket
+  - id: "{BRU42_2*LAU10 L}"
+    name: "2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 1008
+    type: rocket
+  - id: "{BRU3242_2*LAU10 L}"
+    name: "2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 1065.38
+    type: rocket
+  - id: "{BRU42_2*LAU10 R}"
+    name: "2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 1008
+    type: rocket
+  - id: "{BRU3242_2*LAU10 R}"
+    name: "2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 1065.38
+    type: rocket
+  - id: "{BRU42_2*LAU10 RS}"
+    name: "2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 1008
+    type: rocket
+  - id: "{BRU3242_2*LAU10 RS}"
+    name: "2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 1065.38
+    type: rocket
+  - id: "{PHXBRU3242_2*LAU10 RS}"
+    name: "2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 1065.38
+    type: rocket
+  - id: "{BRU42_2*LAU10 LS}"
+    name: "2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 1008
+    type: rocket
+  - id: "{BRU3242_2*LAU10 LS}"
+    name: "2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 1065.38
+    type: rocket
+  - id: "{PHXBRU3242_2*LAU10 LS}"
+    name: "2 LAU-10 - 4 ZUNI MK 71"
+    count: 2
+    weight: 1065.38
+    type: rocket
+  - id: "{BRU42_SUU25}"
+    name: "SUU-25 * 8 LUU-2"
+    count: 1
+    weight: 258
+    type: bomb
+  - id: "{BRU3242_SUU25}"
+    name: "SUU-25 * 8 LUU-2"
+    count: 1
+    weight: 315.38
+    type: bomb
+  - id: "{BRU42_2*SUU25 L}"
+    name: "2 SUU-25 * 8 LUU-2"
+    count: 2
+    weight: 388
+    type: bomb
+  - id: "{BRU3242_2*SUU25 L}"
+    name: "2 SUU-25 * 8 LUU-2"
+    count: 2
+    weight: 445.38
+    type: bomb
+  - id: "{BRU42_2*SUU25 R}"
+    name: "2 SUU-25 * 8 LUU-2"
+    count: 2
+    weight: 388
+    type: bomb
+  - id: "{BRU3242_2*SUU25 R}"
+    name: "2 SUU-25 * 8 LUU-2"
+    count: 2
+    weight: 445.38
+    type: bomb
+  - id: "{BRU42_2*LUU2 R}"
+    name: "2 LUU-2"
+    count: 2
+    weight: 155.2
+    type: bomb
+  - id: "{BRU3242_2*LUU2 R}"
+    name: "2 LUU-2"
+    count: 2
+    weight: 212.58
+    type: bomb
+  - id: "{BRU42_2*LUU2 L}"
+    name: "2 LUU-2"
+    count: 2
+    weight: 155.2
+    type: bomb
+  - id: "{BRU3242_2*LUU2 L}"
+    name: "2 LUU-2"
+    count: 2
+    weight: 212.58
+    type: bomb
+  - id: "{FPU_8A_FUEL_TANK}"
+    name: "FPU-8A Fuel Tank 330 gallons"
+    weight: 1150
+    type: fuel
+  - id: "{ADEN_GUNPOD}"
+    name: "ADEN GUNPOD"
+    weight: 87
+    type: pod
+  - id: "I16_RS_82"
+    name: "RS-82"
+    weight: 9.7
+    type: rocket
+  - id: "I16_FAB_100SV"
+    name: "FAB-100SV"
+    count: 1
+    weight: 100
+    type: bomb
+  - id: "{P-50T}"
+    name: "P-50T"
+    count: 1
+    weight: 50
+    type: bomb
+  - id: "{PTB_150L_L39}"
+    name: "Fuel Tank 150 liters"
+    weight: 124.25
+    type: fuel
+  - id: "{UB-16-57UMP}"
+    name: "UB-16 - 16 S-5KO"
+    count: 16
+    weight: 138
+    type: rocket
+  - id: "{PTB_350L_L39}"
+    name: "Fuel Tank 350 liters"
+    weight: 283.25
+    type: fuel
+  - id: "{FAB-100x2}"
+    name: "OFAB-100 Jupiter x2"
+    count: 2
+    weight: 342
+    type: bomb
+  - id: "{OFAB_100_Jupiter}"
+    name: "OFAB-100 Jupiter"
+    count: 1
+    weight: 121
+    type: bomb
+  - id: "{PK-3}"
+    name: "PK-3"
+    weight: 218
+    type: pod
+  - id: "{BLG66_BELOUGA_AC}"
+    name: "BLG-66-AC Belouga"
+    count: 1
+    weight: 305
+    type: bomb
+  - id: "{M2KC_RAFAUT_MK82}"
+    name: "AUF2 MK-82 x 2"
+    count: 2
+    weight: 525
+    type: bomb
+  - id: "{M2KC_RAFAUT_MK82S}"
+    name: "AUF2 MK-82 Snakeyes x 2"
+    count: 2
+    weight: 525
+    type: bomb
+  - id: "{M2KC_RAFAUT_BLG66}"
+    name: "AUF2 BLG-66-AC x 2"
+    count: 2
+    weight: 685
+    type: bomb
+  - id: "{M2KC_RAFAUT_ROCKEYE}"
+    name: "AUF2 ROCKEYE x 2"
+    count: 2
+    weight: 525
+    type: bomb
+  - id: "{M2KC_RAFAUT_GBU12}"
+    name: "AUF2 GBU-12 x 2"
+    count: 2
+    weight: 621
+    type: bomb
+  - id: "FAB_50"
+    name: "FAB-50"
+    count: 1
+    weight: 50
+    type: bomb
+  - id: "FAB_100M"
+    name: "FAB-100M"
+    count: 1
+    weight: 100
+    type: bomb
+  - id: "PTB400_MIG15"
+    name: "Fuel Tank 400 liters"
+    weight: 364
+    type: fuel
+  - id: "PTB600_MIG15"
+    name: "Fuel Tank 600 liters"
+    weight: 531
+    type: fuel
+  - id: "PTB300_MIG15"
+    name: "Fuel Tank 300 liters"
+    weight: 271
+    type: fuel
+  - id: "{ORO57K_S5M1_HEFRAG}"
+    name: "ORO-57K - S-5M1 HE-FRAG FFAR x 8"
+    count: 8
+    weight: 63.88
+    type: rocket
+  - id: "{ORO57K_S5MO_HEFRAG}"
+    name: "ORO-57K - S-5MO HE-FRAG FFAR x 8"
+    count: 8
+    weight: 63.88
+    type: rocket
+  - id: "{ORO57K_S5M_HEFRAG}"
+    name: "ORO-57K - S-5M x 8"
+    count: 8
+    weight: 64.92
+    type: rocket
+  - id: "{K-13A}"
+    name: "K-13A"
+    count: 1
+    weight: 90
+    type: a2a
+  - id: "FAB_50"
+    name: "FAB-50"
+    count: 1
+    weight: 50
+    type: bomb
+  - id: "FAB_100M"
+    name: "FAB-100M"
+    count: 1
+    weight: 100
+    type: bomb
+  - id: "PTB400_MIG19"
+    name: "Fuel Tank 400 liters"
+    weight: 364
+    type: fuel
+  - id: "PTB760_MIG19"
+    name: "Fuel Tank 760 liters"
+    weight: 663.8
+    type: fuel
+  - id: "{ECM_POD_L_175V}"
+    name: "L175V Khibiny ECM pod"
+    weight: 150
+    type: pod
