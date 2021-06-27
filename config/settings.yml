@@ -5187,6 +5187,7 @@ airframes:
         none: none
   mi24:
     name: Mi-24P
+    seats: 2
     weight:
       empty: 19601
       fuel: 3750
