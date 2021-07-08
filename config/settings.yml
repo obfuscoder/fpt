@@ -779,7 +779,7 @@ theaters:
         comms: 300.05
         tacan: 22Y
         position: "AR-231V: BTY 126/37 (N3620 W11614)"
-        altitude: 12000
+        altitude: 15000
         speed: 280
     waypoints:
       - name: 4807A
@@ -847,15 +847,6 @@ theaters:
       - name: APHID
         lat: 36.3849918945445
         lon: -114.894999227647
-      - name: AR230V
-        lat: 36.8901997825546
-        lon: -114.274146487723
-      - name: AR230V.1
-        lat: 36.333333333333333333
-        lon: -116.233333333333333333
-      - name: AR230V.2
-        lat: 37.1166600160594
-        lon: -114.033342384481
       - name: AR231V
         lat: 36.5971589977976
         lon: -116.533009543474
