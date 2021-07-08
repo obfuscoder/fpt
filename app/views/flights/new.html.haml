@@ -1,5 +1,56 @@
 %h1 New flight
 
-= render 'form'
+= form_for @flight do |f|
+  - if @flight.errors.any?
+    .alert.alert-danger
+      %h4= "#{pluralize(@flight.errors.count, "error")} prohibited this flight from being saved:"
+      %ul
+        - @flight.errors.full_messages.each do |message|
+          %li= message
+  %table.table.table-striped.table-bordered.table-sm.table-hover
+    %tr
+      %th.bg-secondary(colspan=6) MISSION DATA
+    %tr
+      %th.align-middle.table-secondary Start
+      %td= f.datetime_field :start, class: 'form-control'
+      %th.align-middle.table-secondary Duration (min)
+      %td= f.number_field :duration, class: 'form-control'
+      %th.align-middle.table-secondary Mission
+      %td= f.select :mission, Settings.missions, {}, class: 'form-control'
+    %tr
+      %th.align-middle.table-secondary Theater
+      %td= f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }, {}, class: 'form-control update-defaults', data: { remote: true, url: airbases_path, defaults_url: defaults_flights_path }
+      %th.align-middle.table-secondary Comms
+      %td= f.text_field :frequency, class: 'form-control'
+      %th.align-middle.table-secondary IFF
+      %td= f.text_field :iff, class: 'form-control'
+    %tr
+      %th.align-middle.table-secondary A/C + #
+      %td
+        .form-row
+          .col-md-8
+            = f.select :airframe, airframe_options, {}, class: 'form-control'
+          .col-md-4
+            = f.select :slots, 1..4, {}, class: 'form-control'
+      %th.align-middle.table-secondary TACAN
+      %td
+        .form-row
+          .col-md-7
+            = f.select :tacan_channel, 1..48, {}, class: 'form-control'
+          .col-md-5
+            = f.select :tacan_polarization, %w[Y X], {}, class: 'form-control'
+    %tr
+      %th.align-middle.table-secondary Callsign
+      %td
+        .form-row
+          .col-md-8
+            = f.select :callsign, Settings.callsigns, {}, class: 'form-control update-defaults', data: { defaults_url: defaults_flights_path }
+          .col-md-4
+            = f.select :callsign_number, 1..7, { include_blank: true }, class: 'form-control update-defaults', data: { defaults_url: defaults_flights_path }
+      %th.align-middle.table-secondary Lasercode
+      %td= f.select :laser, 111..175, {}, class: 'form-control'
+      %th.align-middle.table-secondary Net Id
+      %td= f.select :group_id, 1..41, { include_blank: true }, class: 'form-control'
+  = f.submit 'Create', class: 'btn btn-primary'
 
 = link_to 'Back', flights_path

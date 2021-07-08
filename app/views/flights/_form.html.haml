@@ -17,7 +17,8 @@
       %td= f.select :mission, Settings.missions, {}, class: 'form-control'
     %tr
       %th.align-middle.table-secondary Theater
-      %td= f.select :theater, Settings.theaters.map { |t| [t.last.name, t.first] }, {}, class: 'form-control update-defaults', data: { remote: true, url: airbases_path, defaults_url: defaults_flights_path }
+      %td
+        %a{ href: Settings.theaters[@flight.theater].link, target: "theater" }= Settings.theaters[@flight.theater].name
       %th.align-middle.table-secondary Comms
       %td= f.text_field :frequency, class: 'form-control'
       %th.align-middle.table-secondary IFF

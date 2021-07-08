@@ -31,7 +31,7 @@ class FlightsController < ApplicationController
     @flight = Flight.new(flight_params)
 
     if @flight.save
-      redirect_to @flight, notice: 'Flight was successfully created.'
+      redirect_to edit_flight_path(@flight), notice: 'Flight was successfully created.'
     else
       render :new
     end
