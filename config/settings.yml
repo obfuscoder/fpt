@@ -5269,6 +5269,7 @@ missions:
   - AI
   - AR
   - AWACS
+  - ATC
   - BAI
   - CAP
   - CAS
@@ -5277,8 +5278,10 @@ missions:
   - DEAD
   - Escort
   - FAC(A)
+  - GCI
   - JTAC
   - RCO
+  - Recce
   - SCAR
   - SEAD
   - Strike
