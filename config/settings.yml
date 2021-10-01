@@ -5935,7 +5935,7 @@ payload:
     name: AN/AAQ-28 LITENING
     short: TGP
     type: pod
-    weight: 661
+    weight: 492
   alq164:
     name: AN/ALQ-164 DECM Pod
     type: pod
@@ -6415,7 +6415,12 @@ payload:
     name: GBU-32(V)2/B
     short: G322B
     type: a2g
-    weight: 1030 
+    weight: 1030
+  asq228:
+    name: AN/ASQ-228 ATFLIR
+    short: TGP
+    type: pod
+    weight: 364
 loadout:
   a10:
     1: &a10station1
@@ -7378,6 +7383,7 @@ loadout:
       - weapon: aim7m
       - weapon: aim7mh
       - weapon: aaq28
+      - weapon: asq228
     5:
       - weapon: cbu99
       - weapon: cbu99
