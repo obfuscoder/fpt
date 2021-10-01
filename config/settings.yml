@@ -6260,7 +6260,7 @@ payload:
     short: FT370
     type: tank
     weight: 110
-    fuel: 2470
+    fuel: 2475
   agm62:
     name: AGM-62
     short: A62
@@ -6416,6 +6416,10 @@ payload:
     short: G322B
     type: a2g
     weight: 1030 
+  bru57:
+    name: BRU-57
+    type: pylon
+    weight: 175
 loadout:
   a10:
     1: &a10station1
@@ -6869,6 +6873,10 @@ loadout:
         amount: 3
       - weapon: agm88c
       - weapon: mxu648
+      - weapon: agm154a
+      - weapon: agm154a
+        amount: 2
+        pylon: bru57
     4: &f16station4
       - weapon: cbu87
       - weapon: cbu87
@@ -6918,11 +6926,12 @@ loadout:
       - weapon: lau3wtu1b
       - weapon: agm88c
       - weapon: mxu648
+      - weapon: ft370
     6:
-      - weapon: ft300
-    7:
-      - weapon: aaq28
+      - weapon: FT300
       - weapon: mxu648
+    7:
+      - weapon: TGP
     8: *f16station4
     9: *f16station3
     10: *f16station2
