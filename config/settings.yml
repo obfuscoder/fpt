@@ -5047,35 +5047,39 @@ airframes:
       amount: 768
       weight: 331
       types:
-        def: DEF
-        not: No-T
+        heit: HEI-T
+        hei: HEI
+        ap: AP
+        tp: TP
+        saphei: SAPHEI
+        tppgu: TP PGU
     expendables:
-      - chaff: 0
-        flares: 60
-      - chaff: 10
-        flares: 55
-      - chaff: 20
-        flares: 50
-      - chaff: 30
-        flares: 45
-      - chaff: 40
-        flares: 40
-      - chaff: 50
-        flares: 35
-      - chaff: 60
-        flares: 30
-      - chaff: 70
-        flares: 25
-      - chaff: 80
-        flares: 20
-      - chaff: 90
-        flares: 15
-      - chaff: 100
-        flares: 10
-      - chaff: 110
-        flares: 5
       - chaff: 120
         flares: 0
+      - chaff: 110
+        flares: 10
+      - chaff: 100
+        flares: 20
+      - chaff: 90
+        flares: 30
+      - chaff: 80
+        flares: 40
+      - chaff: 70
+        flares: 50
+      - chaff: 60
+        flares: 60
+      - chaff: 50
+        flares: 70
+      - chaff: 40
+        flares: 80
+      - chaff: 30
+        flares: 90
+      - chaff: 20
+        flares: 100
+      - chaff: 10
+        flares: 110
+      - chaff: 0
+        flares: 120
   av8b:
     name: AV-8B N/A
     expendables:
