@@ -717,8 +717,8 @@ theaters:
       creech:
         name: Creech AFB
         tacan: 87X
-        atis: 122.5
-        tower: 360.7
+        atis: 290.45
+        tower: 360.6
         ground: 275.8
         recoveries:
           ht8: HI-TACAN RWY 8
@@ -5032,59 +5032,79 @@ airframes:
         flares: 60
       - chaff: 480
         flares: 0
+      - chaff: 60
+        flares: 420
+      - chaff: 120
+        flares: 360
+      - chaff: 180
+        flares: 300
+      - chaff: 240
+        flares: 240
+      - chaff: 300
+        flares: 180
+      - chaff: 360
+        flares: 120
+      - chaff: 420
+        flares: 60
+      - chaff: 480
+        flares: 0
     weight:
-      empty: 25000
-      fuel: 11000
-      tol: 46000
+      empty: 25629
+      fuel: 11087
+      tol: 46476
       flt: 51000
   f18:
     name: F/A-18C
     weight:
-      empty: 25642
+      empty: 26473
       fuel: 10803
-      tol: 51900
+      tol: 51899
     gun:
       amount: 768
       weight: 331
       types:
-        def: DEF
-        not: No-T
+        heit: HEI-T
+        hei: HEI
+        ap: AP
+        tp: TP
+        saphei: SAPHEI
+        tppgu: TP PGU
     expendables:
-      - chaff: 0
-        flares: 60
-      - chaff: 10
-        flares: 55
-      - chaff: 20
-        flares: 50
-      - chaff: 30
-        flares: 45
-      - chaff: 40
-        flares: 40
-      - chaff: 50
-        flares: 35
-      - chaff: 60
-        flares: 30
-      - chaff: 70
-        flares: 25
-      - chaff: 80
-        flares: 20
-      - chaff: 90
-        flares: 15
-      - chaff: 100
-        flares: 10
-      - chaff: 110
-        flares: 5
       - chaff: 120
         flares: 0
+      - chaff: 110
+        flares: 10
+      - chaff: 100
+        flares: 20
+      - chaff: 90
+        flares: 30
+      - chaff: 80
+        flares: 40
+      - chaff: 70
+        flares: 50
+      - chaff: 60
+        flares: 60
+      - chaff: 50
+        flares: 70
+      - chaff: 40
+        flares: 80
+      - chaff: 30
+        flares: 90
+      - chaff: 20
+        flares: 100
+      - chaff: 10
+        flares: 110
+      - chaff: 0
+        flares: 120
   av8b:
     name: AV-8B N/A
     expendables:
       - chaff: 60
         flares: 120
     weight:
-      empty: 14800
+      empty: 14804
       fuel: 7758
-      tol: 31000
+      tol: 31085
     gun:
       amount: 0
       weight: 0
@@ -5123,9 +5143,9 @@ airframes:
     name: F-14
     seats: 2
     weight:
-      empty: 44000
+      empty: 44040
       fuel: 16200
-      tol: 74300
+      tol: 74349
     gun:
       amount: 675
       weight: 520
@@ -5227,6 +5247,7 @@ callsigns:
   - Vanguard
   - Arco
   - Axe
+  - BamBam
   - Beast
   - Boar
   - Chevy
@@ -5241,12 +5262,16 @@ callsigns:
   - Fury
   - Hawg
   - Jedi
+  - Joker
+  - Knife
   - Knight
   - Lugar
   - Magic
+  - Merlin
   - Mig
   - Misty
   - Moonbeam
+  - Nasty
   - Navy
   - Overlord
   - Pig
@@ -5275,11 +5300,13 @@ missions:
   - CAS
   - CASEVAC
   - CSAR
+  - DCA
   - DEAD
   - Escort
   - FAC(A)
   - GCI
   - JTAC
+  - OCA
   - RCO
   - Recce
   - SCAR
@@ -5759,7 +5786,7 @@ payload:
   aww13:
     name: AWW-13 Datalink Pod
     type: pod
-    weight: 441
+    weight: 580
   aim9l:
     name: AIM-9L Sidewinder IR AAM
     short: A9L
@@ -5769,7 +5796,7 @@ payload:
     name: AIM-9M Sidewinder IR AAM
     short: A9M
     type: a2a
-    weight: 191
+    weight: 197
   aim54am47:
     name: AIM-54A-Mk47
     short: A54AM47
@@ -5794,7 +5821,7 @@ payload:
     name: CAP-9M
     short: C9M
     type: a2a
-    weight: 190
+    weight: 187
   lau7:
     name: LAU-7
     type: pylon
@@ -5836,17 +5863,17 @@ payload:
     name: GBU-12
     short: G12
     type: a2g
-    weight: 606
+    weight: 611
   gbu16:
     name: GBU-16
     short: G16
     type: a2g
-    weight: 1243
+    weight: 1131
   gbu24:
     name: GBU-24
     short: G24
     type: a2g
-    weight: 2315
+    weight: 2396
   gbu54:
     name: GBU-54
     short: G54
@@ -5901,7 +5928,7 @@ payload:
     name: AN/ASQ-T50 TCTS Pod
     short: AT50
     type: pod
-    weight: 145
+    weight: 165
   smokeblue:
     name: Smokewinder - blue
     type: pod
@@ -5936,6 +5963,11 @@ payload:
     short: TGP
     type: pod
     weight: 492
+  asq228:
+    name: AN/ASQ-228 ATFLIR 
+    short: TGP
+    type: pod
+    weight: 430
   alq164:
     name: AN/ALQ-164 DECM Pod
     type: pod
@@ -6101,6 +6133,26 @@ payload:
     short: G31B
     type: a2g
     weight: 2163
+  gbu31v1b:
+    name: GBU-31(V)1/B
+    short: G311B
+    type: a2g
+    weight: 2059
+  gbu31v2b:
+    name: GBU-31(V)2/B
+    short: G312B
+    type: a2g
+    weight: 2059
+  gbu31v4b:
+    name: GBU-31(V)4/B
+    short: G314B
+    type: a2g
+    weight: 2138
+  gbu32v2b:
+    name: GBU-32(V)2/B
+    short: G322B
+    type: a2g
+    weight: 1030 
   gbu38:
     name: GBU-38
     short: G38
@@ -6212,6 +6264,11 @@ payload:
     short: A84D
     type: a2g
     weight: 1190
+  agm84h:
+    name: AGM-84H
+    short: A84H
+    type: a2g
+    weight: 1488 
   agm88c:
     name: AGM-88C
     short: A88C
@@ -6260,7 +6317,7 @@ payload:
     short: FT370
     type: tank
     weight: 110
-    fuel: 2470
+    fuel: 2475
   agm62:
     name: AGM-62
     short: A62
@@ -6421,6 +6478,10 @@ payload:
     short: TGP
     type: pod
     weight: 364
+  bru57:
+    name: BRU-57
+    type: pylon
+    weight: 175
 loadout:
   a10:
     1: &a10station1
@@ -6782,7 +6843,7 @@ loadout:
     9: *a10station3
     10: *a10station2
     11: *a10station1
-  f16:
+  3:
     1: &f16station1
       - weapon: aim120b
       - weapon: aim120c
@@ -6874,6 +6935,10 @@ loadout:
         amount: 3
       - weapon: agm88c
       - weapon: mxu648
+      - weapon: agm154a
+      - weapon: agm154a
+        amount: 2
+        pylon: bru57
     4: &f16station4
       - weapon: cbu87
       - weapon: cbu87
@@ -6925,9 +6990,9 @@ loadout:
       - weapon: mxu648
     6:
       - weapon: ft300
+      - weapon: mxu648
     7:
       - weapon: aaq28
-      - weapon: mxu648
     8: *f16station4
     9: *f16station3
     10: *f16station2
@@ -7183,6 +7248,18 @@ loadout:
       - weapon: gbu16
       - weapon: gbu31
       - weapon: gbu31v3b
+      - weapon: gbu32v2b
+      - weapon: gbu31v4b
+      - weapon: gbu31v2b
+      - weapon: gbu31v1b
+      - weapon: bdu45
+      - weapon: bdu45
+        amount: 2
+        pylon: bru33
+      - weapon: bdu45b
+      - weapon: bdu45b
+        amount: 2
+        pylon: bru33
       - weapon: gbu38
       - weapon: gbu38
         amount: 2
@@ -7206,6 +7283,7 @@ loadout:
       - weapon: agm154c
       - weapon: agm84d
       - weapon: agm84e
+      - weapon: agm84h
       - weapon: agm88c
       - weapon: agm154a
         amount: 2
@@ -7239,18 +7317,6 @@ loadout:
       - weapon: lau68mk5
         pylon: bru33
       - weapon: lau68mk5
-        amount: 2
-        pylon: bru33
-      - weapon: gbu32v2b
-      - weapon: gbu31v4b
-      - weapon: gbu31v2b
-      - weapon: gbu31v1b
-      - weapon: bdu45
-      - weapon: bdu45
-        amount: 2
-        pylon: bru33
-      - weapon: bdu45b
-      - weapon: bdu45b
         amount: 2
         pylon: bru33
     3: &f18station3
@@ -7306,6 +7372,18 @@ loadout:
       - weapon: gbu16
       - weapon: gbu31
       - weapon: gbu31v3b
+      - weapon: gbu32v2b
+      - weapon: gbu31v4b
+      - weapon: gbu31v2b
+      - weapon: gbu31v1b
+      - weapon: bdu45
+      - weapon: bdu45
+        amount: 2
+        pylon: bru33
+      - weapon: bdu45b
+      - weapon: bdu45b
+        amount: 2
+        pylon: bru33
       - weapon: gbu38
       - weapon: gbu38
         amount: 2
@@ -7329,6 +7407,7 @@ loadout:
       - weapon: agm154c
       - weapon: agm84d
       - weapon: agm84e
+      - weapon: agm84h
       - weapon: agm88c
       - weapon: agm154a
         amount: 2
@@ -7371,10 +7450,6 @@ loadout:
       - weapon: bdu45b
         amount: 2
         pylon: bru33
-      - weapon: gbu32v2b
-      - weapon: gbu31v4b
-      - weapon: gbu31v2b
-      - weapon: gbu31v1b
     4:
       - weapon: aim120b
       - weapon: aim120c
