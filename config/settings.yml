@@ -717,8 +717,8 @@ theaters:
       creech:
         name: Creech AFB
         tacan: 87X
-        atis: 122.5
-        tower: 360.7
+        atis: 290.45
+        tower: 360.6
         ground: 275.8
         recoveries:
           ht8: HI-TACAN RWY 8
