@@ -6313,7 +6313,7 @@ payload:
     short: FT370
     type: tank
     weight: 110
-    fuel: 2470
+    fuel: 2475
   agm62:
     name: AGM-62
     short: A62
@@ -6449,6 +6449,30 @@ payload:
     name: BDU-45B
     type: a2g
     weight: 511
+  gbu31v1b:
+    name: GBU-31(V)1/B
+    short: G311B
+    type: a2g
+    weight: 2059
+  gbu31v2b:
+    name: GBU-31(V)2/B
+    short: G312B
+    type: a2g
+    weight: 2059
+  gbu31v4b:
+    name: GBU-31(V)4/B
+    short: G314B
+    type: a2g
+    weight: 2138
+  gbu32v2b:
+    name: GBU-32(V)2/B
+    short: G322B
+    type: a2g
+    weight: 1030 
+  bru57:
+    name: BRU-57
+    type: pylon
+    weight: 175
 loadout:
   a10:
     1: &a10station1
@@ -6810,7 +6834,7 @@ loadout:
     9: *a10station3
     10: *a10station2
     11: *a10station1
-  f16:
+  3:
     1: &f16station1
       - weapon: aim120b
       - weapon: aim120c
@@ -6902,6 +6926,10 @@ loadout:
         amount: 3
       - weapon: agm88c
       - weapon: mxu648
+      - weapon: agm154a
+      - weapon: agm154a
+        amount: 2
+        pylon: bru57
     4: &f16station4
       - weapon: cbu87
       - weapon: cbu87
@@ -6953,9 +6981,9 @@ loadout:
       - weapon: mxu648
     6:
       - weapon: ft300
+      - weapon: mxu648
     7:
       - weapon: aaq28
-      - weapon: mxu648
     8: *f16station4
     9: *f16station3
     10: *f16station2
