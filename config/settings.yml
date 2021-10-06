@@ -5063,8 +5063,12 @@ airframes:
       amount: 768
       weight: 331
       types:
-        def: DEF
-        not: No-T
+        heit: HEI-T
+        hei: HEI
+        ap: AP
+        tp: TP
+        saphei: SAPHEI
+        tppgu: TP PGU
     expendables:
       - chaff: 120
         flares: 0
