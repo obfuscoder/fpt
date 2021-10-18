@@ -6844,7 +6844,7 @@ loadout:
     9: *a10station3
     10: *a10station2
     11: *a10station1
-  3:
+  f16:
     1: &f16station1
       - weapon: aim120b
       - weapon: aim120c
