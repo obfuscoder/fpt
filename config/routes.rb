@@ -30,4 +30,6 @@ Rails.application.routes.draw do
   get 'procedures', to: 'airbases#procedures'
   get 'spins', to: 'spins#show'
   get 'mdc/:pilot', to: 'mdc#show', as: 'mdc'
+
+  get '*anythingelse', to: redirect('/404')
 end
