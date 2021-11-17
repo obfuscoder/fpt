@@ -5003,6 +5003,148 @@ theaters:
           case1: CASE I
           case2: CASE II
           case3: CASE III
+  mariana:
+    name: Mariana Islands
+    channels:
+      - name: Flight/Squadron specific
+    navaids:
+      - id: UAM
+        name: Andersen
+        channel: 54
+        pos: N13 35.483 E114 56.848
+        elevation: 608
+      - id: UAZ
+        name: Nimitz
+        channel: 105
+        pos: N13 27.271 E114 43.998
+        elevation: 638
+    airbases:
+      pgum:
+        name: Antonio B. Won Pat International
+        ground: 
+        atis: 
+        tower: 118.1
+        elevation: 255
+        takeoff: 24
+        land: 24
+        runways:
+          - name: 24R
+            length: 12015
+            elevation: 255
+          - name: 24L
+            length: 10014
+            elevation: 255
+          - name: 6R
+            length: 10014
+            elevation: 255
+          - name: 6L
+            length: 12015
+            elevation: 255
+        departures:
+          none: none
+        recoveries:
+          none: none
+      pgro:
+        name: Rota International 
+        ground: 
+        atis: 
+        tower: 123.6
+        elevation: 569
+        takeoff: 09
+        land: 09
+        runways:
+          - name: 09
+            length: 6000
+            elevation: 569
+          - name: 27
+            length: 6000
+            elevation: 569
+        departures:
+          none: none
+        recoveries:
+          none: none
+      pgua:
+        name: Andersen Air Force Base
+        ground: 
+        atis: 
+        tower: 250.1
+        elevation: 535
+        takeoff: 06
+        tacan: 54X
+        land: 06
+        runways:
+          - name: 24R
+            length: 10527
+            elevation: 602
+          - name: 24L
+            length: 11200
+            elevation: 596
+          - name: 06R
+            length: 11200
+            elevation: 547
+          - name: 06L
+            length: 10527
+            elevation: 531
+        departures:
+          none: none
+        recoveries:
+          none: none
+      pgwt:
+        name: Tinian International
+        ground: 
+        atis: 
+        tower: 123.65
+        elevation: 261
+        takeoff: 08
+        land: 08
+        runways:
+          - name: 26
+            length: 8600
+            elevation: 283
+          - name: 08
+            length: 8600
+            elevation: 239
+        departures:
+          none: none
+        recoveries:
+          none: none
+      pgsn:
+        name: Saipan International
+        ground: 
+        atis: 
+        tower: 125.7
+        elevation: 213
+        takeoff: 07
+        land: 07
+        runways:
+          - name: 25
+            length: 8700
+            elevation: 213
+          - name: 07
+            length: 8700
+            elevation: 213
+          - name: 24
+            length: 7001
+            elevation: 212
+          - name: 06
+            length: 7001
+            elevation: 213
+        departures:
+        departures:
+          none: none
+        recoveries:
+          none: none
+      carrier:
+        name: CV-73 USS G. Washington
+        tacan: 73X
+        tower: 305.0
+        ground: ICLS 12
+        departures:
+          cat: CAT
+        recoveries:
+          case1: CASE I
+          case2: CASE II
+          case3: CASE III
 airframes:
   a10:
     name: A-10C
